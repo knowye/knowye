@@ -21,24 +21,6 @@ function setDetailContent(pageUrl) {
     Apperyio.setDetailContent(pageUrl);
 }
 Apperyio.AppPages = [{
-    "name": "itemPage",
-    "location": "itemPage.html"
-},{
-    "name": "menu_shared",
-    "location": "menu_shared.html"
-}, {
-    "name": "qrCodePage",
-    "location": "qrCodePage.html"
-}, {
-    "name": "facebookLogin",
-    "location": "facebookLogin.html"
-}, {
-    "name": "startScreen",
-    "location": "startScreen.html"
-}, {
-    "name": "promoManage",
-    "location": "promoManage.html"
-}, {
     "name": "aboutPage",
     "location": "aboutPage.html"
 }, {
@@ -48,74 +30,50 @@ Apperyio.AppPages = [{
     "name": "menuHeadingManagePage",
     "location": "menuHeadingManagePage.html"
 }, {
-    "name": "createAccount",
-    "location": "createAccount.html"
-}, {
-    "name": "settingsPage",
-    "location": "settingsPage.html"
-}, {
-    "name": "wishListPage",
-    "location": "wishListPage.html"
-}, {
-    "name": "menuManagementPage",
-    "location": "menuManagementPage.html"
-}, {
-    "name": "favoritesPage",
-    "location": "favoritesPage.html"
-}, {
-    "name": "touPage",
-    "location": "touPage.html"
-}, {
-    "name": "navigatePage",
-    "location": "navigatePage.html"
-}, {
-    "name": "logoutPage",
-    "location": "logoutPage.html"
-}, {
-    "name": "proprietorPage",
-    "location": "proprietorPage.html"
-}, {
-    "name": "helpPage",
-    "location": "helpPage.html"
-}, {
     "name": "proprietorAnalyticsPage",
     "location": "proprietorAnalyticsPage.html"
 }, {
-    "name": "menuPreviewPage",
-    "location": "menuPreviewPage.html"
+    "name": "zzpromoEdit",
+    "location": "zzpromoEdit.html"
 }, {
-    "name": "promoEdit",
-    "location": "promoEdit.html"
+    "name": "startScreen",
+    "location": "startScreen.html"
 }, {
-    "name": "menuPage_v2",
-    "location": "menuPage_v2.html"
+    "name": "itemPage",
+    "location": "itemPage.html"
 }, {
-    "name": "filterPage",
-    "location": "filterPage.html"
+    "name": "zzpromoManage",
+    "location": "zzpromoManage.html"
 }, {
-    "name": "easterEggPage",
-    "location": "easterEggPage.html"
+    "name": "zzscannerPage",
+    "location": "zzscannerPage.html"
 }, {
-    "name": "profilePage",
-    "location": "profilePage.html"
+    "name": "zztimeRangePage",
+    "location": "zztimeRangePage.html"
 }, {
-    "name": "searchPage",
-    "location": "searchPage.html"
+    "name": "selectedPage",
+    "location": "selectedPage.html"
 }, {
-    "name": "itemEditPage",
-    "location": "itemEditPage.html"
+    "name": "zzCSStestPage",
+    "location": "zzCSStestPage.html"
 }, {
-    "name": "proprietorStatPage",
-    "location": "proprietorStatPage.html"
+    "name": "zzmenuPage",
+    "location": "zzmenuPage.html"
 }, {
-    "name": "detailedReviewPage",
-    "location": "detailedReviewPage.html"
+    "name": "menuHistoryPage",
+    "location": "menuHistoryPage.html"
 }, {
-    "name": "selectionHistoryPage",
-    "location": "selectionHistoryPage.html"
+    "name": "faqPage",
+    "location": "faqPage.html"
 }, {
-    "name": "operationsRestaurantPage",
-    "location": "operationsRestaurantPage.html"
+    "name": "zzratingInfoPage",
+    "location": "zzratingInfoPage.html"
+}, {
+    "name": "orderHistoryPage",
+    "location": "orderHistoryPage.html"
+}, {
+    "name": "createAccount",
+    "location": "createAccount.html"
 }, {
     "name": "itemManagePage",
     "location": "itemManagePage.html"
@@ -123,38 +81,80 @@ Apperyio.AppPages = [{
     "name": "proprietorStartPage",
     "location": "proprietorStartPage.html"
 }, {
-    "name": "orderHistoryPage",
-    "location": "orderHistoryPage.html"
+    "name": "operationsRestaurantPage",
+    "location": "operationsRestaurantPage.html"
 }, {
-    "name": "selectedPage",
-    "location": "selectedPage.html"
+    "name": "zzdetailedReviewPage",
+    "location": "zzdetailedReviewPage.html"
 }, {
-    "name": "faqPage",
-    "location": "faqPage.html"
+    "name": "itemEditPage",
+    "location": "itemEditPage.html"
 }, {
-    "name": "ratingInfoPage",
-    "location": "ratingInfoPage.html"
+    "name": "selectionHistoryPage",
+    "location": "selectionHistoryPage.html"
 }, {
-    "name": "timeRangePage",
-    "location": "timeRangePage.html"
+    "name": "zzproprietorStatPage",
+    "location": "zzproprietorStatPage.html"
 }, {
-    "name": "scannerPage",
-    "location": "scannerPage.html"
+    "name": "zzitemInventoryPage",
+    "location": "zzitemInventoryPage.html"
 }, {
-    "name": "CSStestPage",
-    "location": "CSStestPage.html"
+    "name": "zzalertPage",
+    "location": "zzalertPage.html"
 }, {
-    "name": "menuHistoryPage",
-    "location": "menuHistoryPage.html"
+    "name": "zzsearchPage",
+    "location": "zzsearchPage.html"
 }, {
-    "name": "menuPage",
-    "location": "menuPage.html"
+    "name": "menuPage_v2",
+    "location": "menuPage_v2.html"
 }, {
-    "name": "itemInventoryPage",
-    "location": "itemInventoryPage.html"
+    "name": "zzqrCodePage",
+    "location": "zzqrCodePage.html"
 }, {
-    "name": "alertPage",
-    "location": "alertPage.html"
+    "name": "profilePage",
+    "location": "profilePage.html"
+}, {
+    "name": "filterPage",
+    "location": "filterPage.html"
+}, {
+    "name": "easterEggPage",
+    "location": "easterEggPage.html"
+}, {
+    "name": "helpPage",
+    "location": "helpPage.html"
+}, {
+    "name": "navigatePage",
+    "location": "navigatePage.html"
+}, {
+    "name": "menuPreviewPage",
+    "location": "menuPreviewPage.html"
+}, {
+    "name": "zzfacebookLogin",
+    "location": "zzfacebookLogin.html"
+}, {
+    "name": "menu_shared",
+    "location": "menu_shared.html"
+}, {
+    "name": "logoutPage",
+    "location": "logoutPage.html"
+}, {
+    "name": "favoritesPage",
+    "location": "favoritesPage.html"
+}, {
+    "name": "proprietorPage",
+    "location": "proprietorPage.html"
+}, {
+    "name": "wishListPage",
+    "location": "wishListPage.html"
+}, {
+    "name": "menuManagementPage",
+    "location": "menuManagementPage.html"
+}, {
+    "name": "touPage",
+    "location": "touPage.html"
+}, {
+    "name": "zzsettingsPage",
+    "location": "zzsettingsPage.html"
 }];
 
 function proprietorAnalyticsPage_js() {

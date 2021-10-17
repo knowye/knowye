@@ -1,0 +1,1209 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>
+            touPage
+        </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, viewport-fit=cover">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="msapplication-tap-highlight" content="no">
+        <!-- Enable all requests, inline styles, and eval() -->
+        <meta http-equiv="Content-Security-Policy" content="default-src * gap://ready data:; style-src 'self' 'unsafe-inline' *; script-src 'self' 'unsafe-inline' 'unsafe-eval' *">
+        <!-- Uncomment link and meta tags below to activate PWA icons and theme color -->
+        <!-- link rel="manifest" href="../manifest.json" crossOrigin="use-credentials" -->
+        <!-- meta name="theme-color" content="#ffffff" -->
+        <link href="../css/theme/jqm/jqm.css" rel="stylesheet" />
+        <link href="../css/theme/KnoWYE3/KnoWYE3.css" rel="stylesheet" />
+        <link href="../libs/jquerymobile/1.4.5/jquery.mobile.structure-1.4.5.css" rel="stylesheet"
+        />
+        <link type="text/css" rel="stylesheet" href="../css/logblock.css" />
+        <link type="text/css" rel="stylesheet" href="../css/menuPageBuilder.css" />
+        <link type="text/css" rel="stylesheet" href="../css/common.css" />
+        <link type="text/css" rel="stylesheet" href="../css/header_footer.css" />
+        <link type="text/css" rel="stylesheet" href="../css/button.css" />
+        <link type="text/css" rel="stylesheet" href="../css/label.css" />
+        <link type="text/css" rel="stylesheet" href="../css/FontRoboto.css.css" />
+        <!-- Uncomment this script to activate service worker -->
+        <!-- <script>
+        if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('../sw.js')
+        .then(() => console.log('service worker installed'))
+        .catch(err => console.error('Error', err));
+        }
+        </script>
+        -->
+        <script type="text/javascript" src="../libs/underscore/underscore.js">
+        </script>
+        <script type="text/javascript" src="../libs/store/json2.js">
+        </script>
+        <script type="text/javascript" src="../libs/jquery/jquery-2.1.1.js">
+        </script>
+        <script type="text/javascript" src="../libs/jquery/jquery-ajaxTransport.js">
+        </script>
+        <script type="text/javascript">
+            $(document).bind("mobileinit", function() {
+                if (navigator.userAgent.toLowerCase().indexOf("android") != -1) {
+                    $.mobile.defaultPageTransition = 'none';
+                    $.mobile.defaultDialogTransition = 'none';
+                } else if (navigator.userAgent.toLowerCase().indexOf("msie") != -1) {
+                    $.mobile.allowCrossDomainPages = true;
+                    $.support.cors = true;
+                } else if (navigator.userAgent.match(/(iPad|iPhone|iPod)/g)) {
+                    $.mobile.hashListeningEnabled = false;
+                }
+            });
+        </script>
+        <script type="text/javascript" src="../libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.js">
+        </script>
+        <script type="text/javascript" src="../libs/apperyio/mobilebase.js">
+        </script>
+        <script type="text/javascript" src="../libs/event/customEventHandler.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/sha1.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/oauth.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/contexts.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/jquery.xml2json.min.js">
+        </script>
+        <script type="text/javascript" src="../libs/ms_sdk_bundle/client-sdk.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/appery.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/component-manager.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/mapping-impl.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/entity-api.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/login.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/storage-api.js">
+        </script>
+        <script type="text/javascript" src="../get_target_platform.js">
+        </script>
+        <script type="text/javascript" src="../cordova.js">
+        </script>
+        <link href="../libs/apperyio/mobilebase.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="../js/services/model.js">
+        </script>
+        <script type="text/javascript" src="../js/menuHeadingManagePageBuilder.js">
+        </script>
+        <script type="text/javascript" src="../js/navigatePageManager.js">
+        </script>
+        <script type="text/javascript" src="../js/logblock.js">
+        </script>
+        <script type="text/javascript" src="../js/Facebook_Helper.js">
+        </script>
+        <script type="text/javascript" src="../js/menuHeadingManager.js">
+        </script>
+        <script type="text/javascript" src="../js/menuPageBuilder.js">
+        </script>
+        <script type="text/javascript" src="../js/jquery-ui.min.js">
+        </script>
+        <script type="text/javascript" src="../js/common.js">
+        </script>
+        <script type="text/javascript" src="../js/clipboard.js">
+        </script>
+        <script type="text/javascript" src="../js/FileUploadHelper.js">
+        </script>
+        <script type="text/javascript" src="../js/zzqrCodeScaner.js">
+        </script>
+        <script type="text/javascript" src="../js/menuHistoryManager.js">
+        </script>
+        <script type="text/javascript" src="../js/GoogleCharts.js">
+        </script>
+        <script type="text/javascript" src="../js/services/service.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/databaseUtils.js">
+        </script>
+        <script type="text/javascript" src="../js/secure.js">
+        </script>
+<script type="text/javascript" src="../js/EncodeDecodeJS.js">
+        </script>
+    </head>
+    
+    <body>
+        <script language="JavaScript" type="text/javascript">
+        </script>
+        <div data-role="page" style="min-height:480px;" dsid="touPage" id="touPage" class="type-interior"
+        data-theme="b">
+            <!-- touHeader -->
+            <div data-role="header" data-position="fixed" data-add-back-btn="true" data-back-btn-text="Back"
+            data-theme="b" name="touHeader" id="touPage_touHeader" class="touPage_touHeader">
+                <h1 dsid="touHeader">
+                    terms of use
+                </h1>
+            </div>
+            <!-- touContainer -->
+            <div data-role="content" id="touPage_touContainer" name="touContainer" class="ui-li-container  touPage_touContainer ui-content"
+            dsid="touContainer" data-theme="b">
+                <link href="touPage.css" rel="stylesheet" type="text/css" />
+                <script type="text/javascript" src="touPage.js">
+                </script>
+                <!-- tocHTML -->
+                <div data-role="appery_html" name="tocHTML" dsid="tocHTML" id="touPage_tocHTML"
+                class="labelOnDark  touPage_tocHTML">
+                    <p>
+                        <strong>
+                            KNOWYE&nbsp;
+                        </strong>
+                        <strong>
+                            TERMS OF USE AGREEMENT
+                        </strong>
+                    </p>
+                    <p>
+                        Welcome to Knowye, operated by Dyjit LLC, located at 600 Harbor Blvd, Weehawken,
+                        NJ 07086 (&ldquo;Knowye,&rdquo; &ldquo;we,&rdquo;&nbsp;or&nbsp;&ldquo;our&rdquo;).
+                    </p>
+                    <p>
+                        By using the website located at www.knowye.com, the related mobile website, and
+                        the mobile application called &ldquo;Knowye&rdquo; (the &ldquo;App&rdquo;) (collectively,
+                        the &ldquo;Websites&rdquo;), you agree to be bound by these Terms of Use (this&nbsp;&ldquo;Terms
+                        of Use&rdquo; or &ldquo;Agreement&rdquo;), whether or not you register as a member
+                        of Knowye (&ldquo;Member&rdquo;). If you wish to become a Member and/or make use
+                        of the service (the &ldquo;Service&rdquo;), please read this Agreement. If you object
+                        to anything in this Agreement or the Knowye Privacy Policy, do not use the Service.
+                    </p>
+                    <p>
+                        PLEASE READ THIS AGREEMENT CAREFULLY AS IT CONTAINS IMPORTANT INFORMATION REGARDING
+                        YOUR LEGAL RIGHTS, REMEDIES, AND OBLIGATIONS, INCLUDING VARIOUS LIMITATIONS AND EXCLUSIONS,
+                        AND A DISPUTE RESOLUTION CLAUSE THAT GOVERNS HOW DISPUTES WILL BE RESOLVED.
+                    </p>
+                    <p>
+                        <strong>
+                            1. Electronic Agreement.
+                        </strong>
+                    </p>
+                    <p>
+                        This Terms of Use is an electronic contract that sets out the legally binding terms
+                        of your use of the Service.&nbsp;This Terms of Use is subject to change by Knowye
+                        at any time, effective upon posting on the Knowye Websites. By accessing and/or using
+                        the Service or becoming a Member, you accept this Terms of Use and agree to the terms,
+                        conditions, and notices contained or referenced herein. Your continued use of the
+                        Service following Knowye&rsquo;sposting of revised terms of any section of the Terms
+                        of Use will constitute your express and binding acceptance of and consent to the
+                        revised Terms of Use.
+                    </p>
+                    <p>
+                        <strong>
+                            2.&nbsp;Access&nbsp;and Retention.
+                        </strong>
+                        &nbsp;
+                    </p>
+                    <p>
+                        In order to access and retain this electronic Agreement, you must have access to
+                        the World Wide Web, either directly or through devices that access web-based content
+                        and pay any service fees associated with such access. In addition, you must use all
+                        equipment necessary to make such connection to the World Wide Web, including a computer
+                        and modem or other access device. Please print a copy of this document for your records.
+                        To retain an electronic copy of this Agreement, you may save it into any word processing
+                        program.
+                    </p>
+                    <p>
+                        <strong>
+                            3. Eligibility.
+                        </strong>
+                        &nbsp;
+                    </p>
+                    <p>
+                        You must be at least thirteen (13) years of age. By using the Service, you represent
+                        and warrant that you have the right, authority and capacity to enter into this Agreement
+                        and to abide by all of the terms and conditions of this Agreement.
+                    </p>
+                    <p>
+                        The Service is also not available to any users who have been previously removed
+                        or suspended from the Service.
+                    </p>
+                    <p>
+                        By using the Service, you represent and warrant that you have the right, authority
+                        and capacity to enter into this Terms of Use and to abide by all of the terms and
+                        conditions of this Terms of Use.
+                    </p>
+                    <p>
+                        <strong>
+                            4. License for Websites
+                        </strong>
+                    </p>
+                    <p>
+                        Knowye grants you permission (which may be revoked at any time for any reason or
+                        no reason) to view the Sites and to download, email, share via social networking
+                        or print individual pages from the Sites in accordance with these Terms of Use and
+                        solely for your own personal, non-commercial use, provided you do not remove any
+                        trademark, copyright or other notice contained on such pages. No other use is permitted.
+                        You may not, for example, incorporate the information, content, or other material
+                        in any database, compilation, archive or cache.
+                    </p>
+                    <p>
+                        <strong>
+                            5. Account Security.&nbsp;
+                        </strong>
+                    </p>
+                    <p>
+                        You are responsible for maintaining the confidentiality of the username and password
+                        that you designate during the registration process, and you are fully responsible
+                        for all activities that occur under your username and password. This applies with
+                        equal force to your Gmail or Facebook account, if you choose to log in with either.
+                        Please read the Privacy Policy regarding your use of a Gmail or Facebook account
+                        to login.
+                    </p>
+                    <p>
+                        You agree to (a) immediately notify Knowye of any unauthorized use of your username
+                        or password or any other breach of security, and (b) ensure that you exit from your
+                        account at the end of each session. Knowye will not be liable for any loss or damage
+                        arising from your failure to comply with this provision. You should use particular
+                        caution when accessing your account from a public or shared computer so that others
+                        are not able to view or record your password or other personal information. If you
+                        share your computer with others, you may wish to consider disabling your auto-sign
+                        in feature if you have it linked to your Knowye account.
+                    </p>
+                    <p>
+                        <strong>
+                            6. Your Use of the Service
+                        </strong>
+                    </p>
+                    <p>
+                        You agree that your use of the Websites and the Service is subject to all applicable
+                        local, state and federal laws and regulations. You also agree:
+                    </p>
+                    <p>
+                        <strong>
+                            a.
+                        </strong>
+                        to comply with US law and local laws or rules regarding online conduct and acceptable
+                        material;
+                    </p>
+                    <p>
+                        <strong>
+                            b.
+                        </strong>
+                        not to use the Websites or the Service or submit content to the Sites if you are
+                        under the age of 13;
+                    </p>
+                    <p>
+                        <strong>
+                            c.
+                        </strong>
+                        not to use the Websites or the Service to purchase alcohol unless you and the alcohol
+                        recipient are 21 or older and present a valid photo identification(s) verifying your
+                        age at the time of alcohol delivery;
+                    </p>
+                    <p>
+                        <strong>
+                            d.
+                        </strong>
+                        not to access the Websites or Service using a third-party's account/registration
+                        without the express consent of the account holder;
+                    </p>
+                    <p>
+                        <strong>
+                            e.
+                        </strong>
+                        not to use the Websites for illegal purposes;
+                    </p>
+                    <p>
+                        <strong>
+                            f.
+                        </strong>
+                        not to commit any acts of infringement on the Websites or with respect to content
+                        on the Websites;
+                    </p>
+                    <p>
+                        <strong>
+                            g.
+                        </strong>
+                        not to use the Websites to engage in commercial activities apart from sanctioned
+                        use of Knowye services;
+                    </p>
+                    <p>
+                        <strong>
+                            h.
+                        </strong>
+                        not to copy any content, including, but not limited to restaurant menu content and
+                        third-party reviews, for republication in print or online;
+                    </p>
+                    <p>
+                        <strong>
+                            i.
+                        </strong>
+                        not to create restaurant reviews or blog entries for or with any commercial or other
+                        purpose or intent that does not in good faith comport with the purpose or spirit
+                        of the Websites;
+                    </p>
+                    <p>
+                        <strong>
+                            j.
+                        </strong>
+                        not to attempt to gain unauthorized access to other computer systems from or through
+                        the Websites;
+                    </p>
+                    <p>
+                        <strong>
+                            k.
+                        </strong>
+                        not to interfere with another person's use and enjoyment of the Websites or another
+                        entity's use and enjoyment of the Websites;
+                    </p>
+                    <p>
+                        <strong>
+                            l.
+                        </strong>
+                        not to upload or transmit viruses or other harmful, disruptive or destructive files;
+                        and/or
+                    </p>
+                    <p>
+                        <strong>
+                            m
+                        </strong>
+                        . not to disrupt, interfere with, or otherwise harm or violate the security of the
+                        Websites, or any services, system resources, accounts, passwords, servers or networks
+                        connected to or accessible through the Websites or affiliated or linked sites (including
+                        those of our restaurant partners).
+                    </p>
+                    <p class="body">
+                        <strong>
+                            n.
+                        </strong>
+                        &nbsp;You must not use the Websites to upload, post,&nbsp;store, transmit, display,
+                        copy, distribute, promote, make available or otherwise communicate to the public:
+                    </p>
+                    <p style="margin-left: 30px;">
+                        <strong>
+                            i.
+                        </strong>
+                        &nbsp;&nbsp;&nbsp;&nbsp;any&nbsp;content that is offensive, abusive, libelous, defamatory,
+                        obscene, racist, sexually explicit, ethnically or culturally offensive, indecent,
+                        that promotes violence, terrorism, or illegal acts, incites hatred on grounds of
+                        race, gender, religion or sexual orientation, or is otherwise objectionable in Knowye&rsquo;ssole
+                        and reasonable discretion;
+                    </p>
+                    <p style="margin-left: 30px;">
+                        <strong>
+                            ii.
+                        </strong>
+                        &nbsp;&nbsp;&nbsp;any&nbsp;information, content or other material that violates,
+                        plagiarizes, misappropriates or infringes the rights of third parties including,
+                        without limitation, copyright, trademark rights, rights of privacy or publicity,
+                        confidential information or any other right; or
+                    </p>
+                    <p style="margin-left: 30px;">
+                        <strong>
+                            iii.
+                        </strong>
+                        &nbsp;&nbsp;any&nbsp;content that violates, breaches or is contrary to any law,
+                        rule, regulation, court order or is otherwise is illegal or unlawful in Knowye&rsquo;ssole
+                        and reasonable opinion;
+                    </p>
+                    <p style="margin-left: 30px;">
+                        <strong>
+                            iv.
+                        </strong>
+                        &nbsp;&nbsp;any&nbsp;material of any kind that contains any virus, Trojan horse,
+                        spyware, adware, malware, bot, time bomb, worm, or other harmful or malicious component,
+                        which will or might overburden, impair or disrupt the Service or servers or networks
+                        forming part of, or connected to, the Service, or which does or might restrict or
+                        inhibit any other user's use and enjoyment of the Service; or
+                    </p>
+                    <p style="margin-left: 30px;">
+                        <strong>
+                            v.
+                        </strong>
+                        &nbsp;&nbsp;&nbsp;any&nbsp;unsolicited or unauthorized advertising, promotional
+                        messages, spam or any other form of solicitation;
+                    </p>
+                    <p style="margin-left: 30px;">
+                        <strong>
+                            vi.&nbsp;
+                        </strong>
+                        any content that advertises, disparages, promotes or offers to trade any goods or
+                        services in any manner that does not comport with the purpose or spirit of the Service,
+                        including, but not limited to, negative reviews posted by competing restaurants or
+                        allegations of health code violations;any content that is intended primarily to promote
+                        a cause or movement, whether political, religious or other;
+                    </p>
+                    <p style="margin-left: 30px;">
+                        <strong>
+                            vii.
+                        </strong>
+                        any content that discloses any personal identifying information relating to or images
+                        of a minor without consent of a parent, guardian or educational supervisor;
+                    </p>
+                    <p style="margin-left: 30px;">
+                        <strong>
+                            viii.
+                        </strong>
+                        Any content that harms or is inappropriate for minors to view;
+                    </p>
+                    <p style="margin-left: 30px;">
+                        <strong>
+                            ix.
+                        </strong>
+                        &nbsp;&nbsp; Any content that links to any commercial or other website; and/or
+                    </p>
+                    <p style="margin-left: 30px;">
+                        <strong>
+                            x.
+                        </strong>
+                        &nbsp;&nbsp; Any content that is not otherwise in compliance with these Terms of
+                        Use.
+                    </p>
+                    <p class="bodyCxSpFirst">
+                        <strong>
+                            o.
+                        </strong>
+                        &nbsp;You must not commit or engage in, or encourage, induce, solicit or promote,
+                        any conduct that would constitute a criminal offense, give rise to civil liability
+                        or otherwise violate any law or regulation.
+                    </p>
+                    <p class="bodyCxSpMiddle">
+                        <strong>
+                            p.
+                        </strong>
+                        &nbsp;You must not rent, sell or lease access to the Service, or any content on
+                        the Websites.
+                    </p>
+                    <p class="bodyCxSpMiddle">
+                        <strong>
+                            q.
+                        </strong>
+                        &nbsp;You must not sell or transfer, or offer to sell or transfer, any Knowye account
+                        to any third party without the prior written approval of Knowye.
+                    </p>
+                    <p class="bodyCxSpMiddle">
+                        <strong>
+                            r.
+                        </strong>
+                        &nbsp;You must not collect or attempt to collect personal data, or any other kind
+                        of information about other users, including without limitation, through spidering
+                        or any form of scraping.
+                    </p>
+                    <p class="bodyCxSpMiddle">
+                        <strong>
+                            s.
+                        </strong>
+                        &nbsp;You must not violate, circumvent or attempt to violate or circumvent any data
+                        security measures employed by Knowye; access or attempt to access data or materials
+                        which are not intended for your use; log into, or attempt to log into, a server or
+                        account which you are not authorized to access; attempt to scan or test the vulnerability
+                        of Knowye&rsquo;sservers, system or network or attempt to breach Knowye&rsquo;sdata
+                        security or authentication procedures; attempt to interfere with the Websites or
+                        the Services by any means including, without limitation, hacking Knowye&rsquo;sservers
+                        or systems, submitting a virus, overloading, mail-bombing or crashing. Without limitation
+                        to any other rights or remedies of Knowye under these Terms of Use, Knowye reserves
+                        the right to investigate any situation that appears to involve any of the above,
+                        and may report such matters to, and cooperate with, appropriate law enforcement authorities
+                        in prosecuting any users who have participated in any such violations.
+                    </p>
+                    <p class="bodyCxSpMiddle">
+                        You agree to comply with the above conditions and acknowledge and agree that Knowye
+                        has the right, in its sole discretion, to terminate your account or take such other
+                        action as we see fit if you breach any of the above conditions or any of the other
+                        terms of these Terms of Use. This may include taking court action and/or reporting
+                        offending users to the relevant authorities.
+                    </p>
+                    <p>
+                        <strong>
+                            7. Harm from Commercial Use.
+                        </strong>
+                    </p>
+                    <p>
+                        You agree that the consequences of commercial use or re-publication of content or
+                        information from the Sites may be so serious and incalculable that monetary compensation
+                        may not be a sufficient or appropriate remedy and that Knowye will be entitled to
+                        temporary and permanent injunctive relief to prohibit such use.
+                    </p>
+                    <p class="bodyCxSpFirst">
+                        <strong>
+                            8. You Bear
+                        </strong>
+                        <strong>
+                            Risk of Upload.
+                        </strong>
+                    </p>
+                    <p class="bodyCxSpMiddle">
+                        Knowye uses reasonable security measures in order to attempt to protect any content
+                        or information that you upload, including without limitation any information, photographs
+                        or other images, or intellectual property (collectively, &ldquo;Your Content&rdquo;).
+                        However, Knowye cannot guarantee that there will be no unauthorized copying or distribution
+                        of Your Content nor will Knowye be liable for any copying or usage of Your Content
+                        not authorized by Knowye. You hereby release and forever waive any claims you may
+                        have against Knowye for any such unauthorized copying or usage of Your Content, under
+                        any theory of liability. THE SECURITY MEASURES TO PROTECT YOUR CONTENT USED BY KNOWYE
+                        HEREIN ARE PROVIDED AND USED &ldquo;AS-IS&rdquo; AND WITH NO WARRANTIES OR ASSURANCES
+                        THAT SUCH SECURITY MEASURES WILL WITHSTAND ATTEMPTS TO EVADE SECURITY MECHANISMS
+                        OR THAT THERE WILL BE NO CRACKS, DISABLEMENTS OR OTHER CIRCUMVENTION OF SUCH SECURITY
+                        MEASURES.
+                    </p>
+                    <p class="bodyCxSpLast">
+                        <strong>
+                            9. Modifications to Service.
+                        </strong>
+                        &nbsp;
+                    </p>
+                    <p>
+                        Knowye reserves the right at any time to modify or discontinue, temporarily or permanently,
+                        the Service (or any part thereof) with or without notice. You agree that Knowye shall
+                        not be liable to you or to any third party for any modification, suspension or discontinuance
+                        of the Service.
+                    </p>
+                    <p>
+                        <strong>
+                            10. Blocking of IP Addresses.&nbsp;
+                        </strong>
+                    </p>
+                    <p>
+                        In order to protect the integrity of the Services, Knowye reserves the right at
+                        any time in its sole discretion to block Members from certain IP addresses from accessing
+                        the Websites and/or Service.
+                    </p>
+                    <p class="bodyCxSpFirst">
+                        <strong>
+                            11. Term.
+                        </strong>
+                    </p>
+                    <p class="bodyCxSpMiddle">
+                        This Terms of Use will remain in full force and effect while you use the Websites
+                        and/or Service. If you resign or cancel your membership to Knowye, to help Knowye
+                        analyze and improve the Service, you may be asked to provide a reason for your resignation/cancellation.
+                    </p>
+                    <p class="bodyCxSpMiddle">
+                        Knowye may terminate your membership for any reason by sending notice to you at
+                        the email address you provide in your application for membership, or such other email
+                        address as you may later provide to Knowye. All decisions regarding the termination
+                        of accounts shall be made in the sole discretion of Knowye. Knowye is not required
+                        to provide you notice prior to terminating your membership. Knowye is not required,
+                        and may be prohibited, from disclosing a reason for the termination of your account.
+                        Even after your membership is terminated, this Terms of Use will remain in effect.
+                        All terms that by their nature may survive termination of this Terms of Use shall
+                        be deemed to survive such termination.
+                    </p>
+                    <h4>
+                        12. Third Party Content.
+                    </h4>
+                    <h4>
+                        Knowye may provide third party content on the Websites and/or Service and may provide
+                        links to webpages and content of third parties (collectively, the &ldquo;
+                        <strong style="font-size: 1em;">
+                            Third-Party Content
+                        </strong>
+                        &rdquo;) as a service to those interested in this information. Knowye does not control,
+                        endorse or adopt any Third-Party Content and makes no representation or warranties
+                        of any kind regarding the Third-Party Content, including without limitation regarding
+                        its accuracy or completeness. Please be aware that Knowye does not create Third-Party
+                        Content, nor does Knowye update or monitor it. Knowye is therefore not responsible
+                        for any Third-Party Content on the Service. Parties use such Third-Party Content
+                        at their own risk.
+                    </h4>
+                    <p>
+                        The Service may include links or references to other websites or services solely
+                        as a convenience to Knowye users (collectively, the &ldquo;
+                        <strong>
+                            Reference Sites
+                        </strong>
+                        &rdquo;). Knowye does not endorse any Reference Sites or the information, materials,
+                        products, or services contained on or accessible through Reference Sites. In addition,
+                        your correspondence or business dealings with, or participation in promotions of,
+                        advertisers found on or through the Service are solely between you and the relevant
+                        advertiser. Access and use of Reference Sites, including the information, materials,
+                        products, and services on or available through Reference Sites is solely at your
+                        own risk.
+                    </p>
+                    <p>
+                        <strong>
+                            13. Intellectual Property.
+                        </strong>
+                    </p>
+                    <p>
+                        Knowye, the Knowye logos and any other product or service name or slogan contained
+                        in the Service are trademarks of Knowye or our suppliers or licensors and may not
+                        be copied, imitated or used, in whole or in part, without the prior written permission
+                        of Knowye or the applicable trademark holder. Any authorized use of these trademarks
+                        must be in accordance with any guidelines that Knowye may provide you from time to
+                        time.
+                    </p>
+                    <p>
+                        Knowyeretains all proprietary rights in the Websites and the Service, except where
+                        otherwise noted. The Websites contain the copyrighted material, trademarks, and other
+                        proprietary information of Knowye, and its licensors. Except where we have given
+                        you express written permission, you may not copy, modify, publish, transmit, distribute,
+                        perform, display, or sell any such proprietary information. All content on Knowye
+                        is proprietary. Except where otherwise specified in this Agreement, all content is
+                        copyrighted material of Knowye and for Knowye Members'&nbsp;use only. Distribution
+                        of content to others is strictly prohibited. You agree that Knowye would be irreparably
+                        harmed by any violation or threatened violation of this section and that, therefore,
+                        Knowye shall be entitled to an injunction prohibiting you from any violation or threatened
+                        violation of this section, without posting bond, in addition to any other right or
+                        remedy it may have.
+                    </p>
+                    <p>
+                        We may provide links to third-party websites, and&nbsp;some of the content appearing
+                        on Knowye may be supplied by third parties. Knowye has no responsibility for these
+                        third-party websites&nbsp;nor&nbsp;for their content, which is subject to and governed
+                        by the terms of use and/or privacy policies, if any, of the applicable third-party
+                        content providers.
+                    </p>
+                    <p>
+                        You may not use any metatags or any other hidden text utilizing &ldquo;Knowye&rdquo;
+                        or any other name, trademark or product or service name of Knowye without our prior
+                        written permission. In addition, the look and feel of the Knowye Service, including
+                        all page headers, custom graphics, button icons and scripts, is the service mark,
+                        trademark and/or trade dress of Knowye and may not be copied, imitated or used, in
+                        whole or in part, without our prior written permission. All other trademarks, registered
+                        trademarks, product names and company names or logos mentioned in the Service are
+                        the property of their respective owners. Reference to any products, services, processes
+                        or other information, by trade name, trademark, manufacturer, supplier or otherwise
+                        does not constitute or imply endorsement, sponsorship or recommendation thereof by
+                        us or any other affiliation.
+                    </p>
+                    <p>
+                        The Service is owned and operated by Dyjit. Unless otherwise indicated, all content
+                        and other materials on the Service, including, without limitation, Knowye&rsquo;slogos,
+                        the visual interfaces, graphics, design, compilation, information, software, computer
+                        code (including source code or object code), services, text, pictures, information,
+                        data, sound files, other files and the selection and arrangement thereof (collectively,
+                        the &ldquo;Materials&rdquo;) are protected by United States copyright, trade dress,
+                        patent, and trademark laws, international conventions, and all other relevant intellectual
+                        property and proprietary rights, and applicable laws (including in your country of
+                        residence).
+                    </p>
+                    <p>
+                        <strong>
+                            14. Your Representations and Warranties.
+                        </strong>
+                    </p>
+                    <p>
+                        Each time you upload content to the Service, you represent and warrant that you
+                        have the right to upload such content, which means:
+                    </p>
+                    <p>
+                        a. you are the author of such content, or
+                    </p>
+                    <p>
+                        b. the content is not protected by copyright law, or
+                    </p>
+                    <p>
+                        c. you have express permission from the copyright owner to use the content in connection
+                        with the Service; and
+                    </p>
+                    <p>
+                        d. you have the right to grant Knowye the license set out in these Terms of Use;
+                    </p>
+                    <p>
+                        e. for restaurant reviews, you have had first-hand experience with the subject restaurant;
+                        and
+                    </p>
+                    <p>
+                        f. your use of the Service does not violate these Terms of Use.
+                    </p>
+                    <p>
+                        <strong>
+                            15. Ownership of Your Content; Licenses.
+                        </strong>
+                    </p>
+                    <p>
+                        With regard to Your Content, you grant Knowye, its affiliates, and related entities
+                        a royalty-free, perpetual, irrevocable, non-exclusive right and license to use, copy,
+                        modify, display, archive, store, publish, transmit, perform, distribute, reproduce
+                        and create derivative works from all Submissions you provide to Knowye in any form,
+                        media, software or technology of any kind now existing or developed in the future.
+                        Without limiting the generality of the previous sentence, you authorize Knowye to
+                        include the Submissions you provide in a searchable format that may be accessed by
+                        users of the Sites. You also grant Knowye and its and related entities the right
+                        to use any Personally Identifiable Information (as that term is defined in Knowye&rsquo;s
+                        Privacy Policy) included with any Submission in connection with the use, reproduction
+                        or distribution of such Submission. You also grant Knowye the right to use the Submission
+                        and any facts, ideas, concepts, know-how or techniques ("Information") contained
+                        in any Submission or communication you send to Knowye for any purpose whatsoever,
+                        including but not limited to, developing, manufacturing, promoting and/or marketing
+                        products and services. You grant all rights described in this paragraph in consideration
+                        of your use of the Sites, without compensation of any sort to you. Knowye does not
+                        claim ownership of Submissions.
+                    </p>
+                    <p>
+                        You acknowledge and agree that &ldquo;Your Content&rdquo; does not include Reviews,
+                        QR Codes, or Favorites Lists (as those terms are defined in Section 16).
+                    </p>
+                    <p>
+                        <strong>
+                            16. Reviews; QR Codes; Favorites List.
+                        </strong>
+                    </p>
+                    <p>
+                        You may post reviews of establishments on the Websites (the &ldquo;Reviews&rdquo;).
+                        All such Reviews must be true and not misleading. Knowye reserves the right to remove
+                        any Review that Knowye determines, in its sole discretion, is false, misleading,
+                        fraudulent, or otherwise illegitimate.
+                    </p>
+                    <p>
+                        You may scan QR codes available on the Websites (the &ldquo;QR Codes&rdquo; to access
+                        information about establishments, including without limitation menus and prices.
+                    </p>
+                    <p>
+                        You may compile and edit lists of your favorite establishments and/or menu items
+                        (your &ldquo;Favorites List&rdquo;).
+                    </p>
+                    <p>
+                        You acknowledge and agree that all Reviews, Favorite Lists, and information relating
+                        to QR Codes (including without limitation your QR Code scanning history), is owned
+                        exclusively by Knowye and may used, and/or shared with third parties, for any reason,
+                        in Knowye&rsquo;s sole discretion.
+                    </p>
+                    <p>
+                        <strong>
+                            1
+                        </strong>
+                        <strong>
+                            7. Responsibility for Material.
+                        </strong>
+                    </p>
+                    <p>
+                        Content uploaded to the Service by users (the &ldquo;User Content&rdquo;) is not
+                        endorsed by Knowye, and does not represent the views of Knowye or its parents, subsidiaries
+                        and affiliates, agents, officers or directors. You acknowledge and agree that Knowye
+                        does not control all User Content, and disclaims any responsibility for such User
+                        Content. Knowye specifically disclaims any duty, obligation, or responsibility, to
+                        review, screen, refuse to post, remove, or edit any User Content. In addition, Knowye
+                        does not represent or warrant that any other content or information accessible via
+                        the Service is accurate, complete, reliable, current or error-free including the
+                        menus, pricing, hours of operation or parking accessibility available from its partner
+                        restaurants. Price, description, menu content, product/service availability, parking
+                        accessibility and restaurant information are subject to change without notice. Knowye
+                        assumes no responsibility or liability for any errors or omissions in the content
+                        of the Websites.
+                    </p>
+                    <p class="bodyCxSpFirst">
+                        <strong>
+                            18. Copyright Policy.
+                        </strong>
+                        &nbsp;
+                    </p>
+                    <p class="bodyCxSpMiddle">
+                        Knowye reserves the right (but disclaims any duty, obligation or responsibility)
+                        to review, screen, refuse to post, remove in their entirety, or edit (at any time
+                        and without prior notice) any User Content that Knowye believes, in its absolute
+                        and sole discretion, may violate this Terms of Use. You may contact Knowye at
+                        <a href="mailto:contact@dyjet.com">contact@Dyjit.com</a>
+                        to request removal of any User Content. However, Knowye disclaims any duty, obligation
+                        or responsibility to comply with such request except as specifically outlined in
+                        this paragraph. Knowye also reserves the right (but disclaims any duty, obligation,
+                        or responsibility) to refuse to post, remove in their entirety, or edit (at any time
+                        and without prior notice) any User Content on the Service for any reason or no reason
+                        whatsoever, in its absolute and sole discretion.
+                    </p>
+                    <p class="bodyCxSpMiddle">
+                        Knowye prohibits the submission or posting of any information that infringes or
+                        violates the copyright rights and/or other intellectual property rights (including
+                        rights of privacy and publicity) of any person or entity.
+                    </p>
+                    <p class="bodyCxSpLast">
+                        Pursuant to Title 17, United States Code, Section 512(c)(2) or for any other claim
+                        of copyright infringement, you hereby agree that notifications of claimed copyright
+                        infringement be sent by certified mail to 600 Harbor Blvd, Weehawken, NJ 07086.
+                    </p>
+                    <p class="bodyCxSpFirst">
+                        When contacting us, please make sure that you include the following information:
+                    </p>
+                    <p class="bodyCxSpLast">
+                        <strong>
+                            a.
+                        </strong>
+                        a&nbsp;statement that you have identified content on Knowye that infringes your
+                        copyright or the copyright of a third party on whose behalf you are entitled to act;
+                    </p>
+                    <p>
+                        <strong>
+                            b.
+                        </strong>
+                        a&nbsp;description of the copyrighted work(s) that you claim have been infringed;
+                    </p>
+                    <p>
+                        <strong>
+                            c.
+                        </strong>
+                        a&nbsp;description of the content that you claim is infringing and the KnowyeURL(s)
+                        where such content can be located;
+                    </p>
+                    <p>
+                        <strong>
+                            d.
+                        </strong>
+                        your&nbsp;full name, address and telephone number, a valid email address on which
+                        you can be contacted, and your Knowye username if you have one;
+                    </p>
+                    <p>
+                        <strong>
+                            e.
+                        </strong>
+                        a&nbsp;statement by you that you have a good-faith belief that the disputed use
+                        of the material is not authorized by the copyright owner, its agent, or the law;
+                        and
+                    </p>
+                    <p>
+                        <strong>
+                            f.
+                        </strong>
+                        a&nbsp;statement by you that the information in your notice is accurate and that
+                        you are authorized to act on behalf of the owner of the exclusive right that is allegedly
+                        infringed.
+                    </p>
+                    <p class="bodyCxSpFirst">
+                        In addition, if you wish for your notice to be considered as a notice pursuant to
+                        the United States Digital Millennium Copyright Act 17 U.S.C.&nbsp;Section 512(c),
+                        please also include the following:
+                    </p>
+                    <p>
+                        <strong>
+                            g.
+                        </strong>
+                        with&nbsp;respect to your statement that you are authorized to act on behalf of
+                        the owner of the exclusive right that is allegedly infringed, confirmation that such
+                        statement is made under penalty of perjury; and
+                    </p>
+                    <p>
+                        <strong>
+                            h.
+                        </strong>
+                        your&nbsp;electronic or physical signature (which may be a scanned copy).
+                    </p>
+                    <p>
+                        Knowye will process any notice of alleged&nbsp;infringement which&nbsp;it receives
+                        and will take appropriate action as required by the Digital Millennium Copyright
+                        Act (DMCA) 17 U.S.C. 512(c)(3) or other applicable copyright law. U.S. law provides
+                        significant penalties for submitting such a statement falsely. Under appropriate
+                        circumstances, persons who repeatedly submit infringing or unlawful material will
+                        be prohibited from posting further submissions.
+                    </p>
+                    <p>
+                        The foregoing process applies to copyright only. If you discover any content that
+                        you believe to be in violation of your trademark rights, please report this to us
+                        by mail or email at 600 Harbor Blvd, Weehawken, NJ 07086 or contact@Dyjit.com. In
+                        all other cases, if you discover content that infringes any or violates any of your
+                        other rights, which you believe is defamatory, pornographic, obscene, racist or otherwise
+                        liable to cause widespread offence, or which constitutes impersonation, harassment,
+                        spam or otherwise violates these Terms of Use or applicable law, please report this
+                        to us at&nbsp;600 Harbor Blvd, Weehawken, NJ 07086 or contact@Dyjit.com.
+                    </p>
+                    <p>
+                        <strong>
+                            19. Terms for the iOS App.
+                        </strong>
+                    </p>
+                    <p>
+                        You acknowledge and agree that this Terms of Use is between you and Knowye only,
+                        and that Apple is not a party to these Terms of Use. Knowye, not Apple, is responsible
+                        for the App and its contents.&nbsp;
+                    </p>
+                    <p>
+                        You must not use the iOS App except on an Apple-branded product that is running
+                        iOS. Any use of the App by you must comply with the relevant terms of use for the
+                        Apple Source from which you obtained it (including, without limitation, the Usage
+                        Rules set forth in the Apple App Store Terms of Service). You acknowledge and agree
+                        that Apple does not have any obligation to furnish you with maintenance and/or support
+                        services with respect to the App.
+                    </p>
+                    <p>
+                        You further acknowledge and agree that Apple is not responsible for addressing or
+                        resolving any claims by you or a third party relating to your use and/or possession
+                        of the App, including, but not limited to, warranty or liability claims, claims that
+                        the App fails to conform to a legal or regulatory requirement, consumer protection
+                        or similar claims, or claims that the App infringes the intellectual property rights
+                        of a third party (including, without limitation, trademark, copyright, and/or patent
+                        rights).
+                    </p>
+                    <p>
+                        Any claims, losses, liabilities, damages costs or expenses relating to a failure
+                        to conform to any warranty shall be Knowye&rsquo;sresponsibility, to the extent allowable
+                        by these Terms of Use. It is important that you read the entire Terms of Use, as
+                        other sections of these Terms of Use limit our liability.
+                    </p>
+                    <p>
+                        Apple and its subsidiaries are third-party beneficiaries of these Terms of Use.
+                        By accepting these Terms of Use, you acknowledge and agree that Apple shall have
+                        the right (and will be deemed to have accepted that right) to enforce the Terms of
+                        Use against you as a third-party beneficiary. Apple is the sole third party beneficiary
+                        and&nbsp;there are no other third-party beneficiaries of the Terms.
+                    </p>
+                    <p>
+                        <strong>
+                            20. Repeat Infringer Policy.
+                        </strong>
+                    </p>
+                    <p>
+                        In accordance with the DMCA and other applicable laws around the world, Knowye has
+                        adopted a policy that it will promptly terminate without notice any user's access
+                        to the Service if that user is determined by Knowye to be a &ldquo;repeat infringer.&rdquo;
+                        A repeat infringer includes, without limitation a user who has been notified by Knowye
+                        of infringing activity violations more than twice and/or who has had any user-submitted
+                        content removed from the Service more than twice. Knowye may also at our sole discretion
+                        limit access to the Service and/or terminate the accounts of any users who infringe
+                        any intellectual property rights of others, whether or not there is any repeat infringement.
+                    </p>
+                    <p>
+                        In addition, Knowye accommodates and does not interfere with standard technical
+                        measures used by intellectual property rights owners to protect their materials.
+                    </p>
+                    <p class="bodyCxSpFirst">
+                        Please note that we do not offer refunds to Members whose accounts are terminated
+                        as a result of repeated infringement of these Terms of Use.
+                    </p>
+                    <p>
+                        <strong>
+                            21. Limitation of Liability.&nbsp;
+                        </strong>
+                    </p>
+                    <p>
+                        In no event shall Knowye be liable for any damages whatsoever, whether direct, indirect,
+                        general, special, compensatory, consequential, and/or incidental, arising out of
+                        or relating to the Websites or Service, or use thereof. Nothing contained in the
+                        Websites or Service or in any written or oral communications from Knowye or its employees
+                        or agents shall be construed to make any promise, covenant, warranty, or guaranty,
+                        all of which are explicitly disclaimed hereby, contrary to the statements and disclaimers
+                        contained in this paragraph.
+                    </p>
+                    <p>
+                        The content and functionality on the Websites and Service, along with the services
+                        provided by employees of the Websites and Service, are offered&nbsp;&ldquo;as is&rdquo;&nbsp;without
+                        warranty of any kind, either express or implied, including, without limitation, implied
+                        warranties of merchantability, fitness for a particular purpose, title and non-infringement.
+                        Knowye makes no warranties, express or implied, as to the ownership, accuracy, completeness
+                        or adequacy of the Websites&rsquo; content or that the functionality of the Websites
+                        or Service will be uninterrupted or error-free or free from virus or third party
+                        attack. You hereby acknowledge that your use of the Websites and the Service is at
+                        your sole risk. UNDER NO CIRCUMSTANCES SHALL KNOWYE, ITS OFFICERS, OWNERS, EMPLOYEES
+                        OR AGENTS AND THEIR RESPECTIVE HEIRS, SUCCESSORS AND ASSIGNS BE LIABLE FOR ANY DAMAGES,
+                        INCLUDING DIRECT, INCIDENTAL, PUNITIVE, SPECIAL, CONSEQUENTIAL OR EXEMPLARY DAMAGES
+                        THAT DIRECTLY OR INDIRECTLY RESULT FROM USE OF, OR INABILITY TO USE, THE WEBSITES
+                        OR SERVICE OR THE INFORMATION CONTAINED THEREIN, INCLUDING WITHOUT LIMITATION FOR
+                        VIRUSES ALLEGED TO HAVE BEEN OBTAINED FROM THE WEBSITES OR SERVICE, EVEN IF KNOWYE
+                        HAS BEEN NOTIFIED OF THE POSSIBILITY OF SUCH DAMAGES OR LOSSES AND REGARDLESS OF
+                        THE THEORY OF LIABILITY.
+                    </p>
+                    <p>
+                        TO THE GREATEST EXTENT PERMITTED BY LAW, YOU AGREE THAT IN NO EVENT WILL KNOWYE
+                        HAVE ANY LIABILITY, CONTINGENT OR OTHERWISE, FOR ANY INDIRECT, SPECIAL, INCIDENTAL,
+                        CONSEQUENTIAL, OR EXEMPLARY DAMAGES IN ANY WAY ARISING OUT OF OR RELATING TO THE
+                        AGREEMENT, WEBSITES OR THE SERVICE, INCLUDING, BUT NOT LIMITED TO PHYSICAL INJURY,
+                        DEATH, PROPERTY DAMAGE, LOST PROFITS, LOST DATA, LOSS OF GOODWILL, COPYRIGHT INFRINGEMENT,
+                        WORK STOPPAGE, EQUIPMENT FAILURE OR MALFUNCTION, PERSONAL INJURY, PROPERTY DAMAGE,
+                        OR ANY OTHER DAMAGES OR LOSSES, EVEN IF KNOWYE HAS BEEN ADVISED OF THE POSSIBILITY
+                        THEREOF, AND REGARDLESS OF THE LEGAL OR EQUITABLE THEORY (CONTRACT, TORT, STATUTE,
+                        INDEMNITY OR OTHERWISE) UPON WHICH SUCH LIABILITY IS BASED.
+                    </p>
+                    <p>
+                        In the event that any of the foregoing limitations are deemed to be unenforceable,
+                        to the greatest extent permitted by law, you agree that the entire aggregate liability
+                        of Knowye and sole remedy available to any Member in any case in any way arising
+                        out of or relating to the Agreement, Websites or the Service shall be limited to
+                        monetary damages that in the aggregate may not exceed the greater of $500.00 or the
+                        sum of any amount paid by the Member or user to Knowye during the six months prior
+                        to notice to Knowye of the dispute for which the remedy is sought.
+                    </p>
+                    <p>
+                        <strong>
+                            22. Indemnity by You.
+                        </strong>
+                        &nbsp;
+                    </p>
+                    <p>
+                        You agree to indemnify and hold Knowye, its subsidiaries, affiliates, officers,
+                        agents, and other partners and employees, harmless from any loss, liability, claim,
+                        or demand, including reasonable attorneys'&nbsp;fees, arising out of or related to:
+                    </p>
+                    <p>
+                        <strong>
+                            a.&nbsp;
+                        </strong>
+                        your&nbsp;use of the Service and/or Websites in violation of this Terms of Use and/or
+                        arising from a breach of this Terms of Use including without limitation your representations
+                        and warranties set forth above;
+                    </p>
+                    <p>
+                        <strong>
+                            b.
+                        </strong>
+                        any third party claim, including without limitation for physical injury, property
+                        damage, or death, arising from your use of the Services;
+                    </p>
+                    <p>
+                        <strong>
+                            c.
+                        </strong>
+                        &nbsp;any&nbsp;third party claim of infringement of copyright or other intellectual
+                        property rights or invasion of privacy arising from the hosting of Your Content on
+                        the Websites, and/or your making available thereof to other users of the Websites,
+                        and/or the actual use of Your Content by other users of the Websites or related services
+                        in accordance with these Terms of Use and the parameters set by you with respect
+                        to the distribution and sharing of Your Content;
+                    </p>
+                    <p>
+                        <strong>
+                            d.
+                        </strong>
+                        &nbsp;any&nbsp;activity related to your account, be it by you or by any other person
+                        accessing your account with or without your consent unless such activity was caused
+                        by the act or default of Knowye.
+                    </p>
+                    <p>
+                        <strong>
+                            23. Attorney Fees.
+                        </strong>
+                        &nbsp;
+                    </p>
+                    <p>
+                        In the event that Knowye is successful in whole or in part in any action or proceeding
+                        related to or arising from this Terms of Use, you shall be responsible for Knowye&rsquo;s
+                        attorneys'&nbsp;fees and costs.
+                    </p>
+                    <p>
+                        <strong>
+                            24. Parental
+                        </strong>
+                        <strong>
+                            &nbsp;
+                        </strong>
+                        <strong>
+                            or Guardian Permission.
+                        </strong>
+                    </p>
+                    <p>
+                        Some of the Content on the Websites may not be appropriate for children. CHILDREN
+                        UNDER THE AGE OF 13 ARE NOT PERMITTED TO USE THE WEBSITES AND/OR SERVICE UNLESS A
+                        SUPERVISING PARENT OR GUARDIAN IS PRESENT. INDIVIDUALS UNDER THE ACCESS THE SERVICE
+                        OR GIVE KNOWYE THEIR EMAIL ADDRESS OR ANY OTHER PERSONALLY IDENTIFIABLE INFORMATION.
+                    </p>
+                    <p>
+                        <strong>
+                            25. Privacy.
+                        </strong>
+                        &nbsp;
+                    </p>
+                    <p>
+                        Use of the Websites and/or the Service is also governed by our Privacy Policy, located
+                        at [PRIVACY POLICY URL].
+                    </p>
+                    <p>
+                        <strong>
+                            26. Jurisdiction and Choice of Law; Dispute Resolution.&nbsp;
+                        </strong>
+                    </p>
+                    <p>
+                        If there is any dispute arising out of the Websites and/or the Service, by using
+                        the Websites and/or Service, you expressly agree that any such dispute shall be governed
+                        by the laws of the State of New Jersey, without regard to its conflict of law provisions,
+                        and you expressly agree and consent to the exclusive jurisdiction and venue of the
+                        state and federal courts of the State of New Jersey, for the resolution of any such
+                        dispute. Acceptance of the terms and conditions of this Agreement constitutes your
+                        consent to be sued in such courts and to accept service of process outside the State
+                        of New Jersey with the same force and effect as if such service had been made within
+                        the State of New Jersey. You hereby agree to accept service of process for any action
+                        hereunder by certified mail return receipt requested which service shall have the
+                        same force and effect as though service had been affected by personal service in
+                        the applicable jurisdiction. If any part of these terms is unlawful, void, or unenforceable,
+                        that part will be deemed severable and will not affect the validity and enforceability
+                        of the remaining provisions.
+                    </p>
+                    <p>
+                        <strong>
+                            27. Arbitration Provision/No Class Action.&nbsp;
+                        </strong>
+                    </p>
+                    <p>
+                        Except where prohibited by law, as a condition of using the Websites and/or Service,
+                        you agree that any and all disputes, claims and causes of action (collectively,&nbsp;&ldquo;Claim&rdquo;)
+                        arising out of or connected with the Websites and/or Service, shall be resolved individually,
+                        without resort to any form of class action, exclusively by binding arbitration for
+                        full and final settlement of such Claim, and judgment on the award rendered in the
+                        arbitration may be entered in any court having jurisdiction thereof. The parties
+                        shall split the arbitration and/or mediator costs. An award rendered by the arbitrator(s)
+                        may be entered and confirmed by the courts of the State of New Jersey, County of
+                        Hudson, or the United States District Court for the District of New Jersey. The parties
+                        agree that any post-arbitration action seeking to enforce an arbitration award or
+                        action seeking equitable or injunctive relief shall be brought exclusively in the
+                        courts of the State of New Jersey, County of Hudson, or the United States District
+                        Court for the District of New Jersey.
+                    </p>
+                    <p>
+                        <strong>
+                            28. No Third Party Beneficiaries.&nbsp;
+                        </strong>
+                    </p>
+                    <p>
+                        You agree that, except as otherwise expressly provided in this Terms of Use, there
+                        shall be no third party beneficiaries to this Terms of Use.
+                    </p>
+                    <p>
+                        <strong>
+                            29. Availability Outside the U.S.
+                        </strong>
+                    </p>
+                    <p>
+                        If you access Knowye from outside of the United States, you do so at your own risk
+                        and are responsible for compliance with the laws of your jurisdiction. If you access
+                        the Websites or Service from outside of the United States, you acknowledge that any
+                        personal information you provide will be processed in the United States and other
+                        geographies as selected by us in our sole discretion, and you hereby consent to the
+                        collection and processing of your personal information in a manner consistent with
+                        this Agreement and the Privacy Policy.
+                    </p>
+                    <p>
+                        <strong>
+                            30. Entire Agreement
+                        </strong>
+                        .
+                    </p>
+                    <p>
+                        This Terms of Use, along with the Privacy Policy, contains the entire agreement
+                        between you and Knowyeregarding the use of the Websites and/or the Service.
+                    </p>
+                    <p>
+                        <strong>
+                            31. Severability
+                        </strong>
+                        <strong>
+                            ; Waiver
+                        </strong>
+                        .
+                    </p>
+                    <p>
+                        If any provision of this Terms of Use is found to be invalid by any court having
+                        competent jurisdiction, the invalidity of such provision shall not affect the validity
+                        of the remaining provisions of this Terms of Use, which shall remain in full force
+                        and effect. No waiver of any term of this Terms of Use shall be deemed a further
+                        or continuing waiver of such term or any other term. In addition, Knowye&rsquo;s
+                        failure to enforce any term of this Terms of Use shall not be deemed as a waiver
+                        of such term or otherwise affect Knowye&rsquo;s ability to enforce such term at any
+                        point in the future.
+                    </p>
+                    <p>
+                        <strong>
+                            32. Headings
+                        </strong>
+                        .
+                    </p>
+                    <p>
+                        The section headings contained in this Terms of Use are for reference purposes only
+                        and shall not in any way affect the meaning or interpretation of this Terms of Use.
+                    </p>
+                    <p>
+                        Please contact us with any questions regarding this agreement.
+                    </p>
+                    <p>
+                        Knowye reserves all rights not expressly granted in these Terms of Use.
+                    </p>
+                    <p>
+                        I HAVE READ THIS AGREEMENT AND AGREE TO ALL OF THE PROVISIONS CONTAINED ABOVE.
+                    </p>
+                    <p>
+                        &nbsp;
+                    </p>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>

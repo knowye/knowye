@@ -1,0 +1,23 @@
+{
+    "short_name": "knowye_dev",
+    "name": "knowye_dev",
+    "description": "know what you eat, knowye, is a food centric guest engagement platform for restaurants
+    Hosts can connect with guests to
+    1. tell their story
+    2. get feedback
+    3. operate with analytics
+    Guests can
+    1. personalize menus to their preferences
+    2. add items to favorites or wishlist
+    3. rate or select items,
+    preview bill
+    Proudly served to you by dyjit.#areyeintheknow ",
+    "display": "fullscreen",
+    "orientation": "any",
+    "start_url": "/",
+    "scope": "/",
+    "background_color": "#ffffff",
+    "theme_color": "#ffffff",
+    "icons": [
+    ]
+}

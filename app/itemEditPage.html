@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>
+            itemEditPage
+        </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, viewport-fit=cover">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="msapplication-tap-highlight" content="no">
+        <!-- Enable all requests, inline styles, and eval() -->
+        <meta http-equiv="Content-Security-Policy" content="default-src * gap://ready data:; style-src 'self' 'unsafe-inline' *; script-src 'self' 'unsafe-inline' 'unsafe-eval' *">
+        <!-- Uncomment link and meta tags below to activate PWA icons and theme color -->
+        <!-- link rel="manifest" href="../manifest.json" crossOrigin="use-credentials" -->
+        <!-- meta name="theme-color" content="#ffffff" -->
+        <link href="../css/theme/jqm/jqm.css" rel="stylesheet" />
+        <link href="../css/theme/KnoWYE3/KnoWYE3.css" rel="stylesheet" />
+        <link href="../libs/jquerymobile/1.4.5/jquery.mobile.structure-1.4.5.css" rel="stylesheet"
+        />
+        <link type="text/css" rel="stylesheet" href="../css/logblock.css" />
+        <link type="text/css" rel="stylesheet" href="../css/menuPageBuilder.css" />
+        <link type="text/css" rel="stylesheet" href="../css/common.css" />
+        <link type="text/css" rel="stylesheet" href="../css/header_footer.css" />
+        <link type="text/css" rel="stylesheet" href="../css/button.css" />
+        <link type="text/css" rel="stylesheet" href="../css/label.css" />
+        <link type="text/css" rel="stylesheet" href="../css/FontRoboto.css.css" />
+        <!-- Uncomment this script to activate service worker -->
+        <!-- <script>
+        if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('../sw.js')
+        .then(() => console.log('service worker installed'))
+        .catch(err => console.error('Error', err));
+        }
+        </script>
+        -->
+        <script type="text/javascript" src="../libs/underscore/underscore.js">
+        </script>
+        <script type="text/javascript" src="../libs/store/json2.js">
+        </script>
+        <script type="text/javascript" src="../libs/jquery/jquery-2.1.1.js">
+        </script>
+        <script type="text/javascript" src="../libs/jquery/jquery-ajaxTransport.js">
+        </script>
+        <script type="text/javascript">
+            $(document).bind("mobileinit", function() {
+                if (navigator.userAgent.toLowerCase().indexOf("android") != -1) {
+                    $.mobile.defaultPageTransition = 'none';
+                    $.mobile.defaultDialogTransition = 'none';
+                } else if (navigator.userAgent.toLowerCase().indexOf("msie") != -1) {
+                    $.mobile.allowCrossDomainPages = true;
+                    $.support.cors = true;
+                } else if (navigator.userAgent.match(/(iPad|iPhone|iPod)/g)) {
+                    $.mobile.hashListeningEnabled = false;
+                }
+            });
+        </script>
+        <script type="text/javascript" src="../libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.js">
+        </script>
+        <script type="text/javascript" src="../libs/apperyio/mobilebase.js">
+        </script>
+        <script type="text/javascript" src="../libs/event/customEventHandler.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/sha1.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/oauth.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/contexts.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/jquery.xml2json.min.js">
+        </script>
+        <script type="text/javascript" src="../libs/ms_sdk_bundle/client-sdk.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/appery.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/component-manager.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/mapping-impl.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/entity-api.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/login.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/storage-api.js">
+        </script>
+        <script type="text/javascript" src="../get_target_platform.js">
+        </script>
+        <script type="text/javascript" src="../cordova.js">
+        </script>
+        <link href="../libs/apperyio/mobilebase.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="../js/services/model.js">
+        </script>
+        <script type="text/javascript" src="../js/menuHeadingManagePageBuilder.js">
+        </script>
+        <script type="text/javascript" src="../js/navigatePageManager.js">
+        </script>
+        <script type="text/javascript" src="../js/logblock.js">
+        </script>
+        <script type="text/javascript" src="../js/Facebook_Helper.js">
+        </script>
+        <script type="text/javascript" src="../js/menuHeadingManager.js">
+        </script>
+        <script type="text/javascript" src="../js/menuPageBuilder.js">
+        </script>
+        <script type="text/javascript" src="../js/jquery-ui.min.js">
+        </script>
+        <script type="text/javascript" src="../js/common.js">
+        </script>
+        <script type="text/javascript" src="../js/clipboard.js">
+        </script>
+        <script type="text/javascript" src="../js/FileUploadHelper.js">
+        </script>
+        <script type="text/javascript" src="../js/zzqrCodeScaner.js">
+        </script>
+        <script type="text/javascript" src="../js/menuHistoryManager.js">
+        </script>
+        <script type="text/javascript" src="../js/GoogleCharts.js">
+        </script>
+        <script type="text/javascript" src="../js/services/service.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/databaseUtils.js">
+        </script>
+        <script type="text/javascript" src="../js/secure.js">
+        </script>
+<script type="text/javascript" src="../js/EncodeDecodeJS.js">
+        </script>
+    </head>
+    
+    <body>
+        <script language="JavaScript" type="text/javascript">
+        </script>
+        <div data-role="page" style="min-height:480px;" dsid="itemEditPage" id="itemEditPage"
+        class="type-interior" data-theme="b">
+            <!-- dishEditHeader -->
+            <div data-role="header" data-position="fixed" data-add-back-btn="true" data-back-btn-text="&nbsp;"
+            data-theme="b" name="dishEditHeader" id="itemEditPage_dishEditHeader" class="itemEditPage_dishEditHeader">
+                <h1 dsid="dishEditHeader">
+                    edit item
+                </h1>
+                <!-- homeButton --><!--
+                --><a data-role="button" name="homeButton" dsid="homeButton" class="itemEditPage_homeButton ui-btn-right"
+                style='min-height:20px; ' id="itemEditPage_homeButton" data-corners="true" data-icon="home"
+                data-iconpos="notext" x-apple-data-detectors="false" data-inline='true' data-mini='true'
+                data-theme="b" tabindex="7">
+                &nbsp;
+                </a>
+            </div>
+            <!-- editDishContainer -->
+            <div data-role="content" id="itemEditPage_editDishContainer" name="editDishContainer"
+            class="ui-li-container  itemEditPage_editDishContainer ui-content" dsid="editDishContainer"
+            data-theme="b">
+                <link href="itemEditPage.css" rel="stylesheet" type="text/css" />
+                <script type="text/javascript" src="itemEditPage.js">
+                </script>
+                <!-- unavailableGrid -->
+                <div class="itemEditPage_unavailableGrid_wrapper" data-wrapper-for="unavailableGrid">
+                    <table id="itemEditPage_unavailableGrid" class="itemEditPage_unavailableGrid" dsid="unavailableGrid"
+                    name="unavailableGrid" cellpadding=0 cellspacing=0>
+                        <col style="width:168px;" />
+                        <col style="width:auto;" />
+                        <tr class="itemEditPage_unavailableGrid_row_0">
+                            <!-- unavailableLabelCell -->
+                            <td id="itemEditPage_unavailableLabelCell" name="unavailableLabelCell" class="itemEditPage_unavailableLabelCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- unavailableItemLabel -->
+                                    <div name="unavailableItemLabel" id="itemEditPage_unavailableItemLabel" dsid="unavailableItemLabel"
+                                    data-role="appery_label" class="labelOnDark  itemEditPage_unavailableItemLabel">
+                                        mark item unavailable (out of ingredient, etc.). guests will see the item and a
+                                        red 'unavailable' note.
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- unavailableToggleCell -->
+                            <td id="itemEditPage_unavailableToggleCell" name="unavailableToggleCell" class="itemEditPage_unavailableToggleCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- unavailableItemToggle -->
+                                    <div data-role="fieldcontain" class="itemEditPage_unavailableItemToggle ">
+                                        <select data-role="flipswitch" name="unavailableItemToggle" id="itemEditPage_unavailableItemToggle"
+                                        dsid="unavailableItemToggle" data-theme="b" data-track-theme="b">
+                                            <option value="off">
+                                                off
+                                            </option>
+                                            <option value="on">
+                                                on
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- inactiveGrid -->
+                <div class="itemEditPage_inactiveGrid_wrapper" data-wrapper-for="inactiveGrid">
+                    <table id="itemEditPage_inactiveGrid" class="itemEditPage_inactiveGrid" dsid="inactiveGrid"
+                    name="inactiveGrid" cellpadding=0 cellspacing=0>
+                        <col style="width:172px;" />
+                        <col style="width:auto;" />
+                        <tr class="itemEditPage_inactiveGrid_row_0">
+                            <!-- inactiveLabelCell -->
+                            <td id="itemEditPage_inactiveLabelCell" name="inactiveLabelCell" class="itemEditPage_inactiveLabelCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- inactiveLabel -->
+                                    <div name="inactiveLabel" id="itemEditPage_inactiveLabel" dsid="inactiveLabel" data-role="appery_label"
+                                    class="labelOnDark  itemEditPage_inactiveLabel">
+                                        hide item on menu. switch on to remove a special or seasonal item and switch off
+                                        to make it visible on the menu again.
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- inactiveToggleCell -->
+                            <td id="itemEditPage_inactiveToggleCell" name="inactiveToggleCell" class="itemEditPage_inactiveToggleCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- inactiveToggle -->
+                                    <div data-role="fieldcontain" class="itemEditPage_inactiveToggle ">
+                                        <select data-role="flipswitch" name="inactiveToggle" id="itemEditPage_inactiveToggle"
+                                        dsid="inactiveToggle" data-theme="b" data-track-theme="b">
+                                            <option value="off">
+                                                off
+                                            </option>
+                                            <option value="on">
+                                                on
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- itemPasteField -->
+                <div data-role="fieldcontain" class="itemEditPage_itemPasteField ">
+                    <textarea name="itemPasteField" id="itemEditPage_itemPasteField" data-mini="true"
+                    tabindex="3" dsid="itemPasteField" data-theme="b" placeholder="Paste from template"
+                    class="itemEditPage_itemPasteField">
+</textarea>
+                </div>
+                <!-- templateLink -->
+                <div class="itemEditPage_templateLink_link_wrapper">
+                    <a id="itemEditPage_templateLink" href="http://appery.io" name="templateLink" dsid="templateLink"
+                    data-role="appery_link" class="itemEditPage_templateLink">
+                    Get template
+                    </a>
+                </div>
+                <!-- orLabel -->
+                <div name="orLabel" id="itemEditPage_orLabel" dsid="orLabel" data-role="appery_label"
+                class="labelStandard  itemEditPage_orLabel">
+                    or
+                </div>
+                <!-- skuGrid -->
+                <div class="itemEditPage_skuGrid_wrapper" data-wrapper-for="skuGrid">
+                    <table id="itemEditPage_skuGrid" class="itemEditPage_skuGrid" dsid="skuGrid" name="skuGrid"
+                    cellpadding=0 cellspacing=0>
+                        <col style="width:94px;" />
+                        <col style="width:auto;" />
+                        <tr class="itemEditPage_skuGrid_row_0">
+                            <!-- skuLabelCell -->
+                            <td id="itemEditPage_skuLabelCell" name="skuLabelCell" class="itemEditPage_skuLabelCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- skuLabel -->
+                                    <div name="skuLabel" id="itemEditPage_skuLabel" dsid="skuLabel" data-role="appery_label"
+                                    class="labelOnDark  itemEditPage_skuLabel">
+                                        sku
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- skuCell -->
+                            <td id="itemEditPage_skuCell" name="skuCell" class="itemEditPage_skuCell" colspan=1
+                            rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- skuInput -->
+                                    <div data-role="fieldcontain" class="itemEditPage_skuInput ">
+                                        <input type="text" name="skuInput" dsid="skuInput" value="" placeholder="enter sku"
+                                        id="itemEditPage_skuInput" tabindex="38" multiple data-theme="b" data-mini="true"
+                                        class="itemEditPage_skuInput" />
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- itemNameField -->
+                <div data-role="fieldcontain" class="itemEditPage_itemNameField ">
+                    <input type="text" name="itemNameField" dsid="itemNameField" value="" placeholder="Item/dish name"
+                    id="itemEditPage_itemNameField" tabindex="4" multiple data-theme="b" data-mini="true"
+                    class="itemEditPage_itemNameField" />
+                </div>
+                <!-- itemDescriptionField -->
+                <div data-role="fieldcontain" class="itemEditPage_itemDescriptionField ">
+                    <textarea name="itemDescriptionField" id="itemEditPage_itemDescriptionField" data-mini="true"
+                    tabindex="5" dsid="itemDescriptionField" data-theme="b" placeholder="Item/dish description"
+                    class="itemEditPage_itemDescriptionField">
+</textarea>
+                </div>
+                <!-- priceGrid -->
+                <div class="itemEditPage_priceGrid_wrapper" data-wrapper-for="priceGrid">
+                    <table id="itemEditPage_priceGrid" class="itemEditPage_priceGrid" dsid="priceGrid"
+                    name="priceGrid" cellpadding=0 cellspacing=0>
+                        <col style="width:19px;" />
+                        <col style="width:auto;" />
+                        <col style="width:auto;" />
+                        <col style="width:auto;" />
+                        <tr class="itemEditPage_priceGrid_row_0">
+                            <!-- dollarSignCell -->
+                            <td id="itemEditPage_dollarSignCell" name="dollarSignCell" class="itemEditPage_dollarSignCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- dollarSignLabel -->
+                                    <div name="dollarSignLabel" id="itemEditPage_dollarSignLabel" dsid="dollarSignLabel"
+                                    data-role="appery_label" class="labelOnDark  itemEditPage_dollarSignLabel">
+                                        $
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- priceCell -->
+                            <td id="itemEditPage_priceCell" name="priceCell" class="itemEditPage_priceCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- itemPriceField -->
+                                    <div data-role="fieldcontain" class="itemEditPage_itemPriceField ">
+                                        <input type="number" name="itemPriceField" dsid="itemPriceField" value="" placeholder="price"
+                                        id="itemEditPage_itemPriceField" tabindex="8" multiple data-theme="b" data-mini="true"
+                                        class="itemEditPage_itemPriceField" />
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- calorieLabelCell -->
+                            <td id="itemEditPage_calorieLabelCell" name="calorieLabelCell" class="itemEditPage_calorieLabelCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- calorieLabel -->
+                                    <div name="calorieLabel" id="itemEditPage_calorieLabel" dsid="calorieLabel" data-role="appery_label"
+                                    class="labelOnDark  itemEditPage_calorieLabel">
+                                        calories
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- calorieCell -->
+                            <td id="itemEditPage_calorieCell" name="calorieCell" class="itemEditPage_calorieCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- calories -->
+                                    <div data-role="fieldcontain" class="itemEditPage_calories ">
+                                        <input type="number" name="calories" dsid="calories" value="" placeholder="optional"
+                                        id="itemEditPage_calories" tabindex="30" multiple data-theme="b" data-mini="true"
+                                        class="itemEditPage_calories" />
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- menuHeadingLabel -->
+                <div name="menuHeadingLabel" id="itemEditPage_menuHeadingLabel" dsid="menuHeadingLabel"
+                data-role="appery_label" class="labelOnDark  itemEditPage_menuHeadingLabel">
+                    select the menu section heading for this item
+                </div>
+                <!-- headingGrid -->
+                <div class="itemEditPage_headingGrid_wrapper" data-wrapper-for="headingGrid">
+                    <table id="itemEditPage_headingGrid" class="itemEditPage_headingGrid" dsid="headingGrid"
+                    name="headingGrid" cellpadding=0 cellspacing=0>
+                        <col style="width:auto;" />
+                        <tr class="itemEditPage_headingGrid_row_0">
+                            <!-- headingCell -->
+                            <td id="itemEditPage_headingCell" name="headingCell" class="itemEditPage_headingCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- menuHeadingSelect -->
+                                    <div data-role="fieldcontain" class="itemEditPage_menuHeadingSelect ">
+                                        <select name="menuHeadingSelect" id="itemEditPage_menuHeadingSelect" dsid="menuHeadingSelect"
+                                        data-theme="b" data-role="appery_selectmenu" data-inline="false" data-mini="true"
+                                        data-icon="arrow-d" data-iconpos="right" data-native-menu="true" tabindex="13" appery-class="itemEditPage_menuHeadingSelect">
+                                            <option id="itemEditPage_menuHeadingSelect-0" value="" reRender="menuHeadingSelect"
+                                            dsid="menuHeadingSelect-0">
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- classificationLabel -->
+                <div name="classificationLabel" id="itemEditPage_classificationLabel" dsid="classificationLabel"
+                data-role="appery_label" class="labelOnDark  itemEditPage_classificationLabel">
+                    select the classification of this item.
+                </div>
+                <!-- classificationSelect -->
+                <div data-role="fieldcontain" class="itemEditPage_classificationSelect ">
+                    <select name="classificationSelect" id="itemEditPage_classificationSelect" dsid="classificationSelect"
+                    data-theme="b" data-role="appery_selectmenu" data-inline="false" data-mini="true"
+                    data-icon="arrow-d" data-iconpos="right" data-native-menu="false" tabindex="29" appery-class="itemEditPage_classificationSelect">
+                        <option id="itemEditPage_classificationSelect-0" value="Veni" reRender="classificationSelect"
+                        dsid="classificationSelect-0" selected="selected">
+                            Veni
+                        </option>
+                        <option id="itemEditPage_classificationSelect-1" value="Vidi" reRender="classificationSelect"
+                        dsid="classificationSelect-1">
+                            Vidi
+                        </option>
+                        <option id="itemEditPage_classificationSelect-2" value="Vici" reRender="classificationSelect"
+                        dsid="classificationSelect-2">
+                            Vici
+                        </option>
+                    </select>
+                </div>
+                <!-- propertyLabel -->
+                <div name="propertyLabel" id="itemEditPage_propertyLabel" dsid="propertyLabel" data-role="appery_label"
+                class="labelOnDark  itemEditPage_propertyLabel">
+                    Sslect properties related to this item.
+                </div>
+                <!-- propertySelectButton -->
+                <div data-role="fieldcontain" class="itemEditPage_propertySelectButton ">
+                    <select name="propertySelectButton" id="itemEditPage_propertySelectButton" dsid="propertySelectButton"
+                    data-theme="b" data-role="appery_selectmenu" data-inline="false" data-mini="true"
+                    data-icon="arrow-d" data-iconpos="right" data-native-menu="false" tabindex="28" multiple="multiple"
+                    appery-class="itemEditPage_propertySelectButton">
+                        <option id="itemEditPage_propertySelectButton-0" value="" reRender="propertySelectButton"
+                        dsid="propertySelectButton-0">
+                        </option>
+                    </select>
+                </div>
+                <!-- pairingGrid -->
+                <div class="itemEditPage_pairingGrid_wrapper" data-wrapper-for="pairingGrid">
+                    <table id="itemEditPage_pairingGrid" class="itemEditPage_pairingGrid" dsid="pairingGrid"
+                    name="pairingGrid" cellpadding=0 cellspacing=0>
+                        <col style="width:auto;" />
+                        <tr class="itemEditPage_pairingGrid_row_0">
+                            <!-- pairingLabelCell -->
+                            <td id="itemEditPage_pairingLabelCell" name="pairingLabelCell" class="itemEditPage_pairingLabelCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- pairingLabel -->
+                                    <div name="pairingLabel" id="itemEditPage_pairingLabel" dsid="pairingLabel" data-role="appery_label"
+                                    class="labelOnDark  itemEditPage_pairingLabel">
+                                        select pairings for this item
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="itemEditPage_pairingGrid_row_1">
+                            <!-- pairingSelectCell -->
+                            <td id="itemEditPage_pairingSelectCell" name="pairingSelectCell" class="itemEditPage_pairingSelectCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- pairingSelectButton -->
+                                    <div data-role="fieldcontain" class="itemEditPage_pairingSelectButton ">
+                                        <select name="pairingSelectButton" id="itemEditPage_pairingSelectButton" dsid="pairingSelectButton"
+                                        data-theme="b" data-role="appery_selectmenu" data-inline="false" data-mini="true"
+                                        data-icon="arrow-d" data-iconpos="right" data-native-menu="false" tabindex="33" appery-class="itemEditPage_pairingSelectButton">
+                                            <option id="itemEditPage_pairingSelectButton-0" value="Veni" reRender="pairingSelectButton"
+                                            dsid="pairingSelectButton-0" selected="selected">
+                                                Veni
+                                            </option>
+                                            <option id="itemEditPage_pairingSelectButton-1" value="Vidi" reRender="pairingSelectButton"
+                                            dsid="pairingSelectButton-1">
+                                                Vidi
+                                            </option>
+                                            <option id="itemEditPage_pairingSelectButton-2" value="Vici" reRender="pairingSelectButton"
+                                            dsid="pairingSelectButton-2">
+                                                Vici
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- ingredientAddButton --><!--
+                --><a data-role="button" name="ingredientAddButton" dsid="ingredientAddButton" class="scanMenuButton  itemEditPage_ingredientAddButton"
+                id="itemEditPage_ingredientAddButton" data-corners="true" data-icon="plus" data-iconpos="right"
+                x-apple-data-detectors="false" data-inline="true" data-mini="true" data-theme="b"
+                tabindex="10">
+                add ingredient
+                </a><!--
+                --><!-- spacer_10 -->
+                <div id="itemEditPage_spacer_10" data-role="appery_spacer" dsid="spacer_10" class='mobilespacer itemEditPage_spacer_10'>
+                </div>
+                <!-- ingredientHiddenLabel -->
+                <div name="ingredientHiddenLabel" id="itemEditPage_ingredientHiddenLabel" dsid="ingredientHiddenLabel"
+                data-role="appery_label" class="labelOnDark  itemEditPage_ingredientHiddenLabel">
+                    words in the field below will be used to filter searches for people with food allergies.
+                </div>
+                <!-- ingredientHiddenConfidentialLabel -->
+                <div name="ingredientHiddenConfidentialLabel" id="itemEditPage_ingredientHiddenConfidentialLabel"
+                dsid="ingredientHiddenConfidentialLabel" data-role="appery_label" class="labelOnDark  itemEditPage_ingredientHiddenConfidentialLabel">
+                    these words are considered confidential and will NOT be visible to anyone.
+                </div>
+                <!-- ingredientHidden -->
+                <div data-role="fieldcontain" class="itemEditPage_ingredientHidden ">
+                    <textarea name="ingredientHidden" id="itemEditPage_ingredientHidden" data-mini="true"
+                    tabindex="12" dsid="ingredientHidden" data-theme="b" placeholder="example: garlic cilantro nuts wheat milk"
+                    class="itemEditPage_ingredientHidden">
+</textarea>
+                </div>
+                <!-- itemTimeRangeLabel -->
+                <div name="itemTimeRangeLabel" id="itemEditPage_itemTimeRangeLabel" dsid="itemTimeRangeLabel"
+                data-role="appery_label" class="labelOnDark  itemEditPage_itemTimeRangeLabel">
+                    select the time range when this item is available.
+                </div>
+                <!-- timeRangeSelect -->
+                <div data-role="fieldcontain" class="itemEditPage_timeRangeSelect ">
+                    <select name="timeRangeSelect" id="itemEditPage_timeRangeSelect" dsid="timeRangeSelect"
+                    data-theme="b" data-role="appery_selectmenu" data-inline="false" data-mini="true"
+                    data-icon="arrow-d" data-iconpos="right" data-native-menu="false" tabindex="15" appery-class="itemEditPage_timeRangeSelect">
+                        <option id="itemEditPage_timeRangeSelect-0" value="1" reRender="timeRangeSelect"
+                        dsid="timeRangeSelect-0">
+                            Breakfast
+                        </option>
+                        <option id="itemEditPage_timeRangeSelect-1" value="2" reRender="timeRangeSelect"
+                        dsid="timeRangeSelect-1">
+                            Lunch
+                        </option>
+                        <option id="itemEditPage_timeRangeSelect-2" value="3" reRender="timeRangeSelect"
+                        dsid="timeRangeSelect-2" selected="selected">
+                            Dinner
+                        </option>
+                    </select>
+                </div>
+                <!-- itemImageGrid -->
+                <div class="itemEditPage_itemImageGrid_wrapper" data-wrapper-for="itemImageGrid">
+                    <table id="itemEditPage_itemImageGrid" class="itemEditPage_itemImageGrid" dsid="itemImageGrid"
+                    name="itemImageGrid" cellpadding=0 cellspacing=0>
+                        <col style="width:18px;" />
+                        <tr class="itemEditPage_itemImageGrid_row_0">
+                            <!-- mobilegridcell_26 -->
+                            <td id="itemEditPage_mobilegridcell_26" name="mobilegridcell_26" class="itemEditPage_mobilegridcell_26"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- itemPhoto -->
+                                    <img class="itemEditPage_itemPhoto" src="../libs/apperyio/img/no-image.jpg" id="itemEditPage_itemPhoto"
+                                    dsid="itemPhoto" name="itemPhoto" />
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- fileSelect -->
+                <div data-role="fieldcontain" class="itemEditPage_fileSelect ">
+                    <input type="file" name="fileSelect" dsid="fileSelect" value="Input" placeholder=""
+                    id="itemEditPage_fileSelect" tabindex="34" multiple data-theme="b" data-mini="true"
+                    class="itemEditPage_fileSelect" />
+                </div>
+                <!-- photoButtonGrid -->
+                <div class="itemEditPage_photoButtonGrid_wrapper" data-wrapper-for="photoButtonGrid">
+                    <table id="itemEditPage_photoButtonGrid" class="itemEditPage_photoButtonGrid" dsid="photoButtonGrid"
+                    name="photoButtonGrid" cellpadding=0 cellspacing=0>
+                        <col style="width:auto;" />
+                        <col style="width:auto;" />
+                        <tr class="itemEditPage_photoButtonGrid_row_0">
+                            <!-- photoAddCell -->
+                            <td id="itemEditPage_photoAddCell" name="photoAddCell" class="itemEditPage_photoAddCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- photoAddButton --><!--
+                                    --><a data-role="button" name="photoAddButton" dsid="photoAddButton" class="scanMenuButton  itemEditPage_photoAddButton"
+                                    id="itemEditPage_photoAddButton" data-corners="true" data-icon="camera" data-iconpos="right"
+                                    x-apple-data-detectors="false" data-mini="true" data-theme="b" tabindex="17">
+                                    add photo
+                                    </a>
+                                </div>
+                            </td>
+                            <!-- photoDeleteCell -->
+                            <td id="itemEditPage_photoDeleteCell" name="photoDeleteCell" class="itemEditPage_photoDeleteCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- photoDeleteButton --><!--
+                                    --><a data-role="button" name="photoDeleteButton" dsid="photoDeleteButton" class="scanMenuButton  itemEditPage_photoDeleteButton"
+                                    id="itemEditPage_photoDeleteButton" data-corners="true" data-icon="alert" data-iconpos="right"
+                                    x-apple-data-detectors="false" data-mini="true" data-theme="b" tabindex="35">
+                                    delete photo
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- multiselectGrid -->
+                <div class="itemEditPage_multiselectGrid_wrapper" data-wrapper-for="multiselectGrid">
+                    <table id="itemEditPage_multiselectGrid" class="itemEditPage_multiselectGrid" dsid="multiselectGrid"
+                    name="multiselectGrid" cellpadding=0 cellspacing=0>
+                        <col style="width:auto;" />
+                        <tr class="itemEditPage_multiselectGrid_row_0">
+                            <!-- multiselectCell -->
+                            <td id="itemEditPage_multiselectCell" name="multiselectCell" class="itemEditPage_multiselectCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- multiselectLabel -->
+                                    <div name="multiselectLabel" id="itemEditPage_multiselectLabel" dsid="multiselectLabel"
+                                    data-role="appery_label" class="labelOnDark  itemEditPage_multiselectLabel">
+                                        mark the attributes of this item below. guests will only see items on the menu that
+                                        match their preferences.
+                                    </div>
+                                    <!-- html_multiselect -->
+                                    <div data-role="appery_html" name="html_multiselect" dsid="html_multiselect" id="itemEditPage_html_multiselect"
+                                    class="itemEditPage_html_multiselect">
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="itemEditPage_multiselectGrid_row_1">
+                            <!-- mobilegridcell_30 -->
+                            <td id="itemEditPage_mobilegridcell_30" name="mobilegridcell_30" class="itemEditPage_mobilegridcell_30"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- buttonGridSaveDeleteCancelGrid -->
+                <div class="itemEditPage_buttonGridSaveDeleteCancelGrid_wrapper" data-wrapper-for="buttonGridSaveDeleteCancelGrid">
+                    <table id="itemEditPage_buttonGridSaveDeleteCancelGrid" class="itemEditPage_buttonGridSaveDeleteCancelGrid"
+                    dsid="buttonGridSaveDeleteCancelGrid" name="buttonGridSaveDeleteCancelGrid" cellpadding=0
+                    cellspacing=0>
+                        <col style="width:auto;" />
+                        <col style="width:auto;" />
+                        <col style="width:auto;" />
+                        <tr class="itemEditPage_buttonGridSaveDeleteCancelGrid_row_0">
+                            <!-- saveCell -->
+                            <td id="itemEditPage_saveCell" name="saveCell" class="itemEditPage_saveCell" colspan=1
+                            rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- itemEditSaveButton --><!--
+                                    --><a data-role="button" name="itemEditSaveButton" dsid="itemEditSaveButton" class="scanMenuButton  itemEditPage_itemEditSaveButton"
+                                    id="itemEditPage_itemEditSaveButton" data-corners="true" data-icon="check" data-iconpos="right"
+                                    x-apple-data-detectors="false" data-mini="true" data-theme="b" tabindex="18">
+                                    save
+                                    </a>
+                                </div>
+                            </td>
+                            <!-- deleteCell -->
+                            <td id="itemEditPage_deleteCell" name="deleteCell" class="itemEditPage_deleteCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- deleteButton --><!--
+                                    --><a data-role="button" name="deleteButton" dsid="deleteButton" class="scanMenuButton  itemEditPage_deleteButton"
+                                    id="itemEditPage_deleteButton" data-corners="true" data-icon="alert" data-iconpos="right"
+                                    x-apple-data-detectors="false" data-mini="true" data-theme="b" tabindex="23">
+                                    delete
+                                    </a>
+                                </div>
+                            </td>
+                            <!-- cancelCell -->
+                            <td id="itemEditPage_cancelCell" name="cancelCell" class="itemEditPage_cancelCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- cancelButton --><!--
+                                    --><a data-role="button" name="cancelButton" dsid="cancelButton" class="scanMenuButton  itemEditPage_cancelButton"
+                                    id="itemEditPage_cancelButton" data-corners="true" data-icon="delete" data-iconpos="right"
+                                    x-apple-data-detectors="false" data-mini="true" data-theme="b" tabindex="24">
+                                    cancel
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <!-- ingredientAddPopup -->
+            <div data-role="popup" name="ingredientAddPopup" dsid="ingredientAddPopup" id="itemEditPage_ingredientAddPopup"
+            class="roundedPopup  itemEditPage_ingredientAddPopup" data-corners="true" data-dismissible="true"
+            data-overlay-theme="" data-theme="" data-shadow="true" data-tolerance="30,15,30,15">
+                <div class="ui-popup-content-wrapper">
+                    <!-- ingredientAddPopupLabel1 -->
+                    <div name="ingredientAddPopupLabel1" id="itemEditPage_ingredientAddPopupLabel1"
+                    dsid="ingredientAddPopupLabel1" data-role="appery_label" class="labelOnLight  itemEditPage_ingredientAddPopupLabel1">
+                        select how the ingredient will be featured. examples of a main ingredient would
+                        be salmon, chicken, etc. featured ingredients are sides or toppings. hidden ingredients
+                        are not displayed. they are only used to to remove the dish as a choice when a diner
+                        identifies an allergy.
+                    </div>
+                    <!-- ingredientVisibilityChoiceRadio -->
+                    <div data-role="fieldcontain" class="itemEditPage_ingredientVisibilityChoiceRadio"
+                    id="itemEditPage_ingredientVisibilityChoiceRadio" dsid="ingredientVisibilityChoiceRadio">
+                        <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true" data-theme="b">
+                            <!-- ingredientMainRadio -->
+                            <span dsid="ingredientMainRadio" class="itemEditPage_ingredientMainRadio" name="ingredientMainRadio">
+                                <input type="radio" name="ingredientVisibilityChoiceRadio" id="itemEditPage_ingredientMainRadio"
+                                style='display:none' tabindex="19" value="1" />
+                                <label id="itemEditPage_ingredientMainRadio_label" for="itemEditPage_ingredientMainRadio">
+                                    main
+                                </label>
+                            </span>
+                            <!-- ingredientFeaturedRadio -->
+                            <span dsid="ingredientFeaturedRadio" class="itemEditPage_ingredientFeaturedRadio"
+                            name="ingredientFeaturedRadio">
+                                <input type="radio" name="ingredientVisibilityChoiceRadio" id="itemEditPage_ingredientFeaturedRadio"
+                                style='display:none' value="2" />
+                                <label id="itemEditPage_ingredientFeaturedRadio_label" for="itemEditPage_ingredientFeaturedRadio">
+                                    featured
+                                </label>
+                            </span>
+                            <!-- ingredientHIDDENRadio -->
+                            <span dsid="ingredientHIDDENRadio" class="itemEditPage_ingredientHIDDENRadio" name="ingredientHIDDENRadio">
+                                <input type="radio" name="ingredientVisibilityChoiceRadio" id="itemEditPage_ingredientHIDDENRadio"
+                                style='display:none' value="999" />
+                                <label id="itemEditPage_ingredientHIDDENRadio_label" for="itemEditPage_ingredientHIDDENRadio">
+                                    hidden
+                                </label>
+                            </span>
+                        </fieldset>
+                    </div>
+                    <!-- ingredientField -->
+                    <div data-role="fieldcontain" class="itemEditPage_ingredientField ">
+                        <input type="text" name="ingredientField" dsid="ingredientField" value="" placeholder="Ingredient"
+                        id="itemEditPage_ingredientField" tabindex="20" multiple data-theme="b" data-mini="true"
+                        class="itemEditPage_ingredientField" />
+                    </div>
+                    <!-- ingredientCooktechLabel -->
+                    <div name="ingredientCooktechLabel" id="itemEditPage_ingredientCooktechLabel" dsid="ingredientCooktechLabel"
+                    data-role="appery_label" class="labelOnLight  itemEditPage_ingredientCooktechLabel">
+                        select how the ingredient is prepared in this dish
+                    </div>
+                    <!-- cooktechSelect -->
+                    <div data-role="fieldcontain" class="itemEditPage_cooktechSelect ">
+                        <select name="cooktechSelect" id="itemEditPage_cooktechSelect" dsid="cooktechSelect"
+                        data-theme="b" data-role="appery_selectmenu" data-inline="false" data-mini="true"
+                        data-icon="arrow-d" data-iconpos="right" data-native-menu="false" tabindex="21" appery-class="itemEditPage_cooktechSelect">
+                            <option id="itemEditPage_cooktechSelect-0" value="pointer1" reRender="cooktechSelect"
+                            dsid="cooktechSelect-0" selected="selected">
+                                Baked
+                            </option>
+                            <option id="itemEditPage_cooktechSelect-1" value="pointer2" reRender="cooktechSelect"
+                            dsid="cooktechSelect-1">
+                                Broiled
+                            </option>
+                            <option id="itemEditPage_cooktechSelect-2" value="pointer3" reRender="cooktechSelect"
+                            dsid="cooktechSelect-2">
+                                Steamed
+                            </option>
+                        </select>
+                    </div>
+                    <!-- ingredientAttributeLabel -->
+                    <div name="ingredientAttributeLabel" id="itemEditPage_ingredientAttributeLabel"
+                    dsid="ingredientAttributeLabel" data-role="appery_label" class="labelOnLight  itemEditPage_ingredientAttributeLabel">
+                        select all the attributes that apply to this ingredient
+                    </div>
+                    <!-- mobileselectmenu_24 -->
+                    <div data-role="fieldcontain" class="itemEditPage_mobileselectmenu_24 ">
+                        <select name="mobileselectmenu_24" id="itemEditPage_mobileselectmenu_24" dsid="mobileselectmenu_24"
+                        data-theme="b" data-role="appery_selectmenu" data-inline="false" data-mini="true"
+                        data-icon="arrow-d" data-iconpos="right" data-native-menu="false" tabindex="22" appery-class="itemEditPage_mobileselectmenu_24">
+                            <option id="itemEditPage_mobileselectmenu_24-0" value="pointer1" reRender="mobileselectmenu_24"
+                            dsid="mobileselectmenu_24-0" selected="selected">
+                                Local
+                            </option>
+                            <option id="itemEditPage_mobileselectmenu_24-1" value="pointer2" reRender="mobileselectmenu_24"
+                            dsid="mobileselectmenu_24-1">
+                                Organic
+                            </option>
+                            <option id="itemEditPage_mobileselectmenu_24-2" value="pointer3" reRender="mobileselectmenu_24"
+                            dsid="mobileselectmenu_24-2">
+                                Wild
+                            </option>
+                        </select>
+                    </div>
+                    <!-- ingredientButtonGrid -->
+                    <div class="itemEditPage_ingredientButtonGrid_wrapper" data-wrapper-for="ingredientButtonGrid">
+                        <table id="itemEditPage_ingredientButtonGrid" class="itemEditPage_ingredientButtonGrid"
+                        dsid="ingredientButtonGrid" name="ingredientButtonGrid" cellpadding=0 cellspacing=0>
+                            <col style="width:auto;" />
+                            <col style="width:auto;" />
+                            <tr class="itemEditPage_ingredientButtonGrid_row_0">
+                                <!-- ingredientSaveCell -->
+                                <td id="itemEditPage_ingredientSaveCell" name="ingredientSaveCell" class="itemEditPage_ingredientSaveCell"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- ingredientAddSaveButton --><!--
+                                        --><a data-role="button" name="ingredientAddSaveButton" dsid="ingredientAddSaveButton"
+                                        class="scanMenuButton  itemEditPage_ingredientAddSaveButton" id="itemEditPage_ingredientAddSaveButton"
+                                        data-corners="true" data-icon="check" data-iconpos="right" x-apple-data-detectors="false"
+                                        data-mini="true" data-theme="b" tabindex="11">
+                                        save
+                                        </a>
+                                    </div>
+                                </td>
+                                <!-- ingredientCancelCell -->
+                                <td id="itemEditPage_ingredientCancelCell" name="ingredientCancelCell" class="itemEditPage_ingredientCancelCell"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- ingredientAddCancelButton --><!--
+                                        --><a data-role="button" name="ingredientAddCancelButton" dsid="ingredientAddCancelButton"
+                                        class="scanMenuButton  itemEditPage_ingredientAddCancelButton" id="itemEditPage_ingredientAddCancelButton"
+                                        data-corners="true" data-icon="delete" data-iconpos="right" x-apple-data-detectors="false"
+                                        data-mini="true" data-theme="b" tabindex="39">
+                                        cancel
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- deleteConfirmPopup -->
+            <div data-role="popup" name="deleteConfirmPopup" dsid="deleteConfirmPopup" id="itemEditPage_deleteConfirmPopup"
+            class="roundedPopup  itemEditPage_deleteConfirmPopup" data-corners="true" data-dismissible="true"
+            data-overlay-theme="" data-theme="" data-shadow="true" data-tolerance="30,15,30,15">
+                <div class="ui-popup-content-wrapper">
+                    <!-- deleteConfirmLabel -->
+                    <div name="deleteConfirmLabel" id="itemEditPage_deleteConfirmLabel" dsid="deleteConfirmLabel"
+                    data-role="appery_label" class="labelOnDark  itemEditPage_deleteConfirmLabel">
+                        are you sure you want to delete this item?
+                    </div>
+                    <!-- deleteConfirmGrid -->
+                    <div class="itemEditPage_deleteConfirmGrid_wrapper" data-wrapper-for="deleteConfirmGrid">
+                        <table id="itemEditPage_deleteConfirmGrid" class="itemEditPage_deleteConfirmGrid"
+                        dsid="deleteConfirmGrid" name="deleteConfirmGrid" cellpadding=0 cellspacing=0>
+                            <col style="width:auto;" />
+                            <col style="width:auto;" />
+                            <tr class="itemEditPage_deleteConfirmGrid_row_0">
+                                <!-- deleteConfirmCell -->
+                                <td id="itemEditPage_deleteConfirmCell" name="deleteConfirmCell" class="itemEditPage_deleteConfirmCell"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- deleteConfirmButton --><!--
+                                        --><a data-role="button" name="deleteConfirmButton" dsid="deleteConfirmButton" class="scanMenuButton  itemEditPage_deleteConfirmButton"
+                                        id="itemEditPage_deleteConfirmButton" data-corners="true" data-icon="alert" data-iconpos="right"
+                                        x-apple-data-detectors="false" data-mini="true" data-theme="b" tabindex="25">
+                                        delete
+                                        </a>
+                                    </div>
+                                </td>
+                                <!-- deleteCancelCell -->
+                                <td id="itemEditPage_deleteCancelCell" name="deleteCancelCell" class="itemEditPage_deleteCancelCell"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- deleteCancelButton --><!--
+                                        --><a data-role="button" name="deleteCancelButton" dsid="deleteCancelButton" class="scanMenuButton  itemEditPage_deleteCancelButton"
+                                        id="itemEditPage_deleteCancelButton" data-corners="true" data-icon="delete" data-iconpos="right"
+                                        x-apple-data-detectors="false" data-mini="true" data-theme="b" tabindex="27">
+                                        cancel
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- deletePhotoConfirmPopup -->
+            <div data-role="popup" name="deletePhotoConfirmPopup" dsid="deletePhotoConfirmPopup"
+            id="itemEditPage_deletePhotoConfirmPopup" class="roundedPopup  itemEditPage_deletePhotoConfirmPopup"
+            data-corners="true" data-dismissible="true" data-overlay-theme="" data-theme="" data-shadow="true"
+            data-tolerance="30,15,30,15">
+                <div class="ui-popup-content-wrapper">
+                    <!-- deletePhotoConfirmLabel -->
+                    <div name="deletePhotoConfirmLabel" id="itemEditPage_deletePhotoConfirmLabel" dsid="deletePhotoConfirmLabel"
+                    data-role="appery_label" class="labelOnDark  itemEditPage_deletePhotoConfirmLabel">
+                        are you sure you want to delete this photo?
+                    </div>
+                    <!-- deletePhotoConfirmGrid -->
+                    <div class="itemEditPage_deletePhotoConfirmGrid_wrapper" data-wrapper-for="deletePhotoConfirmGrid">
+                        <table id="itemEditPage_deletePhotoConfirmGrid" class="itemEditPage_deletePhotoConfirmGrid"
+                        dsid="deletePhotoConfirmGrid" name="deletePhotoConfirmGrid" cellpadding=0 cellspacing=0>
+                            <col style="width:auto;" />
+                            <col style="width:auto;" />
+                            <tr class="itemEditPage_deletePhotoConfirmGrid_row_0">
+                                <!-- confirmPhotoDeleteCell -->
+                                <td id="itemEditPage_confirmPhotoDeleteCell" name="confirmPhotoDeleteCell" class="itemEditPage_confirmPhotoDeleteCell"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- deletePhotoConfirmButton --><!--
+                                        --><a data-role="button" name="deletePhotoConfirmButton" dsid="deletePhotoConfirmButton"
+                                        class="scanMenuButton  itemEditPage_deletePhotoConfirmButton" id="itemEditPage_deletePhotoConfirmButton"
+                                        data-corners="true" data-icon="alert" data-iconpos="right" x-apple-data-detectors="false"
+                                        data-mini="true" data-theme="b" tabindex="36">
+                                        delete
+                                        </a>
+                                    </div>
+                                </td>
+                                <!-- deletePhotoCancelCell -->
+                                <td id="itemEditPage_deletePhotoCancelCell" name="deletePhotoCancelCell" class="itemEditPage_deletePhotoCancelCell"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- deletePhotoCancelButton --><!--
+                                        --><a data-role="button" name="deletePhotoCancelButton" dsid="deletePhotoCancelButton"
+                                        class="scanMenuButton  itemEditPage_deletePhotoCancelButton" id="itemEditPage_deletePhotoCancelButton"
+                                        data-corners="true" data-icon="delete" data-iconpos="right" x-apple-data-detectors="false"
+                                        data-mini="true" data-theme="b" tabindex="37">
+                                        cancel
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>

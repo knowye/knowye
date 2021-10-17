@@ -1,0 +1,145 @@
+
+/* Define default spinner */
+.ui-icon-loading {
+	background: url("../libs/jquerymobile/1.4.5/images/ajax-loader.gif") repeat scroll 0 0 / 46px 46px transparent!important;
+}
+/* menuButton */
+#helpPage_menuButton {
+
+}
+.ui-btn.helpPage_menuButton {
+
+}
+/* helpContainer */
+.ui-content.helpPage_helpContainer {
+	padding: 15px 15px 15px 15px;
+}
+/* helpButtonList */
+.ui-page .helpPage_helpButtonList {
+	margin: 4px 0px 0px 0px;
+}
+/* faqButton */
+/* mobilelistitembutton_4 */
+.helpPage_mobilelistitembutton_4 {
+
+}
+/* RatingsHowTo */
+.ui-listview li.helpPage_RatingsHowTo {
+	display: none;
+}
+/* mobilelistitembutton_12 */
+.helpPage_mobilelistitembutton_12 {
+
+}
+/* searchHelpButton */
+.ui-listview li.helpPage_searchHelpButton {
+	display: none;
+}
+/* mobilelistitembutton_6 */
+.helpPage_mobilelistitembutton_6 {
+
+}
+/* feedbackButton */
+/* mobilelistitembutton_8 */
+.helpPage_mobilelistitembutton_8 {
+
+}
+/* aboutButton */
+/* mobilelistitembutton_10 */
+.helpPage_mobilelistitembutton_10 {
+
+}
+/* helpPageFooter */
+.helpPage_helpPageFooter {
+	min-height:38px;
+}
+/* feedbackPopup */
+.helpPage_feedbackPopup {
+
+}
+div.helpPage_feedbackPopup {
+	max-height: 100vh;
+	box-sizing: border-box;
+}
+div.helpPage_feedbackPopup .ui-popup-content-wrapper {
+	width:100%;
+	height:100%;
+	max-height: 99vh;
+	overflow:auto;
+	box-sizing: border-box;
+	padding: 0px 2px 0px 2px;
+}
+/* feedbackLabel */
+.helpPage_feedbackLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #4c516d; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 4px 4px 4px 4px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* feedbackCategories */
+.helpPage_feedbackCategories {
+	margin: 4px 5px 4px 5px;
+}
+/* feedbackText */
+.helpPage_feedbackText {
+	margin: 10px 0px 4px 0px;
+}
+/* feedbackEmailField */
+.helpPage_feedbackEmailField {
+	margin: 10px 0px 4px 0px;
+}
+/* submitButton */
+#helpPage_submitButton {
+
+}
+.ui-btn.helpPage_submitButton {
+	margin: 10px 5px 4px 5px;
+}
+/* searchPopup */
+.helpPage_searchPopup {
+
+}
+div.helpPage_searchPopup {
+	max-height: 100vh;
+	box-sizing: border-box;
+}
+div.helpPage_searchPopup .ui-popup-content-wrapper {
+	width:100%;
+	height:100%;
+	max-height: 99vh;
+	overflow:auto;
+	box-sizing: border-box;
+}
+/* searchHelpField */
+.helpPage_searchHelpField {
+	margin: 4px 0px 4px 0px;
+}
+/* searchHelpSubmitButton */
+#helpPage_searchHelpSubmitButton {
+
+}
+.ui-btn.helpPage_searchHelpSubmitButton {
+	margin: 4px 5px 4px 5px;
+}
+/* thankYouPopup */
+.helpPage_thankYouPopup {
+
+}
+div.helpPage_thankYouPopup {
+	max-height: 100vh;
+	box-sizing: border-box;
+}
+div.helpPage_thankYouPopup .ui-popup-content-wrapper {
+	width:100%;
+	height:100%;
+	max-height: 99vh;
+	overflow:auto;
+	box-sizing: border-box;
+}
+/* thankYouLabel */
+.helpPage_thankYouLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #4c516d; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 4px 4px 4px 4px;
+	word-wrap: break-word;
+	white-space: normal;
+}

@@ -1,0 +1,106 @@
+
+/* Define default spinner */
+.ui-icon-loading {
+	background: url("../libs/jquerymobile/1.4.5/images/ajax-loader.gif") repeat scroll 0 0 / 46px 46px transparent!important;
+}
+/* testContainter */
+.ui-content.CSStestPage_testContainter {
+	padding: 15px 15px 15px 15px;
+}
+/* mobilelabel_19 */
+.CSStestPage_mobilelabel_19 {
+	text-decoration: none; font-weight: normal; font-style: italic; text-align: left; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* testLabel */
+.CSStestPage_testLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; text-align: left; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* testInput */
+.CSStestPage_testInput {
+	margin: 4px 0px 4px 0px;
+}
+/* testButton */
+#CSStestPage_testButton {
+
+}
+.ui-btn.CSStestPage_testButton {
+	margin: 4px 5px 4px 5px;
+}
+/* testRadio */
+.CSStestPage_testRadio {
+	margin: 4px 0px 4px 0px;
+}
+/* testRadio2 */
+.CSStestPage_testRadio2 {
+	-webkit-border-radius: inherit;
+	border-radius: inherit;
+}
+/* testCheck */
+.CSStestPage_testCheck {
+	margin: 4px 0px 4px 0px;
+}
+/* mobilecheckbox_11 */
+.CSStestPage_mobilecheckbox_11 {
+	-webkit-border-radius: inherit;
+	border-radius: inherit;
+}
+/* testList */
+.ui-page .CSStestPage_testList {
+	margin: 4px 0px 0px 0px;
+}
+/* mobilelistitem_15 */
+/* mobilelistitembutton_16 */
+.CSStestPage_mobilelistitembutton_16 {
+
+}
+/* testSelect */
+.CSStestPage_testSelect {
+	margin: 4px 5px 4px 5px;
+}
+/* testToggle */
+.CSStestPage_testToggle {
+	margin: 4px 0px 4px 0px;
+}
+/* mobilegrid_17 */
+.CSStestPage_mobilegrid_17 {
+	height: auto;
+	width:100%;
+	margin: 4px 0px 4px 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.CSStestPage_mobilegrid_17_wrapper {
+
+}
+.CSStestPage_mobilegrid_17 > tr > td {
+	vertical-align: top;
+}
+.CSStestPage_mobilegrid_17_row_0, .CSStestPage_mobilegrid_17_row_0 > td {
+	height: 30px
+}
+/* mobilegridcell_18 */
+.CSStestPage_mobilegridcell_18 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.CSStestPage_mobilegridcell_18 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* testImage */
+.CSStestPage_testImage {
+	margin: 4px 0px 4px 0px;
+	width: 100px; height: 100px;
+	display: block;
+}
+/* mobilefooter */
+.CSStestPage_mobilefooter {
+	min-height:38px;
+}

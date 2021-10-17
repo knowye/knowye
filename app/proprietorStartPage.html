@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>
+            proprietorStartPage
+        </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, viewport-fit=cover">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="msapplication-tap-highlight" content="no">
+        <!-- Enable all requests, inline styles, and eval() -->
+        <meta http-equiv="Content-Security-Policy" content="default-src * gap://ready data:; style-src 'self' 'unsafe-inline' *; script-src 'self' 'unsafe-inline' 'unsafe-eval' *">
+        <!-- Uncomment link and meta tags below to activate PWA icons and theme color -->
+        <!-- link rel="manifest" href="../manifest.json" crossOrigin="use-credentials" -->
+        <!-- meta name="theme-color" content="#ffffff" -->
+        <link href="../css/theme/jqm/jqm.css" rel="stylesheet" />
+        <link href="../css/theme/KnoWYE3/KnoWYE3.css" rel="stylesheet" />
+        <link href="../libs/jquerymobile/1.4.5/jquery.mobile.structure-1.4.5.css" rel="stylesheet"
+        />
+        <link type="text/css" rel="stylesheet" href="../css/logblock.css" />
+        <link type="text/css" rel="stylesheet" href="../css/menuPageBuilder.css" />
+        <link type="text/css" rel="stylesheet" href="../css/common.css" />
+        <link type="text/css" rel="stylesheet" href="../css/header_footer.css" />
+        <link type="text/css" rel="stylesheet" href="../css/button.css" />
+        <link type="text/css" rel="stylesheet" href="../css/label.css" />
+        <link type="text/css" rel="stylesheet" href="../css/FontRoboto.css.css" />
+        <!-- Uncomment this script to activate service worker -->
+        <!-- <script>
+        if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('../sw.js')
+        .then(() => console.log('service worker installed'))
+        .catch(err => console.error('Error', err));
+        }
+        </script>
+        -->
+        <script type="text/javascript" src="../libs/underscore/underscore.js">
+        </script>
+        <script type="text/javascript" src="../libs/store/json2.js">
+        </script>
+        <script type="text/javascript" src="../libs/jquery/jquery-2.1.1.js">
+        </script>
+        <script type="text/javascript" src="../libs/jquery/jquery-ajaxTransport.js">
+        </script>
+        <script type="text/javascript">
+            $(document).bind("mobileinit", function() {
+                if (navigator.userAgent.toLowerCase().indexOf("android") != -1) {
+                    $.mobile.defaultPageTransition = 'none';
+                    $.mobile.defaultDialogTransition = 'none';
+                } else if (navigator.userAgent.toLowerCase().indexOf("msie") != -1) {
+                    $.mobile.allowCrossDomainPages = true;
+                    $.support.cors = true;
+                } else if (navigator.userAgent.match(/(iPad|iPhone|iPod)/g)) {
+                    $.mobile.hashListeningEnabled = false;
+                }
+            });
+        </script>
+        <script type="text/javascript" src="../libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.js">
+        </script>
+        <script type="text/javascript" src="../libs/apperyio/mobilebase.js">
+        </script>
+        <script type="text/javascript" src="../libs/event/customEventHandler.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/sha1.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/oauth.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/contexts.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/jquery.xml2json.min.js">
+        </script>
+        <script type="text/javascript" src="../libs/ms_sdk_bundle/client-sdk.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/appery.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/component-manager.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/mapping-impl.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/entity-api.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/login.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/storage-api.js">
+        </script>
+        <script type="text/javascript" src="../get_target_platform.js">
+        </script>
+        <script type="text/javascript" src="../cordova.js">
+        </script>
+        <link href="../libs/apperyio/mobilebase.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="../js/services/model.js">
+        </script>
+        <script type="text/javascript" src="../js/menuHeadingManagePageBuilder.js">
+        </script>
+        <script type="text/javascript" src="../js/navigatePageManager.js">
+        </script>
+        <script type="text/javascript" src="../js/logblock.js">
+        </script>
+        <script type="text/javascript" src="../js/Facebook_Helper.js">
+        </script>
+        <script type="text/javascript" src="../js/menuHeadingManager.js">
+        </script>
+        <script type="text/javascript" src="../js/menuPageBuilder.js">
+        </script>
+        <script type="text/javascript" src="../js/jquery-ui.min.js">
+        </script>
+        <script type="text/javascript" src="../js/common.js">
+        </script>
+        <script type="text/javascript" src="../js/clipboard.js">
+        </script>
+        <script type="text/javascript" src="../js/FileUploadHelper.js">
+        </script>
+        <script type="text/javascript" src="../js/zzqrCodeScaner.js">
+        </script>
+        <script type="text/javascript" src="../js/menuHistoryManager.js">
+        </script>
+        <script type="text/javascript" src="../js/GoogleCharts.js">
+        </script>
+        <script type="text/javascript" src="../js/services/service.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/databaseUtils.js">
+        </script>
+        <script type="text/javascript" src="../js/secure.js">
+        </script>
+<script type="text/javascript" src="../js/EncodeDecodeJS.js">
+        </script>
+    </head>
+    
+    <body>
+        <script language="JavaScript" type="text/javascript">
+        </script>
+        <div data-role="page" style="min-height:480px;" dsid="proprietorStartPage" id="proprietorStartPage"
+        class="type-interior" data-theme="b">
+            <!-- vendorStartHeader -->
+            <div data-role="header" data-position="fixed" data-add-back-btn="true" data-back-btn-text="&nbsp;"
+            data-theme="b" name="vendorStartHeader" id="proprietorStartPage_vendorStartHeader"
+            class="proprietorStartPage_vendorStartHeader">
+                <h1 dsid="vendorStartHeader">
+                    host home
+                </h1>
+                <!-- helpButton --><!--
+                --><a data-role="button" name="helpButton" dsid="helpButton" class="proprietorStartPage_helpButton ui-btn-right"
+                style='min-height:20px; ' id="proprietorStartPage_helpButton" data-corners="true"
+                data-icon="info" data-iconpos="notext" x-apple-data-detectors="false" data-inline='true'
+                data-mini='true' data-theme="b" tabindex="6">
+                &nbsp;
+                </a>
+            </div>
+            <!-- vendorContainer -->
+            <div data-role="content" id="proprietorStartPage_vendorContainer" name="vendorContainer"
+            class="ui-li-container  proprietorStartPage_vendorContainer ui-content" dsid="vendorContainer"
+            data-theme="b">
+                <link href="proprietorStartPage.css" rel="stylesheet" type="text/css" />
+                <script type="text/javascript" src="proprietorStartPage.js">
+                </script>
+                <!-- loggedInLabel -->
+                <div name="loggedInLabel" id="proprietorStartPage_loggedInLabel" dsid="loggedInLabel"
+                data-role="appery_label" class="labelOnDark  proprietorStartPage_loggedInLabel">
+                    you are logged in as
+                </div>
+                <!-- loggedInIdLabel -->
+                <div name="loggedInIdLabel" id="proprietorStartPage_loggedInIdLabel" dsid="loggedInIdLabel"
+                data-role="appery_label" class="labelOnDark  proprietorStartPage_loggedInIdLabel">
+                    (user ID)
+                </div>
+                <!-- alertGrid -->
+                <div class="proprietorStartPage_alertGrid_wrapper" data-wrapper-for="alertGrid">
+                    <table id="proprietorStartPage_alertGrid" class="proprietorStartPage_alertGrid"
+                    dsid="alertGrid" name="alertGrid" cellpadding=0 cellspacing=0>
+                        <col style="width:auto;" />
+                        <col style="width:auto;" />
+                        <tr class="proprietorStartPage_alertGrid_row_0">
+                            <!-- mobilegridcell_24 -->
+                            <td id="proprietorStartPage_mobilegridcell_24" name="mobilegridcell_24" class="proprietorStartPage_mobilegridcell_24"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- alertLabel -->
+                                    <div name="alertLabel" id="proprietorStartPage_alertLabel" dsid="alertLabel" data-role="appery_label"
+                                    class="labelLeft  proprietorStartPage_alertLabel">
+                                        Alert
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_25 -->
+                            <td id="proprietorStartPage_mobilegridcell_25" name="mobilegridcell_25" class="proprietorStartPage_mobilegridcell_25"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- alertButtonLabel -->
+                                    <div name="alertButtonLabel" id="proprietorStartPage_alertButtonLabel" dsid="alertButtonLabel"
+                                    data-role="appery_label" class="labelStandard  proprietorStartPage_alertButtonLabel">
+                                        Indicator Button
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="proprietorStartPage_alertGrid_row_1">
+                            <!-- mobilegridcell_26 -->
+                            <td id="proprietorStartPage_mobilegridcell_26" name="mobilegridcell_26" class="proprietorStartPage_mobilegridcell_26"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- inventoryAlertLabel -->
+                                    <div name="inventoryAlertLabel" id="proprietorStartPage_inventoryAlertLabel" dsid="inventoryAlertLabel"
+                                    data-role="appery_label" class="labelLeft  proprietorStartPage_inventoryAlertLabel">
+                                        Inventory
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_27 -->
+                            <td id="proprietorStartPage_mobilegridcell_27" name="mobilegridcell_27" class="proprietorStartPage_mobilegridcell_27"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- inventoryAlertButton --><!--
+                                    --><a data-role="button" name="inventoryAlertButton" dsid="inventoryAlertButton" class="proprietorStartPage_inventoryAlertButton"
+                                    style='min-height:20px; ' id="proprietorStartPage_inventoryAlertButton" data-corners="true"
+                                    data-icon="alert" data-iconpos="notext" x-apple-data-detectors="false" data-mini="true"
+                                    data-theme="b" tabindex="4">
+                                    &nbsp;
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="proprietorStartPage_alertGrid_row_2">
+                            <!-- mobilegridcell_32 -->
+                            <td id="proprietorStartPage_mobilegridcell_32" name="mobilegridcell_32" class="proprietorStartPage_mobilegridcell_32"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- ratingAlertLabel -->
+                                    <div name="ratingAlertLabel" id="proprietorStartPage_ratingAlertLabel" dsid="ratingAlertLabel"
+                                    data-role="appery_label" class="labelLeft  proprietorStartPage_ratingAlertLabel">
+                                        Rating
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_33 -->
+                            <td id="proprietorStartPage_mobilegridcell_33" name="mobilegridcell_33" class="proprietorStartPage_mobilegridcell_33"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- ratingAlertButton --><!--
+                                    --><a data-role="button" name="ratingAlertButton" dsid="ratingAlertButton" class="proprietorStartPage_ratingAlertButton"
+                                    style='min-height:20px; ' id="proprietorStartPage_ratingAlertButton" data-corners="true"
+                                    data-icon="alert" data-iconpos="notext" x-apple-data-detectors="false" data-mini="true"
+                                    data-theme="b" tabindex="5">
+                                    &nbsp;
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- vendorActionsButtons -->
+                <ul data-role="listview" id="proprietorStartPage_vendorActionsButtons" class="proprietorStartPage_vendorActionsButtons"
+                name="vendorActionsButtons" dsid="vendorActionsButtons" data-inset="true" data-theme="b"
+                data-divider-theme="b" data-count-theme="b" style="" data-split-icon="carat-r">
+                    <!-- operatingInfoButton -->
+                    <li class="proprietorStartPage_operatingInfoButton" data-icon="carat-r">
+                        <a id="proprietorStartPage_operatingInfoButton" name="operatingInfoButton" dsid="operatingInfoButton"
+                        tabindex="3" class="proprietorStartPage_operatingInfoButton">
+                        <h3>operations info</h3>
+                        </a>
+                    </li>
+                    <!-- inventoryButton -->
+                    <li class="proprietorStartPage_inventoryButton" data-icon="carat-r">
+                        <a id="proprietorStartPage_inventoryButton" name="inventoryButton" dsid="inventoryButton"
+                        tabindex="3" class="proprietorStartPage_inventoryButton">
+                        <h3>inventory</h3>
+                        </a>
+                    </li>
+                    <!-- analyticsButton -->
+                    <li class="proprietorStartPage_analyticsButton" data-icon="carat-r">
+                        <a id="proprietorStartPage_analyticsButton" name="analyticsButton" dsid="analyticsButton"
+                        tabindex="3" class="proprietorStartPage_analyticsButton">
+                        <h3>analytics</h3>
+                        </a>
+                    </li>
+                    <!-- alertButton -->
+                    <li class="proprietorStartPage_alertButton" data-icon="carat-r">
+                        <a id="proprietorStartPage_alertButton" name="alertButton" dsid="alertButton" tabindex="3"
+                        class="proprietorStartPage_alertButton">
+                        <h3>alerts</h3>
+                        </a>
+                    </li>
+                    <!-- menuItemsButton -->
+                    <li class="proprietorStartPage_menuItemsButton" data-icon="carat-r">
+                        <a id="proprietorStartPage_menuItemsButton" name="menuItemsButton" dsid="menuItemsButton"
+                        tabindex="3" class="proprietorStartPage_menuItemsButton">
+                        <h3>menu management</h3>
+                        </a>
+                    </li>
+                    <!-- sendButton -->
+                    <li class="proprietorStartPage_sendButton" data-icon="comment">
+                        <a id="proprietorStartPage_sendButton" name="sendButton" dsid="sendButton" tabindex="3"
+                        class="proprietorStartPage_sendButton">
+                        <h3>send push message</h3>
+                        </a>
+                    </li>
+                    <!-- promoButton -->
+                    <li class="proprietorStartPage_promoButton" data-icon="carat-r">
+                        <a id="proprietorStartPage_promoButton" name="promoButton" dsid="promoButton" tabindex="3"
+                        class="proprietorStartPage_promoButton">
+                        <h3>promo management (coming soon)</h3>
+                        </a>
+                    </li>
+                    <!-- logoutButton -->
+                    <li class="proprietorStartPage_logoutButton" data-icon="power">
+                        <a id="proprietorStartPage_logoutButton" name="logoutButton" dsid="logoutButton"
+                        tabindex="3" class="proprietorStartPage_logoutButton">
+                        <h3>log out</h3>
+                        </a>
+                    </li>
+                </ul>
+                <!-- customersCountGrid -->
+                <div class="proprietorStartPage_customersCountGrid_wrapper" data-wrapper-for="customersCountGrid">
+                    <table id="proprietorStartPage_customersCountGrid" class="proprietorStartPage_customersCountGrid"
+                    dsid="customersCountGrid" name="customersCountGrid" cellpadding=0 cellspacing=0>
+                        <col style="width:auto;" />
+                        <tr class="proprietorStartPage_customersCountGrid_row_0">
+                            <!-- customersCountCell -->
+                            <td id="proprietorStartPage_customersCountCell" name="customersCountCell" class="proprietorStartPage_customersCountCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- customersCountLabel -->
+                                    <div name="customersCountLabel" id="proprietorStartPage_customersCountLabel" dsid="customersCountLabel"
+                                    data-role="appery_label" class="labelOnDark  proprietorStartPage_customersCountLabel">
+                                        customers in the know
+                                    </div>
+                                    <!-- customersCount -->
+                                    <div name="customersCount" id="proprietorStartPage_customersCount" dsid="customersCount"
+                                    data-role="appery_label" class="proprietorStartPage_customersCount">
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <!-- logoutConfirmPopup -->
+            <div data-role="popup" name="logoutConfirmPopup" dsid="logoutConfirmPopup" id="proprietorStartPage_logoutConfirmPopup"
+            class="roundedPopup  proprietorStartPage_logoutConfirmPopup" data-corners="true"
+            data-dismissible="true" data-overlay-theme="" data-theme="" data-shadow="true" data-tolerance="30,15,30,15">
+                <div class="ui-popup-content-wrapper">
+                    <!-- logoutConfirmLabel -->
+                    <div name="logoutConfirmLabel" id="proprietorStartPage_logoutConfirmLabel" dsid="logoutConfirmLabel"
+                    data-role="appery_label" class="labelOnDark  proprietorStartPage_logoutConfirmLabel">
+                        are you sure you want to log out?
+                    </div>
+                    <!-- logoutButtonGrid -->
+                    <div class="proprietorStartPage_logoutButtonGrid_wrapper" data-wrapper-for="logoutButtonGrid">
+                        <table id="proprietorStartPage_logoutButtonGrid" class="proprietorStartPage_logoutButtonGrid"
+                        dsid="logoutButtonGrid" name="logoutButtonGrid" cellpadding=0 cellspacing=0>
+                            <col style="width:auto;" />
+                            <col style="width:auto;" />
+                            <tr class="proprietorStartPage_logoutButtonGrid_row_0">
+                                <!-- logoutButtonCell -->
+                                <td id="proprietorStartPage_logoutButtonCell" name="logoutButtonCell" class="proprietorStartPage_logoutButtonCell"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- logoutConfirmButton --><!--
+                                        --><a data-role="button" name="logoutConfirmButton" dsid="logoutConfirmButton" class="scanMenuButton  proprietorStartPage_logoutConfirmButton"
+                                        id="proprietorStartPage_logoutConfirmButton" data-corners="true" data-icon="power"
+                                        data-iconpos="right" x-apple-data-detectors="false" data-mini="true" data-theme="b"
+                                        tabindex="7">
+                                        log out
+                                        </a>
+                                    </div>
+                                </td>
+                                <!-- logoutCancelCell -->
+                                <td id="proprietorStartPage_logoutCancelCell" name="logoutCancelCell" class="proprietorStartPage_logoutCancelCell"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- logoutCancelButton --><!--
+                                        --><a data-role="button" name="logoutCancelButton" dsid="logoutCancelButton" class="scanMenuButton  proprietorStartPage_logoutCancelButton"
+                                        id="proprietorStartPage_logoutCancelButton" data-corners="true" data-icon="delete"
+                                        data-iconpos="right" x-apple-data-detectors="false" data-mini="true" data-theme="b"
+                                        tabindex="8">
+                                        cancel
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>

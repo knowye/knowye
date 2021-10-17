@@ -1,0 +1,280 @@
+
+/* Define default spinner */
+.ui-icon-loading {
+	background: url("../libs/jquerymobile/1.4.5/images/ajax-loader.gif") repeat scroll 0 0 / 46px 46px transparent!important;
+}
+/* homeButton */
+#menuManagementPage_homeButton {
+
+}
+.ui-btn.menuManagementPage_homeButton {
+
+}
+/* menuManageContainer */
+.ui-content.menuManagementPage_menuManageContainer {
+	padding: 15px 15px 15px 15px;
+}
+/* menuManageList */
+.ui-page .menuManagementPage_menuManageList {
+	margin: 4px 0px 0px 0px;
+}
+/* headingEditButton */
+/* mobilelistitembutton_6 */
+.menuManagementPage_mobilelistitembutton_6 {
+
+}
+/* itemEditButton */
+/* mobilelistitembutton_8 */
+.menuManagementPage_mobilelistitembutton_8 {
+
+}
+/* menuTagLine */
+/* mobilelistitembutton_16 */
+.menuManagementPage_mobilelistitembutton_16 {
+
+}
+/* timeRangeButton */
+.ui-listview li.menuManagementPage_timeRangeButton {
+	display: none;
+}
+/* mobilelistitembutton_10 */
+.menuManagementPage_mobilelistitembutton_10 {
+
+}
+/* qrCodeButton */
+.ui-listview li.menuManagementPage_qrCodeButton {
+	display: none;
+}
+/* mobilelistitembutton_12 */
+.menuManagementPage_mobilelistitembutton_12 {
+
+}
+/* menuPreview */
+.ui-listview li.menuManagementPage_menuPreview {
+	display: none;
+}
+.ui-mobile-viewport ul[data-role="listview"] li.menuManagementPage_menuPreview {
+	padding: 0;
+	margin: 0;
+}
+.ui-mobile-viewport ul[data-role="listview"] li.menuManagementPage_menuPreview .ui-li-static-container {
+	padding: 0px 0px 4px 0px;
+	padding-right: 41px;
+	padding-left: 0px;
+	min-height: 1em;
+	border-width:0;
+}
+.ui-mobile-viewport ul[data-role="listview"] li.menuManagementPage_menuPreview.ui-icon-none .ui-li-static-container {
+	padding-right: 0px; /* consider nothing */
+}
+/* mobilelistitembutton_14 */
+.menuManagementPage_mobilelistitembutton_14 {
+
+}
+/* menuViewGrid */
+.menuManagementPage_menuViewGrid {
+	height: auto;
+	width:100%;
+	margin: 4px 0px 4px 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.menuManagementPage_menuViewGrid_wrapper {
+	display: none;
+}
+.menuManagementPage_menuViewGrid > tr > td {
+	vertical-align: top;
+}
+.menuManagementPage_menuViewGrid_row_0, .menuManagementPage_menuViewGrid_row_0 > td {
+	height: 30px
+}
+/* menuViewCell */
+.menuManagementPage_menuViewCell {
+	height:30px !important;
+	width:auto;
+	padding: 20px 0px 0px 0px;
+}
+.menuManagementPage_menuViewCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* menuViewPeriodLabel */
+.menuManagementPage_menuViewPeriodLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 0px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* periodSelectButton */
+.menuManagementPage_periodSelectButton {
+	margin: 4px 0px 4px 0px;
+}
+/* menuViewPeriodGrid */
+.menuManagementPage_menuViewPeriodGrid {
+	height: auto;
+	width:100%;
+	margin: 4px 0px 4px 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.menuManagementPage_menuViewPeriodGrid_wrapper {
+
+}
+.menuManagementPage_menuViewPeriodGrid > tr > td {
+	vertical-align: top;
+}
+.menuManagementPage_menuViewPeriodGrid_row_0, .menuManagementPage_menuViewPeriodGrid_row_0 > td {
+	height: 30px
+}
+.menuManagementPage_menuViewPeriodGrid_row_1, .menuManagementPage_menuViewPeriodGrid_row_1 > td {
+	height: 30px
+}
+/* lastPeriodLabelCell */
+.menuManagementPage_lastPeriodLabelCell {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.menuManagementPage_lastPeriodLabelCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* lastPeriodLabel */
+.menuManagementPage_lastPeriodLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; text-align: right; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* thisPeriodLabelCell */
+.menuManagementPage_thisPeriodLabelCell {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.menuManagementPage_thisPeriodLabelCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* thisPeriodLabel */
+.menuManagementPage_thisPeriodLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; text-align: right; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* lastPeriodCountCell */
+.menuManagementPage_lastPeriodCountCell {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.menuManagementPage_lastPeriodCountCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* lastPeriodCountLabel */
+.menuManagementPage_lastPeriodCountLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; text-align: right; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* thisPeriodCountCell */
+.menuManagementPage_thisPeriodCountCell {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.menuManagementPage_thisPeriodCountCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* thisPeriodCountLabel */
+.menuManagementPage_thisPeriodCountLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; text-align: right; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* menuManagementtFooter */
+.menuManagementPage_menuManagementtFooter {
+	min-height:38px;
+}
+/* menuTagLinePopup */
+.menuManagementPage_menuTagLinePopup {
+
+}
+div.menuManagementPage_menuTagLinePopup {
+	max-height: 100vh;
+	box-sizing: border-box;
+}
+div.menuManagementPage_menuTagLinePopup .ui-popup-content-wrapper {
+	width:100%;
+	height:100%;
+	max-height: 99vh;
+	overflow:auto;
+	box-sizing: border-box;
+}
+/* tagLineLabel */
+.menuManagementPage_tagLineLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #4c516d; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 4px 4px 4px 4px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* tagLineField */
+.menuManagementPage_tagLineField {
+	margin: 4px 4px 4px 4px;
+}
+/* taglineButtonGrid */
+.menuManagementPage_taglineButtonGrid {
+	height: auto;
+	width:100%;
+	margin: 10px 0px 4px 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.menuManagementPage_taglineButtonGrid_wrapper {
+
+}
+.menuManagementPage_taglineButtonGrid > tr > td {
+	vertical-align: top;
+}
+.menuManagementPage_taglineButtonGrid_row_0, .menuManagementPage_taglineButtonGrid_row_0 > td {
+	height: 30px
+}
+/* taglineSaveCell */
+.menuManagementPage_taglineSaveCell {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.menuManagementPage_taglineSaveCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* tagLineSaveButton */
+#menuManagementPage_tagLineSaveButton {
+
+}
+.ui-btn.menuManagementPage_tagLineSaveButton {
+	margin: 10px 4px 5px 4px;
+}
+/* taglineCancelCell */
+.menuManagementPage_taglineCancelCell {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.menuManagementPage_taglineCancelCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* taglineCancelButton */
+#menuManagementPage_taglineCancelButton {
+
+}
+.ui-btn.menuManagementPage_taglineCancelButton {
+	margin: 10px 4px 5px 4px;
+}

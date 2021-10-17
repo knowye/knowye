@@ -1,0 +1,116 @@
+html body div.labelPopupAlert {
+    color: #4c516d;
+    text-align: center;
+    font-size: 20px;
+}
+
+html body div.labelOnDark {
+    color: #f8f8fa;
+    font-size: 16px;
+    -webkit-user-select: none;
+}
+
+html body div.labelOnLight {
+    color: #4c516d;
+    font-size: 16px;
+    -webkit-user-select: none;
+}
+
+html body div.labelPopupNotice {
+    color: #4c516d;
+    text-align: center;
+    font-size: 20px;
+}
+
+html body div.labelError {
+    color: red;
+    text-align: left;
+    font-size: 14px;
+}
+
+html body div.labelWarning {
+    color: red;
+    text-align: center;
+    font-size: 16px;
+}
+
+html body div.labelItem {
+    color: white;
+    font-size: 18px;
+}
+
+html body div.labelDescription {
+    color: #D8D8D8;
+    font-size: 16px;
+}
+
+html body div.labelMenuHeading {
+    color: white;
+    text-align: left;
+    font-size: 14px; 
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600 !important;
+}
+
+html body div.labelMenuItem {
+    color: white;
+    text-align: left;
+    font-size: 18px;
+}
+
+
+html body div.labelMenuDescription {
+    color: #D8D8D8;
+    text-align: left;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+}
+
+html body div.labelMenuDollar {
+    color: #D8D8D8;
+    font-size: 16px;
+}
+
+html body div.labelMenuPrice {
+    color: #D8D8D8;
+    font-size: 16px;
+}
+
+html body div.labelUnavailable {
+    color: red;
+    text-align: center;
+    font-size: 16px;
+}
+
+html body div.infoLabel {
+    color: #0ec40a;
+    text-align: center;
+    font-size: 16px;
+}
+
+
+.menu-select-button-layout {
+    margin-top: 15px; 
+    margin-bottom: 15px;
+}
+
+.menu-select-button {
+    background: white; 
+    font-weight: 300 !important;
+    color: #404040;
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+}
+
+/*
+
+html body div.myLabel {
+    background: red;
+    color: #006600;
+    text-align: right;
+    font-size: 10px;
+}
+
+*/
+

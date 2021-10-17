@@ -1,0 +1,556 @@
+
+/* Define default spinner */
+.ui-icon-loading {
+	background: url("../libs/jquerymobile/1.4.5/images/ajax-loader.gif") repeat scroll 0 0 / 46px 46px transparent!important;
+}
+/* helpButton */
+#startScreen_helpButton {
+
+}
+.ui-btn.startScreen_helpButton {
+
+}
+/* startContainer */
+.ui-content.startScreen_startContainer {
+	padding: 15px 15px 15px 15px;
+}
+/* knowyeLogo */
+.startScreen_knowyeLogo {
+	margin: 4px 0px 10px 4px;
+	width: 200px; height: auto;
+	display: block;
+}
+/* scanMenuCodeButton */
+#startScreen_scanMenuCodeButton {
+	display: none;
+}
+.ui-btn.startScreen_scanMenuCodeButton {
+	margin: 20px 5px 4px 5px;
+}
+/* gotoSearch */
+#startScreen_gotoSearch {
+
+}
+.ui-btn.startScreen_gotoSearch {
+	margin: 4px 5px 4px 5px;
+}
+/* loginForm */
+.startScreen_loginForm {
+	height: auto;
+	width:100%;
+	margin: 0px 0px 4px 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.startScreen_loginForm_wrapper {
+
+}
+.startScreen_loginForm > tr > td {
+	vertical-align: top;
+}
+.startScreen_loginForm_row_0, .startScreen_loginForm_row_0 > td {
+	height: 30px
+}
+.startScreen_loginForm_row_1, .startScreen_loginForm_row_1 > td {
+	height: 30px
+}
+/* loginCell */
+.startScreen_loginCell {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.startScreen_loginCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* loginField */
+.startScreen_loginField {
+	margin: 20px 5px 4px 5px;
+}
+/* passwordCell */
+.startScreen_passwordCell {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.startScreen_passwordCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* passwordField */
+.startScreen_passwordField {
+	margin: 4px 5px 4px 5px;
+}
+/* errorLabel */
+.startScreen_errorLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #f50c0c; text-align: left; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 12px 0px;
+	display: none;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* loginButton */
+#startScreen_loginButton {
+
+}
+.ui-btn.startScreen_loginButton {
+	margin: 4px 5px 4px 5px;
+}
+/* forgotPwLabel */
+.startScreen_forgotPwLabel {
+	text-decoration: underline; font-weight: normal; font-style: italic; color: #2489ce; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 20px 4px 4px 4px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* amazonLogin */
+#startScreen_amazonLogin {
+	display: none;
+}
+.ui-btn.startScreen_amazonLogin {
+	margin: 10px 5px 4px 5px;
+}
+/* facebookLogin */
+#startScreen_facebookLogin {
+	display: none;
+}
+.ui-btn.startScreen_facebookLogin {
+	margin: 4px 5px 4px 5px;
+}
+/* createAccountButton */
+#startScreen_createAccountButton {
+
+}
+.ui-btn.startScreen_createAccountButton {
+	margin: 20px 5px 4px 5px;
+}
+/* touPrivacyGrid */
+.startScreen_touPrivacyGrid {
+	height: auto;
+	width:100%;
+	margin: 20px 0px 0px 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.startScreen_touPrivacyGrid_wrapper {
+
+}
+.startScreen_touPrivacyGrid > tr > td {
+	vertical-align: top;
+}
+.startScreen_touPrivacyGrid_row_0, .startScreen_touPrivacyGrid_row_0 > td {
+	height: auto
+}
+/* touCell */
+.startScreen_touCell {
+	height:auto !important;
+	width:auto;
+	padding: 0px 0px 0px 0px;
+}
+.startScreen_touCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* touLabel */
+.startScreen_touLabel {
+	text-decoration: underline; font-weight: normal; font-style: italic; color: #2489ce; text-align: left; font-family: Helvetica; font-size: 12px;
+	margin: 0px 0px 0px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* privacyCell */
+.startScreen_privacyCell {
+	height:auto !important;
+	width:auto;
+	padding: 0px 0px 0px 0px;
+}
+.startScreen_privacyCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* privacyLabel */
+.startScreen_privacyLabel {
+	text-decoration: underline; font-weight: normal; font-style: italic; color: #2489ce; text-align: right; font-family: Helvetica; font-size: 12px;
+	margin: 0px 0px 0px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* startPageFooter */
+.startScreen_startPageFooter {
+	min-height:38px;
+}
+/* introPopup */
+.startScreen_introPopup {
+
+}
+div.startScreen_introPopup {
+	max-height: 100vh;
+	box-sizing: border-box;
+}
+div.startScreen_introPopup .ui-popup-content-wrapper {
+	width:100%;
+	height:100%;
+	max-height: 99vh;
+	overflow:auto;
+	box-sizing: border-box;
+}
+/* introPopupLabel1 */
+.startScreen_introPopupLabel1 {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #4c516d; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 4px 4px 4px 4px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* introPopupLabel2 */
+.startScreen_introPopupLabel2 {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #4c516d; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 4px 4px 4px 4px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* showAgainChkBox */
+.startScreen_showAgainChkBox {
+	margin: 4px 4px 4px 4px;
+}
+/* showAgainCheck */
+.startScreen_showAgainCheck {
+	-webkit-border-radius: inherit;
+	border-radius: inherit;
+}
+/* introPopupContinueButton */
+#startScreen_introPopupContinueButton {
+
+}
+.ui-btn.startScreen_introPopupContinueButton {
+	margin: 10px 5px 4px 5px;
+}
+/* createAccountPopup */
+.startScreen_createAccountPopup {
+
+}
+div.startScreen_createAccountPopup {
+	max-height: 100vh;
+	box-sizing: border-box;
+}
+div.startScreen_createAccountPopup .ui-popup-content-wrapper {
+	width:100%;
+	height:100%;
+	max-height: 99vh;
+	overflow:auto;
+	box-sizing: border-box;
+}
+/* createAccountPopupLabel */
+.startScreen_createAccountPopupLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #4c516d; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 4px 4px 4px 4px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* accountTypeList */
+.ui-page .startScreen_accountTypeList {
+	margin: 10px 4px 4px 4px;
+}
+/* personSelectButton */
+/* mobilelistitembutton_43 */
+.startScreen_mobilelistitembutton_43 {
+
+}
+/* proprietorSelectButton */
+/* mobilelistitembutton_45 */
+.startScreen_mobilelistitembutton_45 {
+
+}
+/* forgotPasswordPopup */
+.startScreen_forgotPasswordPopup {
+
+}
+div.startScreen_forgotPasswordPopup {
+	max-height: 100vh;
+	box-sizing: border-box;
+}
+div.startScreen_forgotPasswordPopup .ui-popup-content-wrapper {
+	width:100%;
+	height:100%;
+	max-height: 99vh;
+	overflow:auto;
+	box-sizing: border-box;
+}
+/* resetPwButton */
+#startScreen_resetPwButton {
+
+}
+.ui-btn.startScreen_resetPwButton {
+	margin: 4px 5px 4px 5px;
+}
+/* resetPasswordTempLabel */
+.startScreen_resetPasswordTempLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 4px 4px 4px 4px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* resetPwAddressLink */
+.startScreen_resetPwAddressLink {
+	margin: 10px 4px 4px 4px;
+	display: block;
+	vertical-align: middle;
+	padding: 2px;
+	cursor: pointer;
+}
+.startScreen_resetPwAddressLink_link_wrapper > .startScreen_resetPwAddressLink,
+.startScreen_resetPwAddressLink_link_wrapper > .startScreen_resetPwAddressLink:hover,
+.startScreen_resetPwAddressLink_link_wrapper > .startScreen_resetPwAddressLink:active,
+.startScreen_resetPwAddressLink_link_wrapper > .startScreen_resetPwAddressLink:visited {
+	text-decoration: underline; font-weight: normal; font-style: italic; color: #2489ce; text-align: center; font-family: Helvetica; font-size: 16px;
+}
+/* forgotPasswordLabel */
+.startScreen_forgotPasswordLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 4px 4px 4px 4px;
+	display: none;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* emailInput */
+.startScreen_emailInput {
+	margin: 4px 4px 4px 4px;
+	display: none;
+}
+/* forgotPasswordButton */
+#startScreen_forgotPasswordButton {
+	display: none;
+}
+.ui-btn.startScreen_forgotPasswordButton {
+	margin: 4px 5px 4px 5px;
+}
+/* locationsPopup */
+.startScreen_locationsPopup {
+
+}
+div.startScreen_locationsPopup {
+	max-height: 100vh;
+	box-sizing: border-box;
+}
+div.startScreen_locationsPopup .ui-popup-content-wrapper {
+	width:100%;
+	height:100%;
+	max-height: 99vh;
+	overflow:auto;
+	box-sizing: border-box;
+}
+/* locationPopupGrid */
+.startScreen_locationPopupGrid {
+	height: auto;
+	width:100%;
+	margin: 4px 0px 4px 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.startScreen_locationPopupGrid_wrapper {
+
+}
+.startScreen_locationPopupGrid > tr > td {
+	vertical-align: top;
+}
+.startScreen_locationPopupGrid_row_0, .startScreen_locationPopupGrid_row_0 > td {
+	height: 30px
+}
+/* mobilegridcell_48 */
+.startScreen_mobilegridcell_48 {
+	height:30px !important;
+	width:46px;
+	padding: 2px 2px 2px 2px;
+}
+.startScreen_mobilegridcell_48 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* locationsCloseBtn */
+#startScreen_locationsCloseBtn {
+
+}
+.ui-btn.startScreen_locationsCloseBtn {
+	margin: 4px 5px 4px 5px;
+}
+/* mobilegridcell_49 */
+.startScreen_mobilegridcell_49 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.startScreen_mobilegridcell_49 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* locationsLabel */
+.startScreen_locationsLabel {
+	text-decoration: none; font-weight: normal; text-align: left; font-family: Helvetica; font-size: 16px;
+	margin: 4px 20px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* featureLocationList */
+.ui-page .startScreen_featureLocationList {
+	margin: 4px 0px 0px 0px;
+	display: none;
+}
+/* featureLocationsItem */
+/* mobilelistitembutton_67 */
+.startScreen_mobilelistitembutton_67 {
+
+}
+/* locationList */
+.ui-page .startScreen_locationList {
+	margin: 4px 0px 0px 0px;
+}
+/* locationsListItem */
+/* mobilelistitembutton_55 */
+.startScreen_mobilelistitembutton_55 {
+
+}
+/* recoverpassword_popup */
+.startScreen_recoverpassword_popup {
+
+}
+div.startScreen_recoverpassword_popup {
+	max-height: 100vh;
+	box-sizing: border-box;
+}
+div.startScreen_recoverpassword_popup .ui-popup-content-wrapper {
+	width:100%;
+	height:100%;
+	max-height: 99vh;
+	overflow:auto;
+	box-sizing: border-box;
+}
+/* rpw_close_btn */
+#startScreen_rpw_close_btn {
+
+}
+.ui-btn.startScreen_rpw_close_btn {
+	margin: 4px 5px 4px 5px;
+}
+/* rpw_title */
+.startScreen_rpw_title {
+	text-decoration: none; font-weight: bold; color: #f8f8fa; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 4px 4px 20px 4px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* rpw_instruction_label */
+.startScreen_rpw_instruction_label {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #f8f8fa; text-align: center; font-family: Helvetica; font-size: 14px;
+	margin: 4px 4px 20px 4px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* rpw_email */
+.startScreen_rpw_email {
+	margin: 10px 4px 0px 4px;
+}
+/* rpw_error */
+.startScreen_rpw_error {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #ff0000; text-align: left; font-family: Helvetica; font-size: 14px;
+	margin: 0px 4px 4px 4px;
+	display: none;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* rpw_send_code */
+#startScreen_rpw_send_code {
+
+}
+.ui-btn.startScreen_rpw_send_code {
+	margin: 10px 5px 4px 5px;
+}
+/* resetpassword_popup */
+.startScreen_resetpassword_popup {
+
+}
+div.startScreen_resetpassword_popup {
+	max-height: 100vh;
+	box-sizing: border-box;
+}
+div.startScreen_resetpassword_popup .ui-popup-content-wrapper {
+	width:100%;
+	height:100%;
+	max-height: 99vh;
+	overflow:auto;
+	box-sizing: border-box;
+}
+/* resetpass_close_btn */
+#startScreen_resetpass_close_btn {
+
+}
+.ui-btn.startScreen_resetpass_close_btn {
+	margin: 4px 5px 4px 5px;
+}
+/* resetpass_title */
+.startScreen_resetpass_title {
+	text-decoration: none; font-weight: bold; color: #f8f8fa; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 10px 4px 10px 4px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* resetpass_msg */
+.startScreen_resetpass_msg {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #f8f8fa; text-align: left; font-family: Helvetica; font-size: 14px;
+	margin: 0px 4px 10px 4px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* resetpass_response_error */
+.startScreen_resetpass_response_error {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #ff0000; text-align: left; font-family: Helvetica; font-size: 14px;
+	margin: 4px 4px 4px 4px;
+	display: none;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* resetpass_email */
+.startScreen_resetpass_email {
+	margin: 4px 4px 4px 4px;
+}
+/* resetpass_email_error */
+.startScreen_resetpass_email_error {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #ff0000; text-align: left; font-family: Helvetica; font-size: 14px;
+	margin: 4px 4px 4px 4px;
+	display: none;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* resetpass_secret */
+.startScreen_resetpass_secret {
+	margin: 4px 4px 0px 4px;
+}
+/* resetpass_secret_error */
+.startScreen_resetpass_secret_error {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #ff0000; text-align: left; font-family: Helvetica; font-size: 14px;
+	margin: 4px 4px 20px 4px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* resetpass_new_pass */
+.startScreen_resetpass_new_pass {
+	margin: 10px 4px 4px 4px;
+}
+/* resetpass_confirm_pass */
+.startScreen_resetpass_confirm_pass {
+	margin: 4px 4px 4px 4px;
+}
+/* resetpass_pass_error */
+.startScreen_resetpass_pass_error {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #ff0000; text-align: left; font-family: Helvetica; font-size: 14px;
+	margin: 4px 4px 4px 4px;
+	display: none;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* resetpass_submit */
+#startScreen_resetpass_submit {
+
+}
+.ui-btn.startScreen_resetpass_submit {
+	margin: 10px 5px 4px 5px;
+}

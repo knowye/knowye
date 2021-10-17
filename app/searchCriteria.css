@@ -1,0 +1,27 @@
+
+/* Define default spinner */
+.ui-icon-loading {
+	background: url("../libs/jquerymobile/1.4.5/images/ajax-loader.gif") repeat scroll 0 0 / 46px 46px transparent!important;
+}
+/* navigateButton */
+#searchCriteria_navigateButton {
+
+}
+.ui-btn.searchCriteria_navigateButton {
+
+}
+/* searchDishCriteriaContainer */
+.ui-content.searchCriteria_searchDishCriteriaContainer {
+	padding: 15px 15px 15px 15px;
+}
+/* mobilefooter */
+.searchCriteria_mobilefooter {
+	min-height:38px;
+}
+/* panel_2 */
+.searchCriteria_panel_2 .ui-panel-inner {
+	padding: 15px 15px 15px 15px;
+}
+.searchCriteria_panel_2:focus {
+	outline: 0;
+}

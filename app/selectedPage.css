@@ -1,0 +1,1090 @@
+
+/* Define default spinner */
+.ui-icon-loading {
+	background: url("../libs/jquerymobile/1.4.5/images/ajax-loader.gif") repeat scroll 0 0 / 46px 46px transparent!important;
+}
+/* navigateButton */
+#selectedPage_navigateButton {
+
+}
+.ui-btn.selectedPage_navigateButton {
+
+}
+/* selectedContainer */
+.ui-content.selectedPage_selectedContainer {
+	padding: 15px 15px 15px 15px;
+}
+/* seatingGrid */
+.selectedPage_seatingGrid {
+	height: auto;
+	width:100%;
+	margin: 4px 0px 4px 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.selectedPage_seatingGrid_wrapper {
+	display: none;
+}
+.selectedPage_seatingGrid > tr > td {
+	vertical-align: top;
+}
+.selectedPage_seatingGrid_row_0, .selectedPage_seatingGrid_row_0 > td {
+	height: 30px
+}
+.selectedPage_seatingGrid_row_1, .selectedPage_seatingGrid_row_1 > td {
+	height: 30px
+}
+/* tableLabelCell */
+.selectedPage_tableLabelCell {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.selectedPage_tableLabelCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* tableLabel */
+.selectedPage_tableLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #0ec40a; text-align: right; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* tableCell */
+.selectedPage_tableCell {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.selectedPage_tableCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* table */
+.selectedPage_table {
+	text-decoration: none; font-weight: normal; font-style: italic; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* seatLabelCell */
+.selectedPage_seatLabelCell {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.selectedPage_seatLabelCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* dinerLabel */
+.selectedPage_dinerLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #0ec40a; text-align: right; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* seatCell */
+.selectedPage_seatCell {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.selectedPage_seatCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* seat */
+.selectedPage_seat {
+	text-decoration: none; font-weight: normal; font-style: italic; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* selectedLabel */
+.selectedPage_selectedLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #f8f8fa; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* removeLabel */
+.selectedPage_removeLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #f8f8fa; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* selectedList */
+.ui-page .selectedPage_selectedList {
+	margin: 10px -15px 0px -15px;
+}
+/* selectedItemList */
+.ui-mobile-viewport ol[data-role="listview"] li.selectedPage_selectedItemList {
+	padding: 0;
+	margin: 0;
+}
+.ui-mobile-viewport ol[data-role="listview"] li.selectedPage_selectedItemList .ui-li-static-container {
+	padding: 0px 0px 6px 0px;
+	padding-right: 41px;
+	padding-left: 30px;
+	min-height: 1em;
+	border-width:0;
+}
+.ui-mobile-viewport ol[data-role="listview"] li.selectedPage_selectedItemList.ui-icon-none .ui-li-static-container {
+	padding-right: 0px; /* consider nothing */
+}
+ol.ui-listview li.selectedPage_selectedItemList:before, ol.ui-listview li.selectedPage_selectedItemList .ui-btn:first-child:before {
+	position: absolute;
+	left: 0px;
+	top: 4px;
+	z-index: 5;
+}
+/* itemGrid */
+.selectedPage_itemGrid {
+	height: auto;
+	width:auto;
+	margin: 0px 0px 0px 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.selectedPage_itemGrid_wrapper {
+
+}
+.selectedPage_itemGrid > tr > td {
+	vertical-align: top;
+}
+.selectedPage_itemGrid_row_0, .selectedPage_itemGrid_row_0 > td {
+	height: auto
+}
+/* itemNameCell */
+.selectedPage_itemNameCell {
+	height:auto !important;
+	width:171px;
+	padding: 0px 0px 0px 0px;
+}
+.selectedPage_itemNameCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* itemNameLabel */
+.selectedPage_itemNameLabel {
+	text-decoration: none; font-weight: normal; text-align: left; font-family: Helvetica; font-size: 16px;
+	margin: 0px 0px 0px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* itemPriceCell */
+.selectedPage_itemPriceCell {
+	height:auto !important;
+	width:22px;
+	padding: 0px 0px 0px 0px;
+}
+.selectedPage_itemPriceCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* dollarSignLabel */
+.selectedPage_dollarSignLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; text-align: right; font-family: Helvetica; font-size: 16px;
+	margin: 0px 0px 0px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* itemButtonPriceCell */
+.selectedPage_itemButtonPriceCell {
+	height:auto !important;
+	width:66px;
+	padding: 0px 0px 0px 0px;
+}
+.selectedPage_itemButtonPriceCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* itemPriceLabel */
+.selectedPage_itemPriceLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; text-align: left; font-family: Helvetica; font-size: 16px;
+	margin: 0px 0px 0px 2px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* mobilelistitembutton_5 */
+.selectedPage_mobilelistitembutton_5 {
+
+}
+/* rateReminderLabel */
+.selectedPage_rateReminderLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 4px 4px 4px 4px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* costLabel */
+.selectedPage_costLabel {
+	text-decoration: none; font-weight: bold; font-style: italic; color: #f8f8fa; text-align: center; font-family: Helvetica; font-size: 18px;
+	margin: 20px 4px 4px 4px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* orderGrid */
+.selectedPage_orderGrid {
+	height: auto;
+	width:100%;
+	margin: 10px 4px 4px 4px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.selectedPage_orderGrid_wrapper {
+
+}
+.selectedPage_orderGrid > tr > td {
+	vertical-align: top;
+}
+.selectedPage_orderGrid_row_0, .selectedPage_orderGrid_row_0 > td {
+	height: 30px
+}
+/* orderTotalCell1 */
+.selectedPage_orderTotalCell1 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.selectedPage_orderTotalCell1 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* orderTotalLabel */
+.selectedPage_orderTotalLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #f8f8fa; text-align: right; font-family: Helvetica; font-size: 16px;
+	margin: 0px 0px 0px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* orderTotalCell */
+.selectedPage_orderTotalCell {
+	height:30px !important;
+	width:100px;
+	padding: 2px 2px 2px 2px;
+}
+.selectedPage_orderTotalCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* orderTotal */
+.selectedPage_orderTotal {
+	text-decoration: none; font-weight: normal; color: #666666; text-align: right; font-family: Helvetica; font-size: 16px;
+	margin: 0px 0px 0px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* adjustedGrid */
+.selectedPage_adjustedGrid {
+	height: auto;
+	width:100%;
+	margin: 4px 4px 4px 4px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.selectedPage_adjustedGrid_wrapper {
+
+}
+.selectedPage_adjustedGrid > tr > td {
+	vertical-align: top;
+}
+.selectedPage_adjustedGrid_row_0, .selectedPage_adjustedGrid_row_0 > td {
+	height: 30px
+}
+/* adjustedCell1 */
+.selectedPage_adjustedCell1 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.selectedPage_adjustedCell1 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* adjustedLabel1 */
+.selectedPage_adjustedLabel1 {
+	text-decoration: none; font-weight: normal; font-style: italic; text-align: right; font-family: Helvetica; font-size: 16px;
+	margin: 6px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* dollarCell1 */
+.selectedPage_dollarCell1 {
+	height:30px !important;
+	width:14px;
+	padding: 2px 2px 2px 2px;
+}
+.selectedPage_dollarCell1 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* dollarLabel1 */
+.selectedPage_dollarLabel1 {
+	text-decoration: none; font-weight: normal; font-style: italic; text-align: right; font-family: Helvetica; font-size: 16px;
+	margin: 6px 0px 0px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* adjustedCell2 */
+.selectedPage_adjustedCell2 {
+	height:30px !important;
+	width:86px;
+	padding: 2px 2px 2px 2px;
+}
+.selectedPage_adjustedCell2 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* adjustedInput */
+.selectedPage_adjustedInput {
+	margin: 0px 0px 0px 0px;
+}
+/* billGrid */
+.selectedPage_billGrid {
+	height: auto;
+	width:100%;
+	margin: 10px 4px 4px 4px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.selectedPage_billGrid_wrapper {
+
+}
+.selectedPage_billGrid > tr > td {
+	vertical-align: top;
+}
+.selectedPage_billGrid_row_0, .selectedPage_billGrid_row_0 > td {
+	height: 2px
+}
+.selectedPage_billGrid_row_1, .selectedPage_billGrid_row_1 > td {
+	height: 30px
+}
+.selectedPage_billGrid_row_2, .selectedPage_billGrid_row_2 > td {
+	height: 30px
+}
+.selectedPage_billGrid_row_3, .selectedPage_billGrid_row_3 > td {
+	height: 30px
+}
+/* orderLabelCellDELETE */
+.selectedPage_orderLabelCellDELETE {
+	height:2px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.selectedPage_orderLabelCellDELETE > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* orderCellDELETE */
+.selectedPage_orderCellDELETE {
+	height:2px !important;
+	width:100px;
+	padding: 2px 2px 2px 2px;
+}
+.selectedPage_orderCellDELETE > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* taxLabelCell1 */
+.selectedPage_taxLabelCell1 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.selectedPage_taxLabelCell1 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* taxGrid */
+.selectedPage_taxGrid {
+	height: auto;
+	width:100%;
+	margin: 0px 0px 0px 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.selectedPage_taxGrid_wrapper {
+
+}
+.selectedPage_taxGrid > tr > td {
+	vertical-align: top;
+}
+.selectedPage_taxGrid_row_0, .selectedPage_taxGrid_row_0 > td {
+	height: 30px
+}
+/* taxLabelCell2 */
+.selectedPage_taxLabelCell2 {
+	height:30px !important;
+	width:90px;
+	padding: 0px 2px 2px 2px;
+}
+.selectedPage_taxLabelCell2 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* taxLabel */
+.selectedPage_taxLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #f8f8fa; text-align: right; font-family: Helvetica; font-size: 16px;
+	margin: 0px 0px 0px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* taxRateLabelCell */
+.selectedPage_taxRateLabelCell {
+	height:30px !important;
+	width:auto;
+	padding: 0px 2px 2px 2px;
+}
+.selectedPage_taxRateLabelCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* rateLabel */
+.selectedPage_rateLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; text-align: right; font-family: Helvetica; font-size: 16px;
+	margin: 0px 0px 0px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* orderTaxCell */
+.selectedPage_orderTaxCell {
+	height:30px !important;
+	width:100px;
+	padding: 2px 2px 2px 2px;
+}
+.selectedPage_orderTaxCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* orderTax */
+.selectedPage_orderTax {
+	text-decoration: none; font-weight: normal; color: #666666; text-align: right; font-family: Helvetica; font-size: 16px;
+	margin: 0px 0px 0px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* tipCell */
+.selectedPage_tipCell {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.selectedPage_tipCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* tipGrid */
+.selectedPage_tipGrid {
+	height: auto;
+	width:100%;
+	margin: 0px 0px 0px 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.selectedPage_tipGrid_wrapper {
+
+}
+.selectedPage_tipGrid > tr > td {
+	vertical-align: top;
+}
+.selectedPage_tipGrid_row_0, .selectedPage_tipGrid_row_0 > td {
+	height: 30px
+}
+/* tipButtonCell */
+.selectedPage_tipButtonCell {
+	height:30px !important;
+	width:90px;
+	padding: 0px 0px 0px 0px;
+}
+.selectedPage_tipButtonCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* tipCalcButton */
+#selectedPage_tipCalcButton {
+
+}
+.ui-btn.selectedPage_tipCalcButton {
+	margin: 0px 0px 0px 0px;
+}
+/* tipLabelCell */
+.selectedPage_tipLabelCell {
+	height:30px !important;
+	width:auto;
+	padding: 0px 2px 2px 2px;
+}
+.selectedPage_tipLabelCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* tipRateLabel */
+.selectedPage_tipRateLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; text-align: right; font-family: Helvetica; font-size: 16px;
+	margin: 6px 0px 0px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* taxCell */
+.selectedPage_taxCell {
+	height:30px !important;
+	width:100px;
+	padding: 2px 2px 2px 2px;
+}
+.selectedPage_taxCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* orderTip */
+.selectedPage_orderTip {
+	text-decoration: none; font-weight: normal; color: #666666; text-align: right; font-family: Helvetica; font-size: 16px;
+	margin: 6px 0px 0px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* billLabelCell */
+.selectedPage_billLabelCell {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.selectedPage_billLabelCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* billTotalLabel */
+.selectedPage_billTotalLabel {
+	text-decoration: none; font-weight: bold; font-style: italic; color: #f8f8fa; text-align: right; font-family: Helvetica; font-size: 16px;
+	margin: 10px 0px 0px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* billCell */
+.selectedPage_billCell {
+	height:30px !important;
+	width:100px;
+	padding: 2px 2px 2px 2px;
+}
+.selectedPage_billCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* orderBill */
+.selectedPage_orderBill {
+	text-decoration: none; font-weight: bold; color: #666666; text-align: right; font-family: Helvetica; font-size: 16px;
+	margin: 10px 0px 0px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* splitGrid */
+.selectedPage_splitGrid {
+	height: auto;
+	width:100%;
+	margin: 20px 4px 4px 4px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.selectedPage_splitGrid_wrapper {
+
+}
+.selectedPage_splitGrid > tr > td {
+	vertical-align: top;
+}
+.selectedPage_splitGrid_row_0, .selectedPage_splitGrid_row_0 > td {
+	height: 30px
+}
+/* splitLabelCell */
+.selectedPage_splitLabelCell {
+	height:30px !important;
+	width:90px;
+	padding: 2px 2px 2px 2px;
+}
+.selectedPage_splitLabelCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* splitLabel */
+.selectedPage_splitLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; text-align: left; font-family: Helvetica; font-size: 16px;
+	margin: 6px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* splitButtonCell */
+.selectedPage_splitButtonCell {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.selectedPage_splitButtonCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* splitSelectButton */
+.selectedPage_splitSelectButton {
+	margin: 0px 0px 0px 0px;
+}
+/* splitAmountCell */
+.selectedPage_splitAmountCell {
+	height:30px !important;
+	width:100px;
+	padding: 2px 2px 2px 2px;
+}
+.selectedPage_splitAmountCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* splitAmountLabel */
+.selectedPage_splitAmountLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #ffffff; text-align: right; font-family: Helvetica; font-size: 16px;
+	margin: 6px 0px 0px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* clearButton */
+#selectedPage_clearButton {
+
+}
+.ui-btn.selectedPage_clearButton {
+	margin: 30px 0px 4px 0px;
+}
+/* selectionHistoryButton */
+#selectedPage_selectionHistoryButton {
+
+}
+.ui-btn.selectedPage_selectionHistoryButton {
+	margin: 10px 0px 4px 0px;
+}
+/* selectedFooter */
+.selectedPage_selectedFooter {
+	min-height:38px;
+}
+/* tipPopup */
+.selectedPage_tipPopup {
+
+}
+div.selectedPage_tipPopup {
+	max-height: 100vh;
+	box-sizing: border-box;
+}
+div.selectedPage_tipPopup .ui-popup-content-wrapper {
+	width:100%;
+	height:100%;
+	max-height: 99vh;
+	overflow:auto;
+	box-sizing: border-box;
+}
+/* tipPopupLabel */
+.selectedPage_tipPopupLabel {
+	text-decoration: none; font-weight: bold; font-style: italic; color: #4c516d; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 4px 4px 4px 4px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* orderAmountGrid */
+.selectedPage_orderAmountGrid {
+	height: auto;
+	width:100%;
+	margin: 10px 0px 4px 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.selectedPage_orderAmountGrid_wrapper {
+
+}
+.selectedPage_orderAmountGrid > tr > td {
+	vertical-align: top;
+}
+.selectedPage_orderAmountGrid_row_0, .selectedPage_orderAmountGrid_row_0 > td {
+	height: 30px
+}
+/* tipOrderLabelCell */
+.selectedPage_tipOrderLabelCell {
+	height:30px !important;
+	width:134px;
+	padding: 2px 2px 2px 2px;
+}
+.selectedPage_tipOrderLabelCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* orderLabel */
+.selectedPage_orderLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #4c516d; text-align: right; font-family: Helvetica; font-size: 16px;
+	margin: 0px 0px 0px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* tipOrderCell */
+.selectedPage_tipOrderCell {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.selectedPage_tipOrderCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* orderPopupAmount */
+.selectedPage_orderPopupAmount {
+	text-decoration: none; font-weight: normal; font-style: italic; text-align: right; font-family: Helvetica; font-size: 16px;
+	margin: 0px 0px 0px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* orderAdjustGrid */
+.selectedPage_orderAdjustGrid {
+	height: auto;
+	width:100%;
+	margin: 0px 0px 0px 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.selectedPage_orderAdjustGrid_wrapper {
+	display: none;
+}
+.selectedPage_orderAdjustGrid > tr > td {
+	vertical-align: top;
+}
+.selectedPage_orderAdjustGrid_row_0, .selectedPage_orderAdjustGrid_row_0 > td {
+	height: 30px
+}
+/* adjustedCell */
+.selectedPage_adjustedCell {
+	height:30px !important;
+	width:134px;
+	padding: 2px 2px 2px 2px;
+}
+.selectedPage_adjustedCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* adjustedLabel */
+.selectedPage_adjustedLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; text-align: right; font-family: Helvetica; font-size: 16px;
+	margin: 6px 0px 0px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* dollarCell */
+.selectedPage_dollarCell {
+	height:30px !important;
+	width:20px;
+	padding: 2px 2px 2px 2px;
+}
+.selectedPage_dollarCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* dollarLabel */
+.selectedPage_dollarLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; text-align: right; font-family: Helvetica; font-size: 16px;
+	margin: 6px 0px 0px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* adjustBillCell */
+.selectedPage_adjustBillCell {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.selectedPage_adjustBillCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* adjustBillEntry */
+.selectedPage_adjustBillEntry {
+	margin: 0px 0px 0px 0px;
+}
+/* tipCalcGrid */
+.selectedPage_tipCalcGrid {
+	height: auto;
+	width:100%;
+	margin: 4px 0px 4px 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.selectedPage_tipCalcGrid_wrapper {
+
+}
+.selectedPage_tipCalcGrid > tr > td {
+	vertical-align: top;
+}
+.selectedPage_tipCalcGrid_row_0, .selectedPage_tipCalcGrid_row_0 > td {
+	height: 30px
+}
+.selectedPage_tipCalcGrid_row_1, .selectedPage_tipCalcGrid_row_1 > td {
+	height: 30px
+}
+.selectedPage_tipCalcGrid_row_2, .selectedPage_tipCalcGrid_row_2 > td {
+	height: 30px
+}
+.selectedPage_tipCalcGrid_row_3, .selectedPage_tipCalcGrid_row_3 > td {
+	height: 30px
+}
+/* empty1 */
+.selectedPage_empty1 {
+	height:30px !important;
+	width:134px;
+	padding: 2px 2px 2px 2px;
+}
+.selectedPage_empty1 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* empty2 */
+.selectedPage_empty2 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.selectedPage_empty2 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* tipTaxButtonCell */
+.selectedPage_tipTaxButtonCell {
+	height:30px !important;
+	width:134px;
+	padding: 2px 2px 2px 2px;
+}
+.selectedPage_tipTaxButtonCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* tipTaxButton */
+.selectedPage_tipTaxButton {
+	margin: 4px 0px 4px 0px;
+}
+/* includeTaxCheck */
+.selectedPage_includeTaxCheck {
+	-webkit-border-radius: inherit;
+	border-radius: inherit;
+}
+/* tipTaxCell */
+.selectedPage_tipTaxCell {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.selectedPage_tipTaxCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* taxAdjusted */
+.selectedPage_taxAdjusted {
+	text-decoration: none; font-weight: normal; font-style: italic; text-align: right; font-family: Helvetica; font-size: 16px;
+	margin: 15px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* tipSelectButtonCell */
+.selectedPage_tipSelectButtonCell {
+	height:30px !important;
+	width:134px;
+	padding: 0px 0px 0px 0px;
+}
+.selectedPage_tipSelectButtonCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* tipSelectButton */
+.selectedPage_tipSelectButton {
+	margin: 2px 2px 2px 2px;
+}
+/* tipSelectCell */
+.selectedPage_tipSelectCell {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.selectedPage_tipSelectCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* tipSelect */
+.selectedPage_tipSelect {
+	text-decoration: none; font-weight: normal; font-style: italic; text-align: right; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* tipEntryGrid */
+.selectedPage_tipEntryGrid {
+	height: auto;
+	width:100%;
+	margin: 0px 0px 0px 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.selectedPage_tipEntryGrid_wrapper {
+
+}
+.selectedPage_tipEntryGrid > tr > td {
+	vertical-align: top;
+}
+.selectedPage_tipEntryGrid_row_0, .selectedPage_tipEntryGrid_row_0 > td {
+	height: 30px
+}
+/* tipEntryCell */
+.selectedPage_tipEntryCell {
+	height:30px !important;
+	width:auto;
+	padding: 0px 0px 0px 0px;
+}
+.selectedPage_tipEntryCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* tipEntry */
+.selectedPage_tipEntry {
+	margin: 0px 0px 0px 15px;
+}
+/* mobilegridcell_27 */
+.selectedPage_mobilegridcell_27 {
+	height:30px !important;
+	width:134px;
+	padding: 2px 2px 2px 2px;
+}
+.selectedPage_mobilegridcell_27 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* mobilegridcell_28 */
+.selectedPage_mobilegridcell_28 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.selectedPage_mobilegridcell_28 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* calculateTipButtonGrid */
+.selectedPage_calculateTipButtonGrid {
+	height: auto;
+	width:100%;
+	margin: 4px 0px 4px 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.selectedPage_calculateTipButtonGrid_wrapper {
+
+}
+.selectedPage_calculateTipButtonGrid > tr > td {
+	vertical-align: top;
+}
+.selectedPage_calculateTipButtonGrid_row_0, .selectedPage_calculateTipButtonGrid_row_0 > td {
+	height: 30px
+}
+/* calculateTipSaveCell */
+.selectedPage_calculateTipSaveCell {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.selectedPage_calculateTipSaveCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* tipSaveButton */
+#selectedPage_tipSaveButton {
+
+}
+.ui-btn.selectedPage_tipSaveButton {
+	margin: 10px 4px 5px 4px;
+}
+/* calculateTipCancelCell */
+.selectedPage_calculateTipCancelCell {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.selectedPage_calculateTipCancelCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* calculateTipCancelButton */
+#selectedPage_calculateTipCancelButton {
+
+}
+.ui-btn.selectedPage_calculateTipCancelButton {
+	margin: 10px 4px 5px 4px;
+}
+/* deleteSelectionConfirmPopup */
+.selectedPage_deleteSelectionConfirmPopup {
+
+}
+div.selectedPage_deleteSelectionConfirmPopup {
+	max-height: 100vh;
+	box-sizing: border-box;
+}
+div.selectedPage_deleteSelectionConfirmPopup .ui-popup-content-wrapper {
+	width:100%;
+	height:100%;
+	max-height: 99vh;
+	overflow:auto;
+	box-sizing: border-box;
+}
+/* deleteSelectedConfirmLabel */
+.selectedPage_deleteSelectedConfirmLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #4c516d; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 4px 4px 4px 4px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* deleteHeadingConfirmGrid */
+.selectedPage_deleteHeadingConfirmGrid {
+	height: auto;
+	width:100%;
+	margin: 10px 0px 4px 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.selectedPage_deleteHeadingConfirmGrid_wrapper {
+
+}
+.selectedPage_deleteHeadingConfirmGrid > tr > td {
+	vertical-align: top;
+}
+.selectedPage_deleteHeadingConfirmGrid_row_0, .selectedPage_deleteHeadingConfirmGrid_row_0 > td {
+	height: 30px
+}
+/* deleteSelectedConfirmCell */
+.selectedPage_deleteSelectedConfirmCell {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.selectedPage_deleteSelectedConfirmCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* deleteSelectedConfirmButton */
+#selectedPage_deleteSelectedConfirmButton {
+
+}
+.ui-btn.selectedPage_deleteSelectedConfirmButton {
+	margin: 10px 4px 5px 4px;
+}
+/* deleteSelectedCancelCell */
+.selectedPage_deleteSelectedCancelCell {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.selectedPage_deleteSelectedCancelCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* deleteSelectedCancelButton */
+#selectedPage_deleteSelectedCancelButton {
+
+}
+.ui-btn.selectedPage_deleteSelectedCancelButton {
+	margin: 10px 4px 5px 4px;
+}

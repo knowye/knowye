@@ -1,0 +1,55 @@
+
+/* Define default spinner */
+.ui-icon-loading {
+	background: url("../libs/jquerymobile/1.4.5/images/ajax-loader.gif") repeat scroll 0 0 / 46px 46px transparent!important;
+}
+/* homeButton */
+#logoutPage_homeButton {
+	display: none;
+}
+.ui-btn.logoutPage_homeButton {
+
+}
+/* logoutContainer */
+.ui-content.logoutPage_logoutContainer {
+	padding: 15px 15px 15px 15px;
+}
+/* spacer_3 */
+.logoutPage_spacer_3 {
+	width: 260px; height: 34px;
+	margin: 4px 0px 4px 0px;
+}
+/* logoutLabel */
+.logoutPage_logoutLabel {
+	text-decoration: none; font-weight: normal; color: #f8f8fa; text-align: center; font-family: Helvetica; font-size: 18px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* spacer_4 */
+.logoutPage_spacer_4 {
+	width: 260px; height: 34px;
+	margin: 4px 0px 4px 0px;
+}
+/* knowyeLogo */
+.logoutPage_knowyeLogo {
+	margin: 4px 0px 4px 0px;
+	width: 200px; height: auto;
+	display: block;
+}
+/* spacer_5 */
+.logoutPage_spacer_5 {
+	width: 260px; height: 34px;
+	margin: 4px 0px 4px 0px;
+}
+/* loginButton */
+#logoutPage_loginButton {
+
+}
+.ui-btn.logoutPage_loginButton {
+	margin: 10px 5px 4px 5px;
+}
+/* logoutFooter */
+.logoutPage_logoutFooter {
+	min-height:38px;
+}

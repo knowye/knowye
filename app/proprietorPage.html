@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>
+            proprietorPage
+        </title>
+        <link rel="icon" href="../favicon.png?v=16814704">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, viewport-fit=cover">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="msapplication-tap-highlight" content="no">
+        <!-- Enable all requests, inline styles, and eval() -->
+        <meta http-equiv="Content-Security-Policy" content="default-src * gap://ready data:; style-src 'self' 'unsafe-inline' *; script-src 'self' 'unsafe-inline' 'unsafe-eval' *">
+        <!-- Uncomment link and meta tags below to activate PWA icons and theme color -->
+        <!-- link rel="manifest" href="../manifest.json" crossOrigin="use-credentials" -->
+        <!-- meta name="theme-color" content="#ffffff" -->
+        <link href="../css/theme/jqm/jqm.css" rel="stylesheet" />
+        <link href="../css/theme/KnoWYE3/KnoWYE3.css" rel="stylesheet" />
+        <link href="../libs/apperyio/iphone-fix.css" rel="stylesheet" type="text/css" />
+        <link href="../libs/jquerymobile/1.4.5/jquery.mobile.structure-1.4.5.css" rel="stylesheet"
+        />
+        <link type="text/css" rel="stylesheet" href="../css/logblock.css" />
+        <link type="text/css" rel="stylesheet" href="../css/menuPageBuilder.css" />
+        <link type="text/css" rel="stylesheet" href="../css/common.css" />
+        <link type="text/css" rel="stylesheet" href="../css/header_footer.css" />
+        <link type="text/css" rel="stylesheet" href="../css/button.css" />
+        <link type="text/css" rel="stylesheet" href="../css/label.css" />
+        <link type="text/css" rel="stylesheet" href="../css/FontRoboto.css.css" />
+        <!-- Uncomment this script to activate service worker -->
+        <!-- <script>
+        if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('../sw.js')
+        .then(() => console.log('service worker installed'))
+        .catch(err => console.error('Error', err));
+        }
+        </script>
+        -->
+        <script type="text/javascript" src="../libs/underscore/underscore.js">
+        </script>
+        <script type="text/javascript" src="../libs/store/json2.js">
+        </script>
+        <script type="text/javascript" src="../libs/jquery/jquery-2.1.1.js">
+        </script>
+        <script type="text/javascript" src="../libs/jquery/jquery-ajaxTransport.js">
+        </script>
+        <script type="text/javascript">
+            $(document).bind("mobileinit", function() {
+                if (navigator.userAgent.toLowerCase().indexOf("android") != -1) {
+                    $.mobile.defaultPageTransition = 'none';
+                    $.mobile.defaultDialogTransition = 'none';
+                } else if (navigator.userAgent.toLowerCase().indexOf("msie") != -1) {
+                    $.mobile.allowCrossDomainPages = true;
+                    $.support.cors = true;
+                } else if (navigator.userAgent.match(/(iPad|iPhone|iPod)/g)) {
+                    $.mobile.hashListeningEnabled = false;
+                }
+            });
+        </script>
+        <script type="text/javascript" src="../libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.js">
+        </script>
+        <script type="text/javascript" src="../libs/apperyio/mobilebase.js">
+        </script>
+        <script type="text/javascript" src="../libs/event/customEventHandler.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/sha1.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/oauth.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/contexts.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/jquery.xml2json.min.js">
+        </script>
+        <script type="text/javascript" src="../libs/ms_sdk_bundle/client-sdk.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/appery.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/component-manager.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/mapping-impl.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/entity-api.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/login.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/storage-api.js">
+        </script>
+        <script type="text/javascript" src="../get_target_platform.js">
+        </script>
+        <script type="text/javascript" src="../cordova.js">
+        </script>
+        <script type="text/javascript">
+            if (typeof cordova !== "undefined" && cordova.platformId === 'ios') {
+                document.documentElement.style.setProperty('--iphone-safe-area-inset-top', '44px');
+                document.documentElement.style.setProperty('--iphone-safe-area-inset-bottom', '34px');
+            }
+        </script>
+        <link href="../libs/apperyio/mobilebase.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="../js/services/model.js">
+        </script>
+        <script type="text/javascript" src="../js/menuHeadingManagePageBuilder.js">
+        </script>
+        <script type="text/javascript" src="../js/navigatePageManager.js">
+        </script>
+        <script type="text/javascript" src="../js/logblock.js">
+        </script>
+        <script type="text/javascript" src="../js/Facebook_Helper.js">
+        </script>
+        <script type="text/javascript" src="../js/menuHeadingManager.js">
+        </script>
+        <script type="text/javascript" src="../js/menuPageBuilder.js">
+        </script>
+        <script type="text/javascript" src="../js/jquery-ui.min.js">
+        </script>
+        <script type="text/javascript" src="../js/common.js">
+        </script>
+        <script type="text/javascript" src="../js/clipboard.js">
+        </script>
+        <script type="text/javascript" src="../js/FileUploadHelper.js">
+        </script>
+        <script type="text/javascript" src="../js/zzqrCodeScaner.js">
+        </script>
+        <script type="text/javascript" src="../js/menuHistoryManager.js">
+        </script>
+        <script type="text/javascript" src="../js/GoogleCharts.js">
+        </script>
+        <script type="text/javascript" src="../js/services/service.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/databaseUtils.js">
+        </script>
+        <script type="text/javascript" src="../js/secure.js">
+        </script>
+<script type="text/javascript" src="../js/EncodeDecodeJS.js">
+        </script>
+    </head>
+    
+    <body>
+        <script language="JavaScript" type="text/javascript">
+        </script>
+        <div data-role="page" style="min-height:480px;" dsid="proprietorPage" id="proprietorPage"
+        class="type-interior" data-theme="b">
+            <!-- proprietorHeader -->
+            <div data-role="header" data-position="fixed" data-add-back-btn="true" data-back-btn-text="&nbsp;"
+            data-theme="b" name="proprietorHeader" id="proprietorPage_proprietorHeader" class="proprietorPage_proprietorHeader">
+                <h1 dsid="proprietorHeader">
+                    host info
+                </h1>
+                <!-- navigateButton --><!--
+                --><a data-role="button" name="navigateButton" dsid="navigateButton" class="proprietorPage_navigateButton ui-btn-right"
+                style='min-height:20px; ' id="proprietorPage_navigateButton" data-corners="true"
+                data-icon="home" data-iconpos="notext" x-apple-data-detectors="false" data-inline='true'
+                data-mini='true' data-theme="b" tabindex="2">
+                &nbsp;
+                </a>
+            </div>
+            <!-- proprietorContainer -->
+            <div data-role="content" id="proprietorPage_proprietorContainer" name="proprietorContainer"
+            class="ui-li-container  proprietorPage_proprietorContainer ui-content" dsid="proprietorContainer"
+            data-theme="b">
+                <link href="proprietorPage.css" rel="stylesheet" type="text/css" />
+                <script type="text/javascript" src="proprietorPage.js">
+                </script>
+                <!-- html_56 -->
+                <div data-role="appery_html" name="html_56" dsid="html_56" id="proprietorPage_html_56"
+                class="proprietorPage_html_56">
+                    <!--<div name="background-image-propietor-page" class="background-image-propietor-page">
+                    <div name="view-image-propietor" class="view-image-propietor"></div>
+                    <div name="overlay-background-image-propietor-page" class="overlay-background-image-propietor-page"></div>
+                    </div>-->
+                </div>
+                <!-- detailGrid -->
+                <div class="proprietorPage_detailGrid_wrapper" data-wrapper-for="detailGrid">
+                    <table id="proprietorPage_detailGrid" class="proprietorPage_detailGrid" dsid="detailGrid"
+                    name="detailGrid" cellpadding=0 cellspacing=0>
+                        <col style="width:209px;" />
+                        <tr class="proprietorPage_detailGrid_row_0">
+                            <!-- imageCell -->
+                            <td id="proprietorPage_imageCell" name="imageCell" class="proprietorPage_imageCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- proprietorImage -->
+                                    <img class="proprietorImage  proprietorPage_proprietorImage" src="../libs/apperyio/img/no-image.jpg"
+                                    id="proprietorPage_proprietorImage" dsid="proprietorImage" name="proprietorImage"
+                                    />
+                                    <!-- businessName -->
+                                    <div name="businessName" id="proprietorPage_businessName" dsid="businessName" data-role="appery_label"
+                                    class="labelItem  proprietorPage_businessName">
+                                        businessName
+                                    </div>
+                                    <!-- aboveAvgLabel -->
+                                    <div name="aboveAvgLabel" id="proprietorPage_aboveAvgLabel" dsid="aboveAvgLabel"
+                                    data-role="appery_label" class="labelStandard  proprietorPage_aboveAvgLabel">
+                                        overall
+                                    </div>
+                                    <!-- SCOREPLACEHOLDER -->
+                                    <div name="SCOREPLACEHOLDER" id="proprietorPage_SCOREPLACEHOLDER" dsid="SCOREPLACEHOLDER"
+                                    data-role="appery_label" class="proprietorPage_SCOREPLACEHOLDER">
+                                        + &amp; ++ aggregate scores
+                                    </div>
+                                    <!-- mobilelabel_43 -->
+                                    <div name="mobilelabel_43" id="proprietorPage_mobilelabel_43" dsid="mobilelabel_43"
+                                    data-role="appery_label" class="proprietorPage_mobilelabel_43">
+                                        price rating $-$$$$
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- photoGrid -->
+                <div class="proprietorPage_photoGrid_wrapper" data-wrapper-for="photoGrid">
+                    <table id="proprietorPage_photoGrid" class="proprietorPage_photoGrid" dsid="photoGrid"
+                    name="photoGrid" cellpadding=0 cellspacing=0>
+                        <col style="width:auto;" />
+                        <tr class="proprietorPage_photoGrid_row_0">
+                            <!-- photoCell -->
+                            <td id="proprietorPage_photoCell" name="photoCell" class="proprietorPage_photoCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- menuLink -->
+                <div class="proprietorPage_menuLink_link_wrapper">
+                    <a id="proprietorPage_menuLink" href="#" name="menuLink" dsid="menuLink" data-role="appery_link"
+                    class="proprietorPage_menuLink">
+                    menu
+                    </a>
+                </div>
+                <!-- addressGrid -->
+                <div class="proprietorPage_addressGrid_wrapper" data-wrapper-for="addressGrid">
+                    <table id="proprietorPage_addressGrid" class="proprietorPage_addressGrid" dsid="addressGrid"
+                    name="addressGrid" cellpadding=0 cellspacing=0>
+                        <col style="width:63px;" />
+                        <col style="width:auto;" />
+                        <tr class="proprietorPage_addressGrid_row_0">
+                            <!-- addressCellIcon -->
+                            <td id="proprietorPage_addressCellIcon" name="addressCellIcon" class="proprietorPage_addressCellIcon"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                </div>
+                            </td>
+                            <!-- addressCell -->
+                            <td id="proprietorPage_addressCell" name="addressCell" class="proprietorPage_addressCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- streetAddress1 -->
+                                    <div name="streetAddress1" id="proprietorPage_streetAddress1" dsid="streetAddress1"
+                                    data-role="appery_label" class="labelDescription  proprietorPage_streetAddress1">
+                                        streetAddress1
+                                    </div>
+                                    <!-- streetAddress2 -->
+                                    <div name="streetAddress2" id="proprietorPage_streetAddress2" dsid="streetAddress2"
+                                    data-role="appery_label" class="labelDescription  proprietorPage_streetAddress2">
+                                        streetAddress2
+                                    </div>
+                                    <!-- city -->
+                                    <div name="city" id="proprietorPage_city" dsid="city" data-role="appery_label" class="labelDescription  proprietorPage_city">
+                                        city
+                                    </div>
+                                    <!-- state -->
+                                    <div name="state" id="proprietorPage_state" dsid="state" data-role="appery_label"
+                                    class="labelDescription  proprietorPage_state">
+                                        state
+                                    </div>
+                                    <!-- zip -->
+                                    <div name="zip" id="proprietorPage_zip" dsid="zip" data-role="appery_label" class="labelDescription  proprietorPage_zip">
+                                        zip
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- phoneGrid -->
+                <div class="proprietorPage_phoneGrid_wrapper" data-wrapper-for="phoneGrid">
+                    <table id="proprietorPage_phoneGrid" class="proprietorPage_phoneGrid" dsid="phoneGrid"
+                    name="phoneGrid" cellpadding=0 cellspacing=0>
+                        <col style="width:63px;" />
+                        <col style="width:auto;" />
+                        <tr class="proprietorPage_phoneGrid_row_0">
+                            <!-- phoneCellIcon -->
+                            <td id="proprietorPage_phoneCellIcon" name="phoneCellIcon" class="proprietorPage_phoneCellIcon"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                </div>
+                            </td>
+                            <!-- phoneCell -->
+                            <td id="proprietorPage_phoneCell" name="phoneCell" class="proprietorPage_phoneCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- phone -->
+                                    <div name="phone" id="proprietorPage_phone" dsid="phone" data-role="appery_label"
+                                    class="labelDescription  proprietorPage_phone">
+                                        phone
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- webGrid -->
+                <div class="proprietorPage_webGrid_wrapper" data-wrapper-for="webGrid">
+                    <table id="proprietorPage_webGrid" class="proprietorPage_webGrid" dsid="webGrid"
+                    name="webGrid" cellpadding=0 cellspacing=0>
+                        <col style="width:67px;" />
+                        <col style="width:auto;" />
+                        <tr class="proprietorPage_webGrid_row_0">
+                            <!-- webCellIcon -->
+                            <td id="proprietorPage_webCellIcon" name="webCellIcon" class="proprietorPage_webCellIcon"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                </div>
+                            </td>
+                            <!-- webCell -->
+                            <td id="proprietorPage_webCell" name="webCell" class="proprietorPage_webCell" colspan=1
+                            rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- website -->
+                                    <div name="website" id="proprietorPage_website" dsid="website" data-role="appery_label"
+                                    class="labelDescription  proprietorPage_website">
+                                        website
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- descGrid -->
+                <div class="proprietorPage_descGrid_wrapper" data-wrapper-for="descGrid">
+                    <table id="proprietorPage_descGrid" class="proprietorPage_descGrid" dsid="descGrid"
+                    name="descGrid" cellpadding=0 cellspacing=0>
+                        <col style="width:67px;" />
+                        <col style="width:auto;" />
+                        <tr class="proprietorPage_descGrid_row_0">
+                            <!-- descCellIcon -->
+                            <td id="proprietorPage_descCellIcon" name="descCellIcon" class="proprietorPage_descCellIcon"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                </div>
+                            </td>
+                            <!-- descCell -->
+                            <td id="proprietorPage_descCell" name="descCell" class="proprietorPage_descCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- vendorDescription -->
+                                    <div name="vendorDescription" id="proprietorPage_vendorDescription" dsid="vendorDescription"
+                                    data-role="appery_label" class="labelDescription  proprietorPage_vendorDescription">
+                                        proprietorDescription
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- hoursGrid -->
+                <div class="proprietorPage_hoursGrid_wrapper" data-wrapper-for="hoursGrid">
+                    <table id="proprietorPage_hoursGrid" class="proprietorPage_hoursGrid" dsid="hoursGrid"
+                    name="hoursGrid" cellpadding=0 cellspacing=0>
+                        <col style="width:auto;" />
+                        <tr class="proprietorPage_hoursGrid_row_0">
+                            <!-- hoursCell -->
+                            <td id="proprietorPage_hoursCell" name="hoursCell" class="proprietorPage_hoursCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- hoursLabel -->
+                                    <div name="hoursLabel" id="proprietorPage_hoursLabel" dsid="hoursLabel" data-role="appery_label"
+                                    class="labelOnDark  proprietorPage_hoursLabel">
+                                        hours
+                                    </div>
+                                    <!-- hoursGrid2 -->
+                                    <div class="proprietorPage_hoursGrid2_wrapper" data-wrapper-for="hoursGrid2">
+                                        <table id="proprietorPage_hoursGrid2" class="proprietorPage_hoursGrid2" dsid="hoursGrid2"
+                                        name="hoursGrid2" cellpadding=0 cellspacing=0>
+                                            <col style="width:auto;" />
+                                            <col style="width:auto;" />
+                                            <col style="width:auto;" />
+                                            <tr class="proprietorPage_hoursGrid2_row_0">
+                                                <!-- mobilegridcell_50 -->
+                                                <td id="proprietorPage_mobilegridcell_50" name="mobilegridcell_50" class="proprietorPage_mobilegridcell_50"
+                                                colspan=1 rowspan=1>
+                                                    <div class="cell-wrapper">
+                                                    </div>
+                                                </td>
+                                                <!-- openLabelCell -->
+                                                <td id="proprietorPage_openLabelCell" name="openLabelCell" class="proprietorPage_openLabelCell"
+                                                colspan=1 rowspan=1>
+                                                    <div class="cell-wrapper">
+                                                        <!-- openLabel -->
+                                                        <div name="openLabel" id="proprietorPage_openLabel" dsid="openLabel" data-role="appery_label"
+                                                        class="labelOnDark  proprietorPage_openLabel">
+                                                            open
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <!-- closeLabelCell -->
+                                                <td id="proprietorPage_closeLabelCell" name="closeLabelCell" class="proprietorPage_closeLabelCell"
+                                                colspan=1 rowspan=1>
+                                                    <div class="cell-wrapper">
+                                                        <!-- closeLabel -->
+                                                        <div name="closeLabel" id="proprietorPage_closeLabel" dsid="closeLabel" data-role="appery_label"
+                                                        class="labelOnDark  proprietorPage_closeLabel">
+                                                            close
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="proprietorPage_hoursGrid2_row_1">
+                                                <!-- mondayLabelCell -->
+                                                <td id="proprietorPage_mondayLabelCell" name="mondayLabelCell" class="proprietorPage_mondayLabelCell"
+                                                colspan=1 rowspan=1>
+                                                    <div class="cell-wrapper">
+                                                        <!-- mondayLabel -->
+                                                        <div name="mondayLabel" id="proprietorPage_mondayLabel" dsid="mondayLabel" data-role="appery_label"
+                                                        class="labelDescription  proprietorPage_mondayLabel">
+                                                            monday
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <!-- mondayOpenLabelCell -->
+                                                <td id="proprietorPage_mondayOpenLabelCell" name="mondayOpenLabelCell" class="proprietorPage_mondayOpenLabelCell"
+                                                colspan=1 rowspan=1>
+                                                    <div class="cell-wrapper">
+                                                        <!-- mondayOpenLabel -->
+                                                        <div name="mondayOpenLabel" id="proprietorPage_mondayOpenLabel" dsid="mondayOpenLabel"
+                                                        data-role="appery_label" class="labelDescription  proprietorPage_mondayOpenLabel">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <!-- mondayCloseLabelCell -->
+                                                <td id="proprietorPage_mondayCloseLabelCell" name="mondayCloseLabelCell" class="proprietorPage_mondayCloseLabelCell"
+                                                colspan=1 rowspan=1>
+                                                    <div class="cell-wrapper">
+                                                        <!-- mondayCloseLabel -->
+                                                        <div name="mondayCloseLabel" id="proprietorPage_mondayCloseLabel" dsid="mondayCloseLabel"
+                                                        data-role="appery_label" class="labelDescription  proprietorPage_mondayCloseLabel">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="proprietorPage_hoursGrid2_row_2">
+                                                <!-- tuesdayLabelCell -->
+                                                <td id="proprietorPage_tuesdayLabelCell" name="tuesdayLabelCell" class="proprietorPage_tuesdayLabelCell"
+                                                colspan=1 rowspan=1>
+                                                    <div class="cell-wrapper">
+                                                        <!-- tuesdayLabel -->
+                                                        <div name="tuesdayLabel" id="proprietorPage_tuesdayLabel" dsid="tuesdayLabel" data-role="appery_label"
+                                                        class="labelDescription  proprietorPage_tuesdayLabel">
+                                                            tuesday
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <!-- mobilegridcell_55 -->
+                                                <td id="proprietorPage_mobilegridcell_55" name="mobilegridcell_55" class="proprietorPage_mobilegridcell_55"
+                                                colspan=1 rowspan=1>
+                                                    <div class="cell-wrapper">
+                                                        <!-- tuesdayOpenLabel -->
+                                                        <div name="tuesdayOpenLabel" id="proprietorPage_tuesdayOpenLabel" dsid="tuesdayOpenLabel"
+                                                        data-role="appery_label" class="labelDescription  proprietorPage_tuesdayOpenLabel">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <!-- tuesdayCloseLabelCell -->
+                                                <td id="proprietorPage_tuesdayCloseLabelCell" name="tuesdayCloseLabelCell" class="proprietorPage_tuesdayCloseLabelCell"
+                                                colspan=1 rowspan=1>
+                                                    <div class="cell-wrapper">
+                                                        <!-- tuesdayCloseLabel -->
+                                                        <div name="tuesdayCloseLabel" id="proprietorPage_tuesdayCloseLabel" dsid="tuesdayCloseLabel"
+                                                        data-role="appery_label" class="labelDescription  proprietorPage_tuesdayCloseLabel">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="proprietorPage_hoursGrid2_row_3">
+                                                <!-- wednesdayLabelCell -->
+                                                <td id="proprietorPage_wednesdayLabelCell" name="wednesdayLabelCell" class="proprietorPage_wednesdayLabelCell"
+                                                colspan=1 rowspan=1>
+                                                    <div class="cell-wrapper">
+                                                        <!-- wednesdayLabel -->
+                                                        <div name="wednesdayLabel" id="proprietorPage_wednesdayLabel" dsid="wednesdayLabel"
+                                                        data-role="appery_label" class="labelDescription  proprietorPage_wednesdayLabel">
+                                                            wednesday
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <!-- wednesdayOpenLabelCell -->
+                                                <td id="proprietorPage_wednesdayOpenLabelCell" name="wednesdayOpenLabelCell" class="proprietorPage_wednesdayOpenLabelCell"
+                                                colspan=1 rowspan=1>
+                                                    <div class="cell-wrapper">
+                                                        <!-- wednesdayOpenLabel -->
+                                                        <div name="wednesdayOpenLabel" id="proprietorPage_wednesdayOpenLabel" dsid="wednesdayOpenLabel"
+                                                        data-role="appery_label" class="labelDescription  proprietorPage_wednesdayOpenLabel">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <!-- wednesdayCloseLabelCell -->
+                                                <td id="proprietorPage_wednesdayCloseLabelCell" name="wednesdayCloseLabelCell" class="proprietorPage_wednesdayCloseLabelCell"
+                                                colspan=1 rowspan=1>
+                                                    <div class="cell-wrapper">
+                                                        <!-- wednesdayCloseLabel -->
+                                                        <div name="wednesdayCloseLabel" id="proprietorPage_wednesdayCloseLabel" dsid="wednesdayCloseLabel"
+                                                        data-role="appery_label" class="labelDescription  proprietorPage_wednesdayCloseLabel">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="proprietorPage_hoursGrid2_row_4">
+                                                <!-- thursdayLabelCell -->
+                                                <td id="proprietorPage_thursdayLabelCell" name="thursdayLabelCell" class="proprietorPage_thursdayLabelCell"
+                                                colspan=1 rowspan=1>
+                                                    <div class="cell-wrapper">
+                                                        <!-- thursdayLabel -->
+                                                        <div name="thursdayLabel" id="proprietorPage_thursdayLabel" dsid="thursdayLabel"
+                                                        data-role="appery_label" class="labelDescription  proprietorPage_thursdayLabel">
+                                                            thursday
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <!-- thursdayOpenLabelCell -->
+                                                <td id="proprietorPage_thursdayOpenLabelCell" name="thursdayOpenLabelCell" class="proprietorPage_thursdayOpenLabelCell"
+                                                colspan=1 rowspan=1>
+                                                    <div class="cell-wrapper">
+                                                        <!-- thursdayOpenLabel -->
+                                                        <div name="thursdayOpenLabel" id="proprietorPage_thursdayOpenLabel" dsid="thursdayOpenLabel"
+                                                        data-role="appery_label" class="labelDescription  proprietorPage_thursdayOpenLabel">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <!-- thursdayCloseLabelCell -->
+                                                <td id="proprietorPage_thursdayCloseLabelCell" name="thursdayCloseLabelCell" class="proprietorPage_thursdayCloseLabelCell"
+                                                colspan=1 rowspan=1>
+                                                    <div class="cell-wrapper">
+                                                        <!-- thursdayCloseLabel -->
+                                                        <div name="thursdayCloseLabel" id="proprietorPage_thursdayCloseLabel" dsid="thursdayCloseLabel"
+                                                        data-role="appery_label" class="labelDescription  proprietorPage_thursdayCloseLabel">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="proprietorPage_hoursGrid2_row_5">
+                                                <!-- fridayLabelCell -->
+                                                <td id="proprietorPage_fridayLabelCell" name="fridayLabelCell" class="proprietorPage_fridayLabelCell"
+                                                colspan=1 rowspan=1>
+                                                    <div class="cell-wrapper">
+                                                        <!-- fridayLabel -->
+                                                        <div name="fridayLabel" id="proprietorPage_fridayLabel" dsid="fridayLabel" data-role="appery_label"
+                                                        class="labelDescription  proprietorPage_fridayLabel">
+                                                            friday
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <!-- fridayOpenLabelCell -->
+                                                <td id="proprietorPage_fridayOpenLabelCell" name="fridayOpenLabelCell" class="proprietorPage_fridayOpenLabelCell"
+                                                colspan=1 rowspan=1>
+                                                    <div class="cell-wrapper">
+                                                        <!-- fridayOpenLabel -->
+                                                        <div name="fridayOpenLabel" id="proprietorPage_fridayOpenLabel" dsid="fridayOpenLabel"
+                                                        data-role="appery_label" class="labelDescription  proprietorPage_fridayOpenLabel">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <!-- fridayCloseLabelCell -->
+                                                <td id="proprietorPage_fridayCloseLabelCell" name="fridayCloseLabelCell" class="proprietorPage_fridayCloseLabelCell"
+                                                colspan=1 rowspan=1>
+                                                    <div class="cell-wrapper">
+                                                        <!-- fridayCloseLabel -->
+                                                        <div name="fridayCloseLabel" id="proprietorPage_fridayCloseLabel" dsid="fridayCloseLabel"
+                                                        data-role="appery_label" class="labelDescription  proprietorPage_fridayCloseLabel">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="proprietorPage_hoursGrid2_row_6">
+                                                <!-- saturdayLabelCell -->
+                                                <td id="proprietorPage_saturdayLabelCell" name="saturdayLabelCell" class="proprietorPage_saturdayLabelCell"
+                                                colspan=1 rowspan=1>
+                                                    <div class="cell-wrapper">
+                                                        <!-- saturdayLabel -->
+                                                        <div name="saturdayLabel" id="proprietorPage_saturdayLabel" dsid="saturdayLabel"
+                                                        data-role="appery_label" class="labelDescription  proprietorPage_saturdayLabel">
+                                                            saturday
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <!-- saturdayOpenLabelCell -->
+                                                <td id="proprietorPage_saturdayOpenLabelCell" name="saturdayOpenLabelCell" class="proprietorPage_saturdayOpenLabelCell"
+                                                colspan=1 rowspan=1>
+                                                    <div class="cell-wrapper">
+                                                        <!-- saturdayOpenLabel -->
+                                                        <div name="saturdayOpenLabel" id="proprietorPage_saturdayOpenLabel" dsid="saturdayOpenLabel"
+                                                        data-role="appery_label" class="labelDescription  proprietorPage_saturdayOpenLabel">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <!-- saturdayCloseLabelCell -->
+                                                <td id="proprietorPage_saturdayCloseLabelCell" name="saturdayCloseLabelCell" class="proprietorPage_saturdayCloseLabelCell"
+                                                colspan=1 rowspan=1>
+                                                    <div class="cell-wrapper">
+                                                        <!-- saturdayCloseLabel -->
+                                                        <div name="saturdayCloseLabel" id="proprietorPage_saturdayCloseLabel" dsid="saturdayCloseLabel"
+                                                        data-role="appery_label" class="labelDescription  proprietorPage_saturdayCloseLabel">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="proprietorPage_hoursGrid2_row_7">
+                                                <!-- sundayLabelCell -->
+                                                <td id="proprietorPage_sundayLabelCell" name="sundayLabelCell" class="proprietorPage_sundayLabelCell"
+                                                colspan=1 rowspan=1>
+                                                    <div class="cell-wrapper">
+                                                        <!-- sundayLabel -->
+                                                        <div name="sundayLabel" id="proprietorPage_sundayLabel" dsid="sundayLabel" data-role="appery_label"
+                                                        class="labelDescription  proprietorPage_sundayLabel">
+                                                            sunday
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <!-- sundayOpenLabelCell -->
+                                                <td id="proprietorPage_sundayOpenLabelCell" name="sundayOpenLabelCell" class="proprietorPage_sundayOpenLabelCell"
+                                                colspan=1 rowspan=1>
+                                                    <div class="cell-wrapper">
+                                                        <!-- sundayOpenLabel -->
+                                                        <div name="sundayOpenLabel" id="proprietorPage_sundayOpenLabel" dsid="sundayOpenLabel"
+                                                        data-role="appery_label" class="labelDescription  proprietorPage_sundayOpenLabel">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <!-- sundayCloseLabelCell -->
+                                                <td id="proprietorPage_sundayCloseLabelCell" name="sundayCloseLabelCell" class="proprietorPage_sundayCloseLabelCell"
+                                                colspan=1 rowspan=1>
+                                                    <div class="cell-wrapper">
+                                                        <!-- sundayCloseLabel -->
+                                                        <div name="sundayCloseLabel" id="proprietorPage_sundayCloseLabel" dsid="sundayCloseLabel"
+                                                        data-role="appery_label" class="labelDescription  proprietorPage_sundayCloseLabel">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <!-- openCloseGrid -->
+                                    <div class="proprietorPage_openCloseGrid_wrapper" data-wrapper-for="openCloseGrid">
+                                        <table id="proprietorPage_openCloseGrid" class="proprietorPage_openCloseGrid" dsid="openCloseGrid"
+                                        name="openCloseGrid" cellpadding=0 cellspacing=0>
+                                            <col style="width:130px;" />
+                                            <col style="width:74px;" />
+                                            <col style="width:74px;" />
+                                            <tr class="proprietorPage_openCloseGrid_row_0">
+                                                <!-- spacingCell -->
+                                                <td id="proprietorPage_spacingCell" name="spacingCell" class="proprietorPage_spacingCell"
+                                                colspan=1 rowspan=1>
+                                                    <div class="cell-wrapper">
+                                                    </div>
+                                                </td>
+                                                <!-- openCell -->
+                                                <td id="proprietorPage_openCell" name="openCell" class="proprietorPage_openCell"
+                                                colspan=1 rowspan=1>
+                                                    <div class="cell-wrapper">
+                                                    </div>
+                                                </td>
+                                                <!-- closeCell -->
+                                                <td id="proprietorPage_closeCell" name="closeCell" class="proprietorPage_closeCell"
+                                                colspan=1 rowspan=1>
+                                                    <div class="cell-wrapper">
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- addFavoriteButton --><!--
+                --><a data-role="button" name="addFavoriteButton" dsid="addFavoriteButton" class="scanMenuButton  proprietorPage_addFavoriteButton"
+                id="proprietorPage_addFavoriteButton" data-corners="true" data-icon="heart" data-iconpos="right"
+                x-apple-data-detectors="false" data-mini="true" data-theme="b" tabindex="3">
+                add to favorites
+                </a><!--
+                --><!-- copyLinkButton --><!--
+                --><a data-role="button" name="copyLinkButton" dsid="copyLinkButton" class="scanMenuButton  proprietorPage_copyLinkButton"
+                id="proprietorPage_copyLinkButton" data-corners="true" data-icon="navigation" data-iconpos="right"
+                x-apple-data-detectors="false" data-mini="true" data-theme="b" tabindex="4">
+                copy link to this page
+                </a><!--
+                --><!-- feedbackButton --><!--
+                --><a data-role="button" name="feedbackButton" dsid="feedbackButton" class="scanMenuButton  proprietorPage_feedbackButton"
+                id="proprietorPage_feedbackButton" data-corners="true" data-icon="comment" data-iconpos="right"
+                x-apple-data-detectors="false" data-mini="true" data-theme="b" tabindex="5">
+                leave feedback
+                </a>
+            </div>
+        </div>
+    </body>
+
+</html>

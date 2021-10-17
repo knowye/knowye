@@ -1,0 +1,74 @@
+
+/* Define default spinner */
+.ui-icon-loading {
+	background: url("../libs/jquerymobile/1.4.5/images/ajax-loader.gif") repeat scroll 0 0 / 46px 46px transparent!important;
+}
+/* mobilecontainerlogin */
+.ui-content.zzfacebookLogin_mobilecontainerlogin {
+	padding: 15px 15px 0px 0px;
+}
+/* mobileimage_2 */
+.zzfacebookLogin_mobileimage_2 {
+	margin: 30px 0px 4px 0px;
+	width: 300px; height: auto;
+	display: block;
+}
+/* scanMenuButton */
+#zzfacebookLogin_scanMenuButton {
+	display: none;
+}
+.ui-btn.zzfacebookLogin_scanMenuButton {
+	margin: 50px 40px 4px 40px;
+}
+/* facebookButton */
+#zzfacebookLogin_facebookButton {
+
+}
+.ui-btn.zzfacebookLogin_facebookButton {
+	margin: 30px 40px 4px 40px;
+}
+/* loginButton */
+#zzfacebookLogin_loginButton {
+
+}
+.ui-btn.zzfacebookLogin_loginButton {
+	margin: 30px 40px 4px 40px;
+}
+/* touGrid */
+.zzfacebookLogin_touGrid {
+	height: auto;
+	width:100%;
+	margin: 20px 0px 2px 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.zzfacebookLogin_touGrid_wrapper {
+
+}
+.zzfacebookLogin_touGrid > tr > td {
+	vertical-align: top;
+}
+.zzfacebookLogin_touGrid_row_0, .zzfacebookLogin_touGrid_row_0 > td {
+	height: auto
+}
+/* touCell */
+.zzfacebookLogin_touCell {
+	height:auto !important;
+	width:auto;
+	padding: 0px 0px 0px 0px;
+}
+.zzfacebookLogin_touCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* touLabel */
+.zzfacebookLogin_touLabel {
+	text-decoration: underline; font-weight: normal; font-style: italic; color: #2489ce; text-align: center; font-family: Helvetica; font-size: 14px;
+	margin: 0px 0px 0px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* mobilefooter */
+.zzfacebookLogin_mobilefooter {
+	min-height:38px;
+}

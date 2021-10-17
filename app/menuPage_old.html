@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>
+            menuPage_old
+        </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, viewport-fit=cover">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="msapplication-tap-highlight" content="no">
+        <!-- Enable all requests, inline styles, and eval() -->
+        <meta http-equiv="Content-Security-Policy" content="default-src * gap://ready data:; style-src 'self' 'unsafe-inline' *; script-src 'self' 'unsafe-inline' 'unsafe-eval' *">
+        <!-- Uncomment link and meta tags below to activate PWA icons and theme color -->
+        <!-- link rel="manifest" href="../manifest.json" crossOrigin="use-credentials" -->
+        <!-- meta name="theme-color" content="#ffffff" -->
+        <link href="../css/theme/jqm/jqm.css" rel="stylesheet" />
+        <link href="../css/theme/KnoWYE3/KnoWYE3.css" rel="stylesheet" />
+        <link href="../libs/apperyio/iphone-fix.css" rel="stylesheet" type="text/css" />
+        <link href="../libs/jquerymobile/1.4.5/jquery.mobile.structure-1.4.5.css" rel="stylesheet"
+        />
+        <link type="text/css" rel="stylesheet" href="../css/common.css" />
+        <link type="text/css" rel="stylesheet" href="../css/header_footer.css" />
+        <link type="text/css" rel="stylesheet" href="../css/button.css" />
+        <link type="text/css" rel="stylesheet" href="../css/label.css" />
+        <!-- Uncomment this script to activate service worker -->
+        <!-- <script>
+        if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('../sw.js')
+        .then(() => console.log('service worker installed'))
+        .catch(err => console.error('Error', err));
+        }
+        </script>
+        -->
+        <script type="text/javascript" src="../libs/underscore/underscore.js">
+        </script>
+        <script type="text/javascript" src="../libs/store/json2.js">
+        </script>
+        <script type="text/javascript" src="../libs/jquery/jquery-2.1.1.js">
+        </script>
+        <script type="text/javascript" src="../libs/jquery/jquery-ajaxTransport.js">
+        </script>
+        <script type="text/javascript">
+            $(document).bind("mobileinit", function() {
+                if (navigator.userAgent.toLowerCase().indexOf("android") != -1) {
+                    $.mobile.defaultPageTransition = 'none';
+                    $.mobile.defaultDialogTransition = 'none';
+                } else if (navigator.userAgent.toLowerCase().indexOf("msie") != -1) {
+                    $.mobile.allowCrossDomainPages = true;
+                    $.support.cors = true;
+                } else if (navigator.userAgent.match(/(iPad|iPhone|iPod)/g)) {
+                    $.mobile.hashListeningEnabled = false;
+                }
+            });
+        </script>
+        <script type="text/javascript" src="../libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.js">
+        </script>
+        <script type="text/javascript" src="../libs/apperyio/mobilebase.js">
+        </script>
+        <script type="text/javascript" src="../libs/event/customEventHandler.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/sha1.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/oauth.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/contexts.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/jquery.xml2json.min.js">
+        </script>
+        <script type="text/javascript" src="../libs/ms_sdk_bundle/client-sdk.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/appery.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/component-manager.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/mapping-impl.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/entity-api.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/login.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/storage-api.js">
+        </script>
+        <script type="text/javascript" src="../get_target_platform.js">
+        </script>
+        <script type="text/javascript" src="../cordova.js">
+        </script>
+        <script type="text/javascript">
+            if (typeof cordova !== "undefined" && cordova.platformId === 'ios') {
+                document.documentElement.style.setProperty('--iphone-safe-area-inset-top', '44px');
+                document.documentElement.style.setProperty('--iphone-safe-area-inset-bottom', '34px');
+            }
+        </script>
+        <link href="../libs/apperyio/mobilebase.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="../js/services/model.js">
+        </script>
+        <script type="text/javascript" src="../js/jquery-ui.min.js">
+        </script>
+        <script type="text/javascript" src="../js/common.js">
+        </script>
+        <script type="text/javascript" src="../js/clipboard.js">
+        </script>
+        <script type="text/javascript" src="../js/FileUploadHelper.js">
+        </script>
+        <script type="text/javascript" src="../js/qrCodeScaner.js">
+        </script>
+        <script type="text/javascript" src="../js/JavaScript1.js">
+        </script>
+        <script type="text/javascript" src="../js/services/service.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/databaseUtils.js">
+        </script>
+        <script type="text/javascript" src="../js/secure.js">
+        </script>
+<script type="text/javascript" src="../js/EncodeDecodeJS.js">
+        </script>
+    </head>
+    
+    <body>
+        <script language="JavaScript" type="text/javascript">
+        </script>
+        <div data-role="page" style="min-height:480px;" dsid="menuPage_old" id="menuPage_old"
+        class="type-interior" data-theme="b">
+            <!-- menuHeader -->
+            <div data-role="header" data-position="fixed" data-add-back-btn="true" data-back-btn-text="&nbsp;"
+            data-theme="b" name="menuHeader" id="menuPage_old_menuHeader" class="menuPage_old_menuHeader">
+                <h1 dsid="menuHeader">
+                    Menu (old)
+                </h1>
+                <!-- navigationButton --><!--
+                --><a data-role="button" name="navigationButton" dsid="navigationButton" class="menuPage_old_navigationButton ui-btn-right"
+                style='min-height:20px; ' id="menuPage_old_navigationButton" data-corners="true"
+                data-icon="bars" data-iconpos="notext" x-apple-data-detectors="false" data-inline='true'
+                data-mini='true' data-theme="b" tabindex="1">
+                &nbsp;
+                </a>
+            </div>
+            <!-- menuContainer -->
+            <div data-role="content" id="menuPage_old_menuContainer" name="menuContainer" class="menuPage_old_menuContainer ui-content"
+            dsid="menuContainer" data-theme="b">
+                <link href="menuPage_old.css" rel="stylesheet" type="text/css" />
+                <script type="text/javascript" src="menuPage_old.js">
+                </script>
+                <!-- profileUseGrid -->
+                <div class="menuPage_old_profileUseGrid_wrapper" data-wrapper-for="profileUseGrid">
+                    <table id="menuPage_old_profileUseGrid" class="menuPage_old_profileUseGrid" dsid="profileUseGrid"
+                    name="profileUseGrid" cellpadding=0 cellspacing=0>
+                        <col style="width:auto;" />
+                        <col style="width:auto;" />
+                        <tr class="menuPage_old_profileUseGrid_row_0">
+                            <!-- mobilegridcell_4 -->
+                            <td id="menuPage_old_mobilegridcell_4" name="mobilegridcell_4" class="menuPage_old_mobilegridcell_4"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- profileUseLabel -->
+                                    <div name="profileUseLabel" id="menuPage_old_profileUseLabel" dsid="profileUseLabel"
+                                    data-role="appery_label" class="menuPage_old_profileUseLabel">
+                                        Use profile
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_5 -->
+                            <td id="menuPage_old_mobilegridcell_5" name="mobilegridcell_5" class="menuPage_old_mobilegridcell_5"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- profileUseToggle -->
+                                    <div data-role="fieldcontain" class="menuPage_old_profileUseToggle ">
+                                        <select data-role="flipswitch" name="profileUseToggle" id="menuPage_old_profileUseToggle"
+                                        dsid="profileUseToggle" data-theme="b" data-track-theme="b">
+                                            <option value="off">
+                                                Off
+                                            </option>
+                                            <option value="on">
+                                                On
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="menuPage_old_profileUseGrid_row_1">
+                            <!-- mobilegridcell_10 -->
+                            <td id="menuPage_old_mobilegridcell_10" name="mobilegridcell_10" class="menuPage_old_mobilegridcell_10"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- searchInput -->
+                                    <div data-role="fieldcontain" class="menuPage_old_searchInput ">
+                                        <input type="text" name="searchInput" dsid="searchInput" value="" placeholder="Looking for something?"
+                                        id="menuPage_old_searchInput" tabindex="3" multiple data-theme="b" data-mini="true"
+                                        class="menuPage_old_searchInput" />
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_11 -->
+                            <td id="menuPage_old_mobilegridcell_11" name="mobilegridcell_11" class="menuPage_old_mobilegridcell_11"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- searchMenuButton --><!--
+                                    --><a data-role="button" name="searchMenuButton" dsid="searchMenuButton" class="menuPage_old_searchMenuButton"
+                                    id="menuPage_old_searchMenuButton" data-corners="true" data-icon="search" data-iconpos="right"
+                                    x-apple-data-detectors="false" data-inline="true" data-mini="true" data-theme="b"
+                                    tabindex="4">
+                                    Search
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- mobilelist_19 -->
+                <ul data-role="listview" id="menuPage_old_mobilelist_19" class="menuPage_old_mobilelist_19"
+                name="mobilelist_19" dsid="mobilelist_19" data-inset="true" data-theme="b" data-divider-theme="b"
+                data-count-theme="b" style="" data-split-icon="carat-r">
+                    <!-- mobilelistitem_20 -->
+                    <li class="menuPage_old_mobilelistitem_20" data-icon="carat-r">
+                        <a id="menuPage_old_mobilelistitem_20" name="mobilelistitem_20" dsid="mobilelistitem_20"
+                        tabindex="7" class="menuPage_old_mobilelistitem_20">
+                        <h3>Breakfast</h3>
+                        </a>
+                    </li>
+                    <!-- mobilelistitem_22 -->
+                    <li class="menuPage_old_mobilelistitem_22" data-icon="carat-r">
+                        <a id="menuPage_old_mobilelistitem_22" name="mobilelistitem_22" dsid="mobilelistitem_22"
+                        tabindex="7" class="menuPage_old_mobilelistitem_22">
+                        <h3>Lunch</h3>
+                        </a>
+                    </li>
+                    <!-- mobilelistitem_24 -->
+                    <li class="menuPage_old_mobilelistitem_24" data-icon="carat-r">
+                        <a id="menuPage_old_mobilelistitem_24" name="mobilelistitem_24" dsid="mobilelistitem_24"
+                        tabindex="7" class="menuPage_old_mobilelistitem_24">
+                        <h3>Dinner</h3>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- menuFooter -->
+            <div data-role="footer" data-position="fixed" class="menuPage_old_menuFooter" name="menuFooter"
+            dsid="menuFooter" id="menuPage_old_menuFooter" data-theme="b">
+                <!-- callServerButton --><!--
+                --><a data-role="button" name="callServerButton" dsid="callServerButton" class="menuPage_old_callServerButton"
+                style='margin-left:5px; ' id="menuPage_old_callServerButton" data-corners="true"
+                data-icon="comment" data-iconpos="right" x-apple-data-detectors="false" data-inline='true'
+                data-mini='true' data-theme="b" tabindex="9">
+                Call server
+                </a><!--
+                --><!-- selectedButton --><!--
+                --><a data-role="button" name="selectedButton" dsid="selectedButton" class="menuPage_old_selectedButton"
+                style='margin-left:5px; ' id="menuPage_old_selectedButton" data-corners="true" data-icon="shop"
+                data-iconpos="right" x-apple-data-detectors="false" data-inline='true' data-mini='true'
+                data-theme="b" tabindex="8">
+                Show selected
+                </a>
+            </div>
+            <!-- loginPopup -->
+            <div data-role="popup" name="loginPopup" dsid="loginPopup" id="menuPage_old_loginPopup"
+            class="menuPage_old_loginPopup" data-corners="true" data-dismissible="true" data-overlay-theme=""
+            data-theme="" data-shadow="true" data-tolerance="30,15,30,15">
+                <div class="ui-popup-content-wrapper">
+                    <!-- loginLabel -->
+                    <div name="loginLabel" id="menuPage_old_loginLabel" dsid="loginLabel" data-role="appery_label"
+                    class="labelStandard  menuPage_old_loginLabel">
+                        You must be logged in to use this feature.
+                    </div>
+                    <!-- mobilegrid_16 -->
+                    <div class="menuPage_old_mobilegrid_16_wrapper" data-wrapper-for="mobilegrid_16">
+                        <table id="menuPage_old_mobilegrid_16" class="menuPage_old_mobilegrid_16" dsid="mobilegrid_16"
+                        name="mobilegrid_16" cellpadding=0 cellspacing=0>
+                            <col style="width:auto;" />
+                            <col style="width:auto;" />
+                            <tr class="menuPage_old_mobilegrid_16_row_0">
+                                <!-- mobilegridcell_17 -->
+                                <td id="menuPage_old_mobilegridcell_17" name="mobilegridcell_17" class="menuPage_old_mobilegridcell_17"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- cancelButton --><!--
+                                        --><a data-role="button" name="cancelButton" dsid="cancelButton" class="menuPage_old_cancelButton"
+                                        id="menuPage_old_cancelButton" data-corners="true" data-icon="delete" data-iconpos="right"
+                                        x-apple-data-detectors="false" data-mini="true" data-theme="b" tabindex="6">
+                                        Cancel
+                                        </a>
+                                    </div>
+                                </td>
+                                <!-- mobilegridcell_18 -->
+                                <td id="menuPage_old_mobilegridcell_18" name="mobilegridcell_18" class="menuPage_old_mobilegridcell_18"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- loginButton --><!--
+                                        --><a data-role="button" name="loginButton" dsid="loginButton" class="menuPage_old_loginButton"
+                                        id="menuPage_old_loginButton" data-corners="true" data-icon="carat-r" data-iconpos="right"
+                                        x-apple-data-detectors="false" data-mini="true" data-theme="b" tabindex="5">
+                                        Login
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- selectedItemsPanel -->
+            <div data-role="panel" tabindex="-1" data-position="right" data-display="overlay"
+            id="menuPage_old_selectedItemsPanel" class="menuPage_old_selectedItemsPanel" name="selectedItemsPanel"
+            dsid="selectedItemsPanel" data-theme="b">
+                <!-- mobilegrid_72 -->
+                <div class="menuPage_old_mobilegrid_72_wrapper" data-wrapper-for="mobilegrid_72">
+                    <table id="menuPage_old_mobilegrid_72" class="menuPage_old_mobilegrid_72" dsid="mobilegrid_72"
+                    name="mobilegrid_72" cellpadding=0 cellspacing=0>
+                        <col style="width:auto;" />
+                        <col style="width:auto;" />
+                        <tr class="menuPage_old_mobilegrid_72_row_0">
+                            <!-- mobilegridcell_73 -->
+                            <td id="menuPage_old_mobilegridcell_73" name="mobilegridcell_73" class="menuPage_old_mobilegridcell_73"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- tableNumberLabel -->
+                                    <div name="tableNumberLabel" id="menuPage_old_tableNumberLabel" dsid="tableNumberLabel"
+                                    data-role="appery_label" class="labelRight  menuPage_old_tableNumberLabel">
+                                        Table (number)
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_74 -->
+                            <td id="menuPage_old_mobilegridcell_74" name="mobilegridcell_74" class="menuPage_old_mobilegridcell_74"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- tableNumber -->
+                                    <div name="tableNumber" id="menuPage_old_tableNumber" dsid="tableNumber" data-role="appery_label"
+                                    class="labelDataCenter  menuPage_old_tableNumber">
+                                        1
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="menuPage_old_mobilegrid_72_row_1">
+                            <!-- mobilegridcell_75 -->
+                            <td id="menuPage_old_mobilegridcell_75" name="mobilegridcell_75" class="menuPage_old_mobilegridcell_75"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- dinerLetterLabel -->
+                                    <div name="dinerLetterLabel" id="menuPage_old_dinerLetterLabel" dsid="dinerLetterLabel"
+                                    data-role="appery_label" class="labelRight  menuPage_old_dinerLetterLabel">
+                                        Diner (letter)
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_76 -->
+                            <td id="menuPage_old_mobilegridcell_76" name="mobilegridcell_76" class="menuPage_old_mobilegridcell_76"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- dinerLetter -->
+                                    <div name="dinerLetter" id="menuPage_old_dinerLetter" dsid="dinerLetter" data-role="appery_label"
+                                    class="labelDataCenter  menuPage_old_dinerLetter">
+                                        A
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- selectedItemsLabel -->
+                <div name="selectedItemsLabel" id="menuPage_old_selectedItemsLabel" dsid="selectedItemsLabel"
+                data-role="appery_label" class="labelStandard  menuPage_old_selectedItemsLabel">
+                    These are items selected for this order.
+                </div>
+                <!-- mobilelist_33 -->
+                <ul data-role="listview" id="menuPage_old_mobilelist_33" class="menuPage_old_mobilelist_33"
+                name="mobilelist_33" dsid="mobilelist_33" data-inset="true" data-theme="b" data-divider-theme="b"
+                data-count-theme="b" style="" data-split-icon="carat-r">
+                    <!-- mobilelistitem_34 -->
+                    <li class="menuPage_old_mobilelistitem_34" data-icon="carat-r">
+                        <a id="menuPage_old_mobilelistitem_34" name="mobilelistitem_34" dsid="mobilelistitem_34"
+                        tabindex="10" class="menuPage_old_mobilelistitem_34">
+                        <h3>Item 1</h3>
+                        </a>
+                    </li>
+                    <!-- mobilelistitem_36 -->
+                    <li class="menuPage_old_mobilelistitem_36" data-icon="carat-r">
+                        <a id="menuPage_old_mobilelistitem_36" name="mobilelistitem_36" dsid="mobilelistitem_36"
+                        tabindex="10" class="menuPage_old_mobilelistitem_36">
+                        <h3>Item 2</h3>
+                        </a>
+                    </li>
+                    <!-- mobilelistitem_38 -->
+                    <li class="menuPage_old_mobilelistitem_38" data-icon="carat-r">
+                        <a id="menuPage_old_mobilelistitem_38" name="mobilelistitem_38" dsid="mobilelistitem_38"
+                        tabindex="10" class="menuPage_old_mobilelistitem_38">
+                        <h3>Item 3</h3>
+                        </a>
+                    </li>
+                </ul>
+                <!-- mobilegrid_81 -->
+                <div class="menuPage_old_mobilegrid_81_wrapper" data-wrapper-for="mobilegrid_81">
+                    <table id="menuPage_old_mobilegrid_81" class="menuPage_old_mobilegrid_81" dsid="mobilegrid_81"
+                    name="mobilegrid_81" cellpadding=0 cellspacing=0>
+                        <col style="width:auto;" />
+                        <col style="width:auto;" />
+                        <col style="width:auto;" />
+                        <tr class="menuPage_old_mobilegrid_81_row_0">
+                            <!-- mobilegridcell_82 -->
+                            <td id="menuPage_old_mobilegridcell_82" name="mobilegridcell_82" class="menuPage_old_mobilegridcell_82"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobilelabel_88 -->
+                                    <div name="mobilelabel_88" id="menuPage_old_mobilelabel_88" dsid="mobilelabel_88"
+                                    data-role="appery_label" class="menuPage_old_mobilelabel_88">
+                                        Label
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_83 -->
+                            <td id="menuPage_old_mobilegridcell_83" name="mobilegridcell_83" class="menuPage_old_mobilegridcell_83"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobilelabel_89 -->
+                                    <div name="mobilelabel_89" id="menuPage_old_mobilelabel_89" dsid="mobilelabel_89"
+                                    data-role="appery_label" class="menuPage_old_mobilelabel_89">
+                                        Label
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_86 -->
+                            <td id="menuPage_old_mobilegridcell_86" name="mobilegridcell_86" class="menuPage_old_mobilegridcell_86"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobilelabel_90 -->
+                                    <div name="mobilelabel_90" id="menuPage_old_mobilelabel_90" dsid="mobilelabel_90"
+                                    data-role="appery_label" class="menuPage_old_mobilelabel_90">
+                                        Label
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="menuPage_old_mobilegrid_81_row_1">
+                            <!-- mobilegridcell_84 -->
+                            <td id="menuPage_old_mobilegridcell_84" name="mobilegridcell_84" class="menuPage_old_mobilegridcell_84"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_85 -->
+                            <td id="menuPage_old_mobilegridcell_85" name="mobilegridcell_85" class="menuPage_old_mobilegridcell_85"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_87 -->
+                            <td id="menuPage_old_mobilegridcell_87" name="mobilegridcell_87" class="menuPage_old_mobilegridcell_87"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- mobilegrid_91 -->
+                <div class="menuPage_old_mobilegrid_91_wrapper" data-wrapper-for="mobilegrid_91">
+                    <table id="menuPage_old_mobilegrid_91" class="menuPage_old_mobilegrid_91" dsid="mobilegrid_91"
+                    name="mobilegrid_91" cellpadding=0 cellspacing=0>
+                        <col style="width:auto;" />
+                        <col style="width:auto;" />
+                        <tr class="menuPage_old_mobilegrid_91_row_0">
+                            <!-- mobilegridcell_92 -->
+                            <td id="menuPage_old_mobilegridcell_92" name="mobilegridcell_92" class="menuPage_old_mobilegridcell_92"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobilelabel_96 -->
+                                    <div name="mobilelabel_96" id="menuPage_old_mobilelabel_96" dsid="mobilelabel_96"
+                                    data-role="appery_label" class="labelRight  menuPage_old_mobilelabel_96">
+                                        Total order
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_93 -->
+                            <td id="menuPage_old_mobilegridcell_93" name="mobilegridcell_93" class="menuPage_old_mobilegridcell_93"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobilelabel_97 -->
+                                    <div name="mobilelabel_97" id="menuPage_old_mobilelabel_97" dsid="mobilelabel_97"
+                                    data-role="appery_label" class="labelDataRight  menuPage_old_mobilelabel_97">
+                                        $75.25
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="menuPage_old_mobilegrid_91_row_1">
+                            <!-- mobilegridcell_98 -->
+                            <td id="menuPage_old_mobilegridcell_98" name="mobilegridcell_98" class="menuPage_old_mobilegridcell_98"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobilebutton_110 --><!--
+                                    --><a data-role="button" name="mobilebutton_110" dsid="mobilebutton_110" class="menuPage_old_mobilebutton_110"
+                                    id="menuPage_old_mobilebutton_110" data-corners="true" data-icon="grid" data-iconpos="right"
+                                    x-apple-data-detectors="false" data-mini="true" data-theme="b" tabindex="21">
+                                    Tip
+                                    </a>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_99 -->
+                            <td id="menuPage_old_mobilegridcell_99" name="mobilegridcell_99" class="menuPage_old_mobilegridcell_99"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobilelabel_107 -->
+                                    <div name="mobilelabel_107" id="menuPage_old_mobilelabel_107" dsid="mobilelabel_107"
+                                    data-role="appery_label" class="labelDataRight  menuPage_old_mobilelabel_107">
+                                        Label
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="menuPage_old_mobilegrid_91_row_2">
+                            <!-- mobilegridcell_100 -->
+                            <td id="menuPage_old_mobilegridcell_100" name="mobilegridcell_100" class="menuPage_old_mobilegridcell_100"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobilelabel_105 -->
+                                    <div name="mobilelabel_105" id="menuPage_old_mobilelabel_105" dsid="mobilelabel_105"
+                                    data-role="appery_label" class="labelRight  menuPage_old_mobilelabel_105">
+                                        Tax
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_101 -->
+                            <td id="menuPage_old_mobilegridcell_101" name="mobilegridcell_101" class="menuPage_old_mobilegridcell_101"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobilelabel_108 -->
+                                    <div name="mobilelabel_108" id="menuPage_old_mobilelabel_108" dsid="mobilelabel_108"
+                                    data-role="appery_label" class="labelDataRight  menuPage_old_mobilelabel_108">
+                                        Label
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="menuPage_old_mobilegrid_91_row_3">
+                            <!-- mobilegridcell_102 -->
+                            <td id="menuPage_old_mobilegridcell_102" name="mobilegridcell_102" class="menuPage_old_mobilegridcell_102"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobilelabel_106 -->
+                                    <div name="mobilelabel_106" id="menuPage_old_mobilelabel_106" dsid="mobilelabel_106"
+                                    data-role="appery_label" class="labelRightBold  menuPage_old_mobilelabel_106">
+                                        Total bill
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_103 -->
+                            <td id="menuPage_old_mobilegridcell_103" name="mobilegridcell_103" class="menuPage_old_mobilegridcell_103"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobilelabel_109 -->
+                                    <div name="mobilelabel_109" id="menuPage_old_mobilelabel_109" dsid="mobilelabel_109"
+                                    data-role="appery_label" class="labelDataRight  menuPage_old_mobilelabel_109">
+                                        Label
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <!-- tipPopup -->
+            <div data-role="popup" name="tipPopup" dsid="tipPopup" id="menuPage_old_tipPopup"
+            class="menuPage_old_tipPopup" data-corners="true" data-dismissible="true" data-overlay-theme=""
+            data-theme="" data-shadow="true" data-tolerance="30,15,30,15">
+                <div class="ui-popup-content-wrapper">
+                    <!-- mobilelabel_112 -->
+                    <div name="mobilelabel_112" id="menuPage_old_mobilelabel_112" dsid="mobilelabel_112"
+                    data-role="appery_label" class="labelStandard  menuPage_old_mobilelabel_112">
+                        Calculate Tip
+                    </div>
+                    <!-- mobilegrid_113 -->
+                    <div class="menuPage_old_mobilegrid_113_wrapper" data-wrapper-for="mobilegrid_113">
+                        <table id="menuPage_old_mobilegrid_113" class="menuPage_old_mobilegrid_113" dsid="mobilegrid_113"
+                        name="mobilegrid_113" cellpadding=0 cellspacing=0>
+                            <col style="width:auto;" />
+                            <col style="width:auto;" />
+                            <tr class="menuPage_old_mobilegrid_113_row_0">
+                                <!-- mobilegridcell_114 -->
+                                <td id="menuPage_old_mobilegridcell_114" name="mobilegridcell_114" class="menuPage_old_mobilegridcell_114"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- mobilelabel_134 -->
+                                        <div name="mobilelabel_134" id="menuPage_old_mobilelabel_134" dsid="mobilelabel_134"
+                                        data-role="appery_label" class="labelRight  menuPage_old_mobilelabel_134">
+                                            Order amount
+                                        </div>
+                                    </div>
+                                </td>
+                                <!-- mobilegridcell_115 -->
+                                <td id="menuPage_old_mobilegridcell_115" name="mobilegridcell_115" class="menuPage_old_mobilegridcell_115"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- mobilelabel_139 -->
+                                        <div name="mobilelabel_139" id="menuPage_old_mobilelabel_139" dsid="mobilelabel_139"
+                                        data-role="appery_label" class="menuPage_old_mobilelabel_139">
+                                            $100.00
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="menuPage_old_mobilegrid_113_row_1">
+                                <!-- mobilegridcell_116 -->
+                                <td id="menuPage_old_mobilegridcell_116" name="mobilegridcell_116" class="menuPage_old_mobilegridcell_116"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <div data-role="fieldcontain" class="menuPage_old_mobilecheckboxgroup_135" id="menuPage_old_mobilecheckboxgroup_135"
+                                        dsid="mobilecheckboxgroup_135">
+                                            <fieldset data-role="controlgroup" data-theme="b" data-mini="true" class="">
+                                                <span dsid="mobilecheckbox_136" class="menuPage_old_mobilecheckbox_136" name="mobilecheckbox_136">
+                                                    <input type="checkbox" name="mobilecheckboxgroup_135" id="menuPage_old_mobilecheckbox_136"
+                                                    checked="checked" tabindex="22" value="1" />
+                                                    <label id="menuPage_old_mobilecheckbox_136_label" for="menuPage_old_mobilecheckbox_136">
+                                                        Include tax
+                                                    </label>
+                                                </span>
+                                            </fieldset>
+                                        </div>
+                                    </div>
+                                </td>
+                                <!-- mobilegridcell_117 -->
+                                <td id="menuPage_old_mobilegridcell_117" name="mobilegridcell_117" class="menuPage_old_mobilegridcell_117"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- mobilelabel_140 -->
+                                        <div name="mobilelabel_140" id="menuPage_old_mobilelabel_140" dsid="mobilelabel_140"
+                                        data-role="appery_label" class="menuPage_old_mobilelabel_140">
+                                            $107.00
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="menuPage_old_mobilegrid_113_row_2">
+                                <!-- mobilegridcell_118 -->
+                                <td id="menuPage_old_mobilegridcell_118" name="mobilegridcell_118" class="menuPage_old_mobilegridcell_118"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- mobileselectmenu_147 -->
+                                        <div data-role="fieldcontain" class="menuPage_old_mobileselectmenu_147 ">
+                                            <select name="mobileselectmenu_147" id="menuPage_old_mobileselectmenu_147" dsid="mobileselectmenu_147"
+                                            data-theme="b" data-role="appery_selectmenu" data-inline="false" data-mini="true"
+                                            data-icon="arrow-d" data-iconpos="right" data-native-menu="false" tabindex="24" appery-class="menuPage_old_mobileselectmenu_147">
+                                                <option id="menuPage_old_mobileselectmenu_147-0" value="15" reRender="mobileselectmenu_147"
+                                                dsid="mobileselectmenu_147-0" selected="selected">
+                                                    15%
+                                                </option>
+                                                <option id="menuPage_old_mobileselectmenu_147-1" value="18" reRender="mobileselectmenu_147"
+                                                dsid="mobileselectmenu_147-1">
+                                                    18%
+                                                </option>
+                                                <option id="menuPage_old_mobileselectmenu_147-2" value="20" reRender="mobileselectmenu_147"
+                                                dsid="mobileselectmenu_147-2">
+                                                    20%
+                                                </option>
+                                                <option id="menuPage_old_mobileselectmenu_147-3" value="amount" reRender="mobileselectmenu_147"
+                                                dsid="mobileselectmenu_147-3">
+                                                    Specify amount
+                                                </option>
+                                                <option id="menuPage_old_mobileselectmenu_147-4" value="percent" reRender="mobileselectmenu_147"
+                                                dsid="mobileselectmenu_147-4">
+                                                    Specify percent
+                                                </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </td>
+                                <!-- mobilegridcell_119 -->
+                                <td id="menuPage_old_mobilegridcell_119" name="mobilegridcell_119" class="menuPage_old_mobilegridcell_119"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- mobilelabel_149 -->
+                                        <div name="mobilelabel_149" id="menuPage_old_mobilelabel_149" dsid="mobilelabel_149"
+                                        data-role="appery_label" class="menuPage_old_mobilelabel_149">
+                                            $16.05
+                                        </div>
+                                        <!-- mobiletextinput_160 -->
+                                        <div data-role="fieldcontain" class="menuPage_old_mobiletextinput_160 ">
+                                            <input type="number" name="mobiletextinput_160" dsid="mobiletextinput_160" value=""
+                                            placeholder="" id="menuPage_old_mobiletextinput_160" tabindex="27" multiple data-theme="b"
+                                            data-mini="true" class="menuPage_old_mobiletextinput_160" />
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="menuPage_old_mobilegrid_113_row_3">
+                                <!-- mobilegridcell_120 -->
+                                <td id="menuPage_old_mobilegridcell_120" name="mobilegridcell_120" class="menuPage_old_mobilegridcell_120"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- mobileradiogroup_155 -->
+                                        <div data-role="fieldcontain" class="menuPage_old_mobileradiogroup_155" id="menuPage_old_mobileradiogroup_155"
+                                        dsid="mobileradiogroup_155">
+                                            <fieldset data-role="controlgroup" data-mini="true" data-theme="b">
+                                                <!-- mobileradiobutton_156 -->
+                                                <span dsid="mobileradiobutton_156" class="menuPage_old_mobileradiobutton_156" name="mobileradiobutton_156">
+                                                    <input type="radio" name="mobileradiogroup_155" id="menuPage_old_mobileradiobutton_156"
+                                                    tabindex="26" value="3" />
+                                                    <label id="menuPage_old_mobileradiobutton_156_label" for="menuPage_old_mobileradiobutton_156">
+                                                        Round up
+                                                    </label>
+                                                </span>
+                                                <!-- mobileradiobutton_157 -->
+                                                <span dsid="mobileradiobutton_157" class="menuPage_old_mobileradiobutton_157" name="mobileradiobutton_157">
+                                                    <input type="radio" name="mobileradiogroup_155" id="menuPage_old_mobileradiobutton_157"
+                                                    checked="checked" value="2" />
+                                                    <label id="menuPage_old_mobileradiobutton_157_label" for="menuPage_old_mobileradiobutton_157">
+                                                        Exact
+                                                    </label>
+                                                </span>
+                                                <!-- mobileradiobutton_158 -->
+                                                <span dsid="mobileradiobutton_158" class="menuPage_old_mobileradiobutton_158" name="mobileradiobutton_158">
+                                                    <input type="radio" name="mobileradiogroup_155" id="menuPage_old_mobileradiobutton_158"
+                                                    value="1" />
+                                                    <label id="menuPage_old_mobileradiobutton_158_label" for="menuPage_old_mobileradiobutton_158">
+                                                        Round down
+                                                    </label>
+                                                </span>
+                                            </fieldset>
+                                        </div>
+                                    </div>
+                                </td>
+                                <!-- mobilegridcell_121 -->
+                                <td id="menuPage_old_mobilegridcell_121" name="mobilegridcell_121" class="menuPage_old_mobilegridcell_121"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- mobilelabel_161 -->
+                                        <div name="mobilelabel_161" id="menuPage_old_mobilelabel_161" dsid="mobilelabel_161"
+                                        data-role="appery_label" class="menuPage_old_mobilelabel_161">
+                                            $16.05
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="menuPage_old_mobilegrid_113_row_4">
+                                <!-- mobilegridcell_122 -->
+                                <td id="menuPage_old_mobilegridcell_122" name="mobilegridcell_122" class="menuPage_old_mobilegridcell_122"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- mobilelabel_162 -->
+                                        <div name="mobilelabel_162" id="menuPage_old_mobilelabel_162" dsid="mobilelabel_162"
+                                        data-role="appery_label" class="labelRightBold  menuPage_old_mobilelabel_162">
+                                            Total
+                                        </div>
+                                    </div>
+                                </td>
+                                <!-- mobilegridcell_123 -->
+                                <td id="menuPage_old_mobilegridcell_123" name="mobilegridcell_123" class="menuPage_old_mobilegridcell_123"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- mobilelabel_159 -->
+                                        <div name="mobilelabel_159" id="menuPage_old_mobilelabel_159" dsid="mobilelabel_159"
+                                        data-role="appery_label" class="menuPage_old_mobilelabel_159">
+                                            $133.05
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <!-- tipSaveButton --><!--
+                    --><a data-role="button" name="tipSaveButton" dsid="tipSaveButton" class="menuPage_old_tipSaveButton"
+                    id="menuPage_old_tipSaveButton" data-corners="false" data-icon="check" data-iconpos="right"
+                    x-apple-data-detectors="false" data-inline="true" data-mini="true" data-theme="b"
+                    tabindex="28">
+                    Save
+                    </a>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>

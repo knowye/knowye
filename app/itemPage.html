@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>
+            itemPage
+        </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, viewport-fit=cover">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="msapplication-tap-highlight" content="no">
+        <!-- Enable all requests, inline styles, and eval() -->
+        <meta http-equiv="Content-Security-Policy" content="default-src * gap://ready data:; style-src 'self' 'unsafe-inline' *; script-src 'self' 'unsafe-inline' 'unsafe-eval' *">
+        <!-- Uncomment link and meta tags below to activate PWA icons and theme color -->
+        <!-- link rel="manifest" href="../manifest.json" crossOrigin="use-credentials" -->
+        <!-- meta name="theme-color" content="#ffffff" -->
+        <link href="../css/theme/jqm/jqm.css" rel="stylesheet" />
+        <link href="../css/theme/KnoWYE3/KnoWYE3.css" rel="stylesheet" />
+        <link href="../libs/jquerymobile/1.4.5/jquery.mobile.structure-1.4.5.css" rel="stylesheet"
+        />
+        <link type="text/css" rel="stylesheet" href="../css/logblock.css" />
+        <link type="text/css" rel="stylesheet" href="../css/menuPageBuilder.css" />
+        <link type="text/css" rel="stylesheet" href="../css/common.css" />
+        <link type="text/css" rel="stylesheet" href="../css/header_footer.css" />
+        <link type="text/css" rel="stylesheet" href="../css/button.css" />
+        <link type="text/css" rel="stylesheet" href="../css/label.css" />
+        <link type="text/css" rel="stylesheet" href="../css/FontRoboto.css.css" />
+        <!-- Uncomment this script to activate service worker -->
+        <!-- <script>
+        if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('../sw.js')
+        .then(() => console.log('service worker installed'))
+        .catch(err => console.error('Error', err));
+        }
+        </script>
+        -->
+        <script type="text/javascript" src="../libs/underscore/underscore.js">
+        </script>
+        <script type="text/javascript" src="../libs/store/json2.js">
+        </script>
+        <script type="text/javascript" src="../libs/jquery/jquery-2.1.1.js">
+        </script>
+        <script type="text/javascript" src="../libs/jquery/jquery-ajaxTransport.js">
+        </script>
+        <script type="text/javascript">
+            $(document).bind("mobileinit", function() {
+                if (navigator.userAgent.toLowerCase().indexOf("android") != -1) {
+                    $.mobile.defaultPageTransition = 'none';
+                    $.mobile.defaultDialogTransition = 'none';
+                } else if (navigator.userAgent.toLowerCase().indexOf("msie") != -1) {
+                    $.mobile.allowCrossDomainPages = true;
+                    $.support.cors = true;
+                } else if (navigator.userAgent.match(/(iPad|iPhone|iPod)/g)) {
+                    $.mobile.hashListeningEnabled = false;
+                }
+            });
+        </script>
+        <script type="text/javascript" src="../libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.js">
+        </script>
+        <script type="text/javascript" src="../libs/apperyio/mobilebase.js">
+        </script>
+        <script type="text/javascript" src="../libs/event/customEventHandler.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/sha1.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/oauth.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/contexts.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/jquery.xml2json.min.js">
+        </script>
+        <script type="text/javascript" src="../libs/ms_sdk_bundle/client-sdk.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/appery.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/component-manager.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/mapping-impl.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/entity-api.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/login.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/storage-api.js">
+        </script>
+        <script type="text/javascript" src="../get_target_platform.js">
+        </script>
+        <script type="text/javascript" src="../cordova.js">
+        </script>
+        <link href="../libs/apperyio/mobilebase.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="../js/services/model.js">
+        </script>
+        <script type="text/javascript" src="../js/menuHeadingManagePageBuilder.js">
+        </script>
+        <script type="text/javascript" src="../js/navigatePageManager.js">
+        </script>
+        <script type="text/javascript" src="../js/logblock.js">
+        </script>
+        <script type="text/javascript" src="../js/Facebook_Helper.js">
+        </script>
+        <script type="text/javascript" src="../js/menuHeadingManager.js">
+        </script>
+        <script type="text/javascript" src="../js/menuPageBuilder.js">
+        </script>
+        <script type="text/javascript" src="../js/jquery-ui.min.js">
+        </script>
+        <script type="text/javascript" src="../js/common.js">
+        </script>
+        <script type="text/javascript" src="../js/clipboard.js">
+        </script>
+        <script type="text/javascript" src="../js/FileUploadHelper.js">
+        </script>
+        <script type="text/javascript" src="../js/zzqrCodeScaner.js">
+        </script>
+        <script type="text/javascript" src="../js/menuHistoryManager.js">
+        </script>
+        <script type="text/javascript" src="../js/GoogleCharts.js">
+        </script>
+        <script type="text/javascript" src="../js/services/service.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/databaseUtils.js">
+        </script>
+        <script type="text/javascript" src="../js/secure.js">
+        </script>
+<script type="text/javascript" src="../js/EncodeDecodeJS.js">
+        </script>
+    </head>
+    
+    <body>
+        <script language="JavaScript" type="text/javascript">
+        </script>
+        <div data-role="page" style="min-height:480px;" dsid="itemPage" id="itemPage" class="type-interior"
+        data-theme="b">
+            <!-- itemPageHeader -->
+            <div data-role="header" data-position="fixed" data-add-back-btn="true" data-back-btn-text="&nbsp;"
+            data-theme="b" name="itemPageHeader" id="itemPage_itemPageHeader" class="itemPage_itemPageHeader">
+                <h1 dsid="itemPageHeader">
+                    itemPage
+                </h1>
+                <!-- navigateButton --><!--
+                --><a data-role="button" name="navigateButton" dsid="navigateButton" class="itemPage_navigateButton ui-btn-right"
+                style='min-height:20px; ' id="itemPage_navigateButton" data-corners="true" data-icon="bars"
+                data-iconpos="notext" x-apple-data-detectors="false" data-inline='true' data-mini='true'
+                data-theme="b" tabindex="2">
+                &nbsp;
+                </a>
+            </div>
+            <!-- dishListContainer -->
+            <div data-role="content" id="itemPage_dishListContainer" name="dishListContainer"
+            class="ui-li-container  itemPage_dishListContainer ui-content" dsid="dishListContainer"
+            data-theme="b">
+                <link href="itemPage.css" rel="stylesheet" type="text/css" />
+                <script type="text/javascript" src="itemPage.js">
+                </script>
+                <!-- proprietorNameLabel -->
+                <div name="proprietorNameLabel" id="itemPage_proprietorNameLabel" dsid="proprietorNameLabel"
+                data-role="appery_label" class="labelItem  itemPage_proprietorNameLabel">
+                    proprietorName
+                </div>
+                <!-- menuTagLineLabel -->
+                <div name="menuTagLineLabel" id="itemPage_menuTagLineLabel" dsid="menuTagLineLabel"
+                data-role="appery_label" class="labelDescription  itemPage_menuTagLineLabel">
+                    tag line
+                </div>
+                <!-- collapseExpandButton --><!--
+                --><a data-role="button" name="collapseExpandButton" dsid="collapseExpandButton" class="scanMenuButton  itemPage_collapseExpandButton"
+                id="itemPage_collapseExpandButton" data-corners="true" data-icon="none" data-iconpos='nowhere'
+                x-apple-data-detectors="false" data-inline="true" data-mini="true" data-theme="b"
+                tabindex="7">
+                collapse / expand all
+                </a><!--
+                --><!-- menuItemList -->
+                <ul data-role="listview" id="itemPage_menuItemList" class="itemPage_menuItemList"
+                name="menuItemList" dsid="menuItemList" data-theme="b" data-divider-theme="b" data-count-theme="b"
+                style="" data-split-icon="carat-r">
+                    <!-- menuItem -->
+                    <li id="itemPage_menuItem" name="menuItem" dsid="menuItem" tabindex="3" data-icon="carat-r"
+                    class="itemPage_menuItem  ui-btn ui-btn-icon-right ui-icon-carat-r">
+                        <div class="ui-li-static-container ui-btn">
+                            <!-- notAvailableLabel -->
+                            <div name="notAvailableLabel" id="itemPage_notAvailableLabel" dsid="notAvailableLabel"
+                            data-role="appery_label" class="status  itemPage_notAvailableLabel">
+                                SORRY, NOT AVAILABLE TODAY
+                            </div>
+                            <!-- nameLabel -->
+                            <div name="nameLabel" id="itemPage_nameLabel" dsid="nameLabel" data-role="appery_label"
+                            class="labelOnDark  itemPage_nameLabel">
+                                item name
+                            </div>
+                            <!-- descriptionLabel -->
+                            <div name="descriptionLabel" id="itemPage_descriptionLabel" dsid="descriptionLabel"
+                            data-role="appery_label" class="labelOnDark  itemPage_descriptionLabel">
+                                description
+                            </div>
+                            <!-- priceRatingGrid -->
+                            <div class="itemPage_priceRatingGrid_wrapper" data-wrapper-for="priceRatingGrid">
+                                <table id="itemPage_priceRatingGrid" class="itemPage_priceRatingGrid" dsid="priceRatingGrid"
+                                name="priceRatingGrid" cellpadding=0 cellspacing=0>
+                                    <col style="width:74px;" />
+                                    <col style="width:auto;" />
+                                    <tr class="itemPage_priceRatingGrid_row_0">
+                                        <!-- mobilegridcell_38 -->
+                                        <td id="itemPage_mobilegridcell_38" name="mobilegridcell_38" class="itemPage_mobilegridcell_38"
+                                        colspan=1 rowspan=1>
+                                            <div class="cell-wrapper">
+                                                <!-- mobilegrid_40 -->
+                                                <div class="itemPage_mobilegrid_40_wrapper" data-wrapper-for="mobilegrid_40">
+                                                    <table id="itemPage_mobilegrid_40" class="itemPage_mobilegrid_40" dsid="mobilegrid_40"
+                                                    name="mobilegrid_40" cellpadding=0 cellspacing=0>
+                                                        <col style="width:auto;" />
+                                                        <col style="width:49px;" />
+                                                        <tr class="itemPage_mobilegrid_40_row_0">
+                                                            <!-- dollarSignCell -->
+                                                            <td id="itemPage_dollarSignCell" name="dollarSignCell" class="itemPage_dollarSignCell"
+                                                            colspan=1 rowspan=1>
+                                                                <div class="cell-wrapper">
+                                                                    <!-- dollarSignLabel -->
+                                                                    <div name="dollarSignLabel" id="itemPage_dollarSignLabel" dsid="dollarSignLabel"
+                                                                    data-role="appery_label" class="labelMenuDollar  itemPage_dollarSignLabel">
+                                                                        $
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <!-- mobilegridcell_42 -->
+                                                            <td id="itemPage_mobilegridcell_42" name="mobilegridcell_42" class="itemPage_mobilegridcell_42"
+                                                            colspan=1 rowspan=1>
+                                                                <div class="cell-wrapper">
+                                                                    <!-- priceLabel -->
+                                                                    <div name="priceLabel" id="itemPage_priceLabel" dsid="priceLabel" data-role="appery_label"
+                                                                    class="labelMenuPrice  itemPage_priceLabel">
+                                                                        price
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <!-- tasteStatCell -->
+                                        <td id="itemPage_tasteStatCell" name="tasteStatCell" class="itemPage_tasteStatCell"
+                                        colspan=1 rowspan=1>
+                                            <div class="cell-wrapper">
+                                                <!-- tasteStatGrid -->
+                                                <div class="itemPage_tasteStatGrid_wrapper" data-wrapper-for="tasteStatGrid">
+                                                    <table id="itemPage_tasteStatGrid" class="itemPage_tasteStatGrid" dsid="tasteStatGrid"
+                                                    name="tasteStatGrid" cellpadding=0 cellspacing=0>
+                                                        <col style="width:auto;" />
+                                                        <col style="width:auto;" />
+                                                        <col style="width:auto;" />
+                                                        <col style="width:auto;" />
+                                                        <tr class="itemPage_tasteStatGrid_row_0">
+                                                            <!-- plus2Cell -->
+                                                            <td id="itemPage_plus2Cell" name="plus2Cell" class="itemPage_plus2Cell" colspan=1
+                                                            rowspan=1>
+                                                                <div class="cell-wrapper">
+                                                                    <!-- plus2Label -->
+                                                                    <div name="plus2Label" id="itemPage_plus2Label" dsid="plus2Label" data-role="appery_label"
+                                                                    class="itemPage_plus2Label">
+                                                                        ++
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <!-- plus2CountCell -->
+                                                            <td id="itemPage_plus2CountCell" name="plus2CountCell" class="itemPage_plus2CountCell"
+                                                            colspan=1 rowspan=1>
+                                                                <div class="cell-wrapper">
+                                                                    <!-- plus2CountLabel -->
+                                                                    <div name="plus2CountLabel" id="itemPage_plus2CountLabel" dsid="plus2CountLabel"
+                                                                    data-role="appery_label" class="itemPage_plus2CountLabel">
+                                                                        #
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <!-- plus2PercentCell -->
+                                                            <td id="itemPage_plus2PercentCell" name="plus2PercentCell" class="itemPage_plus2PercentCell"
+                                                            colspan=1 rowspan=1>
+                                                                <div class="cell-wrapper">
+                                                                    <!-- plus2PercentLabel -->
+                                                                    <div name="plus2PercentLabel" id="itemPage_plus2PercentLabel" dsid="plus2PercentLabel"
+                                                                    data-role="appery_label" class="itemPage_plus2PercentLabel">
+                                                                        #
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <!-- percent2Cell -->
+                                                            <td id="itemPage_percent2Cell" name="percent2Cell" class="itemPage_percent2Cell"
+                                                            colspan=1 rowspan=1>
+                                                                <div class="cell-wrapper">
+                                                                    <!-- percent2Label -->
+                                                                    <div name="percent2Label" id="itemPage_percent2Label" dsid="percent2Label" data-role="appery_label"
+                                                                    class="itemPage_percent2Label">
+                                                                        %
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="itemPage_tasteStatGrid_row_1">
+                                                            <!-- plus1Cell -->
+                                                            <td id="itemPage_plus1Cell" name="plus1Cell" class="itemPage_plus1Cell" colspan=1
+                                                            rowspan=1>
+                                                                <div class="cell-wrapper">
+                                                                    <!-- plus1Label -->
+                                                                    <div name="plus1Label" id="itemPage_plus1Label" dsid="plus1Label" data-role="appery_label"
+                                                                    class="itemPage_plus1Label">
+                                                                        +
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <!-- plus1CountCell -->
+                                                            <td id="itemPage_plus1CountCell" name="plus1CountCell" class="itemPage_plus1CountCell"
+                                                            colspan=1 rowspan=1>
+                                                                <div class="cell-wrapper">
+                                                                    <!-- plus1CountLabel -->
+                                                                    <div name="plus1CountLabel" id="itemPage_plus1CountLabel" dsid="plus1CountLabel"
+                                                                    data-role="appery_label" class="itemPage_plus1CountLabel">
+                                                                        #
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <!-- plus1PercentCell -->
+                                                            <td id="itemPage_plus1PercentCell" name="plus1PercentCell" class="itemPage_plus1PercentCell"
+                                                            colspan=1 rowspan=1>
+                                                                <div class="cell-wrapper">
+                                                                    <!-- plus1PercentLabel -->
+                                                                    <div name="plus1PercentLabel" id="itemPage_plus1PercentLabel" dsid="plus1PercentLabel"
+                                                                    data-role="appery_label" class="itemPage_plus1PercentLabel">
+                                                                        #
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <!-- percent1Cell -->
+                                                            <td id="itemPage_percent1Cell" name="percent1Cell" class="itemPage_percent1Cell"
+                                                            colspan=1 rowspan=1>
+                                                                <div class="cell-wrapper">
+                                                                    <!-- percent1Label -->
+                                                                    <div name="percent1Label" id="itemPage_percent1Label" dsid="percent1Label" data-role="appery_label"
+                                                                    class="itemPage_percent1Label">
+                                                                        %
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                                <!-- rateStras -->
+                                                <div data-role="appery_html" name="rateStras" dsid="rateStras" id="itemPage_rateStras"
+                                                class="rate rate0  itemPage_rateStras">
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <!-- itemSelectButton --><!--
+                            --><a data-role="button" name="itemSelectButton" dsid="itemSelectButton" class="scanMenuButton  itemPage_itemSelectButton"
+                            id="itemPage_itemSelectButton" data-corners="true" data-icon="plus" data-iconpos="right"
+                            x-apple-data-detectors="false" data-mini="true" data-theme="b" tabindex="4">
+                            add to selected list
+                            </a><!--
+                            --><!-- proprietorLabel -->
+                            <div name="proprietorLabel" id="itemPage_proprietorLabel" dsid="proprietorLabel"
+                            data-role="appery_label" class="itemPage_proprietorLabel">
+                                proprietor
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- itemPageFooter -->
+            <div data-role="footer" data-position="fixed" class="itemPage_itemPageFooter" name="itemPageFooter"
+            dsid="itemPageFooter" id="itemPage_itemPageFooter" data-theme="b">
+                <!-- serviceButtonGrid -->
+                <div class="itemPage_serviceButtonGrid_wrapper" data-wrapper-for="serviceButtonGrid">
+                    <table id="itemPage_serviceButtonGrid" class="itemPage_serviceButtonGrid" dsid="serviceButtonGrid"
+                    name="serviceButtonGrid" cellpadding=0 cellspacing=0>
+                        <col style="width:151px;" />
+                        <col style="width:125px;" />
+                        <col style="width:auto;" />
+                        <tr class="itemPage_serviceButtonGrid_row_0">
+                            <!-- selectedCell -->
+                            <td id="itemPage_selectedCell" name="selectedCell" class="itemPage_selectedCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- selectedButton --><!--
+                                    --><a data-role="button" name="selectedButton" dsid="selectedButton" class="itemPage_selectedButton"
+                                    id="itemPage_selectedButton" data-corners="true" data-icon="shop" data-iconpos="right"
+                                    x-apple-data-detectors="false" data-mini="false" data-theme="b" tabindex="6">
+                                    show selected
+                                    </a>
+                                </div>
+                            </td>
+                            <!-- callServerCell -->
+                            <td id="itemPage_callServerCell" name="callServerCell" class="itemPage_callServerCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- callServerButton --><!--
+                                    --><a data-role="button" name="callServerButton" dsid="callServerButton" class="itemPage_callServerButton"
+                                    id="itemPage_callServerButton" data-corners="true" data-icon="comment" data-iconpos="right"
+                                    x-apple-data-detectors="false" data-mini="false" data-theme="b" tabindex="8">
+                                    call server
+                                    </a>
+                                </div>
+                            </td>
+                            <!-- proprietorInfoCell -->
+                            <td id="itemPage_proprietorInfoCell" name="proprietorInfoCell" class="itemPage_proprietorInfoCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- proprietorInfoButton --><!--
+                                    --><a data-role="button" name="proprietorInfoButton" dsid="proprietorInfoButton" class="itemPage_proprietorInfoButton"
+                                    style='min-height:20px; ' id="itemPage_proprietorInfoButton" data-corners="true"
+                                    data-icon="location" data-iconpos="notext" x-apple-data-detectors="false" data-mini="false"
+                                    data-theme="b" tabindex="9">
+                                    &nbsp;
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>

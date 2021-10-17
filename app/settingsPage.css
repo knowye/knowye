@@ -1,0 +1,20 @@
+
+/* Define default spinner */
+.ui-icon-loading {
+	background: url("../libs/jquerymobile/1.4.5/images/ajax-loader.gif") repeat scroll 0 0 / 46px 46px transparent!important;
+}
+/* menuButton */
+#settingsPage_menuButton {
+
+}
+.ui-btn.settingsPage_menuButton {
+
+}
+/* settingsContainer */
+.ui-content.settingsPage_settingsContainer {
+	padding: 15px 15px 15px 15px;
+}
+/* mobilefooter */
+.settingsPage_mobilefooter {
+	min-height:38px;
+}

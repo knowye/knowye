@@ -1,0 +1,29 @@
+
+/* Define default spinner */
+.ui-icon-loading {
+	background: url("../libs/jquerymobile/1.4.5/images/ajax-loader.gif") repeat scroll 0 0 / 46px 46px transparent!important;
+}
+/* navigateButton */
+#zzpromoManage_navigateButton {
+
+}
+.ui-btn.zzpromoManage_navigateButton {
+
+}
+/* mobilecontainer */
+.ui-content.zzpromoManage_mobilecontainer {
+	padding: 15px 15px 15px 15px;
+}
+/* promoList */
+.ui-page .zzpromoManage_promoList {
+	margin: 4px 0px 0px 0px;
+}
+/* promoListItem */
+/* mobilelistitembutton_4 */
+.zzpromoManage_mobilelistitembutton_4 {
+
+}
+/* mobilefooter */
+.zzpromoManage_mobilefooter {
+	min-height:38px;
+}

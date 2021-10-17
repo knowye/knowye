@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>
+            operationsRestaurantPage
+        </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, viewport-fit=cover">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="msapplication-tap-highlight" content="no">
+        <!-- Enable all requests, inline styles, and eval() -->
+        <meta http-equiv="Content-Security-Policy" content="default-src * gap://ready data:; style-src 'self' 'unsafe-inline' *; script-src 'self' 'unsafe-inline' 'unsafe-eval' *">
+        <!-- Uncomment link and meta tags below to activate PWA icons and theme color -->
+        <!-- link rel="manifest" href="../manifest.json" crossOrigin="use-credentials" -->
+        <!-- meta name="theme-color" content="#ffffff" -->
+        <link href="../css/theme/jqm/jqm.css" rel="stylesheet" />
+        <link href="../css/theme/KnoWYE3/KnoWYE3.css" rel="stylesheet" />
+        <link href="../libs/jquerymobile/1.4.5/jquery.mobile.structure-1.4.5.css" rel="stylesheet"
+        />
+        <link type="text/css" rel="stylesheet" href="../css/logblock.css" />
+        <link type="text/css" rel="stylesheet" href="../css/menuPageBuilder.css" />
+        <link type="text/css" rel="stylesheet" href="../css/common.css" />
+        <link type="text/css" rel="stylesheet" href="../css/header_footer.css" />
+        <link type="text/css" rel="stylesheet" href="../css/button.css" />
+        <link type="text/css" rel="stylesheet" href="../css/label.css" />
+        <link type="text/css" rel="stylesheet" href="../css/FontRoboto.css.css" />
+        <!-- Uncomment this script to activate service worker -->
+        <!-- <script>
+        if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('../sw.js')
+        .then(() => console.log('service worker installed'))
+        .catch(err => console.error('Error', err));
+        }
+        </script>
+        -->
+        <script type="text/javascript" src="../libs/underscore/underscore.js">
+        </script>
+        <script type="text/javascript" src="../libs/store/json2.js">
+        </script>
+        <script type="text/javascript" src="../libs/jquery/jquery-2.1.1.js">
+        </script>
+        <script type="text/javascript" src="../libs/jquery/jquery-ajaxTransport.js">
+        </script>
+        <script type="text/javascript">
+            $(document).bind("mobileinit", function() {
+                if (navigator.userAgent.toLowerCase().indexOf("android") != -1) {
+                    $.mobile.defaultPageTransition = 'none';
+                    $.mobile.defaultDialogTransition = 'none';
+                } else if (navigator.userAgent.toLowerCase().indexOf("msie") != -1) {
+                    $.mobile.allowCrossDomainPages = true;
+                    $.support.cors = true;
+                } else if (navigator.userAgent.match(/(iPad|iPhone|iPod)/g)) {
+                    $.mobile.hashListeningEnabled = false;
+                }
+            });
+        </script>
+        <script type="text/javascript" src="../libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.js">
+        </script>
+        <script type="text/javascript" src="../libs/apperyio/mobilebase.js">
+        </script>
+        <script type="text/javascript" src="../libs/event/customEventHandler.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/sha1.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/oauth.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/contexts.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/jquery.xml2json.min.js">
+        </script>
+        <script type="text/javascript" src="../libs/ms_sdk_bundle/client-sdk.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/appery.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/component-manager.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/mapping-impl.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/entity-api.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/login.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/storage-api.js">
+        </script>
+        <script type="text/javascript" src="../get_target_platform.js">
+        </script>
+        <script type="text/javascript" src="../cordova.js">
+        </script>
+        <link href="../libs/apperyio/mobilebase.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="../js/services/model.js">
+        </script>
+        <script type="text/javascript" src="../js/menuHeadingManagePageBuilder.js">
+        </script>
+        <script type="text/javascript" src="../js/navigatePageManager.js">
+        </script>
+        <script type="text/javascript" src="../js/logblock.js">
+        </script>
+        <script type="text/javascript" src="../js/Facebook_Helper.js">
+        </script>
+        <script type="text/javascript" src="../js/menuHeadingManager.js">
+        </script>
+        <script type="text/javascript" src="../js/menuPageBuilder.js">
+        </script>
+        <script type="text/javascript" src="../js/jquery-ui.min.js">
+        </script>
+        <script type="text/javascript" src="../js/common.js">
+        </script>
+        <script type="text/javascript" src="../js/clipboard.js">
+        </script>
+        <script type="text/javascript" src="../js/FileUploadHelper.js">
+        </script>
+        <script type="text/javascript" src="../js/zzqrCodeScaner.js">
+        </script>
+        <script type="text/javascript" src="../js/menuHistoryManager.js">
+        </script>
+        <script type="text/javascript" src="../js/GoogleCharts.js">
+        </script>
+        <script type="text/javascript" src="../js/services/service.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/databaseUtils.js">
+        </script>
+        <script type="text/javascript" src="../js/secure.js">
+        </script>
+<script type="text/javascript" src="../js/EncodeDecodeJS.js">
+        </script>
+    </head>
+    
+    <body>
+        <script language="JavaScript" type="text/javascript">
+        </script>
+        <div data-role="page" style="min-height:480px;" dsid="operationsRestaurantPage"
+        id="operationsRestaurantPage" class="type-interior" data-theme="b">
+            <!-- operationsHeader -->
+            <div data-role="header" data-position="fixed" data-add-back-btn="true" data-back-btn-text="&nbsp;"
+            data-theme="b" name="operationsHeader" id="operationsRestaurantPage_operationsHeader"
+            class="operationsRestaurantPage_operationsHeader">
+                <h1 dsid="operationsHeader">
+                    operations info
+                </h1>
+                <!-- homeButton --><!--
+                --><a data-role="button" name="homeButton" dsid="homeButton" class="operationsRestaurantPage_homeButton ui-btn-right"
+                style='min-height:20px; ' id="operationsRestaurantPage_homeButton" data-corners="true"
+                data-icon="home" data-iconpos="notext" x-apple-data-detectors="false" data-inline='true'
+                data-mini='true' data-theme="b" tabindex="67">
+                &nbsp;
+                </a>
+            </div>
+            <!-- operationsContainer -->
+            <div data-role="content" id="operationsRestaurantPage_operationsContainer" name="operationsContainer"
+            class="ui-li-container  operationsRestaurantPage_operationsContainer ui-content"
+            dsid="operationsContainer" data-theme="b">
+                <link href="operationsRestaurantPage.css" rel="stylesheet" type="text/css" />
+                <script type="text/javascript" src="operationsRestaurantPage.js">
+                </script>
+                <!-- changeLoginPasswordGrid -->
+                <div class="operationsRestaurantPage_changeLoginPasswordGrid_wrapper" data-wrapper-for="changeLoginPasswordGrid">
+                    <table id="operationsRestaurantPage_changeLoginPasswordGrid" class="operationsRestaurantPage_changeLoginPasswordGrid"
+                    dsid="changeLoginPasswordGrid" name="changeLoginPasswordGrid" cellpadding=0 cellspacing=0>
+                        <col style="width:auto;" />
+                        <col style="width:auto;" />
+                        <tr class="operationsRestaurantPage_changeLoginPasswordGrid_row_0">
+                            <!-- loginChangeCell -->
+                            <td id="operationsRestaurantPage_loginChangeCell" name="loginChangeCell" class="operationsRestaurantPage_loginChangeCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- loginChangeButton --><!--
+                                    --><a data-role="button" name="loginChangeButton" dsid="loginChangeButton" class="scanMenuButton  operationsRestaurantPage_loginChangeButton"
+                                    id="operationsRestaurantPage_loginChangeButton" data-corners="true" data-icon="none"
+                                    data-iconpos='nowhere' x-apple-data-detectors="false" data-mini="true" data-theme="b"
+                                    tabindex="2">
+                                    change login
+                                    </a>
+                                </div>
+                            </td>
+                            <!-- passwordChangeCell -->
+                            <td id="operationsRestaurantPage_passwordChangeCell" name="passwordChangeCell" class="operationsRestaurantPage_passwordChangeCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- passwordChangeButton --><!--
+                                    --><a data-role="button" name="passwordChangeButton" dsid="passwordChangeButton" class="scanMenuButton  operationsRestaurantPage_passwordChangeButton"
+                                    id="operationsRestaurantPage_passwordChangeButton" data-corners="true" data-icon="none"
+                                    data-iconpos='nowhere' x-apple-data-detectors="false" data-mini="true" data-theme="b"
+                                    tabindex="3">
+                                    change password
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- typeLabel -->
+                <div name="typeLabel" id="operationsRestaurantPage_typeLabel" dsid="typeLabel" data-role="appery_label"
+                class="labelOnDark  operationsRestaurantPage_typeLabel">
+                    select the type of business
+                </div>
+                <!-- selectBusinessTypeButton -->
+                <div data-role="fieldcontain" class="operationsRestaurantPage_selectBusinessTypeButton ">
+                    <select name="selectBusinessTypeButton" id="operationsRestaurantPage_selectBusinessTypeButton"
+                    dsid="selectBusinessTypeButton" data-theme="b" data-role="appery_selectmenu" data-inline="false"
+                    data-mini="true" data-icon="arrow-d" data-iconpos="right" data-native-menu="false"
+                    tabindex="1" appery-class="operationsRestaurantPage_selectBusinessTypeButton">
+                        <option id="operationsRestaurantPage_selectBusinessTypeButton-0" value="restaurant"
+                        reRender="selectBusinessTypeButton" dsid="selectBusinessTypeButton-0" selected="selected">
+                            restaurant
+                        </option>
+                        <option id="operationsRestaurantPage_selectBusinessTypeButton-1" value="personal chef"
+                        reRender="selectBusinessTypeButton" dsid="selectBusinessTypeButton-1">
+                            personal chef
+                        </option>
+                        <option id="operationsRestaurantPage_selectBusinessTypeButton-2" value="dinner club"
+                        reRender="selectBusinessTypeButton" dsid="selectBusinessTypeButton-2">
+                            dinner club
+                        </option>
+                    </select>
+                </div>
+                <!-- copyMenuLinkButton --><!--
+                --><a data-role="button" name="copyMenuLinkButton" dsid="copyMenuLinkButton" class="scanMenuButton  operationsRestaurantPage_copyMenuLinkButton"
+                id="operationsRestaurantPage_copyMenuLinkButton" data-corners="true" data-icon="action"
+                data-iconpos="right" x-apple-data-detectors="false" data-mini="true" data-theme="b"
+                tabindex="4">
+                copy menu link
+                </a><!--
+                --><!-- locationLabel -->
+                <div name="locationLabel" id="operationsRestaurantPage_locationLabel" dsid="locationLabel"
+                data-role="appery_label" class="labelOnDark  operationsRestaurantPage_locationLabel">
+                    location
+                </div>
+                <!-- businessName -->
+                <div data-role="fieldcontain" class="operationsRestaurantPage_businessName ">
+                    <input type="text" name="businessName" dsid="businessName" value="" placeholder="business name"
+                    id="operationsRestaurantPage_businessName" tabindex="5" multiple data-theme="b" data-mini="true"
+                    class="operationsRestaurantPage_businessName" />
+                </div>
+                <!-- streetAddress1 -->
+                <div data-role="fieldcontain" class="operationsRestaurantPage_streetAddress1 ">
+                    <input type="text" name="streetAddress1" dsid="streetAddress1" value="" placeholder="street address 1"
+                    id="operationsRestaurantPage_streetAddress1" tabindex="8" multiple data-theme="b"
+                    data-mini="true" class="operationsRestaurantPage_streetAddress1" />
+                </div>
+                <!-- streetAddress2 -->
+                <div data-role="fieldcontain" class="operationsRestaurantPage_streetAddress2 ">
+                    <input type="text" name="streetAddress2" dsid="streetAddress2" value="" placeholder="street address 2"
+                    id="operationsRestaurantPage_streetAddress2" tabindex="9" multiple data-theme="b"
+                    data-mini="true" class="operationsRestaurantPage_streetAddress2" />
+                </div>
+                <!-- city -->
+                <div data-role="fieldcontain" class="operationsRestaurantPage_city ">
+                    <input type="text" name="city" dsid="city" value="" placeholder="city" id="operationsRestaurantPage_city"
+                    tabindex="10" multiple data-theme="b" data-mini="true" class="operationsRestaurantPage_city"
+                    />
+                </div>
+                <!-- stateGrid -->
+                <div class="operationsRestaurantPage_stateGrid_wrapper" data-wrapper-for="stateGrid">
+                    <table id="operationsRestaurantPage_stateGrid" class="operationsRestaurantPage_stateGrid"
+                    dsid="stateGrid" name="stateGrid" cellpadding=0 cellspacing=0>
+                        <col style="width:55px;" />
+                        <col style="width:auto;" />
+                        <tr class="operationsRestaurantPage_stateGrid_row_0">
+                            <!-- statelabelCell -->
+                            <td id="operationsRestaurantPage_statelabelCell" name="statelabelCell" class="operationsRestaurantPage_statelabelCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- stateLabel -->
+                                    <div name="stateLabel" id="operationsRestaurantPage_stateLabel" dsid="stateLabel"
+                                    data-role="appery_label" class="labelOnDark  operationsRestaurantPage_stateLabel">
+                                        state
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- stateDropdownCell -->
+                            <td id="operationsRestaurantPage_stateDropdownCell" name="stateDropdownCell" class="operationsRestaurantPage_stateDropdownCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- stateDropdown -->
+                                    <div data-role="fieldcontain" class="operationsRestaurantPage_stateDropdown state-dropdown">
+                                        <select name="stateDropdown" id="operationsRestaurantPage_stateDropdown" dsid="stateDropdown"
+                                        data-theme="b" data-role="appery_selectmenu" data-inline="false" data-mini="true"
+                                        data-icon="arrow-d" data-iconpos="right" data-native-menu="false" tabindex="79" appery-class="operationsRestaurantPage_stateDropdown">
+                                            <option id="operationsRestaurantPage_stateDropdown-0" value="" reRender="stateDropdown"
+                                            dsid="stateDropdown-0">
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- stateDropdown1 -->
+                <div data-role="fieldcontain" class="operationsRestaurantPage_stateDropdown1 ">
+                    <input type="text" name="stateDropdown1" dsid="stateDropdown1" value="" placeholder="state (dropdown)"
+                    id="operationsRestaurantPage_stateDropdown1" tabindex="11" multiple data-theme="b"
+                    data-mini="true" class="operationsRestaurantPage_stateDropdown1" />
+                </div>
+                <!-- zip -->
+                <div data-role="fieldcontain" class="operationsRestaurantPage_zip ">
+                    <input type="text" name="zip" dsid="zip" value="" placeholder="zip" id="operationsRestaurantPage_zip"
+                    tabindex="12" multiple data-theme="b" data-mini="true" class="operationsRestaurantPage_zip"
+                    />
+                </div>
+                <!-- phone -->
+                <div data-role="fieldcontain" class="operationsRestaurantPage_phone ">
+                    <input type="tel" name="phone" dsid="phone" value="" placeholder="phone #" id="operationsRestaurantPage_phone"
+                    tabindex="13" multiple data-theme="b" data-mini="true" class="operationsRestaurantPage_phone"
+                    />
+                </div>
+                <!-- website -->
+                <div data-role="fieldcontain" class="operationsRestaurantPage_website ">
+                    <input type="url" name="website" dsid="website" value="" placeholder="website url"
+                    id="operationsRestaurantPage_website" tabindex="14" multiple data-theme="b" data-mini="true"
+                    class="operationsRestaurantPage_website" />
+                </div>
+                <!-- contactLabel -->
+                <div name="contactLabel" id="operationsRestaurantPage_contactLabel" dsid="contactLabel"
+                data-role="appery_label" class="labelOnDark  operationsRestaurantPage_contactLabel">
+                    contact
+                </div>
+                <!-- contactName -->
+                <div data-role="fieldcontain" class="operationsRestaurantPage_contactName ">
+                    <input type="text" name="contactName" dsid="contactName" value="" placeholder="name"
+                    id="operationsRestaurantPage_contactName" tabindex="15" multiple data-theme="b" data-mini="true"
+                    class="operationsRestaurantPage_contactName" />
+                </div>
+                <!-- contactPhone -->
+                <div data-role="fieldcontain" class="operationsRestaurantPage_contactPhone ">
+                    <input type="tel" name="contactPhone" dsid="contactPhone" value="" placeholder="phone #"
+                    id="operationsRestaurantPage_contactPhone" tabindex="16" multiple data-theme="b"
+                    data-mini="true" class="operationsRestaurantPage_contactPhone" />
+                </div>
+                <!-- contactEmail -->
+                <div data-role="fieldcontain" class="operationsRestaurantPage_contactEmail ">
+                    <input type="email" name="contactEmail" dsid="contactEmail" value="" placeholder="email"
+                    id="operationsRestaurantPage_contactEmail" tabindex="24" multiple data-theme="b"
+                    data-mini="true" class="operationsRestaurantPage_contactEmail" />
+                </div>
+                <!-- chefHead -->
+                <div data-role="fieldcontain" class="operationsRestaurantPage_chefHead ">
+                    <input type="text" name="chefHead" dsid="chefHead" value="" placeholder="head chef"
+                    id="operationsRestaurantPage_chefHead" tabindex="25" multiple data-theme="b" data-mini="true"
+                    class="operationsRestaurantPage_chefHead" />
+                </div>
+                <!-- vendorDetails -->
+                <div name="vendorDetails" id="operationsRestaurantPage_vendorDetails" dsid="vendorDetails"
+                data-role="appery_label" class="labelOnDark  operationsRestaurantPage_vendorDetails">
+                    details
+                </div>
+                <!-- vendorDescription -->
+                <div data-role="fieldcontain" class="operationsRestaurantPage_vendorDescription ">
+                    <textarea name="vendorDescription" id="operationsRestaurantPage_vendorDescription"
+                    data-mini="true" tabindex="26" dsid="vendorDescription" data-theme="b" placeholder="describe your business"
+                    class="operationsRestaurantPage_vendorDescription">
+</textarea>
+                </div>
+                <!-- hoursLabel -->
+                <div name="hoursLabel" id="operationsRestaurantPage_hoursLabel" dsid="hoursLabel"
+                data-role="appery_label" class="labelOnDark  operationsRestaurantPage_hoursLabel">
+                    hours
+                </div>
+                <!-- hoursGrid -->
+                <div class="operationsRestaurantPage_hoursGrid_wrapper" data-wrapper-for="hoursGrid">
+                    <table id="operationsRestaurantPage_hoursGrid" class="operationsRestaurantPage_hoursGrid"
+                    dsid="hoursGrid" name="hoursGrid" cellpadding=0 cellspacing=0>
+                        <col style="width:103px;" />
+                        <col style="width:auto;" />
+                        <col style="width:auto;" />
+                        <tr class="operationsRestaurantPage_hoursGrid_row_0">
+                            <!-- mondayCell -->
+                            <td id="operationsRestaurantPage_mondayCell" name="mondayCell" class="operationsRestaurantPage_mondayCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mondayLabel -->
+                                    <div name="mondayLabel" id="operationsRestaurantPage_mondayLabel" dsid="mondayLabel"
+                                    data-role="appery_label" class="labelOnDark  operationsRestaurantPage_mondayLabel">
+                                        monday
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- mondayOpenCell -->
+                            <td id="operationsRestaurantPage_mondayOpenCell" name="mondayOpenCell" class="operationsRestaurantPage_mondayOpenCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mondayOpen -->
+                                    <div data-role="fieldcontain" class="operationsRestaurantPage_mondayOpen ">
+                                        <input type="time" name="mondayOpen" dsid="mondayOpen" value="" placeholder="Open"
+                                        id="operationsRestaurantPage_mondayOpen" tabindex="27" multiple data-theme="b" data-mini="true"
+                                        class="operationsRestaurantPage_mondayOpen" />
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- mondayCloseCell -->
+                            <td id="operationsRestaurantPage_mondayCloseCell" name="mondayCloseCell" class="operationsRestaurantPage_mondayCloseCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mondayClose -->
+                                    <div data-role="fieldcontain" class="operationsRestaurantPage_mondayClose ">
+                                        <input type="time" name="mondayClose" dsid="mondayClose" value="" placeholder="Close"
+                                        id="operationsRestaurantPage_mondayClose" tabindex="28" multiple data-theme="b" data-mini="true"
+                                        class="operationsRestaurantPage_mondayClose" />
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="operationsRestaurantPage_hoursGrid_row_1">
+                            <!-- tuesdayCell -->
+                            <td id="operationsRestaurantPage_tuesdayCell" name="tuesdayCell" class="operationsRestaurantPage_tuesdayCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- tuesdayLabel -->
+                                    <div name="tuesdayLabel" id="operationsRestaurantPage_tuesdayLabel" dsid="tuesdayLabel"
+                                    data-role="appery_label" class="labelOnDark  operationsRestaurantPage_tuesdayLabel">
+                                        tuesday
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- tuesdayOpenCell -->
+                            <td id="operationsRestaurantPage_tuesdayOpenCell" name="tuesdayOpenCell" class="operationsRestaurantPage_tuesdayOpenCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- tuesdayOpen -->
+                                    <div data-role="fieldcontain" class="operationsRestaurantPage_tuesdayOpen ">
+                                        <input type="time" name="tuesdayOpen" dsid="tuesdayOpen" value="" placeholder="Open"
+                                        id="operationsRestaurantPage_tuesdayOpen" tabindex="29" multiple data-theme="b" data-mini="true"
+                                        class="operationsRestaurantPage_tuesdayOpen" />
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- tuesdayCloseCell -->
+                            <td id="operationsRestaurantPage_tuesdayCloseCell" name="tuesdayCloseCell" class="operationsRestaurantPage_tuesdayCloseCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- tuesdayClose -->
+                                    <div data-role="fieldcontain" class="operationsRestaurantPage_tuesdayClose ">
+                                        <input type="time" name="tuesdayClose" dsid="tuesdayClose" value="" placeholder="Close"
+                                        id="operationsRestaurantPage_tuesdayClose" tabindex="30" multiple data-theme="b"
+                                        data-mini="true" class="operationsRestaurantPage_tuesdayClose" />
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="operationsRestaurantPage_hoursGrid_row_2">
+                            <!-- wednesdayCell -->
+                            <td id="operationsRestaurantPage_wednesdayCell" name="wednesdayCell" class="operationsRestaurantPage_wednesdayCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- wednesdayLabel -->
+                                    <div name="wednesdayLabel" id="operationsRestaurantPage_wednesdayLabel" dsid="wednesdayLabel"
+                                    data-role="appery_label" class="labelOnDark  operationsRestaurantPage_wednesdayLabel">
+                                        wednesday
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- wednesdayOpenCell -->
+                            <td id="operationsRestaurantPage_wednesdayOpenCell" name="wednesdayOpenCell" class="operationsRestaurantPage_wednesdayOpenCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- wednesdayOpen -->
+                                    <div data-role="fieldcontain" class="operationsRestaurantPage_wednesdayOpen ">
+                                        <input type="time" name="wednesdayOpen" dsid="wednesdayOpen" value="" placeholder="Open"
+                                        id="operationsRestaurantPage_wednesdayOpen" tabindex="33" multiple data-theme="b"
+                                        data-mini="true" class="operationsRestaurantPage_wednesdayOpen" />
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- wednesdayCloseCell -->
+                            <td id="operationsRestaurantPage_wednesdayCloseCell" name="wednesdayCloseCell" class="operationsRestaurantPage_wednesdayCloseCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- wednesdayClose -->
+                                    <div data-role="fieldcontain" class="operationsRestaurantPage_wednesdayClose ">
+                                        <input type="time" name="wednesdayClose" dsid="wednesdayClose" value="" placeholder="Close"
+                                        id="operationsRestaurantPage_wednesdayClose" tabindex="54" multiple data-theme="b"
+                                        data-mini="true" class="operationsRestaurantPage_wednesdayClose" />
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="operationsRestaurantPage_hoursGrid_row_3">
+                            <!-- thursdayCell -->
+                            <td id="operationsRestaurantPage_thursdayCell" name="thursdayCell" class="operationsRestaurantPage_thursdayCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- thursdayLabel -->
+                                    <div name="thursdayLabel" id="operationsRestaurantPage_thursdayLabel" dsid="thursdayLabel"
+                                    data-role="appery_label" class="labelOnDark  operationsRestaurantPage_thursdayLabel">
+                                        thursday
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- thursdayOpenCell -->
+                            <td id="operationsRestaurantPage_thursdayOpenCell" name="thursdayOpenCell" class="operationsRestaurantPage_thursdayOpenCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- thursdayOpen -->
+                                    <div data-role="fieldcontain" class="operationsRestaurantPage_thursdayOpen ">
+                                        <input type="time" name="thursdayOpen" dsid="thursdayOpen" value="" placeholder="Open"
+                                        id="operationsRestaurantPage_thursdayOpen" tabindex="55" multiple data-theme="b"
+                                        data-mini="true" class="operationsRestaurantPage_thursdayOpen" />
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- thursdayCloseCell -->
+                            <td id="operationsRestaurantPage_thursdayCloseCell" name="thursdayCloseCell" class="operationsRestaurantPage_thursdayCloseCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- thursdayClose -->
+                                    <div data-role="fieldcontain" class="operationsRestaurantPage_thursdayClose ">
+                                        <input type="time" name="thursdayClose" dsid="thursdayClose" value="" placeholder="Close"
+                                        id="operationsRestaurantPage_thursdayClose" tabindex="56" multiple data-theme="b"
+                                        data-mini="true" class="operationsRestaurantPage_thursdayClose" />
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="operationsRestaurantPage_hoursGrid_row_4">
+                            <!-- fridayCell -->
+                            <td id="operationsRestaurantPage_fridayCell" name="fridayCell" class="operationsRestaurantPage_fridayCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- fridayLabel -->
+                                    <div name="fridayLabel" id="operationsRestaurantPage_fridayLabel" dsid="fridayLabel"
+                                    data-role="appery_label" class="labelOnDark  operationsRestaurantPage_fridayLabel">
+                                        friday
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- fridayOpenCell -->
+                            <td id="operationsRestaurantPage_fridayOpenCell" name="fridayOpenCell" class="operationsRestaurantPage_fridayOpenCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- fridayOpen -->
+                                    <div data-role="fieldcontain" class="operationsRestaurantPage_fridayOpen ">
+                                        <input type="time" name="fridayOpen" dsid="fridayOpen" value="" placeholder="Open"
+                                        id="operationsRestaurantPage_fridayOpen" tabindex="57" multiple data-theme="b" data-mini="true"
+                                        class="operationsRestaurantPage_fridayOpen" />
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- fridayCloseCell -->
+                            <td id="operationsRestaurantPage_fridayCloseCell" name="fridayCloseCell" class="operationsRestaurantPage_fridayCloseCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- fridayClose -->
+                                    <div data-role="fieldcontain" class="operationsRestaurantPage_fridayClose ">
+                                        <input type="time" name="fridayClose" dsid="fridayClose" value="" placeholder="Close"
+                                        id="operationsRestaurantPage_fridayClose" tabindex="58" multiple data-theme="b" data-mini="true"
+                                        class="operationsRestaurantPage_fridayClose" />
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="operationsRestaurantPage_hoursGrid_row_5">
+                            <!-- saturdayCell -->
+                            <td id="operationsRestaurantPage_saturdayCell" name="saturdayCell" class="operationsRestaurantPage_saturdayCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- saturdayLabel -->
+                                    <div name="saturdayLabel" id="operationsRestaurantPage_saturdayLabel" dsid="saturdayLabel"
+                                    data-role="appery_label" class="labelOnDark  operationsRestaurantPage_saturdayLabel">
+                                        saturday
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- saturdayOpenCell -->
+                            <td id="operationsRestaurantPage_saturdayOpenCell" name="saturdayOpenCell" class="operationsRestaurantPage_saturdayOpenCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- saturdayOpen -->
+                                    <div data-role="fieldcontain" class="operationsRestaurantPage_saturdayOpen ">
+                                        <input type="time" name="saturdayOpen" dsid="saturdayOpen" value="" placeholder="Open"
+                                        id="operationsRestaurantPage_saturdayOpen" tabindex="59" multiple data-theme="b"
+                                        data-mini="true" class="operationsRestaurantPage_saturdayOpen" />
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- saturdayCloseCell -->
+                            <td id="operationsRestaurantPage_saturdayCloseCell" name="saturdayCloseCell" class="operationsRestaurantPage_saturdayCloseCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- saturdayClose -->
+                                    <div data-role="fieldcontain" class="operationsRestaurantPage_saturdayClose ">
+                                        <input type="time" name="saturdayClose" dsid="saturdayClose" value="" placeholder="Close"
+                                        id="operationsRestaurantPage_saturdayClose" tabindex="60" multiple data-theme="b"
+                                        data-mini="true" class="operationsRestaurantPage_saturdayClose" />
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="operationsRestaurantPage_hoursGrid_row_6">
+                            <!-- sundayCell -->
+                            <td id="operationsRestaurantPage_sundayCell" name="sundayCell" class="operationsRestaurantPage_sundayCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- sundayLabel -->
+                                    <div name="sundayLabel" id="operationsRestaurantPage_sundayLabel" dsid="sundayLabel"
+                                    data-role="appery_label" class="labelOnDark  operationsRestaurantPage_sundayLabel">
+                                        sunday
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- sundayOpenCell -->
+                            <td id="operationsRestaurantPage_sundayOpenCell" name="sundayOpenCell" class="operationsRestaurantPage_sundayOpenCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- sundayOpen -->
+                                    <div data-role="fieldcontain" class="operationsRestaurantPage_sundayOpen ">
+                                        <input type="time" name="sundayOpen" dsid="sundayOpen" value="" placeholder="Open"
+                                        id="operationsRestaurantPage_sundayOpen" tabindex="61" multiple data-theme="b" data-mini="true"
+                                        class="operationsRestaurantPage_sundayOpen" />
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- sundayCloseCell -->
+                            <td id="operationsRestaurantPage_sundayCloseCell" name="sundayCloseCell" class="operationsRestaurantPage_sundayCloseCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- sundayClose -->
+                                    <div data-role="fieldcontain" class="operationsRestaurantPage_sundayClose ">
+                                        <input type="time" name="sundayClose" dsid="sundayClose" value="" placeholder="Close"
+                                        id="operationsRestaurantPage_sundayClose" tabindex="63" multiple data-theme="b" data-mini="true"
+                                        class="operationsRestaurantPage_sundayClose" />
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- taxGrid -->
+                <div class="operationsRestaurantPage_taxGrid_wrapper" data-wrapper-for="taxGrid">
+                    <table id="operationsRestaurantPage_taxGrid" class="operationsRestaurantPage_taxGrid"
+                    dsid="taxGrid" name="taxGrid" cellpadding=0 cellspacing=0>
+                        <col style="width:79px;" />
+                        <col style="width:79px;" />
+                        <col style="width:auto;" />
+                        <tr class="operationsRestaurantPage_taxGrid_row_0">
+                            <!-- taxLabelCell -->
+                            <td id="operationsRestaurantPage_taxLabelCell" name="taxLabelCell" class="operationsRestaurantPage_taxLabelCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- taxLabel -->
+                                    <div name="taxLabel" id="operationsRestaurantPage_taxLabel" dsid="taxLabel" data-role="appery_label"
+                                    class="labelOnDark  operationsRestaurantPage_taxLabel">
+                                        tax rate
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- taxFieldCell -->
+                            <td id="operationsRestaurantPage_taxFieldCell" name="taxFieldCell" class="operationsRestaurantPage_taxFieldCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- taxField -->
+                                    <div data-role="fieldcontain" class="operationsRestaurantPage_taxField ">
+                                        <input type="number" name="taxField" dsid="taxField" value="taxRateCell" placeholder="%"
+                                        id="operationsRestaurantPage_taxField" tabindex="72" multiple data-theme="b" data-mini="true"
+                                        class="operationsRestaurantPage_taxField" />
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_30 -->
+                            <td id="operationsRestaurantPage_mobilegridcell_30" name="mobilegridcell_30" class="operationsRestaurantPage_mobilegridcell_30"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- percentLabel -->
+                                    <div name="percentLabel" id="operationsRestaurantPage_percentLabel" dsid="percentLabel"
+                                    data-role="appery_label" class="labelLeft  operationsRestaurantPage_percentLabel">
+                                        %
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- fileSelect -->
+                <div data-role="fieldcontain" class="operationsRestaurantPage_fileSelect ">
+                    <input type="file" name="fileSelect" dsid="fileSelect" value="Input" placeholder=""
+                    id="operationsRestaurantPage_fileSelect" tabindex="80" multiple data-theme="b" data-mini="true"
+                    class="operationsRestaurantPage_fileSelect" />
+                </div>
+                <!-- photoButtonGrid -->
+                <div class="operationsRestaurantPage_photoButtonGrid_wrapper" data-wrapper-for="photoButtonGrid">
+                    <table id="operationsRestaurantPage_photoButtonGrid" class="operationsRestaurantPage_photoButtonGrid"
+                    dsid="photoButtonGrid" name="photoButtonGrid" cellpadding=0 cellspacing=0>
+                        <col style="width:auto;" />
+                        <col style="width:auto;" />
+                        <tr class="operationsRestaurantPage_photoButtonGrid_row_0">
+                            <!-- addImageButtonCell -->
+                            <td id="operationsRestaurantPage_addImageButtonCell" name="addImageButtonCell" class="operationsRestaurantPage_addImageButtonCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- addImageButton --><!--
+                                    --><a data-role="button" name="addImageButton" dsid="addImageButton" class="scanMenuButton  operationsRestaurantPage_addImageButton"
+                                    id="operationsRestaurantPage_addImageButton" data-corners="true" data-icon="camera"
+                                    data-iconpos="right" x-apple-data-detectors="false" data-mini="true" data-theme="b"
+                                    tabindex="64">
+                                    add a photo
+                                    </a>
+                                </div>
+                            </td>
+                            <!-- deleteImageButtonCell -->
+                            <td id="operationsRestaurantPage_deleteImageButtonCell" name="deleteImageButtonCell"
+                            class="operationsRestaurantPage_deleteImageButtonCell" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- deleteImageButton --><!--
+                                    --><a data-role="button" name="deleteImageButton" dsid="deleteImageButton" class="scanMenuButton  operationsRestaurantPage_deleteImageButton"
+                                    id="operationsRestaurantPage_deleteImageButton" data-corners="true" data-icon="alert"
+                                    data-iconpos="right" x-apple-data-detectors="false" data-mini="true" data-theme="b"
+                                    tabindex="81">
+                                    delete photo
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- placeholderForImageUpload -->
+                <img class="operationsRestaurantPage_placeholderForImageUpload" src="../libs/apperyio/img/no-image.jpg"
+                id="operationsRestaurantPage_placeholderForImageUpload" dsid="placeholderForImageUpload"
+                name="placeholderForImageUpload" />
+                <!-- buttonGridSaveCancel -->
+                <div class="operationsRestaurantPage_buttonGridSaveCancel_wrapper" data-wrapper-for="buttonGridSaveCancel">
+                    <table id="operationsRestaurantPage_buttonGridSaveCancel" class="operationsRestaurantPage_buttonGridSaveCancel"
+                    dsid="buttonGridSaveCancel" name="buttonGridSaveCancel" cellpadding=0 cellspacing=0>
+                        <col style="width:auto;" />
+                        <col style="width:auto;" />
+                        <tr class="operationsRestaurantPage_buttonGridSaveCancel_row_0">
+                            <!-- operationsInfoSaveCell -->
+                            <td id="operationsRestaurantPage_operationsInfoSaveCell" name="operationsInfoSaveCell"
+                            class="operationsRestaurantPage_operationsInfoSaveCell" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- operationsInfoSave --><!--
+                                    --><a data-role="button" name="operationsInfoSave" dsid="operationsInfoSave" class="scanMenuButton  operationsRestaurantPage_operationsInfoSave"
+                                    id="operationsRestaurantPage_operationsInfoSave" data-corners="true" data-icon="check"
+                                    data-iconpos="right" x-apple-data-detectors="false" data-mini="true" data-theme="b"
+                                    tabindex="65">
+                                    save
+                                    </a>
+                                </div>
+                            </td>
+                            <!-- operationInfoCancelCell -->
+                            <td id="operationsRestaurantPage_operationInfoCancelCell" name="operationInfoCancelCell"
+                            class="operationsRestaurantPage_operationInfoCancelCell" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- operationInfoCancelButton --><!--
+                                    --><a data-role="button" name="operationInfoCancelButton" dsid="operationInfoCancelButton"
+                                    class="scanMenuButton  operationsRestaurantPage_operationInfoCancelButton" id="operationsRestaurantPage_operationInfoCancelButton"
+                                    data-corners="true" data-icon="delete" data-iconpos="right" x-apple-data-detectors="false"
+                                    data-mini="true" data-theme="b" tabindex="66">
+                                    cancel
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- deactivateAccountLink -->
+                <div class="operationsRestaurantPage_deactivateAccountLink_link_wrapper">
+                    <a id="operationsRestaurantPage_deactivateAccountLink" href="http://appery.io" name="deactivateAccountLink"
+                    dsid="deactivateAccountLink" data-role="appery_link" class="operationsRestaurantPage_deactivateAccountLink">
+                    Deactivate account
+                    </a>
+                </div>
+            </div>
+            <!-- passwordChangePopup -->
+            <div data-role="popup" name="passwordChangePopup" dsid="passwordChangePopup" id="operationsRestaurantPage_passwordChangePopup"
+            class="roundedPopup  operationsRestaurantPage_passwordChangePopup" data-corners="true"
+            data-dismissible="true" data-overlay-theme="b" data-theme="" data-shadow="true" data-tolerance="30,10,30,10">
+                <div class="ui-popup-content-wrapper">
+                    <!-- mobilegrid_24 -->
+                    <div class="operationsRestaurantPage_mobilegrid_24_wrapper" data-wrapper-for="mobilegrid_24">
+                        <table id="operationsRestaurantPage_mobilegrid_24" class="operationsRestaurantPage_mobilegrid_24"
+                        dsid="mobilegrid_24" name="mobilegrid_24" cellpadding=0 cellspacing=0>
+                            <col style="width:auto;" />
+                            <tr class="operationsRestaurantPage_mobilegrid_24_row_0">
+                                <!-- mobilegridcell_25 -->
+                                <td id="operationsRestaurantPage_mobilegridcell_25" name="mobilegridcell_25" class="operationsRestaurantPage_mobilegridcell_25"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- passwordCurrentInput -->
+                                        <div data-role="fieldcontain" class="operationsRestaurantPage_passwordCurrentInput ">
+                                            <input type="password" name="passwordCurrentInput" dsid="passwordCurrentInput" value=""
+                                            placeholder="enter current password" id="operationsRestaurantPage_passwordCurrentInput"
+                                            tabindex="68" multiple data-theme="b" data-mini="true" class="operationsRestaurantPage_passwordCurrentInput"
+                                            />
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="operationsRestaurantPage_mobilegrid_24_row_1">
+                                <!-- mobilegridcell_27 -->
+                                <td id="operationsRestaurantPage_mobilegridcell_27" name="mobilegridcell_27" class="operationsRestaurantPage_mobilegridcell_27"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- passwordNewInput -->
+                                        <div data-role="fieldcontain" class="operationsRestaurantPage_passwordNewInput ">
+                                            <input type="password" name="passwordNewInput" dsid="passwordNewInput" value=""
+                                            placeholder="enter new password" id="operationsRestaurantPage_passwordNewInput" tabindex="70"
+                                            multiple data-theme="b" data-mini="true" class="operationsRestaurantPage_passwordNewInput"
+                                            />
+                                        </div>
+                                        <!-- passwordConfirmInput -->
+                                        <div data-role="fieldcontain" class="operationsRestaurantPage_passwordConfirmInput ">
+                                            <input type="password" name="passwordConfirmInput" dsid="passwordConfirmInput" value=""
+                                            placeholder="confirm password" id="operationsRestaurantPage_passwordConfirmInput"
+                                            tabindex="71" multiple data-theme="b" data-mini="true" class="operationsRestaurantPage_passwordConfirmInput"
+                                            />
+                                        </div>
+                                        <!-- errorMessageLabel -->
+                                        <div name="errorMessageLabel" id="operationsRestaurantPage_errorMessageLabel" dsid="errorMessageLabel"
+                                        data-role="appery_label" class="labelError  operationsRestaurantPage_errorMessageLabel">
+                                            errorMessageLabel
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="operationsRestaurantPage_mobilegrid_24_row_2">
+                                <!-- mobilegridcell_29 -->
+                                <td id="operationsRestaurantPage_mobilegridcell_29" name="mobilegridcell_29" class="operationsRestaurantPage_mobilegridcell_29"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- passwordButtonGrid -->
+                                        <div class="operationsRestaurantPage_passwordButtonGrid_wrapper" data-wrapper-for="passwordButtonGrid">
+                                            <table id="operationsRestaurantPage_passwordButtonGrid" class="operationsRestaurantPage_passwordButtonGrid"
+                                            dsid="passwordButtonGrid" name="passwordButtonGrid" cellpadding=0 cellspacing=0>
+                                                <col style="width:auto;" />
+                                                <col style="width:auto;" />
+                                                <tr class="operationsRestaurantPage_passwordButtonGrid_row_0">
+                                                    <!-- passwordSaveCell -->
+                                                    <td id="operationsRestaurantPage_passwordSaveCell" name="passwordSaveCell" class="operationsRestaurantPage_passwordSaveCell"
+                                                    colspan=1 rowspan=1>
+                                                        <div class="cell-wrapper">
+                                                            <!-- mobilebutton_23 --><!--
+                                                            --><a data-role="button" name="mobilebutton_23" dsid="mobilebutton_23" class="scanMenuButton  operationsRestaurantPage_mobilebutton_23"
+                                                            id="operationsRestaurantPage_mobilebutton_23" data-corners="true" data-icon="check"
+                                                            data-iconpos="right" x-apple-data-detectors="false" data-mini="true" data-theme="b"
+                                                            tabindex="73">
+                                                            save
+                                                            </a>
+                                                        </div>
+                                                    </td>
+                                                    <!-- passwordCancelCell -->
+                                                    <td id="operationsRestaurantPage_passwordCancelCell" name="passwordCancelCell" class="operationsRestaurantPage_passwordCancelCell"
+                                                    colspan=1 rowspan=1>
+                                                        <div class="cell-wrapper">
+                                                            <!-- passwordCancelButton --><!--
+                                                            --><a data-role="button" name="passwordCancelButton" dsid="passwordCancelButton" class="scanMenuButton  operationsRestaurantPage_passwordCancelButton"
+                                                            id="operationsRestaurantPage_passwordCancelButton" data-corners="true" data-icon="delete"
+                                                            data-iconpos="right" x-apple-data-detectors="false" data-mini="true" data-theme="b"
+                                                            tabindex="84">
+                                                            cancel
+                                                            </a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- messagePopup -->
+            <div data-role="popup" name="messagePopup" dsid="messagePopup" id="operationsRestaurantPage_messagePopup"
+            class="roundedPopup  operationsRestaurantPage_messagePopup" data-corners="true" data-dismissible="true"
+            data-overlay-theme="b" data-theme="" data-shadow="true" data-tolerance="30,15,30,15">
+                <div class="ui-popup-content-wrapper">
+                    <!-- messageLabel -->
+                    <div name="messageLabel" id="operationsRestaurantPage_messageLabel" dsid="messageLabel"
+                    data-role="appery_label" class="labelOnDark  operationsRestaurantPage_messageLabel">
+                        password has been changed
+                    </div>
+                </div>
+            </div>
+            <!-- loginChangePopup -->
+            <div data-role="popup" name="loginChangePopup" dsid="loginChangePopup" id="operationsRestaurantPage_loginChangePopup"
+            class="roundedPopup  operationsRestaurantPage_loginChangePopup" data-corners="true"
+            data-dismissible="true" data-overlay-theme="" data-theme="" data-shadow="true" data-tolerance="30,15,30,15">
+                <div class="ui-popup-content-wrapper">
+                    <!-- popupGrid -->
+                    <div class="operationsRestaurantPage_popupGrid_wrapper" data-wrapper-for="popupGrid">
+                        <table id="operationsRestaurantPage_popupGrid" class="common-popup  operationsRestaurantPage_popupGrid"
+                        dsid="popupGrid" name="popupGrid" cellpadding=0 cellspacing=0>
+                            <col style="width:auto;" />
+                            <tr class="operationsRestaurantPage_popupGrid_row_0">
+                                <!-- labelCell -->
+                                <td id="operationsRestaurantPage_labelCell" name="labelCell" class="operationsRestaurantPage_labelCell"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- emailChangeLable -->
+                                        <div name="emailChangeLable" id="operationsRestaurantPage_emailChangeLable" dsid="emailChangeLable"
+                                        data-role="appery_label" class="labelOnDark  operationsRestaurantPage_emailChangeLable">
+                                            change your login below.
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="operationsRestaurantPage_popupGrid_row_1">
+                                <!-- loginCell -->
+                                <td id="operationsRestaurantPage_loginCell" name="loginCell" class="operationsRestaurantPage_loginCell"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- emailField -->
+                                        <div data-role="fieldcontain" class="operationsRestaurantPage_emailField ">
+                                            <input type="email" name="emailField" dsid="emailField" value="" placeholder="current email should populate"
+                                            id="operationsRestaurantPage_emailField" tabindex="75" multiple data-theme="b" data-mini="true"
+                                            class="operationsRestaurantPage_emailField" />
+                                        </div>
+                                        <!-- vaildEmailMessage -->
+                                        <div name="vaildEmailMessage" id="operationsRestaurantPage_vaildEmailMessage" dsid="vaildEmailMessage"
+                                        data-role="appery_label" class="operationsRestaurantPage_vaildEmailMessage">
+                                        </div>
+                                        <!-- invalidEmailMessage -->
+                                        <div name="invalidEmailMessage" id="operationsRestaurantPage_invalidEmailMessage"
+                                        dsid="invalidEmailMessage" data-role="appery_label" class="operationsRestaurantPage_invalidEmailMessage">
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="operationsRestaurantPage_popupGrid_row_2">
+                                <!-- saveCell -->
+                                <td id="operationsRestaurantPage_saveCell" name="saveCell" class="operationsRestaurantPage_saveCell"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- changeloginButtonGrid -->
+                                        <div class="operationsRestaurantPage_changeloginButtonGrid_wrapper" data-wrapper-for="changeloginButtonGrid">
+                                            <table id="operationsRestaurantPage_changeloginButtonGrid" class="operationsRestaurantPage_changeloginButtonGrid"
+                                            dsid="changeloginButtonGrid" name="changeloginButtonGrid" cellpadding=0 cellspacing=0>
+                                                <col style="width:auto;" />
+                                                <col style="width:auto;" />
+                                                <tr class="operationsRestaurantPage_changeloginButtonGrid_row_0">
+                                                    <!-- changeloginSaveCell -->
+                                                    <td id="operationsRestaurantPage_changeloginSaveCell" name="changeloginSaveCell"
+                                                    class="operationsRestaurantPage_changeloginSaveCell" colspan=1 rowspan=1>
+                                                        <div class="cell-wrapper">
+                                                            <!-- loginSaveButton --><!--
+                                                            --><a data-role="button" name="loginSaveButton" dsid="loginSaveButton" class="scanMenuButton  operationsRestaurantPage_loginSaveButton"
+                                                            id="operationsRestaurantPage_loginSaveButton" data-corners="true" data-icon="check"
+                                                            data-iconpos="right" x-apple-data-detectors="false" data-mini="true" data-theme="b"
+                                                            tabindex="76">
+                                                            save
+                                                            </a>
+                                                        </div>
+                                                    </td>
+                                                    <!-- changeloginCancelCell -->
+                                                    <td id="operationsRestaurantPage_changeloginCancelCell" name="changeloginCancelCell"
+                                                    class="operationsRestaurantPage_changeloginCancelCell" colspan=1 rowspan=1>
+                                                        <div class="cell-wrapper">
+                                                            <!-- changeloginCancelButton --><!--
+                                                            --><a data-role="button" name="changeloginCancelButton" dsid="changeloginCancelButton"
+                                                            class="scanMenuButton  operationsRestaurantPage_changeloginCancelButton" id="operationsRestaurantPage_changeloginCancelButton"
+                                                            data-corners="true" data-icon="delete" data-iconpos="right" x-apple-data-detectors="false"
+                                                            data-mini="true" data-theme="b" tabindex="85">
+                                                            cancel
+                                                            </a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- deactivateAccountPopup -->
+            <div data-role="popup" name="deactivateAccountPopup" dsid="deactivateAccountPopup"
+            id="operationsRestaurantPage_deactivateAccountPopup" class="roundedPopup  operationsRestaurantPage_deactivateAccountPopup"
+            data-corners="true" data-dismissible="true" data-overlay-theme="" data-theme="" data-shadow="true"
+            data-tolerance="30,15,30,15">
+                <div class="ui-popup-content-wrapper">
+                    <!-- deactivateAccount -->
+                    <div name="deactivateAccount" id="operationsRestaurantPage_deactivateAccount" dsid="deactivateAccount"
+                    data-role="appery_label" class="labelWarning  operationsRestaurantPage_deactivateAccount">
+                        are you sure you want to deactivate your account? you will no longer be able to
+                        log in, and your menu will not be accessible.
+                    </div>
+                    <!-- deactivateAccountGrid -->
+                    <div class="operationsRestaurantPage_deactivateAccountGrid_wrapper" data-wrapper-for="deactivateAccountGrid">
+                        <table id="operationsRestaurantPage_deactivateAccountGrid" class="operationsRestaurantPage_deactivateAccountGrid"
+                        dsid="deactivateAccountGrid" name="deactivateAccountGrid" cellpadding=0 cellspacing=0>
+                            <col style="width:auto;" />
+                            <col style="width:auto;" />
+                            <tr class="operationsRestaurantPage_deactivateAccountGrid_row_0">
+                                <!-- deactivateAccountConfirmCell -->
+                                <td id="operationsRestaurantPage_deactivateAccountConfirmCell" name="deactivateAccountConfirmCell"
+                                class="operationsRestaurantPage_deactivateAccountConfirmCell" colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- deactivateAccountConfirmButton --><!--
+                                        --><a data-role="button" name="deactivateAccountConfirmButton" dsid="deactivateAccountConfirmButton"
+                                        class="scanMenuButton  operationsRestaurantPage_deactivateAccountConfirmButton" id="operationsRestaurantPage_deactivateAccountConfirmButton"
+                                        data-corners="true" data-icon="alert" data-iconpos="right" x-apple-data-detectors="false"
+                                        data-mini="true" data-theme="b" tabindex="77">
+                                        DEACTIVATE
+                                        </a>
+                                    </div>
+                                </td>
+                                <!-- deactivateAccountCancelCell -->
+                                <td id="operationsRestaurantPage_deactivateAccountCancelCell" name="deactivateAccountCancelCell"
+                                class="operationsRestaurantPage_deactivateAccountCancelCell" colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- deactivateAccountCancelButton --><!--
+                                        --><a data-role="button" name="deactivateAccountCancelButton" dsid="deactivateAccountCancelButton"
+                                        class="scanMenuButton  operationsRestaurantPage_deactivateAccountCancelButton" id="operationsRestaurantPage_deactivateAccountCancelButton"
+                                        data-corners="true" data-icon="delete" data-iconpos="right" x-apple-data-detectors="false"
+                                        data-mini="true" data-theme="b" tabindex="78">
+                                        cancel
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- photoDeletePopup -->
+            <div data-role="popup" name="photoDeletePopup" dsid="photoDeletePopup" id="operationsRestaurantPage_photoDeletePopup"
+            class="roundedPopup  operationsRestaurantPage_photoDeletePopup" data-corners="true"
+            data-dismissible="true" data-overlay-theme="" data-theme="" data-shadow="true" data-tolerance="30,15,30,15">
+                <div class="ui-popup-content-wrapper">
+                    <!-- mobilelabel_36 -->
+                    <div name="mobilelabel_36" id="operationsRestaurantPage_mobilelabel_36" dsid="mobilelabel_36"
+                    data-role="appery_label" class="labelWarning  operationsRestaurantPage_mobilelabel_36">
+                        are you sure you want to delete the restaurant photo?
+                    </div>
+                    <!-- photoDeleteGrid -->
+                    <div class="operationsRestaurantPage_photoDeleteGrid_wrapper" data-wrapper-for="photoDeleteGrid">
+                        <table id="operationsRestaurantPage_photoDeleteGrid" class="operationsRestaurantPage_photoDeleteGrid"
+                        dsid="photoDeleteGrid" name="photoDeleteGrid" cellpadding=0 cellspacing=0>
+                            <col style="width:auto;" />
+                            <col style="width:auto;" />
+                            <tr class="operationsRestaurantPage_photoDeleteGrid_row_0">
+                                <!-- photoDeleteOkCell -->
+                                <td id="operationsRestaurantPage_photoDeleteOkCell" name="photoDeleteOkCell" class="operationsRestaurantPage_photoDeleteOkCell"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- photoDeleteOkButton --><!--
+                                        --><a data-role="button" name="photoDeleteOkButton" dsid="photoDeleteOkButton" class="scanMenuButton  operationsRestaurantPage_photoDeleteOkButton"
+                                        id="operationsRestaurantPage_photoDeleteOkButton" data-corners="true" data-icon="alert"
+                                        data-iconpos="right" x-apple-data-detectors="false" data-mini="true" data-theme="b"
+                                        tabindex="82">
+                                        ok
+                                        </a>
+                                    </div>
+                                </td>
+                                <!-- photoDeleteCancelCell -->
+                                <td id="operationsRestaurantPage_photoDeleteCancelCell" name="photoDeleteCancelCell"
+                                class="operationsRestaurantPage_photoDeleteCancelCell" colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- photoDeleteCancelButton --><!--
+                                        --><a data-role="button" name="photoDeleteCancelButton" dsid="photoDeleteCancelButton"
+                                        class="scanMenuButton  operationsRestaurantPage_photoDeleteCancelButton" id="operationsRestaurantPage_photoDeleteCancelButton"
+                                        data-corners="true" data-icon="delete" data-iconpos="right" x-apple-data-detectors="false"
+                                        data-mini="true" data-theme="b" tabindex="83">
+                                        cancel
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>

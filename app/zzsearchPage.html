@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>
+            zzsearchPage
+        </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, viewport-fit=cover">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="msapplication-tap-highlight" content="no">
+        <!-- Enable all requests, inline styles, and eval() -->
+        <meta http-equiv="Content-Security-Policy" content="default-src * gap://ready data:; style-src 'self' 'unsafe-inline' *; script-src 'self' 'unsafe-inline' 'unsafe-eval' *">
+        <!-- Uncomment link and meta tags below to activate PWA icons and theme color -->
+        <!-- link rel="manifest" href="../manifest.json" crossOrigin="use-credentials" -->
+        <!-- meta name="theme-color" content="#ffffff" -->
+        <link href="../css/theme/jqm/jqm.css" rel="stylesheet" />
+        <link href="../css/theme/KnoWYE3/KnoWYE3.css" rel="stylesheet" />
+        <link href="../libs/jquerymobile/1.4.5/jquery.mobile.structure-1.4.5.css" rel="stylesheet"
+        />
+        <link type="text/css" rel="stylesheet" href="../css/logblock.css" />
+        <link type="text/css" rel="stylesheet" href="../css/menuPageBuilder.css" />
+        <link type="text/css" rel="stylesheet" href="../css/common.css" />
+        <link type="text/css" rel="stylesheet" href="../css/header_footer.css" />
+        <link type="text/css" rel="stylesheet" href="../css/button.css" />
+        <link type="text/css" rel="stylesheet" href="../css/label.css" />
+        <link type="text/css" rel="stylesheet" href="../css/FontRoboto.css.css" />
+        <!-- Uncomment this script to activate service worker -->
+        <!-- <script>
+        if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('../sw.js')
+        .then(() => console.log('service worker installed'))
+        .catch(err => console.error('Error', err));
+        }
+        </script>
+        -->
+        <script type="text/javascript" src="../libs/underscore/underscore.js">
+        </script>
+        <script type="text/javascript" src="../libs/store/json2.js">
+        </script>
+        <script type="text/javascript" src="../libs/jquery/jquery-2.1.1.js">
+        </script>
+        <script type="text/javascript" src="../libs/jquery/jquery-ajaxTransport.js">
+        </script>
+        <script type="text/javascript">
+            $(document).bind("mobileinit", function() {
+                if (navigator.userAgent.toLowerCase().indexOf("android") != -1) {
+                    $.mobile.defaultPageTransition = 'none';
+                    $.mobile.defaultDialogTransition = 'none';
+                } else if (navigator.userAgent.toLowerCase().indexOf("msie") != -1) {
+                    $.mobile.allowCrossDomainPages = true;
+                    $.support.cors = true;
+                } else if (navigator.userAgent.match(/(iPad|iPhone|iPod)/g)) {
+                    $.mobile.hashListeningEnabled = false;
+                }
+            });
+        </script>
+        <script type="text/javascript" src="../libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.js">
+        </script>
+        <script type="text/javascript" src="../libs/apperyio/mobilebase.js">
+        </script>
+        <script type="text/javascript" src="../libs/event/customEventHandler.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/sha1.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/oauth.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/contexts.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/jquery.xml2json.min.js">
+        </script>
+        <script type="text/javascript" src="../libs/ms_sdk_bundle/client-sdk.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/appery.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/component-manager.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/mapping-impl.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/entity-api.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/login.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/storage-api.js">
+        </script>
+        <script type="text/javascript" src="../get_target_platform.js">
+        </script>
+        <script type="text/javascript" src="../cordova.js">
+        </script>
+        <link href="../libs/apperyio/mobilebase.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="../js/services/model.js">
+        </script>
+        <script type="text/javascript" src="../js/menuHeadingManagePageBuilder.js">
+        </script>
+        <script type="text/javascript" src="../js/navigatePageManager.js">
+        </script>
+        <script type="text/javascript" src="../js/logblock.js">
+        </script>
+        <script type="text/javascript" src="../js/Facebook_Helper.js">
+        </script>
+        <script type="text/javascript" src="../js/menuHeadingManager.js">
+        </script>
+        <script type="text/javascript" src="../js/menuPageBuilder.js">
+        </script>
+        <script type="text/javascript" src="../js/jquery-ui.min.js">
+        </script>
+        <script type="text/javascript" src="../js/common.js">
+        </script>
+        <script type="text/javascript" src="../js/clipboard.js">
+        </script>
+        <script type="text/javascript" src="../js/FileUploadHelper.js">
+        </script>
+        <script type="text/javascript" src="../js/zzqrCodeScaner.js">
+        </script>
+        <script type="text/javascript" src="../js/menuHistoryManager.js">
+        </script>
+        <script type="text/javascript" src="../js/GoogleCharts.js">
+        </script>
+        <script type="text/javascript" src="../js/services/service.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/databaseUtils.js">
+        </script>
+        <script type="text/javascript" src="../js/secure.js">
+        </script>
+<script type="text/javascript" src="../js/EncodeDecodeJS.js">
+        </script>
+    </head>
+    
+    <body>
+        <script language="JavaScript" type="text/javascript">
+        </script>
+        <div data-role="page" style="min-height:480px;" dsid="zzsearchPage" id="zzsearchPage"
+        class="type-interior" data-theme="b">
+            <!-- searchHeader -->
+            <div data-role="header" data-position="fixed" data-add-back-btn="true" data-back-btn-text="&nbsp;"
+            data-theme="b" name="searchHeader" id="zzsearchPage_searchHeader" class="zzsearchPage_searchHeader">
+                <h1 dsid="searchHeader">
+                    Find Dishes
+                </h1>
+                <!-- menuButton --><!--
+                --><a data-role="button" name="menuButton" dsid="menuButton" class="zzsearchPage_menuButton ui-btn-right"
+                style='min-height:20px; ' id="zzsearchPage_menuButton" data-corners="true" data-icon="bars"
+                data-iconpos="notext" x-apple-data-detectors="false" data-inline='true' data-mini='true'
+                data-theme="b" tabindex="19">
+                &nbsp;
+                </a>
+            </div>
+            <!-- searchContainer -->
+            <div data-role="content" id="zzsearchPage_searchContainer" name="searchContainer"
+            class="ui-li-container  zzsearchPage_searchContainer ui-content" dsid="searchContainer"
+            data-theme="b">
+                <link href="zzsearchPage.css" rel="stylesheet" type="text/css" />
+                <script type="text/javascript" src="zzsearchPage.js">
+                </script>
+                <!-- profileLabel -->
+                <div name="profileLabel" id="zzsearchPage_profileLabel" dsid="profileLabel" data-role="appery_label"
+                class="labelOnDark  zzsearchPage_profileLabel">
+                    Use your profile settings to sort results according to your preferences.
+                </div>
+                <!-- profileUseGrid -->
+                <div class="zzsearchPage_profileUseGrid_wrapper" data-wrapper-for="profileUseGrid">
+                    <table id="zzsearchPage_profileUseGrid" class="zzsearchPage_profileUseGrid" dsid="profileUseGrid"
+                    name="profileUseGrid" cellpadding=0 cellspacing=0>
+                        <col style="width:auto;" />
+                        <col style="width:auto;" />
+                        <tr class="zzsearchPage_profileUseGrid_row_0">
+                            <!-- profileUseCell -->
+                            <td id="zzsearchPage_profileUseCell" name="profileUseCell" class="zzsearchPage_profileUseCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- useProfileLabel -->
+                                    <div name="useProfileLabel" id="zzsearchPage_useProfileLabel" dsid="useProfileLabel"
+                                    data-role="appery_label" class="labelOnDark  zzsearchPage_useProfileLabel">
+                                        Use profile
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- profileUseToggleCell -->
+                            <td id="zzsearchPage_profileUseToggleCell" name="profileUseToggleCell" class="zzsearchPage_profileUseToggleCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- useProfileToggle -->
+                                    <div data-role="fieldcontain" class="zzsearchPage_useProfileToggle ">
+                                        <select data-role="flipswitch" name="useProfileToggle" id="zzsearchPage_useProfileToggle"
+                                        dsid="useProfileToggle" data-theme="b" data-track-theme="b">
+                                            <option value="off">
+                                                Off
+                                            </option>
+                                            <option value="on">
+                                                On
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- locationLabel -->
+                <div name="locationLabel" id="zzsearchPage_locationLabel" dsid="locationLabel" data-role="appery_label"
+                class="labelOnDark  zzsearchPage_locationLabel">
+                    Use location to search nearby or enter an address to search where you'll be later.
+                </div>
+                <!-- locationGrid -->
+                <div class="zzsearchPage_locationGrid_wrapper" data-wrapper-for="locationGrid">
+                    <table id="zzsearchPage_locationGrid" class="zzsearchPage_locationGrid" dsid="locationGrid"
+                    name="locationGrid" cellpadding=0 cellspacing=0>
+                        <col style="width:auto;" />
+                        <col style="width:auto;" />
+                        <tr class="zzsearchPage_locationGrid_row_0">
+                            <!-- locationCell -->
+                            <td id="zzsearchPage_locationCell" name="locationCell" class="zzsearchPage_locationCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- useLocationLabel -->
+                                    <div name="useLocationLabel" id="zzsearchPage_useLocationLabel" dsid="useLocationLabel"
+                                    data-role="appery_label" class="labelOnDark  zzsearchPage_useLocationLabel">
+                                        Use location
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- useLocationToggleCell -->
+                            <td id="zzsearchPage_useLocationToggleCell" name="useLocationToggleCell" class="zzsearchPage_useLocationToggleCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- useLocationToggle -->
+                                    <div data-role="fieldcontain" class="zzsearchPage_useLocationToggle ">
+                                        <select data-role="flipswitch" name="useLocationToggle" id="zzsearchPage_useLocationToggle"
+                                        dsid="useLocationToggle" data-theme="b" data-track-theme="b">
+                                            <option value="off">
+                                                Off
+                                            </option>
+                                            <option value="on">
+                                                On
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="zzsearchPage_locationGrid_row_1">
+                            <!-- enterSearchAddressCell -->
+                            <td id="zzsearchPage_enterSearchAddressCell" name="enterSearchAddressCell" class="zzsearchPage_enterSearchAddressCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- enterSearchAddress -->
+                                    <div data-role="fieldcontain" class="zzsearchPage_enterSearchAddress ">
+                                        <input type="text" name="enterSearchAddress" dsid="enterSearchAddress" value=""
+                                        placeholder="enter address" id="zzsearchPage_enterSearchAddress" tabindex="5" multiple
+                                        data-theme="b" data-mini="true" class="zzsearchPage_enterSearchAddress" />
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- findNearbyButtonCell -->
+                            <td id="zzsearchPage_findNearbyButtonCell" name="findNearbyButtonCell" class="zzsearchPage_findNearbyButtonCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- findNearbyButton --><!--
+                                    --><a data-role="button" name="findNearbyButton" dsid="findNearbyButton" class="zzsearchPage_findNearbyButton"
+                                    id="zzsearchPage_findNearbyButton" data-corners="true" data-icon="location" data-iconpos="right"
+                                    x-apple-data-detectors="false" data-inline="true" data-mini="true" data-theme="b"
+                                    tabindex="6">
+                                    Near address
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- searchCriteriaLabel -->
+                <div name="searchCriteriaLabel" id="zzsearchPage_searchCriteriaLabel" dsid="searchCriteriaLabel"
+                data-role="appery_label" class="labelOnDark  zzsearchPage_searchCriteriaLabel">
+                    Select the criteria that's important for your dish search.
+                </div>
+                <!-- searchButtons -->
+                <div data-role="controlgroup" data-mini="true" name="searchButtons" id="zzsearchPage_searchButtons"
+                dsid="searchButtons" class="zzsearchPage_searchButtons">
+                    <!-- distanceButton --><!--
+                    --><a data-role="button" name="distanceButton" dsid="distanceButton" class="zzsearchPage_distanceButton"
+                    id="zzsearchPage_distanceButton" data-corners="true" data-icon="none" data-iconpos='nowhere'
+                    x-apple-data-detectors="false" data-theme="b" tabindex="7" reRender='searchButtons'>
+                    Distance
+                    </a><!--
+                    --><!-- ratingButton --><!--
+                    --><a data-role="button" name="ratingButton" dsid="ratingButton" class="zzsearchPage_ratingButton"
+                    id="zzsearchPage_ratingButton" data-corners="true" data-icon="none" data-iconpos='nowhere'
+                    x-apple-data-detectors="false" data-theme="b" tabindex="7" reRender='searchButtons'>
+                    Rating
+                    </a><!--
+                    --><!-- priceButton --><!--
+                    --><a data-role="button" name="priceButton" dsid="priceButton" class="zzsearchPage_priceButton"
+                    id="zzsearchPage_priceButton" data-corners="true" data-icon="none" data-iconpos='nowhere'
+                    x-apple-data-detectors="false" data-theme="b" tabindex="7" reRender='searchButtons'>
+                    Price
+                    </a><!--
+                    --><!-- dietaryButton --><!--
+                    --><a data-role="button" name="dietaryButton" dsid="dietaryButton" class="zzsearchPage_dietaryButton"
+                    id="zzsearchPage_dietaryButton" data-corners="true" data-icon="none" data-iconpos='nowhere'
+                    x-apple-data-detectors="false" data-theme="b" tabindex="7" reRender='searchButtons'>
+                    Dietary
+                    </a><!--
+                    --><!-- ingredientButton --><!--
+                    --><a data-role="button" name="ingredientButton" dsid="ingredientButton" class="zzsearchPage_ingredientButton"
+                    id="zzsearchPage_ingredientButton" data-corners="true" data-icon="none" data-iconpos='nowhere'
+                    x-apple-data-detectors="false" data-theme="b" tabindex="7" reRender='searchButtons'>
+                    Ingredient
+                    </a><!--
+                    --><!-- cuisineButton --><!--
+                    --><a data-role="button" name="cuisineButton" dsid="cuisineButton" class="zzsearchPage_cuisineButton"
+                    id="zzsearchPage_cuisineButton" data-corners="true" data-icon="none" data-iconpos='nowhere'
+                    x-apple-data-detectors="false" data-theme="b" tabindex="7" reRender='searchButtons'>
+                    Cuisine
+                    </a><!--
+                    --><!-- nameButton --><!--
+                    --><a data-role="button" name="nameButton" dsid="nameButton" class="zzsearchPage_nameButton"
+                    id="zzsearchPage_nameButton" data-corners="true" data-icon="none" data-iconpos='nowhere'
+                    x-apple-data-detectors="false" data-theme="b" tabindex="7" reRender='searchButtons'>
+                    Name
+                    </a>
+                </div>
+            </div>
+            <!-- searchFooter -->
+            <div data-role="footer" data-position="fixed" class="zzsearchPage_searchFooter"
+            name="searchFooter" dsid="searchFooter" id="zzsearchPage_searchFooter" data-theme="b">
+                <!-- mobilegrid_126 -->
+                <div class="zzsearchPage_mobilegrid_126_wrapper" data-wrapper-for="mobilegrid_126">
+                    <table id="zzsearchPage_mobilegrid_126" class="zzsearchPage_mobilegrid_126" dsid="mobilegrid_126"
+                    name="mobilegrid_126" cellpadding=0 cellspacing=0>
+                        <col style="width:auto;" />
+                        <col style="width:auto;" />
+                        <tr class="zzsearchPage_mobilegrid_126_row_0">
+                            <!-- mobilegridcell_127 -->
+                            <td id="zzsearchPage_mobilegridcell_127" name="mobilegridcell_127" class="zzsearchPage_mobilegridcell_127"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- showFilterButton --><!--
+                                    --><a data-role="button" name="showFilterButton" dsid="showFilterButton" class="zzsearchPage_showFilterButton"
+                                    id="zzsearchPage_showFilterButton" data-corners="true" data-icon="search" data-iconpos="right"
+                                    x-apple-data-detectors="false" data-mini="false" data-theme="b" tabindex="30">
+                                    Show filter
+                                    </a>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_128 -->
+                            <td id="zzsearchPage_mobilegridcell_128" name="mobilegridcell_128" class="zzsearchPage_mobilegridcell_128"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- searchButton --><!--
+                                    --><a data-role="button" name="searchButton" dsid="searchButton" class="zzsearchPage_searchButton"
+                                    id="zzsearchPage_searchButton" data-corners="true" data-icon="check" data-iconpos="right"
+                                    x-apple-data-detectors="false" data-mini="false" data-theme="b" tabindex="26">
+                                    Find my dishes!
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <!-- searchCriteriaPanel -->
+            <div data-role="panel" tabindex="-1" data-position="right" data-display="overlay"
+            id="zzsearchPage_searchCriteriaPanel" class="zzsearchPage_searchCriteriaPanel" name="searchCriteriaPanel"
+            dsid="searchCriteriaPanel" data-theme="b">
+                <!-- distanceSelect -->
+                <div data-role="fieldcontain" class="zzsearchPage_distanceSelect ">
+                    <select name="distanceSelect" id="zzsearchPage_distanceSelect" dsid="distanceSelect"
+                    data-theme="b" data-role="appery_selectmenu" data-inline="false" data-mini="true"
+                    data-icon="arrow-d" data-iconpos="right" data-native-menu="false" tabindex="9" appery-class="zzsearchPage_distanceSelect">
+                        <option id="zzsearchPage_distanceSelect-0" value="1" reRender="distanceSelect" dsid="distanceSelect-0">
+                            2 blocks
+                        </option>
+                        <option id="zzsearchPage_distanceSelect-1" value="2" reRender="distanceSelect" dsid="distanceSelect-1"
+                        selected="selected">
+                            10 blocks
+                        </option>
+                        <option id="zzsearchPage_distanceSelect-2" value="3" reRender="distanceSelect" dsid="distanceSelect-2">
+                            5 miles
+                        </option>
+                    </select>
+                </div>
+                <!-- starLabel -->
+                <div name="starLabel" id="zzsearchPage_starLabel" dsid="starLabel" data-role="appery_label"
+                class="labelStandard  zzsearchPage_starLabel">
+                    Minimum stars
+                </div>
+                <!-- starsSlider -->
+                <div data-role="fieldcontain" class="zzsearchPage_starsSlider ">
+                    <input type="range" reRender="starsSlider" name="starsSlider" dsid="starsSlider"
+                    id="zzsearchPage_starsSlider" data-theme="b" data-track-theme="b" value="4" min="1"
+                    max="5" tabindex="8" class="zzsearchPage_starsSlider" data-mini="true" />
+                </div>
+                <div data-role="fieldcontain" class="zzsearchPage_priceRadio" id="zzsearchPage_priceRadio"
+                dsid="priceRadio">
+                    <fieldset data-role="controlgroup" data-theme="b" data-type="horizontal" class="ui-field-contain">
+                        <span dsid="priceRadio1" class="zzsearchPage_priceRadio1" name="priceRadio1">
+                            <input type="checkbox" name="priceRadio" id="zzsearchPage_priceRadio1" style='display:none'
+                            tabindex="18" value="1" />
+                            <label id="zzsearchPage_priceRadio1_label" for="zzsearchPage_priceRadio1">
+                                $
+                            </label>
+                        </span>
+                        <span dsid="priceRadio2" class="zzsearchPage_priceRadio2" name="priceRadio2">
+                            <input type="checkbox" name="priceRadio" id="zzsearchPage_priceRadio2" style='display:none'
+                            tabindex="18" value="2" />
+                            <label id="zzsearchPage_priceRadio2_label" for="zzsearchPage_priceRadio2">
+                                $$
+                            </label>
+                        </span>
+                        <span dsid="priceRadio3" class="zzsearchPage_priceRadio3" name="priceRadio3">
+                            <input type="checkbox" name="priceRadio" id="zzsearchPage_priceRadio3" style='display:none'
+                            tabindex="18" value="3" />
+                            <label id="zzsearchPage_priceRadio3_label" for="zzsearchPage_priceRadio3">
+                                $$$
+                            </label>
+                        </span>
+                        <span dsid="priceRadio4" class="zzsearchPage_priceRadio4" name="priceRadio4">
+                            <input type="checkbox" name="priceRadio" id="zzsearchPage_priceRadio4" style='display:none'
+                            tabindex="18" value="4" />
+                            <label id="zzsearchPage_priceRadio4_label" for="zzsearchPage_priceRadio4">
+                                $$$$
+                            </label>
+                        </span>
+                    </fieldset>
+                </div>
+                <!-- saveChoicesButton --><!--
+                --><a data-role="button" name="saveChoicesButton" dsid="saveChoicesButton" class="zzsearchPage_saveChoicesButton"
+                id="zzsearchPage_saveChoicesButton" data-corners="true" data-icon="check" data-iconpos="right"
+                x-apple-data-detectors="false" data-inline="true" data-mini="true" data-theme="b"
+                tabindex="10">
+                Save
+                </a>
+            </div>
+            <!-- dietaryPanel -->
+            <div data-role="panel" tabindex="-1" data-position="right" data-display="overlay"
+            id="zzsearchPage_dietaryPanel" class="zzsearchPage_dietaryPanel" name="dietaryPanel"
+            dsid="dietaryPanel" data-theme="b">
+                <!-- cuisinePanelList -->
+                <div data-role="fieldcontain" class="zzsearchPage_cuisinePanelList" id="zzsearchPage_cuisinePanelList"
+                dsid="cuisinePanelList">
+                    <fieldset data-role="controlgroup" data-mini="true" data-theme="b">
+                        <!-- selectHalal -->
+                        <span dsid="selectHalal" class="zzsearchPage_selectHalal" name="selectHalal">
+                            <input type="radio" name="cuisinePanelList" id="zzsearchPage_selectHalal" tabindex="22"
+                            value="Halal" />
+                            <label id="zzsearchPage_selectHalal_label" for="zzsearchPage_selectHalal">
+                                Halal
+                            </label>
+                        </span>
+                        <!-- selectKosher -->
+                        <span dsid="selectKosher" class="zzsearchPage_selectKosher" name="selectKosher">
+                            <input type="radio" name="cuisinePanelList" id="zzsearchPage_selectKosher" value="Kosher"
+                            />
+                            <label id="zzsearchPage_selectKosher_label" for="zzsearchPage_selectKosher">
+                                Kosher
+                            </label>
+                        </span>
+                        <!-- selectJain -->
+                        <span dsid="selectJain" class="zzsearchPage_selectJain" name="selectJain">
+                            <input type="radio" name="cuisinePanelList" id="zzsearchPage_selectJain" value="Jain"
+                            />
+                            <label id="zzsearchPage_selectJain_label" for="zzsearchPage_selectJain">
+                                Jain
+                            </label>
+                        </span>
+                        <!-- selectVegitarian -->
+                        <span dsid="selectVegitarian" class="zzsearchPage_selectVegitarian" name="selectVegitarian">
+                            <input type="radio" name="cuisinePanelList" id="zzsearchPage_selectVegitarian" value="Vegitarian"
+                            />
+                            <label id="zzsearchPage_selectVegitarian_label" for="zzsearchPage_selectVegitarian">
+                                Vegitarian
+                            </label>
+                        </span>
+                        <!-- selectVegan -->
+                        <span dsid="selectVegan" class="zzsearchPage_selectVegan" name="selectVegan">
+                            <input type="radio" name="cuisinePanelList" id="zzsearchPage_selectVegan" value="Vegan"
+                            />
+                            <label id="zzsearchPage_selectVegan_label" for="zzsearchPage_selectVegan">
+                                Vegan
+                            </label>
+                        </span>
+                        <!-- selectGlutenFree -->
+                        <span dsid="selectGlutenFree" class="zzsearchPage_selectGlutenFree" name="selectGlutenFree">
+                            <input type="radio" name="cuisinePanelList" id="zzsearchPage_selectGlutenFree" value="Gluten free"
+                            />
+                            <label id="zzsearchPage_selectGlutenFree_label" for="zzsearchPage_selectGlutenFree">
+                                Gluten free
+                            </label>
+                        </span>
+                        <!-- selectPaleo -->
+                        <span dsid="selectPaleo" class="zzsearchPage_selectPaleo" name="selectPaleo">
+                            <input type="radio" name="cuisinePanelList" id="zzsearchPage_selectPaleo" value="Paleo"
+                            />
+                            <label id="zzsearchPage_selectPaleo_label" for="zzsearchPage_selectPaleo">
+                                Paleo
+                            </label>
+                        </span>
+                    </fieldset>
+                </div>
+                <!-- cuisinePanelBack --><!--
+                --><a data-role="button" name="cuisinePanelBack" dsid="cuisinePanelBack" class="zzsearchPage_cuisinePanelBack"
+                id="zzsearchPage_cuisinePanelBack" data-corners="true" data-icon="check" data-iconpos="right"
+                x-apple-data-detectors="false" data-inline="true" data-mini="true" data-theme="b"
+                tabindex="23">
+                Save
+                </a>
+            </div>
+            <!-- ingredientPopup -->
+            <div data-role="popup" name="ingredientPopup" dsid="ingredientPopup" id="zzsearchPage_ingredientPopup"
+            class="zzsearchPage_ingredientPopup" data-corners="true" data-dismissible="true"
+            data-overlay-theme="" data-theme="" data-shadow="true" data-tolerance="30,15,30,15">
+                <div class="ui-popup-content-wrapper">
+                    <!-- ingredientDescriptionLabel -->
+                    <div name="ingredientDescriptionLabel" id="zzsearchPage_ingredientDescriptionLabel"
+                    dsid="ingredientDescriptionLabel" data-role="appery_label" class="labelStandard  zzsearchPage_ingredientDescriptionLabel">
+                        Enter a main ingredient
+                    </div>
+                    <!-- ingredientField -->
+                    <div data-role="fieldcontain" class="zzsearchPage_ingredientField ">
+                        <input type="text" name="ingredientField" dsid="ingredientField" value="" placeholder="examples: lobster, steak"
+                        id="zzsearchPage_ingredientField" tabindex="24" multiple data-theme="b" data-mini="true"
+                        class="zzsearchPage_ingredientField" />
+                    </div>
+                    <!-- ingredientEnterButton --><!--
+                    --><a data-role="button" name="ingredientEnterButton" dsid="ingredientEnterButton"
+                    class="zzsearchPage_ingredientEnterButton" id="zzsearchPage_ingredientEnterButton"
+                    data-corners="true" data-icon="check" data-iconpos="right" x-apple-data-detectors="false"
+                    data-inline="true" data-mini="true" data-theme="b" tabindex="25">
+                    Save
+                    </a>
+                </div>
+            </div>
+            <!-- distancePopup -->
+            <div data-role="popup" name="distancePopup" dsid="distancePopup" id="zzsearchPage_distancePopup"
+            class="zzsearchPage_distancePopup" data-corners="true" data-dismissible="true" data-overlay-theme=""
+            data-theme="" data-shadow="true" data-tolerance="30,15,30,15">
+                <div class="ui-popup-content-wrapper">
+                    <!-- distancePopupLabel -->
+                    <div name="distancePopupLabel" id="zzsearchPage_distancePopupLabel" dsid="distancePopupLabel"
+                    data-role="appery_label" class="labelStandard  zzsearchPage_distancePopupLabel">
+                        Search within distance
+                    </div>
+                    <!-- distanceRadio -->
+                    <div data-role="fieldcontain" class="zzsearchPage_distanceRadio" id="zzsearchPage_distanceRadio"
+                    dsid="distanceRadio">
+                        <fieldset data-role="controlgroup" data-mini="true" data-theme="b">
+                            <!-- radio2blocks -->
+                            <span dsid="radio2blocks" class="zzsearchPage_radio2blocks" name="radio2blocks">
+                                <input type="radio" name="distanceRadio" id="zzsearchPage_radio2blocks" tabindex="27"
+                                value="1" />
+                                <label id="zzsearchPage_radio2blocks_label" for="zzsearchPage_radio2blocks">
+                                    2 blocks
+                                </label>
+                            </span>
+                            <!-- radio8blocks -->
+                            <span dsid="radio8blocks" class="zzsearchPage_radio8blocks" name="radio8blocks">
+                                <input type="radio" name="distanceRadio" id="zzsearchPage_radio8blocks" value="2"
+                                />
+                                <label id="zzsearchPage_radio8blocks_label" for="zzsearchPage_radio8blocks">
+                                    8 blocks
+                                </label>
+                            </span>
+                            <!-- radio1mile -->
+                            <span dsid="radio1mile" class="zzsearchPage_radio1mile" name="radio1mile">
+                                <input type="radio" name="distanceRadio" id="zzsearchPage_radio1mile" value="3"
+                                />
+                                <label id="zzsearchPage_radio1mile_label" for="zzsearchPage_radio1mile">
+                                    1 mile
+                                </label>
+                            </span>
+                            <!-- radio5miles -->
+                            <span dsid="radio5miles" class="zzsearchPage_radio5miles" name="radio5miles">
+                                <input type="radio" name="distanceRadio" id="zzsearchPage_radio5miles" value="4"
+                                />
+                                <label id="zzsearchPage_radio5miles_label" for="zzsearchPage_radio5miles">
+                                    5 miles
+                                </label>
+                            </span>
+                            <!-- radio10miles -->
+                            <span dsid="radio10miles" class="zzsearchPage_radio10miles" name="radio10miles">
+                                <input type="radio" name="distanceRadio" id="zzsearchPage_radio10miles" value="5"
+                                />
+                                <label id="zzsearchPage_radio10miles_label" for="zzsearchPage_radio10miles">
+                                    10 miles
+                                </label>
+                            </span>
+                        </fieldset>
+                    </div>
+                    <!-- distanceOK --><!--
+                    --><a data-role="button" name="distanceOK" dsid="distanceOK" class="zzsearchPage_distanceOK"
+                    id="zzsearchPage_distanceOK" data-corners="true" data-icon="check" data-iconpos="right"
+                    x-apple-data-detectors="false" data-inline="true" data-mini="true" data-theme="b"
+                    tabindex="35">
+                    Save
+                    </a>
+                </div>
+            </div>
+            <!-- ratingPopup -->
+            <div data-role="popup" name="ratingPopup" dsid="ratingPopup" id="zzsearchPage_ratingPopup"
+            class="zzsearchPage_ratingPopup" data-corners="true" data-dismissible="true" data-overlay-theme=""
+            data-theme="" data-shadow="true" data-tolerance="30,15,30,15">
+                <div class="ui-popup-content-wrapper">
+                    <!-- ratingFilterLabel -->
+                    <div name="ratingFilterLabel" id="zzsearchPage_ratingFilterLabel" dsid="ratingFilterLabel"
+                    data-role="appery_label" class="labelStandard  zzsearchPage_ratingFilterLabel">
+                        Choose rating filter
+                    </div>
+                    <!-- ratingSearchChoices -->
+                    <div data-role="controlgroup" data-type='horizontal' data-mini="true" name="ratingSearchChoices"
+                    id="zzsearchPage_ratingSearchChoices" dsid="ratingSearchChoices" class="zzsearchPage_ratingSearchChoices">
+                        <!-- star1Select --><!--
+                        --><a data-role="button" name="star1Select" dsid="star1Select" class="zzsearchPage_star1Select"
+                        id="zzsearchPage_star1Select" data-corners="true" data-icon="none" data-iconpos='nowhere'
+                        x-apple-data-detectors="false" data-theme="b" tabindex="29" reRender='ratingSearchChoices'>
+                        *
+                        </a><!--
+                        --><!-- star2Select --><!--
+                        --><a data-role="button" name="star2Select" dsid="star2Select" class="zzsearchPage_star2Select"
+                        id="zzsearchPage_star2Select" data-corners="true" data-icon="none" data-iconpos='nowhere'
+                        x-apple-data-detectors="false" data-theme="b" tabindex="29" reRender='ratingSearchChoices'>
+                        * *
+                        </a><!--
+                        --><!-- star3Select --><!--
+                        --><a data-role="button" name="star3Select" dsid="star3Select" class="zzsearchPage_star3Select"
+                        id="zzsearchPage_star3Select" data-corners="true" data-icon="none" data-iconpos='nowhere'
+                        x-apple-data-detectors="false" data-theme="b" tabindex="29" reRender='ratingSearchChoices'>
+                        * * *
+                        </a><!--
+                        --><!-- star4Select --><!--
+                        --><a data-role="button" name="star4Select" dsid="star4Select" class="zzsearchPage_star4Select"
+                        id="zzsearchPage_star4Select" data-corners="true" data-icon="none" data-iconpos='nowhere'
+                        x-apple-data-detectors="false" data-theme="b" tabindex="29" reRender='ratingSearchChoices'>
+                        * * * *
+                        </a><!--
+                        --><!-- star5Select --><!--
+                        --><a data-role="button" name="star5Select" dsid="star5Select" class="zzsearchPage_star5Select"
+                        id="zzsearchPage_star5Select" data-corners="true" data-icon="none" data-iconpos='nowhere'
+                        x-apple-data-detectors="false" data-theme="b" tabindex="29" reRender='ratingSearchChoices'>
+                        * * * * *
+                        </a>
+                    </div>
+                    <!-- ratingOK --><!--
+                    --><a data-role="button" name="ratingOK" dsid="ratingOK" class="zzsearchPage_ratingOK"
+                    id="zzsearchPage_ratingOK" data-corners="true" data-icon="check" data-iconpos="right"
+                    x-apple-data-detectors="false" data-inline="true" data-mini="true" data-theme="b"
+                    tabindex="36">
+                    Save
+                    </a>
+                </div>
+            </div>
+            <!-- cuisinePopup -->
+            <div data-role="popup" name="cuisinePopup" dsid="cuisinePopup" id="zzsearchPage_cuisinePopup"
+            class="zzsearchPage_cuisinePopup" data-corners="true" data-dismissible="true" data-overlay-theme=""
+            data-theme="" data-shadow="true" data-tolerance="30,15,30,15">
+                <div class="ui-popup-content-wrapper">
+                    <!-- cuisinePopupLabel -->
+                    <div name="cuisinePopupLabel" id="zzsearchPage_cuisinePopupLabel" dsid="cuisinePopupLabel"
+                    data-role="appery_label" class="labelStandard  zzsearchPage_cuisinePopupLabel">
+                        Begin typing a cuisine to filter the list
+                    </div>
+                    <!-- mobilesearchbar_90 -->
+                    <div data-role="fieldcontain" class="zzsearchPage_mobilesearchbar_90 ">
+                        <div id="zzsearchPage_mobilesearchbar_90-cover-div">
+                            <img id="zzsearchPage_mobilesearchbar_90-cover-img" src="../libs/apperyio/img/icon-search-cover.png"
+                            />
+                        </div>
+                        <input type="search" name="mobilesearchbar_90" id="zzsearchPage_mobilesearchbar_90"
+                        dsid="mobilesearchbar_90" value="Search" placeholder="" data-theme="b" tabindex="31"
+                        class="zzsearchPage_mobilesearchbar_90" />
+                    </div>
+                    <!-- cuisineOK --><!--
+                    --><a data-role="button" name="cuisineOK" dsid="cuisineOK" class="zzsearchPage_cuisineOK"
+                    id="zzsearchPage_cuisineOK" data-corners="true" data-icon="check" data-iconpos="right"
+                    x-apple-data-detectors="false" data-inline="true" data-mini="true" data-theme="b"
+                    tabindex="39">
+                    Save
+                    </a>
+                    <div data-role="fieldcontain" class="zzsearchPage_mobilecheckboxgroup_92" id="zzsearchPage_mobilecheckboxgroup_92"
+                    dsid="mobilecheckboxgroup_92">
+                        <fieldset data-role="controlgroup" data-theme="b" data-mini="true" class="">
+                            <span dsid="mobilecheckbox_93" class="zzsearchPage_mobilecheckbox_93" name="mobilecheckbox_93">
+                                <input type="checkbox" name="mobilecheckboxgroup_92" id="zzsearchPage_mobilecheckbox_93"
+                                tabindex="32" value="African" />
+                                <label id="zzsearchPage_mobilecheckbox_93_label" for="zzsearchPage_mobilecheckbox_93">
+                                    African
+                                </label>
+                            </span>
+                            <span dsid="mobilecheckbox_94" class="zzsearchPage_mobilecheckbox_94" name="mobilecheckbox_94">
+                                <input type="checkbox" name="mobilecheckboxgroup_92" id="zzsearchPage_mobilecheckbox_94"
+                                tabindex="32" value="American" />
+                                <label id="zzsearchPage_mobilecheckbox_94_label" for="zzsearchPage_mobilecheckbox_94">
+                                    American
+                                </label>
+                            </span>
+                            <span dsid="mobilecheckbox_95" class="zzsearchPage_mobilecheckbox_95" name="mobilecheckbox_95">
+                                <input type="checkbox" name="mobilecheckboxgroup_92" id="zzsearchPage_mobilecheckbox_95"
+                                tabindex="32" value="Chinese" />
+                                <label id="zzsearchPage_mobilecheckbox_95_label" for="zzsearchPage_mobilecheckbox_95">
+                                    Chinese
+                                </label>
+                            </span>
+                            <span dsid="mobilecheckbox_96" class="zzsearchPage_mobilecheckbox_96" name="mobilecheckbox_96">
+                                <input type="checkbox" name="mobilecheckboxgroup_92" id="zzsearchPage_mobilecheckbox_96"
+                                tabindex="32" value="French" />
+                                <label id="zzsearchPage_mobilecheckbox_96_label" for="zzsearchPage_mobilecheckbox_96">
+                                    French
+                                </label>
+                            </span>
+                            <span dsid="mobilecheckbox_97" class="zzsearchPage_mobilecheckbox_97" name="mobilecheckbox_97">
+                                <input type="checkbox" name="mobilecheckboxgroup_92" id="zzsearchPage_mobilecheckbox_97"
+                                tabindex="32" value="Greek" />
+                                <label id="zzsearchPage_mobilecheckbox_97_label" for="zzsearchPage_mobilecheckbox_97">
+                                    Greek
+                                </label>
+                            </span>
+                            <span dsid="mobilecheckbox_98" class="zzsearchPage_mobilecheckbox_98" name="mobilecheckbox_98">
+                                <input type="checkbox" name="mobilecheckboxgroup_92" id="zzsearchPage_mobilecheckbox_98"
+                                tabindex="32" value="Indian" />
+                                <label id="zzsearchPage_mobilecheckbox_98_label" for="zzsearchPage_mobilecheckbox_98">
+                                    Indian
+                                </label>
+                            </span>
+                            <span dsid="mobilecheckbox_99" class="zzsearchPage_mobilecheckbox_99" name="mobilecheckbox_99">
+                                <input type="checkbox" name="mobilecheckboxgroup_92" id="zzsearchPage_mobilecheckbox_99"
+                                tabindex="32" value="Italian" />
+                                <label id="zzsearchPage_mobilecheckbox_99_label" for="zzsearchPage_mobilecheckbox_99">
+                                    Italian
+                                </label>
+                            </span>
+                            <span dsid="mobilecheckbox_100" class="zzsearchPage_mobilecheckbox_100" name="mobilecheckbox_100">
+                                <input type="checkbox" name="mobilecheckboxgroup_92" id="zzsearchPage_mobilecheckbox_100"
+                                tabindex="32" value="Japanese" />
+                                <label id="zzsearchPage_mobilecheckbox_100_label" for="zzsearchPage_mobilecheckbox_100">
+                                    Japanese
+                                </label>
+                            </span>
+                            <span dsid="mobilecheckbox_101" class="zzsearchPage_mobilecheckbox_101" name="mobilecheckbox_101">
+                                <input type="checkbox" name="mobilecheckboxgroup_92" id="zzsearchPage_mobilecheckbox_101"
+                                tabindex="32" value="Mexican" />
+                                <label id="zzsearchPage_mobilecheckbox_101_label" for="zzsearchPage_mobilecheckbox_101">
+                                    Mexican
+                                </label>
+                            </span>
+                            <span dsid="mobilecheckbox_102" class="zzsearchPage_mobilecheckbox_102" name="mobilecheckbox_102">
+                                <input type="checkbox" name="mobilecheckboxgroup_92" id="zzsearchPage_mobilecheckbox_102"
+                                tabindex="32" value="Thai" />
+                                <label id="zzsearchPage_mobilecheckbox_102_label" for="zzsearchPage_mobilecheckbox_102">
+                                    Thai
+                                </label>
+                            </span>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+            <!-- pricePopup -->
+            <div data-role="popup" name="pricePopup" dsid="pricePopup" id="zzsearchPage_pricePopup"
+            class="zzsearchPage_pricePopup" data-corners="true" data-dismissible="true" data-overlay-theme=""
+            data-theme="" data-shadow="true" data-tolerance="30,15,30,15">
+                <div class="ui-popup-content-wrapper">
+                    <!-- pricePopupLabel -->
+                    <div name="pricePopupLabel" id="zzsearchPage_pricePopupLabel" dsid="pricePopupLabel"
+                    data-role="appery_label" class="labelStandard  zzsearchPage_pricePopupLabel">
+                        Select price ranges
+                    </div>
+                    <div data-role="fieldcontain" class="zzsearchPage_mobilecheckboxgroup_104" id="zzsearchPage_mobilecheckboxgroup_104"
+                    dsid="mobilecheckboxgroup_104">
+                        <fieldset data-role="controlgroup" data-theme="b" data-type="horizontal" data-mini="true"
+                        class="ui-field-contain">
+                            <span dsid="mobilecheckbox_105" class="zzsearchPage_mobilecheckbox_105" name="mobilecheckbox_105">
+                                <input type="checkbox" name="mobilecheckboxgroup_104" id="zzsearchPage_mobilecheckbox_105"
+                                style='display:none' tabindex="33" value="1" />
+                                <label id="zzsearchPage_mobilecheckbox_105_label" for="zzsearchPage_mobilecheckbox_105">
+                                    $&lt;10
+                                </label>
+                            </span>
+                            <span dsid="mobilecheckbox_106" class="zzsearchPage_mobilecheckbox_106" name="mobilecheckbox_106">
+                                <input type="checkbox" name="mobilecheckboxgroup_104" id="zzsearchPage_mobilecheckbox_106"
+                                style='display:none' tabindex="33" value="2" />
+                                <label id="zzsearchPage_mobilecheckbox_106_label" for="zzsearchPage_mobilecheckbox_106">
+                                    $11-20
+                                </label>
+                            </span>
+                            <span dsid="mobilecheckbox_107" class="zzsearchPage_mobilecheckbox_107" name="mobilecheckbox_107">
+                                <input type="checkbox" name="mobilecheckboxgroup_104" id="zzsearchPage_mobilecheckbox_107"
+                                style='display:none' tabindex="33" value="3" />
+                                <label id="zzsearchPage_mobilecheckbox_107_label" for="zzsearchPage_mobilecheckbox_107">
+                                    $21-30
+                                </label>
+                            </span>
+                            <span dsid="mobilecheckbox_108" class="zzsearchPage_mobilecheckbox_108" name="mobilecheckbox_108">
+                                <input type="checkbox" name="mobilecheckboxgroup_104" id="zzsearchPage_mobilecheckbox_108"
+                                style='display:none' tabindex="33" value="4" />
+                                <label id="zzsearchPage_mobilecheckbox_108_label" for="zzsearchPage_mobilecheckbox_108">
+                                    $&gt;30
+                                </label>
+                            </span>
+                        </fieldset>
+                    </div>
+                    <!-- priceOK --><!--
+                    --><a data-role="button" name="priceOK" dsid="priceOK" class="zzsearchPage_priceOK"
+                    id="zzsearchPage_priceOK" data-corners="true" data-icon="check" data-iconpos="right"
+                    x-apple-data-detectors="false" data-inline="true" data-mini="true" data-theme="b"
+                    tabindex="37">
+                    Save
+                    </a>
+                </div>
+            </div>
+            <!-- dietaryPopup -->
+            <div data-role="popup" name="dietaryPopup" dsid="dietaryPopup" id="zzsearchPage_dietaryPopup"
+            class="zzsearchPage_dietaryPopup" data-corners="true" data-dismissible="true" data-overlay-theme=""
+            data-theme="" data-shadow="true" data-tolerance="30,15,30,15">
+                <div class="ui-popup-content-wrapper">
+                    <!-- dietaryPopupLabel -->
+                    <div name="dietaryPopupLabel" id="zzsearchPage_dietaryPopupLabel" dsid="dietaryPopupLabel"
+                    data-role="appery_label" class="labelStandard  zzsearchPage_dietaryPopupLabel">
+                        Dietary restrictions
+                    </div>
+                    <!-- dietaryChoices -->
+                    <div data-role="fieldcontain" class="zzsearchPage_dietaryChoices" id="zzsearchPage_dietaryChoices"
+                    dsid="dietaryChoices">
+                        <fieldset data-role="controlgroup" data-theme="b">
+                            <!-- glutenFreeSelect -->
+                            <span dsid="glutenFreeSelect" class="zzsearchPage_glutenFreeSelect" name="glutenFreeSelect">
+                                <input type="radio" name="dietaryChoices" id="zzsearchPage_glutenFreeSelect" tabindex="34"
+                                value="glutenFree" />
+                                <label id="zzsearchPage_glutenFreeSelect_label" for="zzsearchPage_glutenFreeSelect">
+                                    Gluten Free
+                                </label>
+                            </span>
+                            <!-- halalSelect -->
+                            <span dsid="halalSelect" class="zzsearchPage_halalSelect" name="halalSelect">
+                                <input type="radio" name="dietaryChoices" id="zzsearchPage_halalSelect" value="Halal"
+                                />
+                                <label id="zzsearchPage_halalSelect_label" for="zzsearchPage_halalSelect">
+                                    Halal
+                                </label>
+                            </span>
+                            <!-- jainSelect -->
+                            <span dsid="jainSelect" class="zzsearchPage_jainSelect" name="jainSelect">
+                                <input type="radio" name="dietaryChoices" id="zzsearchPage_jainSelect" value="Jain"
+                                />
+                                <label id="zzsearchPage_jainSelect_label" for="zzsearchPage_jainSelect">
+                                    Jain
+                                </label>
+                            </span>
+                            <!-- kosherSelect -->
+                            <span dsid="kosherSelect" class="zzsearchPage_kosherSelect" name="kosherSelect">
+                                <input type="radio" name="dietaryChoices" id="zzsearchPage_kosherSelect" value="Kosher"
+                                />
+                                <label id="zzsearchPage_kosherSelect_label" for="zzsearchPage_kosherSelect">
+                                    Kosher
+                                </label>
+                            </span>
+                            <!-- paleoSelect -->
+                            <span dsid="paleoSelect" class="zzsearchPage_paleoSelect" name="paleoSelect">
+                                <input type="radio" name="dietaryChoices" id="zzsearchPage_paleoSelect" value="Paleo"
+                                />
+                                <label id="zzsearchPage_paleoSelect_label" for="zzsearchPage_paleoSelect">
+                                    Paleo
+                                </label>
+                            </span>
+                            <!-- veganSelect -->
+                            <span dsid="veganSelect" class="zzsearchPage_veganSelect" name="veganSelect">
+                                <input type="radio" name="dietaryChoices" id="zzsearchPage_veganSelect" value="Vegan"
+                                />
+                                <label id="zzsearchPage_veganSelect_label" for="zzsearchPage_veganSelect">
+                                    Vegan
+                                </label>
+                            </span>
+                            <!-- vegetarianSelect -->
+                            <span dsid="vegetarianSelect" class="zzsearchPage_vegetarianSelect" name="vegetarianSelect">
+                                <input type="radio" name="dietaryChoices" id="zzsearchPage_vegetarianSelect" value="Vegetarian "
+                                />
+                                <label id="zzsearchPage_vegetarianSelect_label" for="zzsearchPage_vegetarianSelect">
+                                    Vegetarian
+                                </label>
+                            </span>
+                        </fieldset>
+                    </div>
+                    <!-- dietaryOK --><!--
+                    --><a data-role="button" name="dietaryOK" dsid="dietaryOK" class="zzsearchPage_dietaryOK"
+                    id="zzsearchPage_dietaryOK" data-corners="true" data-icon="check" data-iconpos="right"
+                    x-apple-data-detectors="false" data-inline="true" data-mini="true" data-theme="b"
+                    tabindex="38">
+                    Save
+                    </a>
+                </div>
+            </div>
+            <!-- loginPopup -->
+            <div data-role="popup" name="loginPopup" dsid="loginPopup" id="zzsearchPage_loginPopup"
+            class="zzsearchPage_loginPopup" data-corners="true" data-dismissible="true" data-overlay-theme=""
+            data-theme="" data-shadow="true" data-tolerance="30,15,30,15">
+                <div class="ui-popup-content-wrapper">
+                    <!-- loginPopupLabel -->
+                    <div name="loginPopupLabel" id="zzsearchPage_loginPopupLabel" dsid="loginPopupLabel"
+                    data-role="appery_label" class="labelStandard  zzsearchPage_loginPopupLabel">
+                        You must be logged in to use this feature.
+                    </div>
+                    <!-- mobilegrid_123 -->
+                    <div class="zzsearchPage_mobilegrid_123_wrapper" data-wrapper-for="mobilegrid_123">
+                        <table id="zzsearchPage_mobilegrid_123" class="zzsearchPage_mobilegrid_123" dsid="mobilegrid_123"
+                        name="mobilegrid_123" cellpadding=0 cellspacing=0>
+                            <col style="width:auto;" />
+                            <col style="width:auto;" />
+                            <tr class="zzsearchPage_mobilegrid_123_row_0">
+                                <!-- mobilegridcell_124 -->
+                                <td id="zzsearchPage_mobilegridcell_124" name="mobilegridcell_124" class="zzsearchPage_mobilegridcell_124"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- loginPopupCancelButton --><!--
+                                        --><a data-role="button" name="loginPopupCancelButton" dsid="loginPopupCancelButton"
+                                        class="zzsearchPage_loginPopupCancelButton" id="zzsearchPage_loginPopupCancelButton"
+                                        data-corners="true" data-icon="delete" data-iconpos="right" x-apple-data-detectors="false"
+                                        data-mini="true" data-theme="b" tabindex="41">
+                                        Cancel
+                                        </a>
+                                    </div>
+                                </td>
+                                <!-- mobilegridcell_125 -->
+                                <td id="zzsearchPage_mobilegridcell_125" name="mobilegridcell_125" class="zzsearchPage_mobilegridcell_125"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- loginPopupButton --><!--
+                                        --><a data-role="button" name="loginPopupButton" dsid="loginPopupButton" class="zzsearchPage_loginPopupButton"
+                                        id="zzsearchPage_loginPopupButton" data-corners="true" data-icon="carat-r" data-iconpos="right"
+                                        x-apple-data-detectors="false" data-mini="true" data-theme="b" tabindex="40">
+                                        Login
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>

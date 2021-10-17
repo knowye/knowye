@@ -1,0 +1,188 @@
+
+/* Define default spinner */
+.ui-icon-loading {
+	background: url("../libs/jquerymobile/1.4.5/images/ajax-loader.gif") repeat scroll 0 0 / 46px 46px transparent!important;
+}
+/* homeButton */
+#itemManagePage_homeButton {
+
+}
+.ui-btn.itemManagePage_homeButton {
+
+}
+/* dishManageContainer */
+.ui-content.itemManagePage_dishManageContainer {
+	padding: 15px 15px 15px 15px;
+}
+/* manageItemLabel */
+.itemManagePage_manageItemLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #f8f8fa; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* buttonGridItemAddPreview */
+.itemManagePage_buttonGridItemAddPreview {
+	height: auto;
+	width:100%;
+	margin: 10px 0px 4px 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.itemManagePage_buttonGridItemAddPreview_wrapper {
+
+}
+.itemManagePage_buttonGridItemAddPreview > tr > td {
+	vertical-align: top;
+}
+.itemManagePage_buttonGridItemAddPreview_row_0, .itemManagePage_buttonGridItemAddPreview_row_0 > td {
+	height: 30px
+}
+/* cellAdd */
+.itemManagePage_cellAdd {
+	height:30px !important;
+	width:auto;
+	padding: 0px 0px 0px 0px;
+}
+.itemManagePage_cellAdd > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* itemAddButton */
+#itemManagePage_itemAddButton {
+
+}
+.ui-btn.itemManagePage_itemAddButton {
+	margin: 0px 2px 0px 0px;
+}
+/* cellPreview */
+.itemManagePage_cellPreview {
+	height:30px !important;
+	width:auto;
+	padding: 0px 0px 0px 0px;
+}
+.itemManagePage_cellPreview > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* sortItemButton */
+.itemManagePage_sortItemButton {
+	margin: 0px 0px 0px 2px;
+	display: none;
+}
+/* menuItemsList */
+.ui-page .itemManagePage_menuItemsList {
+	margin: 10px -15px 0px -15px;
+}
+/* menuItem */
+.ui-mobile-viewport ul[data-role="listview"] li.itemManagePage_menuItem {
+	padding: 0;
+	margin: 0;
+}
+.ui-mobile-viewport ul[data-role="listview"] li.itemManagePage_menuItem .ui-li-static-container {
+	padding: 0px 0px 4px 0px;
+	padding-right: 10px;
+	padding-left: 0px;
+	min-height: 1em;
+	border-width:0;
+}
+.ui-mobile-viewport ul[data-role="listview"] li.itemManagePage_menuItem.ui-icon-none .ui-li-static-container {
+	padding-right: 0px; /* consider nothing */
+}
+/* itemName */
+.itemManagePage_itemName {
+	text-decoration: none; font-weight: normal; color: #deeafc; text-align: left; font-family: Helvetica; font-size: 18px;
+	margin: 4px 2px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* menuItemButton */
+.itemManagePage_menuItemButton {
+
+}
+/* itemDescription */
+.itemManagePage_itemDescription {
+	text-decoration: none; font-weight: normal; font-style: italic; text-align: left; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 2px 2px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* priceGrid */
+.itemManagePage_priceGrid {
+	height: auto;
+	width:100%;
+	margin: 4px 0px 4px 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.itemManagePage_priceGrid_wrapper {
+
+}
+.itemManagePage_priceGrid > tr > td {
+	vertical-align: top;
+}
+.itemManagePage_priceGrid_row_0, .itemManagePage_priceGrid_row_0 > td {
+	height: 30px
+}
+/* dollarCell */
+.itemManagePage_dollarCell {
+	height:30px !important;
+	width:18px;
+	padding: 2px 2px 2px 2px;
+}
+.itemManagePage_dollarCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* dollarLabel */
+.itemManagePage_dollarLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #d8d8d8; text-align: right; font-family: Helvetica; font-size: 16px;
+	margin: 0px 0px 0px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* priceCell */
+.itemManagePage_priceCell {
+	height:30px !important;
+	width:47px;
+	padding: 2px 2px 2px 2px;
+}
+.itemManagePage_priceCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* price */
+.itemManagePage_price {
+	text-decoration: none; font-weight: normal; font-style: italic; text-align: left; font-family: Helvetica; font-size: 16px;
+	margin: 0px 0px 0px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* mobilegridcell_10 */
+.itemManagePage_mobilegridcell_10 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.itemManagePage_mobilegridcell_10 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* hiddenStatus */
+.itemManagePage_hiddenStatus {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #f70c29; text-align: left; font-family: Helvetica; font-size: 16px;
+	margin: 0px 0px 0px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* inactiveLabel */
+.itemManagePage_inactiveLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #f70c29; text-align: left; font-family: Helvetica; font-size: 16px;
+	margin: 0px 0px 0px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* itemManageFooter */
+.itemManagePage_itemManageFooter {
+	min-height:38px;
+}

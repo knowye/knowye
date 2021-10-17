@@ -1,0 +1,838 @@
+
+/* Define default spinner */
+.ui-icon-loading {
+	background: url("../libs/jquerymobile/1.4.5/images/ajax-loader.gif") repeat scroll 0 0 / 46px 46px transparent!important;
+}
+/* menuButton */
+#searchPage_menuButton {
+
+}
+.ui-btn.searchPage_menuButton {
+
+}
+/* searchContainer */
+.ui-content.searchPage_searchContainer {
+	padding: 15px 15px 15px 15px;
+}
+/* profileLabel */
+.searchPage_profileLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #0ec40a; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* profileUseGrid */
+.searchPage_profileUseGrid {
+	height: auto;
+	width:100%;
+	margin: 4px 0px 4px 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.searchPage_profileUseGrid_wrapper {
+
+}
+.searchPage_profileUseGrid > tr > td {
+	vertical-align: top;
+}
+.searchPage_profileUseGrid_row_0, .searchPage_profileUseGrid_row_0 > td {
+	height: 30px
+}
+/* profileUseCell */
+.searchPage_profileUseCell {
+	height:30px !important;
+	width:auto;
+	padding: 0px 0px 0px 0px;
+}
+.searchPage_profileUseCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* useProfileLabel */
+.searchPage_useProfileLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #0ec40a; text-align: right; font-family: Helvetica; font-size: 16px;
+	margin: 6px 4px 0px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* profileUseToggleCell */
+.searchPage_profileUseToggleCell {
+	height:30px !important;
+	width:auto;
+	padding: 0px 0px 0px 0px;
+}
+.searchPage_profileUseToggleCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* useProfileToggle */
+.searchPage_useProfileToggle {
+	margin: 0px 0px 0px 4px;
+}
+/* locationLabel */
+.searchPage_locationLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #0ec40a; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 10px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* locationGrid */
+.searchPage_locationGrid {
+	height: auto;
+	width:100%;
+	margin: 10px 0px 0px 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.searchPage_locationGrid_wrapper {
+
+}
+.searchPage_locationGrid > tr > td {
+	vertical-align: top;
+}
+.searchPage_locationGrid_row_0, .searchPage_locationGrid_row_0 > td {
+	height: 30px
+}
+.searchPage_locationGrid_row_1, .searchPage_locationGrid_row_1 > td {
+	height: 30px
+}
+/* locationCell */
+.searchPage_locationCell {
+	height:30px !important;
+	width:auto;
+	padding: 0px 0px 0px 0px;
+}
+.searchPage_locationCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* useLocationLabel */
+.searchPage_useLocationLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #0ec40a; text-align: right; font-family: Helvetica; font-size: 16px;
+	margin: 10px 4px 0px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* useLocationToggleCell */
+.searchPage_useLocationToggleCell {
+	height:30px !important;
+	width:auto;
+	padding: 0px 0px 0px 0px;
+}
+.searchPage_useLocationToggleCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* useLocationToggle */
+.searchPage_useLocationToggle {
+	margin: 0px 0px 0px 4px;
+}
+/* enterSearchAddressCell */
+.searchPage_enterSearchAddressCell {
+	height:30px !important;
+	width:auto;
+	padding: 4px 0px 0px 0px;
+}
+.searchPage_enterSearchAddressCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* enterSearchAddress */
+.searchPage_enterSearchAddress {
+	margin: 0px 0px 0px 0px;
+}
+/* findNearbyButtonCell */
+.searchPage_findNearbyButtonCell {
+	height:30px !important;
+	width:auto;
+	padding: 4px 0px 0px 0px;
+}
+.searchPage_findNearbyButtonCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* findNearbyButton */
+#searchPage_findNearbyButton {
+
+}
+.ui-btn.searchPage_findNearbyButton {
+	margin: 0px 0px 0px 4px;
+}
+/* searchCriteriaLabel */
+.searchPage_searchCriteriaLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #0ec40a; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 10px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* searchButtons */
+.ui-controlgroup.searchPage_searchButtons {
+	margin: 10px 5px 4px 5px;
+}
+.ui-controlgroup.searchPage_searchButtons .ui-btn {
+	margin: 0 -1px 0 0;
+}
+/* distanceButton */
+#searchPage_distanceButton {
+
+}
+.ui-btn.searchPage_distanceButton {
+
+}
+/* ratingButton */
+#searchPage_ratingButton {
+
+}
+.ui-btn.searchPage_ratingButton {
+
+}
+/* priceButton */
+#searchPage_priceButton {
+
+}
+.ui-btn.searchPage_priceButton {
+
+}
+/* dietaryButton */
+#searchPage_dietaryButton {
+
+}
+.ui-btn.searchPage_dietaryButton {
+
+}
+/* ingredientButton */
+#searchPage_ingredientButton {
+
+}
+.ui-btn.searchPage_ingredientButton {
+
+}
+/* cuisineButton */
+#searchPage_cuisineButton {
+
+}
+.ui-btn.searchPage_cuisineButton {
+
+}
+/* nameButton */
+#searchPage_nameButton {
+
+}
+.ui-btn.searchPage_nameButton {
+
+}
+/* searchFooter */
+.searchPage_searchFooter {
+	min-height:38px;
+}
+/* mobilegrid_126 */
+.searchPage_mobilegrid_126 {
+	height: auto;
+	width:100%;
+	margin: 4px 0px 4px 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.searchPage_mobilegrid_126_wrapper {
+
+}
+.searchPage_mobilegrid_126 > tr > td {
+	vertical-align: top;
+}
+.searchPage_mobilegrid_126_row_0, .searchPage_mobilegrid_126_row_0 > td {
+	height: 30px
+}
+/* mobilegridcell_127 */
+.searchPage_mobilegridcell_127 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.searchPage_mobilegridcell_127 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* showFilterButton */
+#searchPage_showFilterButton {
+
+}
+.ui-btn.searchPage_showFilterButton {
+	margin: 4px 5px 4px 5px;
+}
+/* mobilegridcell_128 */
+.searchPage_mobilegridcell_128 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.searchPage_mobilegridcell_128 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* searchButton */
+#searchPage_searchButton {
+
+}
+.ui-btn.searchPage_searchButton {
+	margin: 4px 5px 4px 5px;
+}
+/* searchCriteriaPanel */
+.searchPage_searchCriteriaPanel .ui-panel-inner {
+	padding: 15px 15px 15px 15px;
+}
+.searchPage_searchCriteriaPanel:focus {
+	outline: 0;
+}
+/* distanceSelect */
+.searchPage_distanceSelect {
+	margin: 4px 5px 4px 5px;
+}
+/* starLabel */
+.searchPage_starLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #0ec40a; text-align: center; font-family: Helvetica; font-size: 14px;
+	margin: 10px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* starsSlider */
+.searchPage_starsSlider {
+	margin: 4px 0px 4px 0px;
+}
+/* priceRadio */
+.searchPage_priceRadio {
+	margin: 10px 0px 4px 0px;
+}
+/* priceRadio1 */
+.searchPage_priceRadio1 {
+	-webkit-border-radius: inherit;
+	border-radius: inherit;
+}
+/* priceRadio2 */
+.searchPage_priceRadio2 {
+	-webkit-border-radius: inherit;
+	border-radius: inherit;
+}
+/* priceRadio3 */
+.searchPage_priceRadio3 {
+	-webkit-border-radius: inherit;
+	border-radius: inherit;
+}
+/* priceRadio4 */
+.searchPage_priceRadio4 {
+	-webkit-border-radius: inherit;
+	border-radius: inherit;
+}
+/* saveChoicesButton */
+#searchPage_saveChoicesButton {
+
+}
+.ui-btn.searchPage_saveChoicesButton {
+	margin: 10px 5px 4px 5px;
+}
+/* dietaryPanel */
+.searchPage_dietaryPanel .ui-panel-inner {
+	padding: 15px 15px 15px 15px;
+}
+.searchPage_dietaryPanel:focus {
+	outline: 0;
+}
+/* cuisinePanelList */
+.searchPage_cuisinePanelList {
+	margin: 4px 0px 4px 0px;
+}
+/* selectHalal */
+.searchPage_selectHalal {
+	-webkit-border-radius: inherit;
+	border-radius: inherit;
+}
+/* selectKosher */
+.searchPage_selectKosher {
+	-webkit-border-radius: inherit;
+	border-radius: inherit;
+}
+/* selectJain */
+.searchPage_selectJain {
+	-webkit-border-radius: inherit;
+	border-radius: inherit;
+}
+/* selectVegitarian */
+.searchPage_selectVegitarian {
+	-webkit-border-radius: inherit;
+	border-radius: inherit;
+}
+/* selectVegan */
+.searchPage_selectVegan {
+	-webkit-border-radius: inherit;
+	border-radius: inherit;
+}
+/* selectGlutenFree */
+.searchPage_selectGlutenFree {
+	-webkit-border-radius: inherit;
+	border-radius: inherit;
+}
+/* selectPaleo */
+.searchPage_selectPaleo {
+	-webkit-border-radius: inherit;
+	border-radius: inherit;
+}
+/* cuisinePanelBack */
+#searchPage_cuisinePanelBack {
+
+}
+.ui-btn.searchPage_cuisinePanelBack {
+	margin: 4px 5px 4px 5px;
+}
+/* ingredientPopup */
+.searchPage_ingredientPopup {
+
+}
+div.searchPage_ingredientPopup {
+	max-height: 100vh;
+	box-sizing: border-box;
+}
+div.searchPage_ingredientPopup .ui-popup-content-wrapper {
+	width:100%;
+	height:100%;
+	max-height: 99vh;
+	overflow:auto;
+	box-sizing: border-box;
+}
+/* ingredientDescriptionLabel */
+.searchPage_ingredientDescriptionLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #0ec40a; text-align: center; font-family: Helvetica; font-size: 14px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* ingredientField */
+.searchPage_ingredientField {
+	margin: 4px 0px 4px 0px;
+}
+/* ingredientEnterButton */
+#searchPage_ingredientEnterButton {
+
+}
+.ui-btn.searchPage_ingredientEnterButton {
+	margin: 4px 5px 4px 5px;
+}
+/* distancePopup */
+.searchPage_distancePopup {
+
+}
+div.searchPage_distancePopup {
+	max-height: 100vh;
+	box-sizing: border-box;
+}
+div.searchPage_distancePopup .ui-popup-content-wrapper {
+	width:100%;
+	height:100%;
+	max-height: 99vh;
+	overflow:auto;
+	box-sizing: border-box;
+}
+/* distancePopupLabel */
+.searchPage_distancePopupLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #0ec40a; text-align: center; font-family: Helvetica; font-size: 14px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* distanceRadio */
+.searchPage_distanceRadio {
+	margin: 4px 0px 4px 0px;
+}
+/* radio2blocks */
+.searchPage_radio2blocks {
+	-webkit-border-radius: inherit;
+	border-radius: inherit;
+}
+/* radio8blocks */
+.searchPage_radio8blocks {
+	-webkit-border-radius: inherit;
+	border-radius: inherit;
+}
+/* radio1mile */
+.searchPage_radio1mile {
+	-webkit-border-radius: inherit;
+	border-radius: inherit;
+}
+/* radio5miles */
+.searchPage_radio5miles {
+	-webkit-border-radius: inherit;
+	border-radius: inherit;
+}
+/* radio10miles */
+.searchPage_radio10miles {
+	-webkit-border-radius: inherit;
+	border-radius: inherit;
+}
+/* distanceOK */
+#searchPage_distanceOK {
+
+}
+.ui-btn.searchPage_distanceOK {
+	margin: 10px 5px 4px 5px;
+}
+/* ratingPopup */
+.searchPage_ratingPopup {
+
+}
+div.searchPage_ratingPopup {
+	max-height: 100vh;
+	box-sizing: border-box;
+}
+div.searchPage_ratingPopup .ui-popup-content-wrapper {
+	width:100%;
+	height:100%;
+	max-height: 99vh;
+	overflow:auto;
+	box-sizing: border-box;
+}
+/* ratingFilterLabel */
+.searchPage_ratingFilterLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #0ec40a; text-align: center; font-family: Helvetica; font-size: 14px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* ratingSearchChoices */
+.ui-controlgroup.searchPage_ratingSearchChoices {
+	margin: 4px 5px 4px 5px;
+}
+.ui-controlgroup.searchPage_ratingSearchChoices .ui-btn {
+	margin: 0 -1px 0 0;
+	max-width: 100%;
+}
+.ui-controlgroup.searchPage_ratingSearchChoices .ui-controlgroup-controls {
+	max-width: 100%;
+}
+/* star1Select */
+#searchPage_star1Select {
+
+}
+.ui-btn.searchPage_star1Select {
+
+}
+/* star2Select */
+#searchPage_star2Select {
+
+}
+.ui-btn.searchPage_star2Select {
+
+}
+/* star3Select */
+#searchPage_star3Select {
+
+}
+.ui-btn.searchPage_star3Select {
+
+}
+/* star4Select */
+#searchPage_star4Select {
+
+}
+.ui-btn.searchPage_star4Select {
+
+}
+/* star5Select */
+#searchPage_star5Select {
+
+}
+.ui-btn.searchPage_star5Select {
+
+}
+/* ratingOK */
+#searchPage_ratingOK {
+
+}
+.ui-btn.searchPage_ratingOK {
+	margin: 4px 5px 4px 5px;
+}
+/* cuisinePopup */
+.searchPage_cuisinePopup {
+
+}
+div.searchPage_cuisinePopup {
+	max-height: 100vh;
+	box-sizing: border-box;
+}
+div.searchPage_cuisinePopup .ui-popup-content-wrapper {
+	width:100%;
+	height:100%;
+	max-height: 99vh;
+	overflow:auto;
+	box-sizing: border-box;
+}
+/* cuisinePopupLabel */
+.searchPage_cuisinePopupLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #0ec40a; text-align: center; font-family: Helvetica; font-size: 14px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* mobilesearchbar_90 */
+.searchPage_mobilesearchbar_90 {
+	margin: 4px 0px 4px 0px;
+}
+#searchPage_mobilesearchbar_90-cover-div {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	margin: 9px 7px 8px 7px;
+	z-index: 9999;
+}
+/* cuisineOK */
+#searchPage_cuisineOK {
+
+}
+.ui-btn.searchPage_cuisineOK {
+	margin: 10px 5px 4px 5px;
+}
+/* mobilecheckboxgroup_92 */
+.searchPage_mobilecheckboxgroup_92 {
+	margin: 4px 0px 4px 0px;
+}
+/* mobilecheckbox_93 */
+.searchPage_mobilecheckbox_93 {
+	-webkit-border-radius: inherit;
+	border-radius: inherit;
+}
+/* mobilecheckbox_94 */
+.searchPage_mobilecheckbox_94 {
+	-webkit-border-radius: inherit;
+	border-radius: inherit;
+}
+/* mobilecheckbox_95 */
+.searchPage_mobilecheckbox_95 {
+	-webkit-border-radius: inherit;
+	border-radius: inherit;
+}
+/* mobilecheckbox_96 */
+.searchPage_mobilecheckbox_96 {
+	-webkit-border-radius: inherit;
+	border-radius: inherit;
+}
+/* mobilecheckbox_97 */
+.searchPage_mobilecheckbox_97 {
+	-webkit-border-radius: inherit;
+	border-radius: inherit;
+}
+/* mobilecheckbox_98 */
+.searchPage_mobilecheckbox_98 {
+	-webkit-border-radius: inherit;
+	border-radius: inherit;
+}
+/* mobilecheckbox_99 */
+.searchPage_mobilecheckbox_99 {
+	-webkit-border-radius: inherit;
+	border-radius: inherit;
+}
+/* mobilecheckbox_100 */
+.searchPage_mobilecheckbox_100 {
+	-webkit-border-radius: inherit;
+	border-radius: inherit;
+}
+/* mobilecheckbox_101 */
+.searchPage_mobilecheckbox_101 {
+	-webkit-border-radius: inherit;
+	border-radius: inherit;
+}
+/* mobilecheckbox_102 */
+.searchPage_mobilecheckbox_102 {
+	-webkit-border-radius: inherit;
+	border-radius: inherit;
+}
+/* pricePopup */
+.searchPage_pricePopup {
+
+}
+div.searchPage_pricePopup {
+	max-height: 100vh;
+	box-sizing: border-box;
+}
+div.searchPage_pricePopup .ui-popup-content-wrapper {
+	width:100%;
+	height:100%;
+	max-height: 99vh;
+	overflow:auto;
+	box-sizing: border-box;
+}
+/* pricePopupLabel */
+.searchPage_pricePopupLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #0ec40a; text-align: center; font-family: Helvetica; font-size: 14px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* mobilecheckboxgroup_104 */
+.searchPage_mobilecheckboxgroup_104 {
+	margin: 4px 0px 4px 0px;
+}
+/* mobilecheckbox_105 */
+.searchPage_mobilecheckbox_105 {
+	-webkit-border-radius: inherit;
+	border-radius: inherit;
+}
+/* mobilecheckbox_106 */
+.searchPage_mobilecheckbox_106 {
+	-webkit-border-radius: inherit;
+	border-radius: inherit;
+}
+/* mobilecheckbox_107 */
+.searchPage_mobilecheckbox_107 {
+	-webkit-border-radius: inherit;
+	border-radius: inherit;
+}
+/* mobilecheckbox_108 */
+.searchPage_mobilecheckbox_108 {
+	-webkit-border-radius: inherit;
+	border-radius: inherit;
+}
+/* priceOK */
+#searchPage_priceOK {
+
+}
+.ui-btn.searchPage_priceOK {
+	margin: 4px 5px 4px 5px;
+}
+/* dietaryPopup */
+.searchPage_dietaryPopup {
+
+}
+div.searchPage_dietaryPopup {
+	max-height: 100vh;
+	box-sizing: border-box;
+}
+div.searchPage_dietaryPopup .ui-popup-content-wrapper {
+	width:100%;
+	height:100%;
+	max-height: 99vh;
+	overflow:auto;
+	box-sizing: border-box;
+}
+/* dietaryPopupLabel */
+.searchPage_dietaryPopupLabel {
+	text-decoration: none; font-weight: normal; color: #0ec40a; text-align: center; font-family: Helvetica; font-size: 14px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* dietaryChoices */
+.searchPage_dietaryChoices {
+	margin: 4px 0px 4px 0px;
+}
+/* glutenFreeSelect */
+.searchPage_glutenFreeSelect {
+	-webkit-border-radius: inherit;
+	border-radius: inherit;
+}
+/* halalSelect */
+.searchPage_halalSelect {
+	-webkit-border-radius: inherit;
+	border-radius: inherit;
+}
+/* jainSelect */
+.searchPage_jainSelect {
+	-webkit-border-radius: inherit;
+	border-radius: inherit;
+}
+/* kosherSelect */
+.searchPage_kosherSelect {
+	-webkit-border-radius: inherit;
+	border-radius: inherit;
+}
+/* paleoSelect */
+.searchPage_paleoSelect {
+	-webkit-border-radius: inherit;
+	border-radius: inherit;
+}
+/* veganSelect */
+.searchPage_veganSelect {
+	-webkit-border-radius: inherit;
+	border-radius: inherit;
+}
+/* vegitarianSelect */
+.searchPage_vegitarianSelect {
+	-webkit-border-radius: inherit;
+	border-radius: inherit;
+}
+/* dietaryOK */
+#searchPage_dietaryOK {
+
+}
+.ui-btn.searchPage_dietaryOK {
+	margin: 4px 5px 4px 5px;
+}
+/* loginPopup */
+.searchPage_loginPopup {
+
+}
+div.searchPage_loginPopup {
+	max-height: 100vh;
+	box-sizing: border-box;
+}
+div.searchPage_loginPopup .ui-popup-content-wrapper {
+	width:100%;
+	height:100%;
+	max-height: 99vh;
+	overflow:auto;
+	box-sizing: border-box;
+}
+/* loginPopupLabel */
+.searchPage_loginPopupLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #0ec40a; text-align: center; font-family: Helvetica; font-size: 14px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* mobilegrid_123 */
+.searchPage_mobilegrid_123 {
+	height: auto;
+	width:100%;
+	margin: 4px 0px 4px 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.searchPage_mobilegrid_123_wrapper {
+
+}
+.searchPage_mobilegrid_123 > tr > td {
+	vertical-align: top;
+}
+.searchPage_mobilegrid_123_row_0, .searchPage_mobilegrid_123_row_0 > td {
+	height: 30px
+}
+/* mobilegridcell_124 */
+.searchPage_mobilegridcell_124 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.searchPage_mobilegridcell_124 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* loginPopupCancelButton */
+#searchPage_loginPopupCancelButton {
+
+}
+.ui-btn.searchPage_loginPopupCancelButton {
+	margin: 4px 5px 4px 5px;
+}
+/* mobilegridcell_125 */
+.searchPage_mobilegridcell_125 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.searchPage_mobilegridcell_125 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* loginPopupButton */
+#searchPage_loginPopupButton {
+
+}
+.ui-btn.searchPage_loginPopupButton {
+	margin: 4px 5px 4px 5px;
+}

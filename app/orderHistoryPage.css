@@ -1,0 +1,33 @@
+
+/* Define default spinner */
+.ui-icon-loading {
+	background: url("../libs/jquerymobile/1.4.5/images/ajax-loader.gif") repeat scroll 0 0 / 46px 46px transparent!important;
+}
+/* navigateButton */
+#orderHistoryPage_navigateButton {
+
+}
+.ui-btn.orderHistoryPage_navigateButton {
+
+}
+/* orderHistoryContainer */
+.ui-content.orderHistoryPage_orderHistoryContainer {
+	padding: 15px 15px 15px 15px;
+}
+/* sortButton */
+.orderHistoryPage_sortButton {
+	margin: 4px 5px 4px 5px;
+}
+/* oderHistoryList */
+.ui-page .orderHistoryPage_oderHistoryList {
+	margin: 10px -15px 0px -15px;
+}
+/* orderHistoryItem */
+/* mobilelistitembutton_7 */
+.orderHistoryPage_mobilelistitembutton_7 {
+
+}
+/* orderHistoryFooter */
+.orderHistoryPage_orderHistoryFooter {
+	min-height:38px;
+}

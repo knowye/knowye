@@ -1,0 +1,26 @@
+
+/* Define default spinner */
+.ui-icon-loading {
+	background: url("../libs/jquerymobile/1.4.5/images/ajax-loader.gif") repeat scroll 0 0 / 46px 46px transparent!important;
+}
+/* navigateButton */
+#easterEggPage_navigateButton {
+
+}
+.ui-btn.easterEggPage_navigateButton {
+
+}
+/* easterEggContainerer */
+.ui-content.easterEggPage_easterEggContainerer {
+	padding: 15px 15px 15px 15px;
+}
+/* easterEggImage */
+.easterEggPage_easterEggImage {
+	margin: 4px 0px 4px 0px;
+	width: 200px; height: 356px;
+	display: block;
+}
+/* easterEggFooter */
+.easterEggPage_easterEggFooter {
+	min-height:38px;
+}

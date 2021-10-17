@@ -1,0 +1,121 @@
+
+/* Define default spinner */
+.ui-icon-loading {
+	background: url("../libs/jquerymobile/1.4.5/images/ajax-loader.gif") repeat scroll 0 0 / 46px 46px transparent!important;
+}
+/* navigateButton */
+#zzpromoEdit_navigateButton {
+
+}
+.ui-btn.zzpromoEdit_navigateButton {
+
+}
+/* promoEditContainer */
+.ui-content.zzpromoEdit_promoEditContainer {
+	padding: 15px 15px 15px 15px;
+}
+/* promoTitleLabel */
+.zzpromoEdit_promoTitleLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; text-align: left; font-family: Helvetica; font-size: 16px;
+	margin: 4px 2px 2px 2px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* promoTitleField */
+.zzpromoEdit_promoTitleField {
+	margin: 4px 2px 2px 2px;
+}
+/* promoDetailLabel */
+.zzpromoEdit_promoDetailLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; text-align: left; font-family: Helvetica; font-size: 16px;
+	margin: 20px 2px 2px 2px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* promoDetailField */
+.zzpromoEdit_promoDetailField {
+	margin: 4px 2px 2px 2px;
+}
+/* promoExpireLabel */
+.zzpromoEdit_promoExpireLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; text-align: left; font-family: Helvetica; font-size: 16px;
+	margin: 20px 2px 2px 2px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* mobiletextinput_7 */
+.zzpromoEdit_mobiletextinput_7 {
+	margin: 4px 2px 2px 2px;
+}
+/* promoEditButtonGrid */
+.zzpromoEdit_promoEditButtonGrid {
+	height: auto;
+	width:100%;
+	margin: 20px 2px 2px 2px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.zzpromoEdit_promoEditButtonGrid_wrapper {
+
+}
+.zzpromoEdit_promoEditButtonGrid > tr > td {
+	vertical-align: top;
+}
+.zzpromoEdit_promoEditButtonGrid_row_0, .zzpromoEdit_promoEditButtonGrid_row_0 > td {
+	height: 30px
+}
+/* mobilegridcell_9 */
+.zzpromoEdit_mobilegridcell_9 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.zzpromoEdit_mobilegridcell_9 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* mobilebutton_14 */
+#zzpromoEdit_mobilebutton_14 {
+
+}
+.ui-btn.zzpromoEdit_mobilebutton_14 {
+	margin: 0px 0px 0px 0px;
+}
+/* mobilegridcell_10 */
+.zzpromoEdit_mobilegridcell_10 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.zzpromoEdit_mobilegridcell_10 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* promoDeleteButton */
+#zzpromoEdit_promoDeleteButton {
+
+}
+.ui-btn.zzpromoEdit_promoDeleteButton {
+	margin: 0px 0px 0px 0px;
+}
+/* mobilegridcell_13 */
+.zzpromoEdit_mobilegridcell_13 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.zzpromoEdit_mobilegridcell_13 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* pr */
+#zzpromoEdit_pr {
+
+}
+.ui-btn.zzpromoEdit_pr {
+	margin: 0px 0px 0px 0px;
+}
+/* mobilefooter */
+.zzpromoEdit_mobilefooter {
+	min-height:38px;
+}

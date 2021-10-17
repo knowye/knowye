@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>
+            itemManagePage
+        </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, viewport-fit=cover">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="msapplication-tap-highlight" content="no">
+        <!-- Enable all requests, inline styles, and eval() -->
+        <meta http-equiv="Content-Security-Policy" content="default-src * gap://ready data:; style-src 'self' 'unsafe-inline' *; script-src 'self' 'unsafe-inline' 'unsafe-eval' *">
+        <!-- Uncomment link and meta tags below to activate PWA icons and theme color -->
+        <!-- link rel="manifest" href="../manifest.json" crossOrigin="use-credentials" -->
+        <!-- meta name="theme-color" content="#ffffff" -->
+        <link href="../css/theme/jqm/jqm.css" rel="stylesheet" />
+        <link href="../css/theme/KnoWYE3/KnoWYE3.css" rel="stylesheet" />
+        <link href="../libs/jquerymobile/1.4.5/jquery.mobile.structure-1.4.5.css" rel="stylesheet"
+        />
+        <link type="text/css" rel="stylesheet" href="../css/logblock.css" />
+        <link type="text/css" rel="stylesheet" href="../css/menuPageBuilder.css" />
+        <link type="text/css" rel="stylesheet" href="../css/common.css" />
+        <link type="text/css" rel="stylesheet" href="../css/header_footer.css" />
+        <link type="text/css" rel="stylesheet" href="../css/button.css" />
+        <link type="text/css" rel="stylesheet" href="../css/label.css" />
+        <link type="text/css" rel="stylesheet" href="../css/FontRoboto.css.css" />
+        <!-- Uncomment this script to activate service worker -->
+        <!-- <script>
+        if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('../sw.js')
+        .then(() => console.log('service worker installed'))
+        .catch(err => console.error('Error', err));
+        }
+        </script>
+        -->
+        <script type="text/javascript" src="../libs/underscore/underscore.js">
+        </script>
+        <script type="text/javascript" src="../libs/store/json2.js">
+        </script>
+        <script type="text/javascript" src="../libs/jquery/jquery-2.1.1.js">
+        </script>
+        <script type="text/javascript" src="../libs/jquery/jquery-ajaxTransport.js">
+        </script>
+        <script type="text/javascript">
+            $(document).bind("mobileinit", function() {
+                if (navigator.userAgent.toLowerCase().indexOf("android") != -1) {
+                    $.mobile.defaultPageTransition = 'none';
+                    $.mobile.defaultDialogTransition = 'none';
+                } else if (navigator.userAgent.toLowerCase().indexOf("msie") != -1) {
+                    $.mobile.allowCrossDomainPages = true;
+                    $.support.cors = true;
+                } else if (navigator.userAgent.match(/(iPad|iPhone|iPod)/g)) {
+                    $.mobile.hashListeningEnabled = false;
+                }
+            });
+        </script>
+        <script type="text/javascript" src="../libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.js">
+        </script>
+        <script type="text/javascript" src="../libs/apperyio/mobilebase.js">
+        </script>
+        <script type="text/javascript" src="../libs/event/customEventHandler.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/sha1.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/oauth.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/contexts.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/jquery.xml2json.min.js">
+        </script>
+        <script type="text/javascript" src="../libs/ms_sdk_bundle/client-sdk.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/appery.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/component-manager.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/mapping-impl.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/entity-api.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/login.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/storage-api.js">
+        </script>
+        <script type="text/javascript" src="../get_target_platform.js">
+        </script>
+        <script type="text/javascript" src="../cordova.js">
+        </script>
+        <link href="../libs/apperyio/mobilebase.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="../js/services/model.js">
+        </script>
+        <script type="text/javascript" src="../js/menuHeadingManagePageBuilder.js">
+        </script>
+        <script type="text/javascript" src="../js/navigatePageManager.js">
+        </script>
+        <script type="text/javascript" src="../js/logblock.js">
+        </script>
+        <script type="text/javascript" src="../js/Facebook_Helper.js">
+        </script>
+        <script type="text/javascript" src="../js/menuHeadingManager.js">
+        </script>
+        <script type="text/javascript" src="../js/menuPageBuilder.js">
+        </script>
+        <script type="text/javascript" src="../js/jquery-ui.min.js">
+        </script>
+        <script type="text/javascript" src="../js/common.js">
+        </script>
+        <script type="text/javascript" src="../js/clipboard.js">
+        </script>
+        <script type="text/javascript" src="../js/FileUploadHelper.js">
+        </script>
+        <script type="text/javascript" src="../js/zzqrCodeScaner.js">
+        </script>
+        <script type="text/javascript" src="../js/menuHistoryManager.js">
+        </script>
+        <script type="text/javascript" src="../js/GoogleCharts.js">
+        </script>
+        <script type="text/javascript" src="../js/services/service.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/databaseUtils.js">
+        </script>
+        <script type="text/javascript" src="../js/secure.js">
+        </script>
+<script type="text/javascript" src="../js/EncodeDecodeJS.js">
+        </script>
+    </head>
+    
+    <body>
+        <script language="JavaScript" type="text/javascript">
+        </script>
+        <div data-role="page" style="min-height:480px;" dsid="itemManagePage" id="itemManagePage"
+        class="type-interior" data-theme="b">
+            <!-- itemHeader -->
+            <div data-role="header" data-position="fixed" data-add-back-btn="true" data-back-btn-text="&nbsp;"
+            data-theme="b" name="itemHeader" id="itemManagePage_itemHeader" class="itemManagePage_itemHeader">
+                <h1 dsid="itemHeader">
+                    menu items
+                </h1>
+                <!-- homeButton --><!--
+                --><a data-role="button" name="homeButton" dsid="homeButton" class="itemManagePage_homeButton ui-btn-right"
+                style='min-height:20px; ' id="itemManagePage_homeButton" data-corners="true" data-icon="home"
+                data-iconpos="notext" x-apple-data-detectors="false" data-inline='true' data-mini='true'
+                data-theme="b" tabindex="5">
+                &nbsp;
+                </a>
+            </div>
+            <!-- dishManageContainer -->
+            <div data-role="content" id="itemManagePage_dishManageContainer" name="dishManageContainer"
+            class="ui-li-container  itemManagePage_dishManageContainer ui-content" dsid="dishManageContainer"
+            data-theme="b">
+                <link href="itemManagePage.css" rel="stylesheet" type="text/css" />
+                <script type="text/javascript" src="itemManagePage.js">
+                </script>
+                <!-- manageItemLabel -->
+                <div name="manageItemLabel" id="itemManagePage_manageItemLabel" dsid="manageItemLabel"
+                data-role="appery_label" class="labelOnDark  itemManagePage_manageItemLabel">
+                    click the add item button add a new item or long-press an item to edit it
+                </div>
+                <!-- buttonGridItemAddPreview -->
+                <div class="itemManagePage_buttonGridItemAddPreview_wrapper" data-wrapper-for="buttonGridItemAddPreview">
+                    <table id="itemManagePage_buttonGridItemAddPreview" class="itemManagePage_buttonGridItemAddPreview"
+                    dsid="buttonGridItemAddPreview" name="buttonGridItemAddPreview" cellpadding=0 cellspacing=0>
+                        <col style="width:auto;" />
+                        <col style="width:auto;" />
+                        <tr class="itemManagePage_buttonGridItemAddPreview_row_0">
+                            <!-- cellAdd -->
+                            <td id="itemManagePage_cellAdd" name="cellAdd" class="itemManagePage_cellAdd" colspan=1
+                            rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- itemAddButton --><!--
+                                    --><a data-role="button" name="itemAddButton" dsid="itemAddButton" class="scanMenuButton  itemManagePage_itemAddButton"
+                                    id="itemManagePage_itemAddButton" data-corners="true" data-icon="plus" data-iconpos="right"
+                                    x-apple-data-detectors="false" data-mini="true" data-theme="b" tabindex="1">
+                                    add item
+                                    </a>
+                                </div>
+                            </td>
+                            <!-- cellPreview -->
+                            <td id="itemManagePage_cellPreview" name="cellPreview" class="itemManagePage_cellPreview"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- sortItemButton -->
+                                    <div data-role="fieldcontain" class="itemManagePage_sortItemButton scanMenuButton">
+                                        <select name="sortItemButton" id="itemManagePage_sortItemButton" dsid="sortItemButton"
+                                        data-theme="b" data-role="appery_selectmenu" data-inline="false" data-mini="true"
+                                        data-icon="carat-d" data-iconpos="right" data-native-menu="false" tabindex="6" appery-class="itemManagePage_sortItemButton">
+                                            <option id="itemManagePage_sortItemButton-0" value="Veni" reRender="sortItemButton"
+                                            dsid="sortItemButton-0" selected="selected">
+                                                alphabetic
+                                            </option>
+                                            <option id="itemManagePage_sortItemButton-1" value="Vidi" reRender="sortItemButton"
+                                            dsid="sortItemButton-1">
+                                                favorites
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- menuItemsList -->
+                <ul data-role="listview" id="itemManagePage_menuItemsList" class="itemManagePage_menuItemsList"
+                name="menuItemsList" dsid="menuItemsList" data-theme="b" data-divider-theme="b" data-count-theme="b"
+                style="" data-split-icon="carat-r">
+                    <!-- menuItem -->
+                    <li id="itemManagePage_menuItem" name="menuItem" dsid="menuItem" tabindex="3" data-icon="none"
+                    class="itemManagePage_menuItem  ui-btn ui-btn-icon-right ui-icon-none">
+                        <div class="ui-li-static-container ui-btn">
+                            <!-- itemName -->
+                            <div name="itemName" id="itemManagePage_itemName" dsid="itemName" data-role="appery_label"
+                            class="labelMenuItem  itemManagePage_itemName">
+                                item name
+                            </div>
+                            <!-- itemDescription -->
+                            <div name="itemDescription" id="itemManagePage_itemDescription" dsid="itemDescription"
+                            data-role="appery_label" class="labelMenuDescription  itemManagePage_itemDescription">
+                                item description
+                            </div>
+                            <!-- priceGrid -->
+                            <div class="itemManagePage_priceGrid_wrapper" data-wrapper-for="priceGrid">
+                                <table id="itemManagePage_priceGrid" class="itemManagePage_priceGrid" dsid="priceGrid"
+                                name="priceGrid" cellpadding=0 cellspacing=0>
+                                    <col style="width:22px;" />
+                                    <col style="width:51px;" />
+                                    <col style="width:auto;" />
+                                    <tr class="itemManagePage_priceGrid_row_0">
+                                        <!-- dollarCell -->
+                                        <td id="itemManagePage_dollarCell" name="dollarCell" class="itemManagePage_dollarCell"
+                                        colspan=1 rowspan=1>
+                                            <div class="cell-wrapper">
+                                                <!-- dollarLabel -->
+                                                <div name="dollarLabel" id="itemManagePage_dollarLabel" dsid="dollarLabel" data-role="appery_label"
+                                                class="labelMenuDollar  itemManagePage_dollarLabel">
+                                                    $
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <!-- priceCell -->
+                                        <td id="itemManagePage_priceCell" name="priceCell" class="itemManagePage_priceCell"
+                                        colspan=1 rowspan=1>
+                                            <div class="cell-wrapper">
+                                                <!-- price -->
+                                                <div name="price" id="itemManagePage_price" dsid="price" data-role="appery_label"
+                                                class="labelMenuPrice  itemManagePage_price">
+                                                    price
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <!-- mobilegridcell_10 -->
+                                        <td id="itemManagePage_mobilegridcell_10" name="mobilegridcell_10" class="itemManagePage_mobilegridcell_10"
+                                        colspan=1 rowspan=1>
+                                            <div class="cell-wrapper">
+                                                <!-- hiddenStatus -->
+                                                <div name="hiddenStatus" id="itemManagePage_hiddenStatus" dsid="hiddenStatus" data-role="appery_label"
+                                                class="labelUnavailable  itemManagePage_hiddenStatus">
+                                                    UNAVAILABLE
+                                                </div>
+                                                <!-- inactiveLabel -->
+                                                <div name="inactiveLabel" id="itemManagePage_inactiveLabel" dsid="inactiveLabel"
+                                                data-role="appery_label" class="labelUnavailable  itemManagePage_inactiveLabel">
+                                                    INACTIVE
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </body>
+
+</html>

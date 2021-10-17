@@ -1,0 +1,38 @@
+html body div.myButton {
+    background: red;
+    color: blue;
+    text-align: right;
+    font-size: 10px;
+}
+
+
+.customButton1 {
+    color:blue;
+    font-weight:bold;
+    font-size:24px;
+}
+
+.customButton2 {
+    background: red;
+    color: blue;
+    font-weight:bolder;
+    font-size:36px;
+}
+
+.expand-collapse-container {
+    /*border: solid white;*/
+    text-align: center;
+    border-width: 2px 2px;
+    position: relative;
+    width: fit-content;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    float: right;
+    margin-right: 4px;
+}
+
+
+.relative {
+    position: relative;
+}

@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>
+            zzmenuPage
+        </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, viewport-fit=cover">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="msapplication-tap-highlight" content="no">
+        <!-- Enable all requests, inline styles, and eval() -->
+        <meta http-equiv="Content-Security-Policy" content="default-src * gap://ready data:; style-src 'self' 'unsafe-inline' *; script-src 'self' 'unsafe-inline' 'unsafe-eval' *">
+        <!-- Uncomment link and meta tags below to activate PWA icons and theme color -->
+        <!-- link rel="manifest" href="../manifest.json" crossOrigin="use-credentials" -->
+        <!-- meta name="theme-color" content="#ffffff" -->
+        <link href="../css/theme/jqm/jqm.css" rel="stylesheet" />
+        <link href="../css/theme/KnoWYE3/KnoWYE3.css" rel="stylesheet" />
+        <link href="../libs/jquerymobile/1.4.5/jquery.mobile.structure-1.4.5.css" rel="stylesheet"
+        />
+        <link type="text/css" rel="stylesheet" href="../css/logblock.css" />
+        <link type="text/css" rel="stylesheet" href="../css/menuPageBuilder.css" />
+        <link type="text/css" rel="stylesheet" href="../css/common.css" />
+        <link type="text/css" rel="stylesheet" href="../css/header_footer.css" />
+        <link type="text/css" rel="stylesheet" href="../css/button.css" />
+        <link type="text/css" rel="stylesheet" href="../css/label.css" />
+        <link type="text/css" rel="stylesheet" href="../css/FontRoboto.css.css" />
+        <!-- Uncomment this script to activate service worker -->
+        <!-- <script>
+        if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('../sw.js')
+        .then(() => console.log('service worker installed'))
+        .catch(err => console.error('Error', err));
+        }
+        </script>
+        -->
+        <script type="text/javascript" src="../libs/underscore/underscore.js">
+        </script>
+        <script type="text/javascript" src="../libs/store/json2.js">
+        </script>
+        <script type="text/javascript" src="../libs/jquery/jquery-2.1.1.js">
+        </script>
+        <script type="text/javascript" src="../libs/jquery/jquery-ajaxTransport.js">
+        </script>
+        <script type="text/javascript">
+            $(document).bind("mobileinit", function() {
+                if (navigator.userAgent.toLowerCase().indexOf("android") != -1) {
+                    $.mobile.defaultPageTransition = 'none';
+                    $.mobile.defaultDialogTransition = 'none';
+                } else if (navigator.userAgent.toLowerCase().indexOf("msie") != -1) {
+                    $.mobile.allowCrossDomainPages = true;
+                    $.support.cors = true;
+                } else if (navigator.userAgent.match(/(iPad|iPhone|iPod)/g)) {
+                    $.mobile.hashListeningEnabled = false;
+                }
+            });
+        </script>
+        <script type="text/javascript" src="../libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.js">
+        </script>
+        <script type="text/javascript" src="../libs/apperyio/mobilebase.js">
+        </script>
+        <script type="text/javascript" src="../libs/event/customEventHandler.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/sha1.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/oauth.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/contexts.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/jquery.xml2json.min.js">
+        </script>
+        <script type="text/javascript" src="../libs/ms_sdk_bundle/client-sdk.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/appery.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/component-manager.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/mapping-impl.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/entity-api.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/login.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/storage-api.js">
+        </script>
+        <script type="text/javascript" src="../get_target_platform.js">
+        </script>
+        <script type="text/javascript" src="../cordova.js">
+        </script>
+        <link href="../libs/apperyio/mobilebase.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="../js/services/model.js">
+        </script>
+        <script type="text/javascript" src="../js/menuHeadingManagePageBuilder.js">
+        </script>
+        <script type="text/javascript" src="../js/navigatePageManager.js">
+        </script>
+        <script type="text/javascript" src="../js/logblock.js">
+        </script>
+        <script type="text/javascript" src="../js/Facebook_Helper.js">
+        </script>
+        <script type="text/javascript" src="../js/menuHeadingManager.js">
+        </script>
+        <script type="text/javascript" src="../js/menuPageBuilder.js">
+        </script>
+        <script type="text/javascript" src="../js/jquery-ui.min.js">
+        </script>
+        <script type="text/javascript" src="../js/common.js">
+        </script>
+        <script type="text/javascript" src="../js/clipboard.js">
+        </script>
+        <script type="text/javascript" src="../js/FileUploadHelper.js">
+        </script>
+        <script type="text/javascript" src="../js/zzqrCodeScaner.js">
+        </script>
+        <script type="text/javascript" src="../js/menuHistoryManager.js">
+        </script>
+        <script type="text/javascript" src="../js/GoogleCharts.js">
+        </script>
+        <script type="text/javascript" src="../js/services/service.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/databaseUtils.js">
+        </script>
+        <script type="text/javascript" src="../js/secure.js">
+        </script>
+<script type="text/javascript" src="../js/EncodeDecodeJS.js">
+        </script>
+    </head>
+    
+    <body>
+        <script language="JavaScript" type="text/javascript">
+        </script>
+        <div data-role="page" style="min-height:480px;" dsid="zzmenuPage" id="zzmenuPage"
+        class="type-interior" data-theme="b">
+            <!-- headingManageHeader -->
+            <div data-role="header" data-position="fixed" data-add-back-btn="true" data-back-btn-text="&nbsp;"
+            data-theme="b" name="headingManageHeader" id="zzmenuPage_headingManageHeader" class="zzmenuPage_headingManageHeader">
+                <h1 dsid="headingManageHeader">
+                    Menu
+                </h1>
+                <!-- navigateButton --><!--
+                --><a data-role="button" name="navigateButton" dsid="navigateButton" class="zzmenuPage_navigateButton ui-btn-right"
+                style='min-height:20px; ' id="zzmenuPage_navigateButton" data-corners="true" data-icon="home"
+                data-iconpos="notext" x-apple-data-detectors="false" data-inline='true' data-mini='true'
+                data-theme="b" tabindex="9">
+                &nbsp;
+                </a>
+            </div>
+            <!-- menuHeadingContainer -->
+            <div data-role="content" id="zzmenuPage_menuHeadingContainer" name="menuHeadingContainer"
+            class="ui-li-container  zzmenuPage_menuHeadingContainer ui-content" dsid="menuHeadingContainer"
+            data-theme="b">
+                <link href="zzmenuPage.css" rel="stylesheet" type="text/css" />
+                <script type="text/javascript" src="zzmenuPage.js">
+                </script>
+                <!-- profileUseGrid -->
+                <div class="zzmenuPage_profileUseGrid_wrapper" data-wrapper-for="profileUseGrid">
+                    <table id="zzmenuPage_profileUseGrid" class="zzmenuPage_profileUseGrid" dsid="profileUseGrid"
+                    name="profileUseGrid" cellpadding=0 cellspacing=0>
+                        <col style="width:auto;" />
+                        <col style="width:auto;" />
+                        <col style="width:auto;" />
+                        <tr class="zzmenuPage_profileUseGrid_row_0">
+                            <!-- profileUseLabelCell -->
+                            <td id="zzmenuPage_profileUseLabelCell" name="profileUseLabelCell" class="zzmenuPage_profileUseLabelCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- profileUseLabel -->
+                                    <div name="profileUseLabel" id="zzmenuPage_profileUseLabel" dsid="profileUseLabel"
+                                    data-role="appery_label" class="labelOnDark  zzmenuPage_profileUseLabel">
+                                        Preferences
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- profileUseToggleCell -->
+                            <td id="zzmenuPage_profileUseToggleCell" name="profileUseToggleCell" class="zzmenuPage_profileUseToggleCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- profileUseToggle -->
+                                    <div data-role="fieldcontain" class="zzmenuPage_profileUseToggle ">
+                                        <select data-role="flipswitch" name="profileUseToggle" id="zzmenuPage_profileUseToggle"
+                                        dsid="profileUseToggle" data-theme="b" data-track-theme="b">
+                                            <option value="off">
+                                                Off
+                                            </option>
+                                            <option value="on">
+                                                On
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- collapseExpandCell -->
+                            <td id="zzmenuPage_collapseExpandCell" name="collapseExpandCell" class="zzmenuPage_collapseExpandCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- collapseExpandButton --><!--
+                                    --><a data-role="button" name="collapseExpandButton" dsid="collapseExpandButton" class="scanMenuButton  zzmenuPage_collapseExpandButton"
+                                    id="zzmenuPage_collapseExpandButton" data-corners="true" data-icon="none" data-iconpos='nowhere'
+                                    x-apple-data-detectors="false" data-mini="true" data-theme="b" tabindex="22">
+                                    + / -
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- profileSearchGrid -->
+                <div class="zzmenuPage_profileSearchGrid_wrapper" data-wrapper-for="profileSearchGrid">
+                    <table id="zzmenuPage_profileSearchGrid" class="zzmenuPage_profileSearchGrid" dsid="profileSearchGrid"
+                    name="profileSearchGrid" cellpadding=0 cellspacing=0>
+                        <col style="width:205px;" />
+                        <col style="width:auto;" />
+                        <tr class="zzmenuPage_profileSearchGrid_row_0">
+                            <!-- profileLabelCell -->
+                            <td id="zzmenuPage_profileLabelCell" name="profileLabelCell" class="zzmenuPage_profileLabelCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                </div>
+                            </td>
+                            <!-- profileToggleCell -->
+                            <td id="zzmenuPage_profileToggleCell" name="profileToggleCell" class="zzmenuPage_profileToggleCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="zzmenuPage_profileSearchGrid_row_1">
+                            <!-- searchLabelCell -->
+                            <td id="zzmenuPage_searchLabelCell" name="searchLabelCell" class="zzmenuPage_searchLabelCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- searchInput -->
+                                    <div data-role="fieldcontain" class="zzmenuPage_searchInput ">
+                                        <input type="text" name="searchInput" dsid="searchInput" value="" placeholder="Looking for something?"
+                                        id="zzmenuPage_searchInput" tabindex="3" multiple data-theme="b" data-mini="true"
+                                        class="zzmenuPage_searchInput" />
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- searchButtonCell -->
+                            <td id="zzmenuPage_searchButtonCell" name="searchButtonCell" class="zzmenuPage_searchButtonCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- searchMenuButton --><!--
+                                    --><a data-role="button" name="searchMenuButton" dsid="searchMenuButton" class="zzmenuPage_searchMenuButton"
+                                    id="zzmenuPage_searchMenuButton" data-corners="true" data-icon="search" data-iconpos="right"
+                                    x-apple-data-detectors="false" data-mini="true" data-theme="b" tabindex="19">
+                                    Search
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- menuTagLine -->
+                <div name="menuTagLine" id="zzmenuPage_menuTagLine" dsid="menuTagLine" data-role="appery_label"
+                class="labelDescription  zzmenuPage_menuTagLine">
+                    tag line
+                </div>
+                <!-- menuList -->
+                <ul data-role="listview" id="zzmenuPage_menuList" class="menu-heading-list  zzmenuPage_menuList"
+                name="menuList" dsid="menuList" data-theme="b" data-divider-theme="b" data-count-theme="b"
+                style="" data-split-icon="carat-r">
+                    <!-- headingItem -->
+                    <li id="zzmenuPage_headingItem" name="headingItem" dsid="headingItem" tabindex="15"
+                    data-icon="carat-r" class="zzmenuPage_headingItem  ui-btn ui-btn-icon-right ui-icon-carat-r">
+                        <div class="ui-li-static-container ui-btn">
+                            <!-- menuHeadingName -->
+                            <div name="menuHeadingName" id="zzmenuPage_menuHeadingName" dsid="menuHeadingName"
+                            data-role="appery_label" class="labelMenuHeading  zzmenuPage_menuHeadingName">
+                                heading name
+                            </div>
+                            <!-- menuHeadingDescription -->
+                            <div name="menuHeadingDescription" id="zzmenuPage_menuHeadingDescription" dsid="menuHeadingDescription"
+                            data-role="appery_label" class="labelMenuDescription  zzmenuPage_menuHeadingDescription">
+                                description
+                            </div>
+                            <!-- priceRatingGrid -->
+                            <div class="zzmenuPage_priceRatingGrid_wrapper" data-wrapper-for="priceRatingGrid">
+                                <table id="zzmenuPage_priceRatingGrid" class="zzmenuPage_priceRatingGrid" dsid="priceRatingGrid"
+                                name="priceRatingGrid" cellpadding=0 cellspacing=0>
+                                    <col style="width:77px;" />
+                                    <col style="width:auto;" />
+                                    <tr class="zzmenuPage_priceRatingGrid_row_0">
+                                        <!-- priceCell -->
+                                        <td id="zzmenuPage_priceCell" name="priceCell" class="zzmenuPage_priceCell" colspan=1
+                                        rowspan=1>
+                                            <div class="cell-wrapper">
+                                                <!-- priceGrid -->
+                                                <div class="zzmenuPage_priceGrid_wrapper" data-wrapper-for="priceGrid">
+                                                    <table id="zzmenuPage_priceGrid" class="zzmenuPage_priceGrid" dsid="priceGrid" name="priceGrid"
+                                                    cellpadding=0 cellspacing=0>
+                                                        <col style="width:14px;" />
+                                                        <col style="width:auto;" />
+                                                        <tr class="zzmenuPage_priceGrid_row_0">
+                                                            <!-- dollarSignCell -->
+                                                            <td id="zzmenuPage_dollarSignCell" name="dollarSignCell" class="zzmenuPage_dollarSignCell"
+                                                            colspan=1 rowspan=1>
+                                                                <div class="cell-wrapper">
+                                                                    <!-- dollarSignLabel -->
+                                                                    <div name="dollarSignLabel" id="zzmenuPage_dollarSignLabel" dsid="dollarSignLabel"
+                                                                    data-role="appery_label" class="labelMenuDollar  zzmenuPage_dollarSignLabel">
+                                                                        $
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <!-- priceAmountCell -->
+                                                            <td id="zzmenuPage_priceAmountCell" name="priceAmountCell" class="zzmenuPage_priceAmountCell"
+                                                            colspan=1 rowspan=1>
+                                                                <div class="cell-wrapper">
+                                                                    <!-- priceAmountLabel -->
+                                                                    <div name="priceAmountLabel" id="zzmenuPage_priceAmountLabel" dsid="priceAmountLabel"
+                                                                    data-role="appery_label" class="labelMenuPrice  zzmenuPage_priceAmountLabel">
+                                                                        price
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <!-- ratingCell -->
+                                        <td id="zzmenuPage_ratingCell" name="ratingCell" class="zzmenuPage_ratingCell" colspan=1
+                                        rowspan=1>
+                                            <div class="cell-wrapper">
+                                                <!-- selectItemButton --><!--
+                                                --><a data-role="button" name="selectItemButton" dsid="selectItemButton" class="scanMenuButton  zzmenuPage_selectItemButton"
+                                                id="zzmenuPage_selectItemButton" data-corners="false" data-icon="plus" data-iconpos="right"
+                                                x-apple-data-detectors="false" data-inline="true" data-mini="true" data-theme="b"
+                                                tabindex="23">
+                                                Select
+                                                </a><!--
+                                                --><!-- addWishListButton --><!--
+                                                --><a data-role="button" name="addWishListButton" dsid="addWishListButton" class="scanMenuButton  zzmenuPage_addWishListButton"
+                                                id="zzmenuPage_addWishListButton" data-corners="true" data-icon="bullets" data-iconpos="right"
+                                                x-apple-data-detectors="false" data-inline="true" data-mini="true" data-theme="b"
+                                                tabindex="24">
+                                                Add to wish list
+                                                </a><!--
+                                                --><!-- unavailableLabel -->
+                                                <div name="unavailableLabel" id="zzmenuPage_unavailableLabel" dsid="unavailableLabel"
+                                                data-role="appery_label" class="labelUnavailable  zzmenuPage_unavailableLabel">
+                                                    sorry, not available today
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- menuFooter -->
+            <div data-role="footer" data-position="fixed" class="zzmenuPage_menuFooter" name="menuFooter"
+            dsid="menuFooter" id="zzmenuPage_menuFooter" data-theme="b" data-id="persistentDataId">
+                <!-- footerGrid -->
+                <div class="zzmenuPage_footerGrid_wrapper" data-wrapper-for="footerGrid">
+                    <table id="zzmenuPage_footerGrid" class="zzmenuPage_footerGrid" dsid="footerGrid"
+                    name="footerGrid" cellpadding=0 cellspacing=0>
+                        <col style="width:auto;" />
+                        <col style="width:auto;" />
+                        <col style="width:42px;" />
+                        <tr class="zzmenuPage_footerGrid_row_0">
+                            <!-- selectedCell -->
+                            <td id="zzmenuPage_selectedCell" name="selectedCell" class="zzmenuPage_selectedCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- selectedButton --><!--
+                                    --><a data-role="button" name="selectedButton" dsid="selectedButton" class="zzmenuPage_selectedButton"
+                                    id="zzmenuPage_selectedButton" data-corners="true" data-icon="shop" data-iconpos="right"
+                                    x-apple-data-detectors="false" data-mini="false" data-theme="b" tabindex="20">
+                                    Show selected
+                                    </a>
+                                </div>
+                            </td>
+                            <!-- callServerCell -->
+                            <td id="zzmenuPage_callServerCell" name="callServerCell" class="zzmenuPage_callServerCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- callServerButton --><!--
+                                    --><a data-role="button" name="callServerButton" dsid="callServerButton" class="zzmenuPage_callServerButton"
+                                    id="zzmenuPage_callServerButton" data-corners="true" data-icon="comment" data-iconpos="right"
+                                    x-apple-data-detectors="false" data-mini="false" data-theme="b" tabindex="21">
+                                    Call server
+                                    </a>
+                                </div>
+                            </td>
+                            <!-- ownerInfoCell -->
+                            <td id="zzmenuPage_ownerInfoCell" name="ownerInfoCell" class="zzmenuPage_ownerInfoCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- ownerInfoButton --><!--
+                                    --><a data-role="button" name="ownerInfoButton" dsid="ownerInfoButton" class="zzmenuPage_ownerInfoButton"
+                                    style='min-height:20px; ' id="zzmenuPage_ownerInfoButton" data-corners="true" data-icon="location"
+                                    data-iconpos="notext" x-apple-data-detectors="false" data-mini="false" data-theme="b"
+                                    tabindex="27">
+                                    &nbsp;
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <!-- headingAddPopup -->
+            <div data-role="popup" name="headingAddPopup" dsid="headingAddPopup" id="zzmenuPage_headingAddPopup"
+            class="common-popup  zzmenuPage_headingAddPopup" data-corners="true" data-dismissible="true"
+            data-overlay-theme="" data-theme="" data-shadow="true" data-tolerance="30,15,30,15">
+                <div class="ui-popup-content-wrapper">
+                    <!-- categoryAddLabel -->
+                    <div name="categoryAddLabel" id="zzmenuPage_categoryAddLabel" dsid="categoryAddLabel"
+                    data-role="appery_label" class="labelOnLight  zzmenuPage_categoryAddLabel">
+                        Enter a new menu heading in the field below.
+                    </div>
+                    <!-- headingAddField -->
+                    <div data-role="fieldcontain" class="zzmenuPage_headingAddField ">
+                        <input type="text" name="headingAddField" dsid="headingAddField" value="" placeholder="Enter a new menu heading"
+                        id="zzmenuPage_headingAddField" tabindex="4" multiple data-theme="b" data-mini="true"
+                        class="zzmenuPage_headingAddField" />
+                    </div>
+                    <!-- headerDescriptionField -->
+                    <div data-role="fieldcontain" class="zzmenuPage_headerDescriptionField ">
+                        <textarea name="headerDescriptionField" id="zzmenuPage_headerDescriptionField" data-mini="true"
+                        tabindex="11" dsid="headerDescriptionField" data-theme="b" placeholder="Use this field to include a description or detail below the heading."
+                        class="zzmenuPage_headerDescriptionField">
+</textarea>
+                    </div>
+                    <!-- categoryParentLabel -->
+                    <div name="categoryParentLabel" id="zzmenuPage_categoryParentLabel" dsid="categoryParentLabel"
+                    data-role="appery_label" class="labelOnLight  zzmenuPage_categoryParentLabel">
+                        You can make this heading a subheading under a heading you select below
+                    </div>
+                    <!-- headingExampleLabel1 -->
+                    <div name="headingExampleLabel1" id="zzmenuPage_headingExampleLabel1" dsid="headingExampleLabel1"
+                    data-role="appery_label" class="zzmenuPage_headingExampleLabel1">
+                        Entrée
+                    </div>
+                    <!-- headingExampleLabel2 -->
+                    <div name="headingExampleLabel2" id="zzmenuPage_headingExampleLabel2" dsid="headingExampleLabel2"
+                    data-role="appery_label" class="zzmenuPage_headingExampleLabel2">
+                        Beef
+                    </div>
+                    <!-- headingExampleLabel3 -->
+                    <div name="headingExampleLabel3" id="zzmenuPage_headingExampleLabel3" dsid="headingExampleLabel3"
+                    data-role="appery_label" class="zzmenuPage_headingExampleLabel3">
+                        Chicken
+                    </div>
+                    <!-- headingParentSelect -->
+                    <div data-role="fieldcontain" class="zzmenuPage_headingParentSelect ">
+                        <select name="headingParentSelect" id="zzmenuPage_headingParentSelect" dsid="headingParentSelect"
+                        data-theme="b" data-role="appery_selectmenu" data-inline="false" data-mini="true"
+                        data-icon="arrow-d" data-iconpos="right" data-native-menu="false" tabindex="5" appery-class="zzmenuPage_headingParentSelect">
+                            <option id="zzmenuPage_headingParentSelect-0" value="" reRender="headingParentSelect"
+                            dsid="headingParentSelect-0">
+                            </option>
+                        </select>
+                    </div>
+                    <!-- headingAddSaveButton --><!--
+                    --><a data-role="button" name="headingAddSaveButton" dsid="headingAddSaveButton" class="zzmenuPage_headingAddSaveButton"
+                    id="zzmenuPage_headingAddSaveButton" data-corners="true" data-icon="check" data-iconpos="right"
+                    x-apple-data-detectors="false" data-inline="true" data-mini="true" data-theme="b"
+                    tabindex="10">
+                    Save
+                    </a>
+                </div>
+            </div>
+            <!-- categoryEditPopup -->
+            <div data-role="popup" name="categoryEditPopup" dsid="categoryEditPopup" id="zzmenuPage_categoryEditPopup"
+            class="common-popup  zzmenuPage_categoryEditPopup" data-corners="true" data-dismissible="true"
+            data-overlay-theme="" data-theme="" data-shadow="true" data-tolerance="30,15,30,15">
+                <div class="ui-popup-content-wrapper">
+                    <!-- categoryEditLabel -->
+                    <div name="categoryEditLabel" id="zzmenuPage_categoryEditLabel" dsid="categoryEditLabel"
+                    data-role="appery_label" class="labelOnLight  zzmenuPage_categoryEditLabel">
+                        Edit the category below
+                    </div>
+                    <!-- mobiletextinput_22 -->
+                    <div data-role="fieldcontain" class="zzmenuPage_mobiletextinput_22 ">
+                        <input type="text" name="mobiletextinput_22" dsid="mobiletextinput_22" value=""
+                        placeholder="" id="zzmenuPage_mobiletextinput_22" tabindex="6" multiple data-theme="b"
+                        data-mini="true" class="zzmenuPage_mobiletextinput_22" />
+                    </div>
+                    <!-- categoryParentEditLabel -->
+                    <div name="categoryParentEditLabel" id="zzmenuPage_categoryParentEditLabel" dsid="categoryParentEditLabel"
+                    data-role="appery_label" class="labelOnLight  zzmenuPage_categoryParentEditLabel">
+                        Change the parent category below
+                    </div>
+                    <!-- categoryParentEditButton -->
+                    <div data-role="fieldcontain" class="zzmenuPage_categoryParentEditButton ">
+                        <select name="categoryParentEditButton" id="zzmenuPage_categoryParentEditButton"
+                        dsid="categoryParentEditButton" data-theme="b" data-role="appery_selectmenu" data-inline="false"
+                        data-mini="true" data-icon="arrow-d" data-iconpos="right" data-native-menu="false"
+                        tabindex="7" appery-class="zzmenuPage_categoryParentEditButton">
+                            <option id="zzmenuPage_categoryParentEditButton-0" value="Appetizer" reRender="categoryParentEditButton"
+                            dsid="categoryParentEditButton-0" selected="selected">
+                                Appetizer
+                            </option>
+                            <option id="zzmenuPage_categoryParentEditButton-1" value="Beef" reRender="categoryParentEditButton"
+                            dsid="categoryParentEditButton-1">
+                                Beef
+                            </option>
+                            <option id="zzmenuPage_categoryParentEditButton-2" value="Beverage" reRender="categoryParentEditButton"
+                            dsid="categoryParentEditButton-2">
+                                Beverage
+                            </option>
+                        </select>
+                    </div>
+                    <!-- categoryEditSaveButton --><!--
+                    --><a data-role="button" name="categoryEditSaveButton" dsid="categoryEditSaveButton"
+                    class="zzmenuPage_categoryEditSaveButton" id="zzmenuPage_categoryEditSaveButton"
+                    data-corners="true" data-icon="check" data-iconpos="right" x-apple-data-detectors="false"
+                    data-inline="true" data-mini="true" data-theme="b" tabindex="8">
+                    Save
+                    </a>
+                </div>
+            </div>
+            <!-- itemIsInOrderPopup -->
+            <div data-role="popup" name="itemIsInOrderPopup" dsid="itemIsInOrderPopup" id="zzmenuPage_itemIsInOrderPopup"
+            class="common-popup  zzmenuPage_itemIsInOrderPopup" data-corners="true" data-dismissible="true"
+            data-overlay-theme="" data-theme="" data-shadow="true" data-tolerance="30,15,30,15">
+                <div class="ui-popup-content-wrapper">
+                    <!-- itemIsInOrderLabel -->
+                    <div name="itemIsInOrderLabel" id="zzmenuPage_itemIsInOrderLabel" dsid="itemIsInOrderLabel"
+                    data-role="appery_label" class="labelOnLight  zzmenuPage_itemIsInOrderLabel">
+                        This item is already selected
+                    </div>
+                </div>
+            </div>
+            <!-- addToOrderPopup -->
+            <div data-role="popup" name="addToOrderPopup" dsid="addToOrderPopup" id="zzmenuPage_addToOrderPopup"
+            class="common-popup  zzmenuPage_addToOrderPopup" data-corners="true" data-dismissible="true"
+            data-overlay-theme="" data-theme="" data-shadow="true" data-tolerance="30,15,30,15">
+                <div class="ui-popup-content-wrapper">
+                    <!-- addtoOrderLabel -->
+                    <div name="addtoOrderLabel" id="zzmenuPage_addtoOrderLabel" dsid="addtoOrderLabel"
+                    data-role="appery_label" class="labelOnLight  zzmenuPage_addtoOrderLabel">
+                        You have selected this Item
+                    </div>
+                </div>
+            </div>
+            <!-- wishListPopup -->
+            <div data-role="popup" name="wishListPopup" dsid="wishListPopup" id="zzmenuPage_wishListPopup"
+            class="common-popup  zzmenuPage_wishListPopup" data-corners="true" data-dismissible="true"
+            data-overlay-theme="" data-theme="" data-shadow="true" data-tolerance="30,15,30,15">
+                <div class="ui-popup-content-wrapper">
+                    <!-- labelStandard -->
+                    <div name="labelStandard" id="zzmenuPage_labelStandard" dsid="labelStandard" data-role="appery_label"
+                    class="labelOnLight  zzmenuPage_labelStandard">
+                        This item was added to your wish list! Do you want to include notes about why you
+                        added it or when you want to try it?
+                    </div>
+                    <!-- wishListNote -->
+                    <div data-role="fieldcontain" class="zzmenuPage_wishListNote ">
+                        <textarea name="wishListNote" id="zzmenuPage_wishListNote" data-mini="true" tabindex="25"
+                        dsid="wishListNote" data-theme="b" placeholder="Type some notes" class="zzmenuPage_wishListNote">
+</textarea>
+                    </div>
+                    <!-- closePopupButton --><!--
+                    --><a data-role="button" name="closePopupButton" dsid="closePopupButton" class="zzmenuPage_closePopupButton"
+                    id="zzmenuPage_closePopupButton" data-corners="true" data-icon="carat-d" data-iconpos="right"
+                    x-apple-data-detectors="false" data-inline="true" data-mini="true" data-theme="b"
+                    tabindex="26">
+                    Save
+                    </a>
+                </div>
+            </div>
+            <!-- wishlistConfirmPopup -->
+            <div data-role="popup" name="wishlistConfirmPopup" dsid="wishlistConfirmPopup" id="zzmenuPage_wishlistConfirmPopup"
+            class="common-popup  zzmenuPage_wishlistConfirmPopup" data-corners="true" data-dismissible="true"
+            data-overlay-theme="" data-theme="" data-shadow="true" data-tolerance="30,15,30,15">
+                <div class="ui-popup-content-wrapper">
+                    <!-- wishlistConfirmLabel -->
+                    <div name="wishlistConfirmLabel" id="zzmenuPage_wishlistConfirmLabel" dsid="wishlistConfirmLabel"
+                    data-role="appery_label" class="labelPopupNotice  zzmenuPage_wishlistConfirmLabel">
+                        This item was added to your wish list
+                    </div>
+                </div>
+            </div>
+            <!-- wishlistContainsItem -->
+            <div data-role="popup" name="wishlistContainsItem" dsid="wishlistContainsItem" id="zzmenuPage_wishlistContainsItem"
+            class="common-popup  zzmenuPage_wishlistContainsItem" data-corners="true" data-dismissible="true"
+            data-overlay-theme="" data-theme="" data-shadow="true" data-tolerance="30,15,30,15">
+                <div class="ui-popup-content-wrapper">
+                    <!-- wishListContainsItemLabel -->
+                    <div name="wishListContainsItemLabel" id="zzmenuPage_wishListContainsItemLabel"
+                    dsid="wishListContainsItemLabel" data-role="appery_label" class="labelPopupNotice  zzmenuPage_wishListContainsItemLabel">
+                        This item is already in your wish list
+                    </div>
+                </div>
+            </div>
+            <!-- loginGotoPopup -->
+            <div data-role="popup" name="loginGotoPopup" dsid="loginGotoPopup" id="zzmenuPage_loginGotoPopup"
+            class="common-popup  zzmenuPage_loginGotoPopup" data-corners="true" data-dismissible="true"
+            data-overlay-theme="" data-theme="" data-shadow="true" data-tolerance="30,15,30,15">
+                <div class="ui-popup-content-wrapper">
+                    <!-- loginGotoLabel -->
+                    <div name="loginGotoLabel" id="zzmenuPage_loginGotoLabel" dsid="loginGotoLabel"
+                    data-role="appery_label" class="labelOnLight  zzmenuPage_loginGotoLabel">
+                        Please log in to use this feature
+                    </div>
+                    <!-- loginGotoButtonGrid -->
+                    <div class="zzmenuPage_loginGotoButtonGrid_wrapper" data-wrapper-for="loginGotoButtonGrid">
+                        <table id="zzmenuPage_loginGotoButtonGrid" class="zzmenuPage_loginGotoButtonGrid"
+                        dsid="loginGotoButtonGrid" name="loginGotoButtonGrid" cellpadding=0 cellspacing=0>
+                            <col style="width:auto;" />
+                            <col style="width:auto;" />
+                            <tr class="zzmenuPage_loginGotoButtonGrid_row_0">
+                                <!-- loginGotoCell -->
+                                <td id="zzmenuPage_loginGotoCell" name="loginGotoCell" class="zzmenuPage_loginGotoCell"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- loginGotoButton --><!--
+                                        --><a data-role="button" name="loginGotoButton" dsid="loginGotoButton" class="zzmenuPage_loginGotoButton"
+                                        id="zzmenuPage_loginGotoButton" data-corners="true" data-icon="none" data-iconpos='nowhere'
+                                        x-apple-data-detectors="false" data-mini="true" data-theme="b" tabindex="29">
+                                        Log in
+                                        </a>
+                                    </div>
+                                </td>
+                                <!-- loginGotoCancelCell -->
+                                <td id="zzmenuPage_loginGotoCancelCell" name="loginGotoCancelCell" class="zzmenuPage_loginGotoCancelCell"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- loginGotoCancelButton --><!--
+                                        --><a data-role="button" name="loginGotoCancelButton" dsid="loginGotoCancelButton"
+                                        class="zzmenuPage_loginGotoCancelButton" id="zzmenuPage_loginGotoCancelButton" data-corners="true"
+                                        data-icon="none" data-iconpos='nowhere' x-apple-data-detectors="false" data-mini="true"
+                                        data-theme="b" tabindex="30">
+                                        Cancel
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>

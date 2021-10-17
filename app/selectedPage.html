@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>
+            selectedPage
+        </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, viewport-fit=cover">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="msapplication-tap-highlight" content="no">
+        <!-- Enable all requests, inline styles, and eval() -->
+        <meta http-equiv="Content-Security-Policy" content="default-src * gap://ready data:; style-src 'self' 'unsafe-inline' *; script-src 'self' 'unsafe-inline' 'unsafe-eval' *">
+        <!-- Uncomment link and meta tags below to activate PWA icons and theme color -->
+        <!-- link rel="manifest" href="../manifest.json" crossOrigin="use-credentials" -->
+        <!-- meta name="theme-color" content="#ffffff" -->
+        <link href="../css/theme/jqm/jqm.css" rel="stylesheet" />
+        <link href="../css/theme/KnoWYE3/KnoWYE3.css" rel="stylesheet" />
+        <link href="../libs/jquerymobile/1.4.5/jquery.mobile.structure-1.4.5.css" rel="stylesheet"
+        />
+        <link type="text/css" rel="stylesheet" href="../css/logblock.css" />
+        <link type="text/css" rel="stylesheet" href="../css/menuPageBuilder.css" />
+        <link type="text/css" rel="stylesheet" href="../css/common.css" />
+        <link type="text/css" rel="stylesheet" href="../css/header_footer.css" />
+        <link type="text/css" rel="stylesheet" href="../css/button.css" />
+        <link type="text/css" rel="stylesheet" href="../css/label.css" />
+        <link type="text/css" rel="stylesheet" href="../css/FontRoboto.css.css" />
+        <!-- Uncomment this script to activate service worker -->
+        <!-- <script>
+        if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('../sw.js')
+        .then(() => console.log('service worker installed'))
+        .catch(err => console.error('Error', err));
+        }
+        </script>
+        -->
+        <script type="text/javascript" src="../libs/underscore/underscore.js">
+        </script>
+        <script type="text/javascript" src="../libs/store/json2.js">
+        </script>
+        <script type="text/javascript" src="../libs/jquery/jquery-2.1.1.js">
+        </script>
+        <script type="text/javascript" src="../libs/jquery/jquery-ajaxTransport.js">
+        </script>
+        <script type="text/javascript">
+            $(document).bind("mobileinit", function() {
+                if (navigator.userAgent.toLowerCase().indexOf("android") != -1) {
+                    $.mobile.defaultPageTransition = 'none';
+                    $.mobile.defaultDialogTransition = 'none';
+                } else if (navigator.userAgent.toLowerCase().indexOf("msie") != -1) {
+                    $.mobile.allowCrossDomainPages = true;
+                    $.support.cors = true;
+                } else if (navigator.userAgent.match(/(iPad|iPhone|iPod)/g)) {
+                    $.mobile.hashListeningEnabled = false;
+                }
+            });
+        </script>
+        <script type="text/javascript" src="../libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.js">
+        </script>
+        <script type="text/javascript" src="../libs/apperyio/mobilebase.js">
+        </script>
+        <script type="text/javascript" src="../libs/event/customEventHandler.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/sha1.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/oauth.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/contexts.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/jquery.xml2json.min.js">
+        </script>
+        <script type="text/javascript" src="../libs/ms_sdk_bundle/client-sdk.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/appery.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/component-manager.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/mapping-impl.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/entity-api.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/login.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/storage-api.js">
+        </script>
+        <script type="text/javascript" src="../get_target_platform.js">
+        </script>
+        <script type="text/javascript" src="../cordova.js">
+        </script>
+        <link href="../libs/apperyio/mobilebase.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="../js/services/model.js">
+        </script>
+        <script type="text/javascript" src="../js/menuHeadingManagePageBuilder.js">
+        </script>
+        <script type="text/javascript" src="../js/navigatePageManager.js">
+        </script>
+        <script type="text/javascript" src="../js/logblock.js">
+        </script>
+        <script type="text/javascript" src="../js/Facebook_Helper.js">
+        </script>
+        <script type="text/javascript" src="../js/menuHeadingManager.js">
+        </script>
+        <script type="text/javascript" src="../js/menuPageBuilder.js">
+        </script>
+        <script type="text/javascript" src="../js/jquery-ui.min.js">
+        </script>
+        <script type="text/javascript" src="../js/common.js">
+        </script>
+        <script type="text/javascript" src="../js/clipboard.js">
+        </script>
+        <script type="text/javascript" src="../js/FileUploadHelper.js">
+        </script>
+        <script type="text/javascript" src="../js/zzqrCodeScaner.js">
+        </script>
+        <script type="text/javascript" src="../js/menuHistoryManager.js">
+        </script>
+        <script type="text/javascript" src="../js/GoogleCharts.js">
+        </script>
+        <script type="text/javascript" src="../js/services/service.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/databaseUtils.js">
+        </script>
+        <script type="text/javascript" src="../js/secure.js">
+        </script>
+<script type="text/javascript" src="../js/EncodeDecodeJS.js">
+        </script>
+    </head>
+    
+    <body>
+        <script language="JavaScript" type="text/javascript">
+        </script>
+        <div data-role="page" style="min-height:480px;" dsid="selectedPage" id="selectedPage"
+        class="type-interior" data-theme="b">
+            <!-- selectedHeader -->
+            <div data-role="header" data-position="fixed" data-add-back-btn="true" data-back-btn-text="&nbsp;"
+            data-theme="b" name="selectedHeader" id="selectedPage_selectedHeader" class="selectedPage_selectedHeader">
+                <h1 dsid="selectedHeader">
+                    selected items
+                </h1>
+                <!-- navigateButton --><!--
+                --><a data-role="button" name="navigateButton" dsid="navigateButton" class="selectedPage_navigateButton ui-btn-right"
+                style='min-height:20px; ' id="selectedPage_navigateButton" data-corners="true" data-icon="home"
+                data-iconpos="notext" x-apple-data-detectors="false" data-inline='true' data-mini='true'
+                data-theme="b" tabindex="9">
+                &nbsp;
+                </a>
+            </div>
+            <!-- selectedContainer -->
+            <div data-role="content" id="selectedPage_selectedContainer" name="selectedContainer"
+            class="ui-li-container  selectedPage_selectedContainer ui-content" dsid="selectedContainer"
+            data-theme="b">
+                <link href="selectedPage.css" rel="stylesheet" type="text/css" />
+                <script type="text/javascript" src="selectedPage.js">
+                </script>
+                <!-- seatingGrid -->
+                <div class="selectedPage_seatingGrid_wrapper" data-wrapper-for="seatingGrid">
+                    <table id="selectedPage_seatingGrid" class="selectedPage_seatingGrid" dsid="seatingGrid"
+                    name="seatingGrid" cellpadding=0 cellspacing=0>
+                        <col style="width:auto;" />
+                        <col style="width:auto;" />
+                        <tr class="selectedPage_seatingGrid_row_0">
+                            <!-- tableLabelCell -->
+                            <td id="selectedPage_tableLabelCell" name="tableLabelCell" class="selectedPage_tableLabelCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- tableLabel -->
+                                    <div name="tableLabel" id="selectedPage_tableLabel" dsid="tableLabel" data-role="appery_label"
+                                    class="labelRight  selectedPage_tableLabel">
+                                        table (number)
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- tableCell -->
+                            <td id="selectedPage_tableCell" name="tableCell" class="selectedPage_tableCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- table -->
+                                    <div name="table" id="selectedPage_table" dsid="table" data-role="appery_label"
+                                    class="selectedPage_table">
+                                        1
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="selectedPage_seatingGrid_row_1">
+                            <!-- seatLabelCell -->
+                            <td id="selectedPage_seatLabelCell" name="seatLabelCell" class="selectedPage_seatLabelCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- dinerLabel -->
+                                    <div name="dinerLabel" id="selectedPage_dinerLabel" dsid="dinerLabel" data-role="appery_label"
+                                    class="labelRight  selectedPage_dinerLabel">
+                                        seat (letter)
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- seatCell -->
+                            <td id="selectedPage_seatCell" name="seatCell" class="selectedPage_seatCell" colspan=1
+                            rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- seat -->
+                                    <div name="seat" id="selectedPage_seat" dsid="seat" data-role="appery_label" class="selectedPage_seat">
+                                        A
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- selectedLabel -->
+                <div name="selectedLabel" id="selectedPage_selectedLabel" dsid="selectedLabel" data-role="appery_label"
+                class="labelOnDark  selectedPage_selectedLabel">
+                    tell your server the items you selected below for your order.
+                </div>
+                <!-- removeLabel -->
+                <div name="removeLabel" id="selectedPage_removeLabel" dsid="removeLabel" data-role="appery_label"
+                class="labelOnDark  selectedPage_removeLabel">
+                    swipe an item left to remove.
+                </div>
+                <!-- selectedList -->
+                <ol data-role="listview" id="selectedPage_selectedList" class="selectedPage_selectedList"
+                name="selectedList" dsid="selectedList" data-theme="b" data-divider-theme="b" data-count-theme="b"
+                style="">
+                    <!-- selectedItemList -->
+                    <li id="selectedPage_selectedItemList" name="selectedItemList" dsid="selectedItemList"
+                    tabindex="7" data-icon="none" class="selectedPage_selectedItemList  ui-btn ui-btn-icon-right ui-icon-none">
+                        <div class="ui-li-static-container ui-btn">
+                            <!-- itemGrid -->
+                            <div class="selectedPage_itemGrid_wrapper" data-wrapper-for="itemGrid">
+                                <table id="selectedPage_itemGrid" class="selectedPage_itemGrid" dsid="itemGrid"
+                                name="itemGrid" cellpadding=0 cellspacing=0>
+                                    <col style="width:171px;" />
+                                    <col style="width:22px;" />
+                                    <col style="width:66px;" />
+                                    <tr class="selectedPage_itemGrid_row_0">
+                                        <!-- itemNameCell -->
+                                        <td id="selectedPage_itemNameCell" name="itemNameCell" class="selectedPage_itemNameCell"
+                                        colspan=1 rowspan=1>
+                                            <div class="cell-wrapper">
+                                                <!-- itemNameLabel -->
+                                                <div name="itemNameLabel" id="selectedPage_itemNameLabel" dsid="itemNameLabel" data-role="appery_label"
+                                                class="labelItem  selectedPage_itemNameLabel">
+                                                    itemName
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <!-- itemPriceCell -->
+                                        <td id="selectedPage_itemPriceCell" name="itemPriceCell" class="selectedPage_itemPriceCell"
+                                        colspan=1 rowspan=1>
+                                            <div class="cell-wrapper">
+                                                <!-- dollarSignLabel -->
+                                                <div name="dollarSignLabel" id="selectedPage_dollarSignLabel" dsid="dollarSignLabel"
+                                                data-role="appery_label" class="labelMenuDollar  selectedPage_dollarSignLabel">
+                                                    $
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <!-- itemButtonPriceCell -->
+                                        <td id="selectedPage_itemButtonPriceCell" name="itemButtonPriceCell" class="selectedPage_itemButtonPriceCell"
+                                        colspan=1 rowspan=1>
+                                            <div class="cell-wrapper">
+                                                <!-- itemPriceLabel -->
+                                                <div name="itemPriceLabel" id="selectedPage_itemPriceLabel" dsid="itemPriceLabel"
+                                                data-role="appery_label" class="labelMenuPrice  selectedPage_itemPriceLabel">
+                                                    price
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </li>
+                </ol>
+                <!-- rateReminderLabel -->
+                <div name="rateReminderLabel" id="selectedPage_rateReminderLabel" dsid="rateReminderLabel"
+                data-role="appery_label" class="labelOnDark  selectedPage_rateReminderLabel">
+                    please rate all the items you tried. it will help us make recommendations for you
+                    and provide anonymous feedback to the restaurant.
+                </div>
+                <!-- costLabel -->
+                <div name="costLabel" id="selectedPage_costLabel" dsid="costLabel" data-role="appery_label"
+                class="labelOnDark  selectedPage_costLabel">
+                    estimate your bill
+                </div>
+                <!-- orderGrid -->
+                <div class="selectedPage_orderGrid_wrapper" data-wrapper-for="orderGrid">
+                    <table id="selectedPage_orderGrid" class="selectedPage_orderGrid" dsid="orderGrid"
+                    name="orderGrid" cellpadding=0 cellspacing=0>
+                        <col style="width:auto;" />
+                        <col style="width:104px;" />
+                        <tr class="selectedPage_orderGrid_row_0">
+                            <!-- orderTotalCell1 -->
+                            <td id="selectedPage_orderTotalCell1" name="orderTotalCell1" class="selectedPage_orderTotalCell1"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- orderTotalLabel -->
+                                    <div name="orderTotalLabel" id="selectedPage_orderTotalLabel" dsid="orderTotalLabel"
+                                    data-role="appery_label" class="labelOnDark  selectedPage_orderTotalLabel">
+                                        order total
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- orderTotalCell -->
+                            <td id="selectedPage_orderTotalCell" name="orderTotalCell" class="selectedPage_orderTotalCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- orderTotal -->
+                                    <div name="orderTotal" id="selectedPage_orderTotal" dsid="orderTotal" data-role="appery_label"
+                                    class="labelOnDark  selectedPage_orderTotal">
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- adjustedGrid -->
+                <div class="selectedPage_adjustedGrid_wrapper" data-wrapper-for="adjustedGrid">
+                    <table id="selectedPage_adjustedGrid" class="selectedPage_adjustedGrid" dsid="adjustedGrid"
+                    name="adjustedGrid" cellpadding=0 cellspacing=0>
+                        <col style="width:auto;" />
+                        <col style="width:18px;" />
+                        <col style="width:90px;" />
+                        <tr class="selectedPage_adjustedGrid_row_0">
+                            <!-- adjustedCell1 -->
+                            <td id="selectedPage_adjustedCell1" name="adjustedCell1" class="selectedPage_adjustedCell1"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- adjustedLabel1 -->
+                                    <div name="adjustedLabel1" id="selectedPage_adjustedLabel1" dsid="adjustedLabel1"
+                                    data-role="appery_label" class="labelOnDark  selectedPage_adjustedLabel1">
+                                        actual bill (if different)
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- dollarCell1 -->
+                            <td id="selectedPage_dollarCell1" name="dollarCell1" class="selectedPage_dollarCell1"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- dollarLabel1 -->
+                                    <div name="dollarLabel1" id="selectedPage_dollarLabel1" dsid="dollarLabel1" data-role="appery_label"
+                                    class="labelOnDark  selectedPage_dollarLabel1">
+                                        $
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- adjustedCell2 -->
+                            <td id="selectedPage_adjustedCell2" name="adjustedCell2" class="selectedPage_adjustedCell2"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- adjustedInput -->
+                                    <div data-role="fieldcontain" class="selectedPage_adjustedInput ">
+                                        <input type="number" name="adjustedInput" dsid="adjustedInput" value="Input" placeholder="optional"
+                                        id="selectedPage_adjustedInput" tabindex="14" multiple data-theme="b" data-mini="true"
+                                        class="selectedPage_adjustedInput" />
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- billGrid -->
+                <div class="selectedPage_billGrid_wrapper" data-wrapper-for="billGrid">
+                    <table id="selectedPage_billGrid" class="selectedPage_billGrid" dsid="billGrid"
+                    name="billGrid" cellpadding=0 cellspacing=0>
+                        <col style="width:auto;" />
+                        <col style="width:104px;" />
+                        <tr class="selectedPage_billGrid_row_0">
+                            <!-- orderLabelCellDELETE -->
+                            <td id="selectedPage_orderLabelCellDELETE" name="orderLabelCellDELETE" class="selectedPage_orderLabelCellDELETE"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                </div>
+                            </td>
+                            <!-- orderCellDELETE -->
+                            <td id="selectedPage_orderCellDELETE" name="orderCellDELETE" class="selectedPage_orderCellDELETE"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="selectedPage_billGrid_row_1">
+                            <!-- taxLabelCell1 -->
+                            <td id="selectedPage_taxLabelCell1" name="taxLabelCell1" class="selectedPage_taxLabelCell1"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- taxGrid -->
+                                    <div class="selectedPage_taxGrid_wrapper" data-wrapper-for="taxGrid">
+                                        <table id="selectedPage_taxGrid" class="selectedPage_taxGrid" dsid="taxGrid" name="taxGrid"
+                                        cellpadding=0 cellspacing=0>
+                                            <col style="width:94px;" />
+                                            <col style="width:auto;" />
+                                            <tr class="selectedPage_taxGrid_row_0">
+                                                <!-- taxLabelCell2 -->
+                                                <td id="selectedPage_taxLabelCell2" name="taxLabelCell2" class="selectedPage_taxLabelCell2"
+                                                colspan=1 rowspan=1>
+                                                    <div class="cell-wrapper">
+                                                        <!-- taxLabel -->
+                                                        <div name="taxLabel" id="selectedPage_taxLabel" dsid="taxLabel" data-role="appery_label"
+                                                        class="labelOnDark  selectedPage_taxLabel">
+                                                            tax
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <!-- taxRateLabelCell -->
+                                                <td id="selectedPage_taxRateLabelCell" name="taxRateLabelCell" class="selectedPage_taxRateLabelCell"
+                                                colspan=1 rowspan=1>
+                                                    <div class="cell-wrapper">
+                                                        <!-- rateLabel -->
+                                                        <div name="rateLabel" id="selectedPage_rateLabel" dsid="rateLabel" data-role="appery_label"
+                                                        class="labelOnDark  selectedPage_rateLabel">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- orderTaxCell -->
+                            <td id="selectedPage_orderTaxCell" name="orderTaxCell" class="selectedPage_orderTaxCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- orderTax -->
+                                    <div name="orderTax" id="selectedPage_orderTax" dsid="orderTax" data-role="appery_label"
+                                    class="labelOnDark  selectedPage_orderTax">
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="selectedPage_billGrid_row_2">
+                            <!-- tipCell -->
+                            <td id="selectedPage_tipCell" name="tipCell" class="selectedPage_tipCell" colspan=1
+                            rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- tipGrid -->
+                                    <div class="selectedPage_tipGrid_wrapper" data-wrapper-for="tipGrid">
+                                        <table id="selectedPage_tipGrid" class="selectedPage_tipGrid" dsid="tipGrid" name="tipGrid"
+                                        cellpadding=0 cellspacing=0>
+                                            <col style="width:90px;" />
+                                            <col style="width:auto;" />
+                                            <tr class="selectedPage_tipGrid_row_0">
+                                                <!-- tipButtonCell -->
+                                                <td id="selectedPage_tipButtonCell" name="tipButtonCell" class="selectedPage_tipButtonCell"
+                                                colspan=1 rowspan=1>
+                                                    <div class="cell-wrapper">
+                                                        <!-- tipCalcButton --><!--
+                                                        --><a data-role="button" name="tipCalcButton" dsid="tipCalcButton" class="scanMenuButton  selectedPage_tipCalcButton"
+                                                        id="selectedPage_tipCalcButton" data-corners="true" data-icon="grid" data-iconpos="right"
+                                                        x-apple-data-detectors="false" data-mini="true" data-theme="b" tabindex="1">
+                                                        tip
+                                                        </a>
+                                                    </div>
+                                                </td>
+                                                <!-- tipLabelCell -->
+                                                <td id="selectedPage_tipLabelCell" name="tipLabelCell" class="selectedPage_tipLabelCell"
+                                                colspan=1 rowspan=1>
+                                                    <div class="cell-wrapper">
+                                                        <!-- tipRateLabel -->
+                                                        <div name="tipRateLabel" id="selectedPage_tipRateLabel" dsid="tipRateLabel" data-role="appery_label"
+                                                        class="labelOnDark  selectedPage_tipRateLabel">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- taxCell -->
+                            <td id="selectedPage_taxCell" name="taxCell" class="selectedPage_taxCell" colspan=1
+                            rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- orderTip -->
+                                    <div name="orderTip" id="selectedPage_orderTip" dsid="orderTip" data-role="appery_label"
+                                    class="labelOnDark  selectedPage_orderTip">
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="selectedPage_billGrid_row_3">
+                            <!-- billLabelCell -->
+                            <td id="selectedPage_billLabelCell" name="billLabelCell" class="selectedPage_billLabelCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- billTotalLabel -->
+                                    <div name="billTotalLabel" id="selectedPage_billTotalLabel" dsid="billTotalLabel"
+                                    data-role="appery_label" class="labelOnDark  selectedPage_billTotalLabel">
+                                        total bill
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- billCell -->
+                            <td id="selectedPage_billCell" name="billCell" class="selectedPage_billCell" colspan=1
+                            rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- orderBill -->
+                                    <div name="orderBill" id="selectedPage_orderBill" dsid="orderBill" data-role="appery_label"
+                                    class="labelOnDark  selectedPage_orderBill">
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- splitGrid -->
+                <div class="selectedPage_splitGrid_wrapper" data-wrapper-for="splitGrid">
+                    <table id="selectedPage_splitGrid" class="selectedPage_splitGrid" dsid="splitGrid"
+                    name="splitGrid" cellpadding=0 cellspacing=0>
+                        <col style="width:94px;" />
+                        <col style="width:auto;" />
+                        <col style="width:104px;" />
+                        <tr class="selectedPage_splitGrid_row_0">
+                            <!-- splitLabelCell -->
+                            <td id="selectedPage_splitLabelCell" name="splitLabelCell" class="selectedPage_splitLabelCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- splitLabel -->
+                                    <div name="splitLabel" id="selectedPage_splitLabel" dsid="splitLabel" data-role="appery_label"
+                                    class="labelOnDark  selectedPage_splitLabel">
+                                        split bill
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- splitButtonCell -->
+                            <td id="selectedPage_splitButtonCell" name="splitButtonCell" class="selectedPage_splitButtonCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- splitSelectButton -->
+                                    <div data-role="fieldcontain" class="selectedPage_splitSelectButton ">
+                                        <select name="splitSelectButton" id="selectedPage_splitSelectButton" dsid="splitSelectButton"
+                                        data-theme="b" data-role="appery_selectmenu" data-inline="false" data-mini="true"
+                                        data-icon="arrow-d" data-iconpos="right" data-native-menu="false" tabindex="15" appery-class="selectedPage_splitSelectButton">
+                                            <option id="selectedPage_splitSelectButton-0" value="1" reRender="splitSelectButton"
+                                            dsid="splitSelectButton-0" selected="selected">
+                                                1
+                                            </option>
+                                            <option id="selectedPage_splitSelectButton-1" value="2" reRender="splitSelectButton"
+                                            dsid="splitSelectButton-1">
+                                                2
+                                            </option>
+                                            <option id="selectedPage_splitSelectButton-2" value="3" reRender="splitSelectButton"
+                                            dsid="splitSelectButton-2">
+                                                3
+                                            </option>
+                                            <option id="selectedPage_splitSelectButton-3" value="4" reRender="splitSelectButton"
+                                            dsid="splitSelectButton-3">
+                                                4
+                                            </option>
+                                            <option id="selectedPage_splitSelectButton-4" value="5" reRender="splitSelectButton"
+                                            dsid="splitSelectButton-4">
+                                                5
+                                            </option>
+                                            <option id="selectedPage_splitSelectButton-5" value="6" reRender="splitSelectButton"
+                                            dsid="splitSelectButton-5">
+                                                6
+                                            </option>
+                                            <option id="selectedPage_splitSelectButton-6" value="7" reRender="splitSelectButton"
+                                            dsid="splitSelectButton-6">
+                                                7
+                                            </option>
+                                            <option id="selectedPage_splitSelectButton-7" value="8" reRender="splitSelectButton"
+                                            dsid="splitSelectButton-7">
+                                                8
+                                            </option>
+                                            <option id="selectedPage_splitSelectButton-8" value="9" reRender="splitSelectButton"
+                                            dsid="splitSelectButton-8">
+                                                9
+                                            </option>
+                                            <option id="selectedPage_splitSelectButton-9" value="10" reRender="splitSelectButton"
+                                            dsid="splitSelectButton-9">
+                                                10
+                                            </option>
+                                            <option id="selectedPage_splitSelectButton-10" value="11" reRender="splitSelectButton"
+                                            dsid="splitSelectButton-10">
+                                                11
+                                            </option>
+                                            <option id="selectedPage_splitSelectButton-11" value="12" reRender="splitSelectButton"
+                                            dsid="splitSelectButton-11">
+                                                12
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- splitAmountCell -->
+                            <td id="selectedPage_splitAmountCell" name="splitAmountCell" class="selectedPage_splitAmountCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- splitAmountLabel -->
+                                    <div name="splitAmountLabel" id="selectedPage_splitAmountLabel" dsid="splitAmountLabel"
+                                    data-role="appery_label" class="labelOnDark  selectedPage_splitAmountLabel">
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- clearButton --><!--
+                --><a data-role="button" name="clearButton" dsid="clearButton" class="scanMenuButton  selectedPage_clearButton"
+                id="selectedPage_clearButton" data-corners="true" data-icon="recycle" data-iconpos="right"
+                x-apple-data-detectors="false" data-mini="true" data-theme="b" tabindex="16">
+                clear selections
+                </a><!--
+                --><!-- selectionHistoryButton --><!--
+                --><a data-role="button" name="selectionHistoryButton" dsid="selectionHistoryButton"
+                class="scanMenuButton  selectedPage_selectionHistoryButton" id="selectedPage_selectionHistoryButton"
+                data-corners="true" data-icon="eye" data-iconpos="right" x-apple-data-detectors="false"
+                data-mini="true" data-theme="b" tabindex="17">
+                see previous selections
+                </a>
+            </div>
+            <!-- tipPopup -->
+            <div data-role="popup" name="tipPopup" dsid="tipPopup" id="selectedPage_tipPopup"
+            class="roundedPopup  selectedPage_tipPopup" data-corners="true" data-dismissible="true"
+            data-overlay-theme="" data-theme="" data-shadow="true" data-tolerance="30,15,30,15">
+                <div class="ui-popup-content-wrapper">
+                    <!-- tipPopupLabel -->
+                    <div name="tipPopupLabel" id="selectedPage_tipPopupLabel" dsid="tipPopupLabel" data-role="appery_label"
+                    class="labelOnDark  selectedPage_tipPopupLabel">
+                        calculate tip
+                    </div>
+                    <!-- orderAmountGrid -->
+                    <div class="selectedPage_orderAmountGrid_wrapper" data-wrapper-for="orderAmountGrid">
+                        <table id="selectedPage_orderAmountGrid" class="selectedPage_orderAmountGrid" dsid="orderAmountGrid"
+                        name="orderAmountGrid" cellpadding=0 cellspacing=0>
+                            <col style="width:138px;" />
+                            <col style="width:auto;" />
+                            <tr class="selectedPage_orderAmountGrid_row_0">
+                                <!-- tipOrderLabelCell -->
+                                <td id="selectedPage_tipOrderLabelCell" name="tipOrderLabelCell" class="selectedPage_tipOrderLabelCell"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- orderLabel -->
+                                        <div name="orderLabel" id="selectedPage_orderLabel" dsid="orderLabel" data-role="appery_label"
+                                        class="labelOnDark  selectedPage_orderLabel">
+                                            bill amount
+                                        </div>
+                                    </div>
+                                </td>
+                                <!-- tipOrderCell -->
+                                <td id="selectedPage_tipOrderCell" name="tipOrderCell" class="selectedPage_tipOrderCell"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- orderPopupAmount -->
+                                        <div name="orderPopupAmount" id="selectedPage_orderPopupAmount" dsid="orderPopupAmount"
+                                        data-role="appery_label" class="labelOnDark  selectedPage_orderPopupAmount">
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <!-- orderAdjustGrid -->
+                    <div class="selectedPage_orderAdjustGrid_wrapper" data-wrapper-for="orderAdjustGrid">
+                        <table id="selectedPage_orderAdjustGrid" class="selectedPage_orderAdjustGrid" dsid="orderAdjustGrid"
+                        name="orderAdjustGrid" cellpadding=0 cellspacing=0>
+                            <col style="width:138px;" />
+                            <col style="width:24px;" />
+                            <col style="width:auto;" />
+                            <tr class="selectedPage_orderAdjustGrid_row_0">
+                                <!-- adjustedCell -->
+                                <td id="selectedPage_adjustedCell" name="adjustedCell" class="selectedPage_adjustedCell"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- adjustedLabel -->
+                                        <div name="adjustedLabel" id="selectedPage_adjustedLabel" dsid="adjustedLabel" data-role="appery_label"
+                                        class="labelOnDark  selectedPage_adjustedLabel">
+                                            Adjust bill
+                                        </div>
+                                    </div>
+                                </td>
+                                <!-- dollarCell -->
+                                <td id="selectedPage_dollarCell" name="dollarCell" class="selectedPage_dollarCell"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- dollarLabel -->
+                                        <div name="dollarLabel" id="selectedPage_dollarLabel" dsid="dollarLabel" data-role="appery_label"
+                                        class="labelOnDark  selectedPage_dollarLabel">
+                                            $
+                                        </div>
+                                    </div>
+                                </td>
+                                <!-- adjustBillCell -->
+                                <td id="selectedPage_adjustBillCell" name="adjustBillCell" class="selectedPage_adjustBillCell"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- adjustBillEntry -->
+                                        <div data-role="fieldcontain" class="selectedPage_adjustBillEntry ">
+                                            <input type="number" name="adjustBillEntry" dsid="adjustBillEntry" value="" placeholder="bill amt"
+                                            id="selectedPage_adjustBillEntry" tabindex="13" multiple data-theme="b" data-mini="true"
+                                            class="selectedPage_adjustBillEntry" />
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <!-- tipCalcGrid -->
+                    <div class="selectedPage_tipCalcGrid_wrapper" data-wrapper-for="tipCalcGrid">
+                        <table id="selectedPage_tipCalcGrid" class="selectedPage_tipCalcGrid" dsid="tipCalcGrid"
+                        name="tipCalcGrid" cellpadding=0 cellspacing=0>
+                            <col style="width:138px;" />
+                            <col style="width:auto;" />
+                            <tr class="selectedPage_tipCalcGrid_row_0">
+                                <!-- empty1 -->
+                                <td id="selectedPage_empty1" name="empty1" class="selectedPage_empty1" colspan=1
+                                rowspan=1>
+                                    <div class="cell-wrapper">
+                                    </div>
+                                </td>
+                                <!-- empty2 -->
+                                <td id="selectedPage_empty2" name="empty2" class="selectedPage_empty2" colspan=1
+                                rowspan=1>
+                                    <div class="cell-wrapper">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="selectedPage_tipCalcGrid_row_1">
+                                <!-- tipTaxButtonCell -->
+                                <td id="selectedPage_tipTaxButtonCell" name="tipTaxButtonCell" class="selectedPage_tipTaxButtonCell"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <div data-role="fieldcontain" class="selectedPage_tipTaxButton" id="selectedPage_tipTaxButton"
+                                        dsid="tipTaxButton">
+                                            <fieldset data-role="controlgroup" data-theme="b" data-mini="true" class="">
+                                                <span dsid="includeTaxCheck" class="selectedPage_includeTaxCheck" name="includeTaxCheck">
+                                                    <input type="checkbox" name="tipTaxButton" id="selectedPage_includeTaxCheck" checked="checked"
+                                                    tabindex="2" value="1" />
+                                                    <label id="selectedPage_includeTaxCheck_label" for="selectedPage_includeTaxCheck">
+                                                        include tax :-)
+                                                    </label>
+                                                </span>
+                                            </fieldset>
+                                        </div>
+                                    </div>
+                                </td>
+                                <!-- tipTaxCell -->
+                                <td id="selectedPage_tipTaxCell" name="tipTaxCell" class="selectedPage_tipTaxCell"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- taxAdjusted -->
+                                        <div name="taxAdjusted" id="selectedPage_taxAdjusted" dsid="taxAdjusted" data-role="appery_label"
+                                        class="labelOnDark  selectedPage_taxAdjusted">
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="selectedPage_tipCalcGrid_row_2">
+                                <!-- tipSelectButtonCell -->
+                                <td id="selectedPage_tipSelectButtonCell" name="tipSelectButtonCell" class="selectedPage_tipSelectButtonCell"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- tipSelectButton -->
+                                        <div data-role="fieldcontain" class="selectedPage_tipSelectButton ">
+                                            <select name="tipSelectButton" id="selectedPage_tipSelectButton" dsid="tipSelectButton"
+                                            data-theme="b" data-role="appery_selectmenu" data-inline="false" data-mini="true"
+                                            data-icon="arrow-d" data-iconpos="right" data-native-menu="false" tabindex="3" appery-class="selectedPage_tipSelectButton">
+                                                <option id="selectedPage_tipSelectButton-0" value="15" reRender="tipSelectButton"
+                                                dsid="tipSelectButton-0">
+                                                    15%
+                                                </option>
+                                                <option id="selectedPage_tipSelectButton-1" value="18" reRender="tipSelectButton"
+                                                dsid="tipSelectButton-1" selected="selected">
+                                                    18%
+                                                </option>
+                                                <option id="selectedPage_tipSelectButton-2" value="20" reRender="tipSelectButton"
+                                                dsid="tipSelectButton-2">
+                                                    20%
+                                                </option>
+                                                <option id="selectedPage_tipSelectButton-3" value="amount" reRender="tipSelectButton"
+                                                dsid="tipSelectButton-3">
+                                                    Specify amount
+                                                </option>
+                                                <option id="selectedPage_tipSelectButton-4" value="rate" reRender="tipSelectButton"
+                                                dsid="tipSelectButton-4">
+                                                    Specify rate
+                                                </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </td>
+                                <!-- tipSelectCell -->
+                                <td id="selectedPage_tipSelectCell" name="tipSelectCell" class="selectedPage_tipSelectCell"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- tipSelect -->
+                                        <div name="tipSelect" id="selectedPage_tipSelect" dsid="tipSelect" data-role="appery_label"
+                                        class="labelOnDark  selectedPage_tipSelect">
+                                        </div>
+                                        <!-- tipEntryGrid -->
+                                        <div class="selectedPage_tipEntryGrid_wrapper" data-wrapper-for="tipEntryGrid">
+                                            <table id="selectedPage_tipEntryGrid" class="selectedPage_tipEntryGrid" dsid="tipEntryGrid"
+                                            name="tipEntryGrid" cellpadding=0 cellspacing=0>
+                                                <col style="width:auto;" />
+                                                <tr class="selectedPage_tipEntryGrid_row_0">
+                                                    <!-- tipEntryCell -->
+                                                    <td id="selectedPage_tipEntryCell" name="tipEntryCell" class="selectedPage_tipEntryCell"
+                                                    colspan=1 rowspan=1>
+                                                        <div class="cell-wrapper">
+                                                            <!-- tipEntry -->
+                                                            <div data-role="fieldcontain" class="selectedPage_tipEntry ">
+                                                                <input type="number" name="tipEntry" dsid="tipEntry" value="" placeholder="enter"
+                                                                id="selectedPage_tipEntry" tabindex="5" multiple data-theme="b" data-mini="true"
+                                                                class="selectedPage_tipEntry" />
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="selectedPage_tipCalcGrid_row_3">
+                                <!-- mobilegridcell_27 -->
+                                <td id="selectedPage_mobilegridcell_27" name="mobilegridcell_27" class="selectedPage_mobilegridcell_27"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                    </div>
+                                </td>
+                                <!-- mobilegridcell_28 -->
+                                <td id="selectedPage_mobilegridcell_28" name="mobilegridcell_28" class="selectedPage_mobilegridcell_28"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <!-- calculateTipButtonGrid -->
+                    <div class="selectedPage_calculateTipButtonGrid_wrapper" data-wrapper-for="calculateTipButtonGrid">
+                        <table id="selectedPage_calculateTipButtonGrid" class="selectedPage_calculateTipButtonGrid"
+                        dsid="calculateTipButtonGrid" name="calculateTipButtonGrid" cellpadding=0 cellspacing=0>
+                            <col style="width:auto;" />
+                            <col style="width:auto;" />
+                            <tr class="selectedPage_calculateTipButtonGrid_row_0">
+                                <!-- calculateTipSaveCell -->
+                                <td id="selectedPage_calculateTipSaveCell" name="calculateTipSaveCell" class="selectedPage_calculateTipSaveCell"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- tipSaveButton --><!--
+                                        --><a data-role="button" name="tipSaveButton" dsid="tipSaveButton" class="scanMenuButton  selectedPage_tipSaveButton"
+                                        id="selectedPage_tipSaveButton" data-corners="true" data-icon="check" data-iconpos="right"
+                                        x-apple-data-detectors="false" data-mini="true" data-theme="b" tabindex="6">
+                                        save
+                                        </a>
+                                    </div>
+                                </td>
+                                <!-- calculateTipCancelCell -->
+                                <td id="selectedPage_calculateTipCancelCell" name="calculateTipCancelCell" class="selectedPage_calculateTipCancelCell"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- calculateTipCancelButton --><!--
+                                        --><a data-role="button" name="calculateTipCancelButton" dsid="calculateTipCancelButton"
+                                        class="scanMenuButton  selectedPage_calculateTipCancelButton" id="selectedPage_calculateTipCancelButton"
+                                        data-corners="true" data-icon="delete" data-iconpos="right" x-apple-data-detectors="false"
+                                        data-mini="true" data-theme="b" tabindex="18">
+                                        cancel
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- deleteSelectionConfirmPopup -->
+            <div data-role="popup" name="deleteSelectionConfirmPopup" dsid="deleteSelectionConfirmPopup"
+            id="selectedPage_deleteSelectionConfirmPopup" class="roundedPopup  selectedPage_deleteSelectionConfirmPopup"
+            data-corners="true" data-dismissible="true" data-overlay-theme="" data-theme="" data-shadow="true"
+            data-tolerance="30,15,30,15">
+                <div class="ui-popup-content-wrapper">
+                    <!-- deleteSelectedConfirmLabel -->
+                    <div name="deleteSelectedConfirmLabel" id="selectedPage_deleteSelectedConfirmLabel"
+                    dsid="deleteSelectedConfirmLabel" data-role="appery_label" class="labelOnDark  selectedPage_deleteSelectedConfirmLabel">
+                        are you sure you want to remove this item?
+                    </div>
+                    <!-- deleteHeadingConfirmGrid -->
+                    <div class="selectedPage_deleteHeadingConfirmGrid_wrapper" data-wrapper-for="deleteHeadingConfirmGrid">
+                        <table id="selectedPage_deleteHeadingConfirmGrid" class="selectedPage_deleteHeadingConfirmGrid"
+                        dsid="deleteHeadingConfirmGrid" name="deleteHeadingConfirmGrid" cellpadding=0 cellspacing=0>
+                            <col style="width:auto;" />
+                            <col style="width:auto;" />
+                            <tr class="selectedPage_deleteHeadingConfirmGrid_row_0">
+                                <!-- deleteSelectedConfirmCell -->
+                                <td id="selectedPage_deleteSelectedConfirmCell" name="deleteSelectedConfirmCell"
+                                class="selectedPage_deleteSelectedConfirmCell" colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- deleteSelectedConfirmButton --><!--
+                                        --><a data-role="button" name="deleteSelectedConfirmButton" dsid="deleteSelectedConfirmButton"
+                                        class="scanMenuButton  selectedPage_deleteSelectedConfirmButton" id="selectedPage_deleteSelectedConfirmButton"
+                                        data-corners="true" data-icon="alert" data-iconpos="right" x-apple-data-detectors="false"
+                                        data-mini="true" data-theme="b" tabindex="10">
+                                        delete
+                                        </a>
+                                    </div>
+                                </td>
+                                <!-- deleteSelectedCancelCell -->
+                                <td id="selectedPage_deleteSelectedCancelCell" name="deleteSelectedCancelCell" class="selectedPage_deleteSelectedCancelCell"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- deleteSelectedCancelButton --><!--
+                                        --><a data-role="button" name="deleteSelectedCancelButton" dsid="deleteSelectedCancelButton"
+                                        class="scanMenuButton  selectedPage_deleteSelectedCancelButton" id="selectedPage_deleteSelectedCancelButton"
+                                        data-corners="true" data-icon="delete" data-iconpos="right" x-apple-data-detectors="false"
+                                        data-mini="true" data-theme="b" tabindex="11">
+                                        cancel
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>
+            proprietorAnalyticsPage
+        </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, viewport-fit=cover">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="msapplication-tap-highlight" content="no">
+        <!-- Enable all requests, inline styles, and eval() -->
+        <meta http-equiv="Content-Security-Policy" content="default-src * gap://ready data:; style-src 'self' 'unsafe-inline' *; script-src 'self' 'unsafe-inline' 'unsafe-eval' *">
+        <!-- Uncomment link and meta tags below to activate PWA icons and theme color -->
+        <!-- link rel="manifest" href="../manifest.json" crossOrigin="use-credentials" -->
+        <!-- meta name="theme-color" content="#ffffff" -->
+        <link href="../css/theme/jqm/jqm.css" rel="stylesheet" />
+        <link href="../css/theme/KnoWYE3/KnoWYE3.css" rel="stylesheet" />
+        <link href="../libs/jquerymobile/1.4.5/jquery.mobile.structure-1.4.5.css" rel="stylesheet"
+        />
+        <link type="text/css" rel="stylesheet" href="../css/logblock.css" />
+        <link type="text/css" rel="stylesheet" href="../css/menuPageBuilder.css" />
+        <link type="text/css" rel="stylesheet" href="../css/common.css" />
+        <link type="text/css" rel="stylesheet" href="../css/header_footer.css" />
+        <link type="text/css" rel="stylesheet" href="../css/button.css" />
+        <link type="text/css" rel="stylesheet" href="../css/label.css" />
+        <link type="text/css" rel="stylesheet" href="../css/FontRoboto.css.css" />
+        <!-- Uncomment this script to activate service worker -->
+        <!-- <script>
+        if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('../sw.js')
+        .then(() => console.log('service worker installed'))
+        .catch(err => console.error('Error', err));
+        }
+        </script>
+        -->
+        <script type="text/javascript" src="../libs/underscore/underscore.js">
+        </script>
+        <script type="text/javascript" src="../libs/store/json2.js">
+        </script>
+        <script type="text/javascript" src="../libs/jquery/jquery-2.1.1.js">
+        </script>
+        <script type="text/javascript" src="../libs/jquery/jquery-ajaxTransport.js">
+        </script>
+        <script type="text/javascript">
+            $(document).bind("mobileinit", function() {
+                if (navigator.userAgent.toLowerCase().indexOf("android") != -1) {
+                    $.mobile.defaultPageTransition = 'none';
+                    $.mobile.defaultDialogTransition = 'none';
+                } else if (navigator.userAgent.toLowerCase().indexOf("msie") != -1) {
+                    $.mobile.allowCrossDomainPages = true;
+                    $.support.cors = true;
+                } else if (navigator.userAgent.match(/(iPad|iPhone|iPod)/g)) {
+                    $.mobile.hashListeningEnabled = false;
+                }
+            });
+        </script>
+        <script type="text/javascript" src="../libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.js">
+        </script>
+        <script type="text/javascript" src="../libs/apperyio/mobilebase.js">
+        </script>
+        <script type="text/javascript" src="../libs/event/customEventHandler.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/sha1.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/oauth.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/contexts.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/jquery.xml2json.min.js">
+        </script>
+        <script type="text/javascript" src="../libs/ms_sdk_bundle/client-sdk.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/appery.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/component-manager.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/mapping-impl.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/entity-api.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/login.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/storage-api.js">
+        </script>
+        <script type="text/javascript" src="../get_target_platform.js">
+        </script>
+        <script type="text/javascript" src="../cordova.js">
+        </script>
+        <link href="../libs/apperyio/mobilebase.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="../js/services/model.js">
+        </script>
+        <script type="text/javascript" src="../js/menuHeadingManagePageBuilder.js">
+        </script>
+        <script type="text/javascript" src="../js/navigatePageManager.js">
+        </script>
+        <script type="text/javascript" src="../js/logblock.js">
+        </script>
+        <script type="text/javascript" src="../js/Facebook_Helper.js">
+        </script>
+        <script type="text/javascript" src="../js/menuHeadingManager.js">
+        </script>
+        <script type="text/javascript" src="../js/menuPageBuilder.js">
+        </script>
+        <script type="text/javascript" src="../js/jquery-ui.min.js">
+        </script>
+        <script type="text/javascript" src="../js/common.js">
+        </script>
+        <script type="text/javascript" src="../js/clipboard.js">
+        </script>
+        <script type="text/javascript" src="../js/FileUploadHelper.js">
+        </script>
+        <script type="text/javascript" src="../js/zzqrCodeScaner.js">
+        </script>
+        <script type="text/javascript" src="../js/menuHistoryManager.js">
+        </script>
+        <script type="text/javascript" src="../js/GoogleCharts.js">
+        </script>
+        <script type="text/javascript" src="../js/services/service.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/databaseUtils.js">
+        </script>
+        <script type="text/javascript" src="../js/secure.js">
+        </script>
+<script type="text/javascript" src="../js/EncodeDecodeJS.js">
+        </script>
+    </head>
+    
+    <body>
+        <script language="JavaScript" type="text/javascript">
+        </script>
+        <div data-role="page" style="min-height:480px;" dsid="proprietorAnalyticsPage" id="proprietorAnalyticsPage"
+        class="type-interior" data-theme="b">
+            <!-- analyticsHeader -->
+            <div data-role="header" data-position="fixed" data-add-back-btn="true" data-back-btn-text="Back"
+            data-theme="b" name="analyticsHeader" id="proprietorAnalyticsPage_analyticsHeader"
+            class="proprietorAnalyticsPage_analyticsHeader">
+                <h1 dsid="analyticsHeader">
+                    analytics
+                </h1>
+                <!-- homeButton --><!--
+                --><a data-role="button" name="homeButton" dsid="homeButton" class="proprietorAnalyticsPage_homeButton ui-btn-right"
+                style='min-height:20px; ' id="proprietorAnalyticsPage_homeButton" data-corners="true"
+                data-icon="home" data-iconpos="notext" x-apple-data-detectors="false" data-inline='true'
+                data-mini='true' data-theme="b" tabindex="3">
+                &nbsp;
+                </a>
+            </div>
+            <!-- mobilecontainer -->
+            <div data-role="content" id="proprietorAnalyticsPage_mobilecontainer" name="mobilecontainer"
+            class="ui-li-container  proprietorAnalyticsPage_mobilecontainer ui-content" dsid="mobilecontainer"
+            data-theme="b">
+                <link href="proprietorAnalyticsPage.css" rel="stylesheet" type="text/css" />
+                <script type="text/javascript" src="proprietorAnalyticsPage.js">
+                </script>
+                <!-- mobilelabel_2 -->
+                <div name="mobilelabel_2" id="proprietorAnalyticsPage_mobilelabel_2" dsid="mobilelabel_2"
+                data-role="appery_label" class="proprietorAnalyticsPage_mobilelabel_2">
+                    guests in the know:
+                </div>
+                <!-- connectButton --><!--
+                --><a data-role="button" name="connectButton" dsid="connectButton" class="scan-btn rounded  proprietorAnalyticsPage_connectButton"
+                id="proprietorAnalyticsPage_connectButton" data-corners="true" data-icon="recycle"
+                data-iconpos="right" x-apple-data-detectors="false" data-mini="true" data-theme="b"
+                tabindex="1">
+                connect
+                </a><!--
+                --><!-- mobilelabel_12 -->
+                <div name="mobilelabel_12" id="proprietorAnalyticsPage_mobilelabel_12" dsid="mobilelabel_12"
+                data-role="appery_label" class="proprietorAnalyticsPage_mobilelabel_12">
+                    zip code distribution of guests
+                </div>
+                <!-- html_11 -->
+                <div data-role="appery_html" name="html_11" dsid="html_11" id="proprietorAnalyticsPage_html_11"
+                class="proprietorAnalyticsPage_html_11">
+                    <style>
+                        #bar_div { display: inline-block; }
+                    </style>
+                    <!--colors: ['#689d45' ,'#3f5e97' ,'#cedb00' ],-->
+                    <div name="zipCode" style="color: white; text-align: center;">
+                    </div>
+                    <div id="chart_div" style="width: 100%;">
+                    </div>
+                    <div name="menu-props" style="color: white; text-align: center; display: none;">
+                    </div>
+                    <select style="font-size: 12px;" name="filter-by-time">
+                        <option value="by-year">
+                            current year
+                        </option>
+                        <option value="by-month" selected="selected">
+                            current month
+                        </option>
+                    </select>
+                    <div style="display:inline-block">
+                        <div style="display:inline-block;margin-left: 60px;">
+                            <span style="text-align:center;color:#689d45;font-size: 20px;">
+                                •
+                            </span>
+                            <span style="color:white;font-size: 10px;vertical-align: text-top;">
+                                total menu views
+                            </span>
+                        </div>
+                        <div style="display:inline-block;margin-left: 60px;">
+                            <span style="text-align:center;color:#3f5e97;font-size: 20px;">
+                                •
+                            </span>
+                            <span style="color:white;font-size: 10px;vertical-align: text-top;">
+                                unique menu views
+                            </span>
+                        </div>
+                        <div style="margin-left: 60px;display:inline-block;">
+                            <span style="text-align:center;color:#cedb00;font-size: 20px;">
+                                •
+                            </span>
+                            <span style="color:white;font-size: 10px;vertical-align: text-top;">
+                                guest menu views
+                            </span>
+                        </div>
+                    </div>
+                    <div id="bar_div" style="width: 100%;margin-top: -5px; ">
+                    </div>
+                    <div style="color: white; text-align: center;">
+                        menu view trend
+                    </div>
+                </div>
+            </div>
+            <!-- mobilefooter -->
+            <div data-role="footer" data-position="fixed" class="proprietorAnalyticsPage_mobilefooter"
+            name="mobilefooter" dsid="mobilefooter" id="proprietorAnalyticsPage_mobilefooter"
+            data-theme="b">
+            </div>
+            <!-- comingSoonPopup -->
+            <div data-role="popup" name="comingSoonPopup" dsid="comingSoonPopup" id="proprietorAnalyticsPage_comingSoonPopup"
+            class="roundedPopup  proprietorAnalyticsPage_comingSoonPopup" data-corners="true"
+            data-dismissible="true" data-overlay-theme="" data-theme="" data-shadow="true" data-tolerance="30,15,30,15">
+                <div class="ui-popup-content-wrapper">
+                    <!-- close --><!--
+                    --><a data-role="button" name="close" dsid="close" class="proprietorAnalyticsPage_close"
+                    style='min-height:20px; ' id="proprietorAnalyticsPage_close" data-corners="true"
+                    data-icon="delete" data-iconpos="notext" x-apple-data-detectors="false" data-inline="true"
+                    data-mini="true" data-theme="b" tabindex="2">
+                    &nbsp;
+                    </a><!--
+                    --><!-- comingSoonLabel -->
+                    <div name="comingSoonLabel" id="proprietorAnalyticsPage_comingSoonLabel" dsid="comingSoonLabel"
+                    data-role="appery_label" class="labelOnDark  proprietorAnalyticsPage_comingSoonLabel">
+                        coming soon!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>

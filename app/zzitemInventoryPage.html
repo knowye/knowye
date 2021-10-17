@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>
+            zzitemInventoryPage
+        </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, viewport-fit=cover">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="msapplication-tap-highlight" content="no">
+        <!-- Enable all requests, inline styles, and eval() -->
+        <meta http-equiv="Content-Security-Policy" content="default-src * gap://ready data:; style-src 'self' 'unsafe-inline' *; script-src 'self' 'unsafe-inline' 'unsafe-eval' *">
+        <!-- Uncomment link and meta tags below to activate PWA icons and theme color -->
+        <!-- link rel="manifest" href="../manifest.json" crossOrigin="use-credentials" -->
+        <!-- meta name="theme-color" content="#ffffff" -->
+        <link href="../css/theme/jqm/jqm.css" rel="stylesheet" />
+        <link href="../css/theme/KnoWYE3/KnoWYE3.css" rel="stylesheet" />
+        <link href="../libs/jquerymobile/1.4.5/jquery.mobile.structure-1.4.5.css" rel="stylesheet"
+        />
+        <link type="text/css" rel="stylesheet" href="../css/logblock.css" />
+        <link type="text/css" rel="stylesheet" href="../css/menuPageBuilder.css" />
+        <link type="text/css" rel="stylesheet" href="../css/common.css" />
+        <link type="text/css" rel="stylesheet" href="../css/header_footer.css" />
+        <link type="text/css" rel="stylesheet" href="../css/button.css" />
+        <link type="text/css" rel="stylesheet" href="../css/label.css" />
+        <link type="text/css" rel="stylesheet" href="../css/FontRoboto.css.css" />
+        <!-- Uncomment this script to activate service worker -->
+        <!-- <script>
+        if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('../sw.js')
+        .then(() => console.log('service worker installed'))
+        .catch(err => console.error('Error', err));
+        }
+        </script>
+        -->
+        <script type="text/javascript" src="../libs/underscore/underscore.js">
+        </script>
+        <script type="text/javascript" src="../libs/store/json2.js">
+        </script>
+        <script type="text/javascript" src="../libs/jquery/jquery-2.1.1.js">
+        </script>
+        <script type="text/javascript" src="../libs/jquery/jquery-ajaxTransport.js">
+        </script>
+        <script type="text/javascript">
+            $(document).bind("mobileinit", function() {
+                if (navigator.userAgent.toLowerCase().indexOf("android") != -1) {
+                    $.mobile.defaultPageTransition = 'none';
+                    $.mobile.defaultDialogTransition = 'none';
+                } else if (navigator.userAgent.toLowerCase().indexOf("msie") != -1) {
+                    $.mobile.allowCrossDomainPages = true;
+                    $.support.cors = true;
+                } else if (navigator.userAgent.match(/(iPad|iPhone|iPod)/g)) {
+                    $.mobile.hashListeningEnabled = false;
+                }
+            });
+        </script>
+        <script type="text/javascript" src="../libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.js">
+        </script>
+        <script type="text/javascript" src="../libs/apperyio/mobilebase.js">
+        </script>
+        <script type="text/javascript" src="../libs/event/customEventHandler.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/sha1.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/oauth.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/contexts.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/jquery.xml2json.min.js">
+        </script>
+        <script type="text/javascript" src="../libs/ms_sdk_bundle/client-sdk.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/appery.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/component-manager.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/mapping-impl.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/entity-api.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/login.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/storage-api.js">
+        </script>
+        <script type="text/javascript" src="../get_target_platform.js">
+        </script>
+        <script type="text/javascript" src="../cordova.js">
+        </script>
+        <link href="../libs/apperyio/mobilebase.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="../js/services/model.js">
+        </script>
+        <script type="text/javascript" src="../js/menuHeadingManagePageBuilder.js">
+        </script>
+        <script type="text/javascript" src="../js/navigatePageManager.js">
+        </script>
+        <script type="text/javascript" src="../js/logblock.js">
+        </script>
+        <script type="text/javascript" src="../js/Facebook_Helper.js">
+        </script>
+        <script type="text/javascript" src="../js/menuHeadingManager.js">
+        </script>
+        <script type="text/javascript" src="../js/menuPageBuilder.js">
+        </script>
+        <script type="text/javascript" src="../js/jquery-ui.min.js">
+        </script>
+        <script type="text/javascript" src="../js/common.js">
+        </script>
+        <script type="text/javascript" src="../js/clipboard.js">
+        </script>
+        <script type="text/javascript" src="../js/FileUploadHelper.js">
+        </script>
+        <script type="text/javascript" src="../js/zzqrCodeScaner.js">
+        </script>
+        <script type="text/javascript" src="../js/menuHistoryManager.js">
+        </script>
+        <script type="text/javascript" src="../js/GoogleCharts.js">
+        </script>
+        <script type="text/javascript" src="../js/services/service.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/databaseUtils.js">
+        </script>
+        <script type="text/javascript" src="../js/secure.js">
+        </script>
+<script type="text/javascript" src="../js/EncodeDecodeJS.js">
+        </script>
+    </head>
+    
+    <body>
+        <script language="JavaScript" type="text/javascript">
+        </script>
+        <div data-role="page" style="min-height:480px;" dsid="zzitemInventoryPage" id="zzitemInventoryPage"
+        class="type-interior" data-theme="b">
+            <!-- inventoryHeader -->
+            <div data-role="header" data-position="fixed" data-add-back-btn="true" data-back-btn-text="&nbsp;"
+            data-theme="b" name="inventoryHeader" id="zzitemInventoryPage_inventoryHeader" class="zzitemInventoryPage_inventoryHeader">
+                <h1 dsid="inventoryHeader">
+                    item inventory
+                </h1>
+                <!-- homeButton --><!--
+                --><a data-role="button" name="homeButton" dsid="homeButton" class="zzitemInventoryPage_homeButton ui-btn-right"
+                style='min-height:20px; ' id="zzitemInventoryPage_homeButton" data-corners="true"
+                data-icon="home" data-iconpos="notext" x-apple-data-detectors="false" data-inline='true'
+                data-mini='true' data-theme="b" tabindex="1">
+                &nbsp;
+                </a>
+            </div>
+            <!-- dishInventoryContainer -->
+            <div data-role="content" id="zzitemInventoryPage_dishInventoryContainer" name="dishInventoryContainer"
+            class="ui-li-container  zzitemInventoryPage_dishInventoryContainer ui-content" dsid="dishInventoryContainer"
+            data-theme="b">
+                <link href="zzitemInventoryPage.css" rel="stylesheet" type="text/css" />
+                <script type="text/javascript" src="zzitemInventoryPage.js">
+                </script>
+                <!-- dishInventoryLabel -->
+                <div name="dishInventoryLabel" id="zzitemInventoryPage_dishInventoryLabel" dsid="dishInventoryLabel"
+                data-role="appery_label" class="labelOnDark  zzitemInventoryPage_dishInventoryLabel">
+                    click on a dish below to change the number of servings available or temporarily
+                    hide it from the menu.
+                </div>
+                <!-- dishInventoryList -->
+                <ul data-role="listview" id="zzitemInventoryPage_dishInventoryList" class="zzitemInventoryPage_dishInventoryList"
+                name="dishInventoryList" dsid="dishInventoryList" data-theme="b" data-divider-theme="b"
+                data-count-theme="b" style="" data-split-icon="carat-r">
+                    <!-- mobilelistitem_4 -->
+                    <li class="zzitemInventoryPage_mobilelistitem_4" data-icon="carat-r">
+                        <a id="zzitemInventoryPage_mobilelistitem_4" name="mobilelistitem_4" dsid="mobilelistitem_4"
+                        tabindex="2" class="zzitemInventoryPage_mobilelistitem_4">
+                        <h3>Grilled chicken in mango sauce</h3>
+                        </a>
+                    </li>
+                    <!-- mobilelistitem_6 -->
+                    <li class="zzitemInventoryPage_mobilelistitem_6" data-icon="carat-r">
+                        <a id="zzitemInventoryPage_mobilelistitem_6" name="mobilelistitem_6" dsid="mobilelistitem_6"
+                        tabindex="2" class="zzitemInventoryPage_mobilelistitem_6">
+                        <h3>Leg of lamb</h3>
+                        </a>
+                    </li>
+                    <!-- mobilelistitem_8 -->
+                    <li class="zzitemInventoryPage_mobilelistitem_8" data-icon="carat-r">
+                        <a id="zzitemInventoryPage_mobilelistitem_8" name="mobilelistitem_8" dsid="mobilelistitem_8"
+                        tabindex="2" class="zzitemInventoryPage_mobilelistitem_8">
+                        <h3>Seared tuna</h3>
+                        </a>
+                    </li>
+                    <!-- mobilelistitem_11 -->
+                    <li class="zzitemInventoryPage_mobilelistitem_11" data-icon="carat-r">
+                        <a id="zzitemInventoryPage_mobilelistitem_11" name="mobilelistitem_11" dsid="mobilelistitem_11"
+                        tabindex="2" class="zzitemInventoryPage_mobilelistitem_11">
+                        <h3>. . .</h3>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- inventoryPopup -->
+            <div data-role="popup" name="inventoryPopup" dsid="inventoryPopup" id="zzitemInventoryPage_inventoryPopup"
+            class="zzitemInventoryPage_inventoryPopup" data-corners="true" data-dismissible="true"
+            data-overlay-theme="" data-theme="" data-shadow="true" data-tolerance="30,15,30,15">
+                <div class="ui-popup-content-wrapper">
+                    <!-- name -->
+                    <div name="name" id="zzitemInventoryPage_name" dsid="name" data-role="appery_label"
+                    class="labelDataCenter  zzitemInventoryPage_name">
+                        Grilled chicken in mango sauce
+                    </div>
+                    <!-- dishHideLabel -->
+                    <div name="dishHideLabel" id="zzitemInventoryPage_dishHideLabel" dsid="dishHideLabel"
+                    data-role="appery_label" class="labelStandard  zzitemInventoryPage_dishHideLabel">
+                        Enter the number of hours to hide this item on the menu when out of stock.
+                    </div>
+                    <!-- dishHideTime -->
+                    <div data-role="fieldcontain" class="zzitemInventoryPage_dishHideTime ">
+                        <input type="number" name="dishHideTime" dsid="dishHideTime" value="" placeholder="Number of hours to hide from menu"
+                        id="zzitemInventoryPage_dishHideTime" tabindex="3" multiple data-theme="b" data-mini="true"
+                        class="zzitemInventoryPage_dishHideTime" />
+                    </div>
+                    <!-- inventoryCount -->
+                    <div name="inventoryCount" id="zzitemInventoryPage_inventoryCount" dsid="inventoryCount"
+                    data-role="appery_label" class="zzitemInventoryPage_inventoryCount">
+                        25
+                    </div>
+                    <!-- inventoryCountLabel -->
+                    <div name="inventoryCountLabel" id="zzitemInventoryPage_inventoryCountLabel" dsid="inventoryCountLabel"
+                    data-role="appery_label" class="labelStandard  zzitemInventoryPage_inventoryCountLabel">
+                        The current inventory count is above. Enter the new count below.
+                    </div>
+                    <!-- updateInventory -->
+                    <div data-role="fieldcontain" class="zzitemInventoryPage_updateInventory ">
+                        <input type="number" name="updateInventory" dsid="updateInventory" value="" placeholder="New inventory count"
+                        id="zzitemInventoryPage_updateInventory" tabindex="4" multiple data-theme="b" data-mini="true"
+                        class="zzitemInventoryPage_updateInventory" />
+                    </div>
+                    <!-- inventoryAlertLabel -->
+                    <div name="inventoryAlertLabel" id="zzitemInventoryPage_inventoryAlertLabel" dsid="inventoryAlertLabel"
+                    data-role="appery_label" class="labelStandard  zzitemInventoryPage_inventoryAlertLabel">
+                        Alert when the inventory count drops to this number
+                    </div>
+                    <!-- inventoryLow -->
+                    <div data-role="fieldcontain" class="zzitemInventoryPage_inventoryLow ">
+                        <input type="text" name="inventoryLow" dsid="inventoryLow" value="" placeholder="Alert when inventory drops to this #"
+                        id="zzitemInventoryPage_inventoryLow" tabindex="6" multiple data-theme="b" data-mini="true"
+                        class="zzitemInventoryPage_inventoryLow" />
+                    </div>
+                    <!-- inventorySaveButton --><!--
+                    --><a data-role="button" name="inventorySaveButton" dsid="inventorySaveButton" class="zzitemInventoryPage_inventorySaveButton"
+                    id="zzitemInventoryPage_inventorySaveButton" data-corners="true" data-icon="check"
+                    data-iconpos="right" x-apple-data-detectors="false" data-inline="true" data-mini="true"
+                    data-theme="b" tabindex="5">
+                    Save
+                    </a>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>

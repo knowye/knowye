@@ -1,0 +1,29 @@
+
+/* Define default spinner */
+.ui-icon-loading {
+	background: url("../libs/jquerymobile/1.4.5/images/ajax-loader.gif") repeat scroll 0 0 / 46px 46px transparent!important;
+}
+/* navigateButton */
+#zzratingInfoPage_navigateButton {
+
+}
+.ui-btn.zzratingInfoPage_navigateButton {
+
+}
+/* ratingInfoContainer */
+.ui-content.zzratingInfoPage_ratingInfoContainer {
+	padding: 15px 15px 15px 15px;
+}
+/* ratingAboutText */
+.zzratingInfoPage_ratingAboutText {
+	margin: 4px 4px 4px 4px;
+	font-weight: normal;
+	width: auto; height: auto;
+}
+div.zzratingInfoPage_ratingAboutText {
+	overflow: auto;
+}
+/* ratingInfoFooter */
+.zzratingInfoPage_ratingInfoFooter {
+	min-height:38px;
+}

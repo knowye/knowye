@@ -1,0 +1,193 @@
+
+/* Define default spinner */
+.ui-icon-loading {
+	background: url("../libs/jquerymobile/1.4.5/images/ajax-loader.gif") repeat scroll 0 0 / 46px 46px transparent!important;
+}
+/* homeButton */
+#zztimeRangePage_homeButton {
+
+}
+.ui-btn.zztimeRangePage_homeButton {
+
+}
+/* timeRangeContainer */
+.ui-content.zztimeRangePage_timeRangeContainer {
+	padding: 15px 15px 15px 15px;
+}
+/* timeRangeLabel */
+.zztimeRangePage_timeRangeLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #0ec40a; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* rangeNameInput */
+.zztimeRangePage_rangeNameInput {
+	margin: 4px 0px 4px 0px;
+}
+/* daySelect */
+.zztimeRangePage_daySelect {
+	margin: 4px 0px 4px 0px;
+}
+/* monday */
+.zztimeRangePage_monday {
+	-webkit-border-radius: inherit;
+	border-radius: inherit;
+}
+/* tuesday */
+.zztimeRangePage_tuesday {
+	-webkit-border-radius: inherit;
+	border-radius: inherit;
+}
+/* wednesday */
+.zztimeRangePage_wednesday {
+	-webkit-border-radius: inherit;
+	border-radius: inherit;
+}
+/* thursday */
+.zztimeRangePage_thursday {
+	-webkit-border-radius: inherit;
+	border-radius: inherit;
+}
+/* friday */
+.zztimeRangePage_friday {
+	-webkit-border-radius: inherit;
+	border-radius: inherit;
+}
+/* saturday */
+.zztimeRangePage_saturday {
+	-webkit-border-radius: inherit;
+	border-radius: inherit;
+}
+/* sunday */
+.zztimeRangePage_sunday {
+	-webkit-border-radius: inherit;
+	border-radius: inherit;
+}
+/* rangeTimeGrid */
+.zztimeRangePage_rangeTimeGrid {
+	height: auto;
+	width:100%;
+	margin: 4px 0px 4px 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.zztimeRangePage_rangeTimeGrid_wrapper {
+
+}
+.zztimeRangePage_rangeTimeGrid > tr > td {
+	vertical-align: top;
+}
+.zztimeRangePage_rangeTimeGrid_row_0, .zztimeRangePage_rangeTimeGrid_row_0 > td {
+	height: 30px
+}
+.zztimeRangePage_rangeTimeGrid_row_1, .zztimeRangePage_rangeTimeGrid_row_1 > td {
+	height: 30px
+}
+/* timeStartLabelCell */
+.zztimeRangePage_timeStartLabelCell {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.zztimeRangePage_timeStartLabelCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* timeStartLabel */
+.zztimeRangePage_timeStartLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #0ec40a; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* timeEndLabelCell */
+.zztimeRangePage_timeEndLabelCell {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.zztimeRangePage_timeEndLabelCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* timeEndLabel */
+.zztimeRangePage_timeEndLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #0ec40a; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* timeStartCell */
+.zztimeRangePage_timeStartCell {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.zztimeRangePage_timeStartCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* timeStartInput */
+.zztimeRangePage_timeStartInput {
+	margin: 4px 0px 4px 0px;
+}
+/* timeEndCell */
+.zztimeRangePage_timeEndCell {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.zztimeRangePage_timeEndCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* timeEndInput */
+.zztimeRangePage_timeEndInput {
+	margin: 4px 0px 4px 0px;
+}
+/* timeRangeSaveButton */
+#zztimeRangePage_timeRangeSaveButton {
+
+}
+.ui-btn.zztimeRangePage_timeRangeSaveButton {
+	margin: 4px 5px 4px 5px;
+}
+/* DELETEsampleList */
+.ui-page .zztimeRangePage_DELETEsampleList {
+	margin: 4px -15px 0px -15px;
+}
+/* mobilelistitem_5 */
+/* mobilelistitembutton_5 */
+.zztimeRangePage_mobilelistitembutton_5 {
+
+}
+/* mobilelistitem_6 */
+/* mobilelistitembutton_7 */
+.zztimeRangePage_mobilelistitembutton_7 {
+
+}
+/* mobilelistitem_8 */
+/* mobilelistitembutton_9 */
+.zztimeRangePage_mobilelistitembutton_9 {
+
+}
+/* mobilelistitem_28 */
+/* mobilelistitembutton_29 */
+.zztimeRangePage_mobilelistitembutton_29 {
+
+}
+/* mobilelistitem_30 */
+/* mobilelistitembutton_31 */
+.zztimeRangePage_mobilelistitembutton_31 {
+
+}
+/* mobilelistitem_32 */
+/* mobilelistitembutton_33 */
+.zztimeRangePage_mobilelistitembutton_33 {
+
+}
+/* timeRangeFooter */
+.zztimeRangePage_timeRangeFooter {
+	min-height:38px;
+}

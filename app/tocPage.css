@@ -1,0 +1,22 @@
+
+/* Define default spinner */
+.ui-icon-loading {
+	background: url("../libs/jquerymobile/1.4.5/images/ajax-loader.gif") repeat scroll 0 0 / 46px 46px transparent!important;
+}
+/* tocContainer */
+.ui-content.tocPage_tocContainer {
+	padding: 15px 15px 15px 15px;
+}
+/* tocHTML */
+.tocPage_tocHTML {
+	margin: 2px 2px 2px 2px;
+	font-weight: normal;
+	width: auto; height: auto;
+}
+div.tocPage_tocHTML {
+	overflow: auto;
+}
+/* mobilefooter */
+.tocPage_mobilefooter {
+	min-height:38px;
+}

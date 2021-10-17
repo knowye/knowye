@@ -1,0 +1,329 @@
+
+/* Define default spinner */
+.ui-icon-loading {
+	background: url("../libs/jquerymobile/1.4.5/images/ajax-loader.gif") repeat scroll 0 0 / 46px 46px transparent!important;
+}
+/* helpButton */
+#proprietorStartPage_helpButton {
+
+}
+.ui-btn.proprietorStartPage_helpButton {
+
+}
+/* vendorContainer */
+.ui-content.proprietorStartPage_vendorContainer {
+	padding: 15px 15px 15px 15px;
+}
+/* loggedInLabel */
+.proprietorStartPage_loggedInLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #f8f8fa; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* loggedInIdLabel */
+.proprietorStartPage_loggedInIdLabel {
+	text-decoration: none; font-weight: normal; color: #f8f8fa; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* alertGrid */
+.proprietorStartPage_alertGrid {
+	height: auto;
+	width:100%;
+	margin: 10px 0px 4px 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.proprietorStartPage_alertGrid_wrapper {
+	display: none;
+}
+.proprietorStartPage_alertGrid > tr > td {
+	vertical-align: top;
+}
+.proprietorStartPage_alertGrid_row_0, .proprietorStartPage_alertGrid_row_0 > td {
+	height: 30px
+}
+.proprietorStartPage_alertGrid_row_1, .proprietorStartPage_alertGrid_row_1 > td {
+	height: 30px
+}
+.proprietorStartPage_alertGrid_row_2, .proprietorStartPage_alertGrid_row_2 > td {
+	height: 30px
+}
+/* mobilegridcell_24 */
+.proprietorStartPage_mobilegridcell_24 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.proprietorStartPage_mobilegridcell_24 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* alertLabel */
+.proprietorStartPage_alertLabel {
+	text-decoration: none; font-weight: bold; font-style: italic; color: #0ec40a; text-align: left; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* mobilegridcell_25 */
+.proprietorStartPage_mobilegridcell_25 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.proprietorStartPage_mobilegridcell_25 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* alertButtonLabel */
+.proprietorStartPage_alertButtonLabel {
+	text-decoration: none; font-weight: bold; font-style: italic; color: #0ec40a; text-align: left; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* mobilegridcell_26 */
+.proprietorStartPage_mobilegridcell_26 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.proprietorStartPage_mobilegridcell_26 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* inventoryAlertLabel */
+.proprietorStartPage_inventoryAlertLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #0ec40a; text-align: left; font-family: Helvetica; font-size: 16px;
+	margin: 8px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* mobilegridcell_27 */
+.proprietorStartPage_mobilegridcell_27 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.proprietorStartPage_mobilegridcell_27 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* inventoryAlertButton */
+#proprietorStartPage_inventoryAlertButton {
+	display: none;
+}
+.ui-btn.proprietorStartPage_inventoryAlertButton {
+	margin: 4px 5px 4px 5px;
+}
+/* mobilegridcell_32 */
+.proprietorStartPage_mobilegridcell_32 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.proprietorStartPage_mobilegridcell_32 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* ratingAlertLabel */
+.proprietorStartPage_ratingAlertLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #0ec40a; text-align: left; font-family: Helvetica; font-size: 16px;
+	margin: 8px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* mobilegridcell_33 */
+.proprietorStartPage_mobilegridcell_33 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.proprietorStartPage_mobilegridcell_33 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* ratingAlertButton */
+#proprietorStartPage_ratingAlertButton {
+
+}
+.ui-btn.proprietorStartPage_ratingAlertButton {
+	margin: 4px 5px 4px 5px;
+}
+/* vendorActionsButtons */
+.ui-page .proprietorStartPage_vendorActionsButtons {
+	margin: 10px 0px 0px 0px;
+}
+/* operatingInfoButton */
+/* mobilelistitembutton_12 */
+.proprietorStartPage_mobilelistitembutton_12 {
+
+}
+/* inventoryButton */
+.ui-listview li.proprietorStartPage_inventoryButton {
+	display: none;
+}
+/* mobilelistitembutton_16 */
+.proprietorStartPage_mobilelistitembutton_16 {
+
+}
+/* analyticsButton */
+/* mobilelistitembutton_18 */
+.proprietorStartPage_mobilelistitembutton_18 {
+
+}
+/* alertButton */
+.ui-listview li.proprietorStartPage_alertButton {
+	display: none;
+}
+/* mobilelistitembutton_37 */
+.proprietorStartPage_mobilelistitembutton_37 {
+
+}
+/* menuItemsButton */
+/* mobilelistitembutton_14 */
+.proprietorStartPage_mobilelistitembutton_14 {
+
+}
+/* sendButton */
+.ui-listview li.proprietorStartPage_sendButton {
+	display: none;
+}
+/* mobilelistitembutton_41 */
+.proprietorStartPage_mobilelistitembutton_41 {
+
+}
+/* promoButton */
+.ui-listview li.proprietorStartPage_promoButton {
+	display: none;
+}
+/* mobilelistitembutton_43 */
+.proprietorStartPage_mobilelistitembutton_43 {
+
+}
+/* logoutButton */
+/* mobilelistitembutton_39 */
+.proprietorStartPage_mobilelistitembutton_39 {
+
+}
+/* customersCountGrid */
+.proprietorStartPage_customersCountGrid {
+	height: auto;
+	width:100%;
+	margin: 20px 0px 0px 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.proprietorStartPage_customersCountGrid_wrapper {
+	display: none;
+}
+.proprietorStartPage_customersCountGrid > tr > td {
+	vertical-align: top;
+}
+.proprietorStartPage_customersCountGrid_row_0, .proprietorStartPage_customersCountGrid_row_0 > td {
+	height: 30px
+}
+/* customersCountCell */
+.proprietorStartPage_customersCountCell {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.proprietorStartPage_customersCountCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* customersCountLabel */
+.proprietorStartPage_customersCountLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 0px 0px 0px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* customersCount */
+.proprietorStartPage_customersCount {
+	text-decoration: none; font-weight: normal; font-style: italic; text-align: left; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 0px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* vendorStartFooter */
+.proprietorStartPage_vendorStartFooter {
+	min-height:38px;
+}
+/* logoutConfirmPopup */
+.proprietorStartPage_logoutConfirmPopup {
+
+}
+div.proprietorStartPage_logoutConfirmPopup {
+	max-height: 100vh;
+	box-sizing: border-box;
+}
+div.proprietorStartPage_logoutConfirmPopup .ui-popup-content-wrapper {
+	width:100%;
+	height:100%;
+	max-height: 99vh;
+	overflow:auto;
+	box-sizing: border-box;
+}
+/* logoutConfirmLabel */
+.proprietorStartPage_logoutConfirmLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #4c516d; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 4px 4px 4px 4px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* logoutButtonGrid */
+.proprietorStartPage_logoutButtonGrid {
+	height: auto;
+	width:100%;
+	margin: 10px 0px 4px 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.proprietorStartPage_logoutButtonGrid_wrapper {
+
+}
+.proprietorStartPage_logoutButtonGrid > tr > td {
+	vertical-align: top;
+}
+.proprietorStartPage_logoutButtonGrid_row_0, .proprietorStartPage_logoutButtonGrid_row_0 > td {
+	height: 30px
+}
+/* logoutButtonCell */
+.proprietorStartPage_logoutButtonCell {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 4px;
+}
+.proprietorStartPage_logoutButtonCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* logoutConfirmButton */
+#proprietorStartPage_logoutConfirmButton {
+
+}
+.ui-btn.proprietorStartPage_logoutConfirmButton {
+	margin: 10px 4px 5px 4px;
+}
+/* logoutCancelCell */
+.proprietorStartPage_logoutCancelCell {
+	height:30px !important;
+	width:auto;
+	padding: 2px 4px 2px 2px;
+}
+.proprietorStartPage_logoutCancelCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* logoutCancelButton */
+#proprietorStartPage_logoutCancelButton {
+
+}
+.ui-btn.proprietorStartPage_logoutCancelButton {
+	margin: 10px 4px 5px 4px;
+}

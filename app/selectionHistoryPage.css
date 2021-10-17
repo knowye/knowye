@@ -1,0 +1,64 @@
+
+/* Define default spinner */
+.ui-icon-loading {
+	background: url("../libs/jquerymobile/1.4.5/images/ajax-loader.gif") repeat scroll 0 0 / 46px 46px transparent!important;
+}
+/* navigateButton */
+#selectionHistoryPage_navigateButton {
+
+}
+.ui-btn.selectionHistoryPage_navigateButton {
+
+}
+/* selectionHistoryContainer */
+.ui-content.selectionHistoryPage_selectionHistoryContainer {
+	padding: 15px 15px 15px 15px;
+}
+/* ownerNameLabel */
+.selectionHistoryPage_ownerNameLabel {
+	text-decoration: underline; font-weight: normal; font-style: italic; color: #539eed; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* selectedHistoryList */
+.ui-page .selectionHistoryPage_selectedHistoryList {
+	margin: 10px -15px 0px -15px;
+}
+/* selectedHistoryItem */
+.ui-mobile-viewport ul[data-role="listview"] li.selectionHistoryPage_selectedHistoryItem {
+	padding: 0;
+	margin: 0;
+}
+.ui-mobile-viewport ul[data-role="listview"] li.selectionHistoryPage_selectedHistoryItem .ui-li-static-container {
+	padding: 0px 0px 4px 0px;
+	padding-right: 41px;
+	padding-left: 0px;
+	min-height: 1em;
+	border-width:0;
+}
+.ui-mobile-viewport ul[data-role="listview"] li.selectionHistoryPage_selectedHistoryItem.ui-icon-none .ui-li-static-container {
+	padding-right: 0px; /* consider nothing */
+}
+/* mobilelistitembutton_11 */
+.selectionHistoryPage_mobilelistitembutton_11 {
+
+}
+/* itemNameLabel */
+.selectionHistoryPage_itemNameLabel {
+	text-decoration: none; font-weight: normal; text-align: left; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* dateAddedLabel */
+.selectionHistoryPage_dateAddedLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; text-align: left; font-family: Helvetica; font-size: 14px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* mobilefooter */
+.selectionHistoryPage_mobilefooter {
+	min-height:38px;
+}

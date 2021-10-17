@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>
+            startScreen
+        </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, viewport-fit=cover">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="msapplication-tap-highlight" content="no">
+        <!-- Enable all requests, inline styles, and eval() -->
+        <meta http-equiv="Content-Security-Policy" content="default-src * gap://ready data:; style-src 'self' 'unsafe-inline' *; script-src 'self' 'unsafe-inline' 'unsafe-eval' *">
+        <!-- Uncomment link and meta tags below to activate PWA icons and theme color -->
+        <!-- link rel="manifest" href="../manifest.json" crossOrigin="use-credentials" -->
+        <!-- meta name="theme-color" content="#ffffff" -->
+        <link href="../css/theme/jqm/jqm.css" rel="stylesheet" />
+        <link href="../css/theme/KnoWYE3/KnoWYE3.css" rel="stylesheet" />
+        <link href="../libs/jquerymobile/1.4.5/jquery.mobile.structure-1.4.5.css" rel="stylesheet"
+        />
+        <link type="text/css" rel="stylesheet" href="../css/logblock.css" />
+        <link type="text/css" rel="stylesheet" href="../css/menuPageBuilder.css" />
+        <link type="text/css" rel="stylesheet" href="../css/common.css" />
+        <link type="text/css" rel="stylesheet" href="../css/header_footer.css" />
+        <link type="text/css" rel="stylesheet" href="../css/button.css" />
+        <link type="text/css" rel="stylesheet" href="../css/label.css" />
+        <link type="text/css" rel="stylesheet" href="../css/FontRoboto.css.css" />
+        <!-- Uncomment this script to activate service worker -->
+        <!-- <script>
+        if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('../sw.js')
+        .then(() => console.log('service worker installed'))
+        .catch(err => console.error('Error', err));
+        }
+        </script>
+        -->
+        <script type="text/javascript" src="../libs/underscore/underscore.js">
+        </script>
+        <script type="text/javascript" src="../libs/store/json2.js">
+        </script>
+        <script type="text/javascript" src="../libs/jquery/jquery-2.1.1.js">
+        </script>
+        <script type="text/javascript" src="../libs/jquery/jquery-ajaxTransport.js">
+        </script>
+        <script type="text/javascript">
+            $(document).bind("mobileinit", function() {
+                if (navigator.userAgent.toLowerCase().indexOf("android") != -1) {
+                    $.mobile.defaultPageTransition = 'none';
+                    $.mobile.defaultDialogTransition = 'none';
+                } else if (navigator.userAgent.toLowerCase().indexOf("msie") != -1) {
+                    $.mobile.allowCrossDomainPages = true;
+                    $.support.cors = true;
+                } else if (navigator.userAgent.match(/(iPad|iPhone|iPod)/g)) {
+                    $.mobile.hashListeningEnabled = false;
+                }
+            });
+        </script>
+        <script type="text/javascript" src="../libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.js">
+        </script>
+        <script type="text/javascript" src="../libs/apperyio/mobilebase.js">
+        </script>
+        <script type="text/javascript" src="../libs/event/customEventHandler.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/sha1.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/oauth.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/contexts.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/jquery.xml2json.min.js">
+        </script>
+        <script type="text/javascript" src="../libs/ms_sdk_bundle/client-sdk.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/appery.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/component-manager.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/mapping-impl.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/entity-api.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/login.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/storage-api.js">
+        </script>
+        <script type="text/javascript" src="../get_target_platform.js">
+        </script>
+        <script type="text/javascript" src="../cordova.js">
+        </script>
+        <link href="../libs/apperyio/mobilebase.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="../js/services/model.js">
+        </script>
+        <script type="text/javascript" src="../js/menuHeadingManagePageBuilder.js">
+        </script>
+        <script type="text/javascript" src="../js/navigatePageManager.js">
+        </script>
+        <script type="text/javascript" src="../js/logblock.js">
+        </script>
+        <script type="text/javascript" src="../js/Facebook_Helper.js">
+        </script>
+        <script type="text/javascript" src="../js/menuHeadingManager.js">
+        </script>
+        <script type="text/javascript" src="../js/menuPageBuilder.js">
+        </script>
+        <script type="text/javascript" src="../js/jquery-ui.min.js">
+        </script>
+        <script type="text/javascript" src="../js/common.js">
+        </script>
+        <script type="text/javascript" src="../js/clipboard.js">
+        </script>
+        <script type="text/javascript" src="../js/FileUploadHelper.js">
+        </script>
+        <script type="text/javascript" src="../js/zzqrCodeScaner.js">
+        </script>
+        <script type="text/javascript" src="../js/menuHistoryManager.js">
+        </script>
+        <script type="text/javascript" src="../js/GoogleCharts.js">
+        </script>
+        <script type="text/javascript" src="../js/services/service.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/databaseUtils.js">
+        </script>
+        <script type="text/javascript" src="../js/secure.js">
+        </script>
+<script type="text/javascript" src="../js/EncodeDecodeJS.js">
+        </script>
+    </head>
+    
+    <body>
+        <script language="JavaScript" type="text/javascript">
+        </script>
+        <div data-role="page" style="min-height:480px;" dsid="startScreen" id="startScreen"
+        class="type-interior" data-theme="b">
+            <!-- startContainer -->
+            <div data-role="content" id="startScreen_startContainer" name="startContainer" class="ui-li-container centered  startScreen_startContainer ui-content"
+            dsid="startContainer" data-theme="b">
+                <link href="startScreen.css" rel="stylesheet" type="text/css" />
+                <script type="text/javascript" src="startScreen.js">
+                </script>
+                <!-- knowyeLogo -->
+                <img class="startScreen_knowyeLogo" src="../img/knowye_logo_w1.png" id="startScreen_knowyeLogo"
+                dsid="knowyeLogo" name="knowyeLogo" />
+                <!-- scanMenuCodeButton --><!--
+                --><a data-role="button" name="scanMenuCodeButton" dsid="scanMenuCodeButton" class="scan-btn rounded  startScreen_scanMenuCodeButton"
+                id="startScreen_scanMenuCodeButton" data-corners="true" data-icon="eye" data-iconpos="right"
+                x-apple-data-detectors="false" data-mini="true" data-theme="b" tabindex="1">
+                scan menu code
+                </a><!--
+                --><!-- gotoSearch --><!--
+                --><a data-role="button" name="gotoSearch" dsid="gotoSearch" class="scan-btn rounded  startScreen_gotoSearch"
+                id="startScreen_gotoSearch" data-corners="true" data-icon="search" data-iconpos="right"
+                x-apple-data-detectors="false" data-mini="true" data-theme="b" tabindex="2">
+                knowye near me
+                </a><!--
+                --><!-- loginForm -->
+                <div class="startScreen_loginForm_wrapper" data-wrapper-for="loginForm">
+                    <table id="startScreen_loginForm" class="loginForm  startScreen_loginForm" dsid="loginForm"
+                    name="loginForm" cellpadding=0 cellspacing=0>
+                        <col style="width:auto;" />
+                        <tr class="startScreen_loginForm_row_0">
+                            <!-- loginCell -->
+                            <td id="startScreen_loginCell" name="loginCell" class="startScreen_loginCell" colspan=1
+                            rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- loginField -->
+                                    <div data-role="fieldcontain" class="startScreen_loginField ">
+                                        <input type="email" name="loginField" dsid="loginField" value="" placeholder="login with email address"
+                                        id="startScreen_loginField" tabindex="3" multiple data-theme="b" data-mini="true"
+                                        class="startScreen_loginField" />
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="startScreen_loginForm_row_1">
+                            <!-- passwordCell -->
+                            <td id="startScreen_passwordCell" name="passwordCell" class="startScreen_passwordCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- passwordField -->
+                                    <div data-role="fieldcontain" class="startScreen_passwordField ">
+                                        <input type="password" name="passwordField" dsid="passwordField" value="" placeholder="password"
+                                        id="startScreen_passwordField" tabindex="4" multiple data-theme="b" data-mini="true"
+                                        class="startScreen_passwordField" />
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- errorLabel -->
+                <div name="errorLabel" id="startScreen_errorLabel" dsid="errorLabel" data-role="appery_label"
+                class="labelError  startScreen_errorLabel">
+                    please enter your password
+                </div>
+                <!-- loginButton --><!--
+                --><a data-role="button" name="loginButton" dsid="loginButton" class="scanMenuButton  startScreen_loginButton"
+                id="startScreen_loginButton" data-corners="true" data-icon="check" data-iconpos="right"
+                x-apple-data-detectors="false" data-mini="true" data-theme="b" tabindex="5">
+                login
+                </a><!--
+                --><!-- forgotPwLabel -->
+                <div name="forgotPwLabel" id="startScreen_forgotPwLabel" dsid="forgotPwLabel" data-role="appery_label"
+                class="startScreen_forgotPwLabel">
+                    forgot password?
+                </div>
+                <!-- amazonLogin --><!--
+                --><a data-role="button" name="amazonLogin" dsid="amazonLogin" class="startScreen_amazonLogin"
+                id="startScreen_amazonLogin" data-corners="true" data-icon="none" data-iconpos='nowhere'
+                x-apple-data-detectors="false" data-mini="true" data-theme="e" tabindex="11">
+                login with amazon
+                </a><!--
+                --><!-- facebookLogin --><!--
+                --><a data-role="button" name="facebookLogin" dsid="facebookLogin" class="startScreen_facebookLogin"
+                id="startScreen_facebookLogin" data-corners="true" data-icon="none" data-iconpos='nowhere'
+                x-apple-data-detectors="false" data-mini="true" data-theme="f" tabindex="12">
+                login with facebook
+                </a><!--
+                --><!-- createAccountButton --><!--
+                --><a data-role="button" name="createAccountButton" dsid="createAccountButton" class="scanMenuButton  startScreen_createAccountButton"
+                id="startScreen_createAccountButton" data-corners="true" data-icon="user" data-iconpos="right"
+                x-apple-data-detectors="false" data-mini="true" data-theme="b" tabindex="13">
+                create account to personalize
+                </a><!--
+                --><!-- touPrivacyGrid -->
+                <div class="startScreen_touPrivacyGrid_wrapper" data-wrapper-for="touPrivacyGrid">
+                    <table id="startScreen_touPrivacyGrid" class="startScreen_touPrivacyGrid" dsid="touPrivacyGrid"
+                    name="touPrivacyGrid" cellpadding=0 cellspacing=0>
+                        <col style="width:auto;" />
+                        <col style="width:auto;" />
+                        <tr class="startScreen_touPrivacyGrid_row_0">
+                            <!-- touCell -->
+                            <td id="startScreen_touCell" name="touCell" class="startScreen_touCell" colspan=1
+                            rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- touLabel -->
+                                    <div name="touLabel" id="startScreen_touLabel" dsid="touLabel" data-role="appery_label"
+                                    class="startScreen_touLabel">
+                                        terms of use
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- privacyCell -->
+                            <td id="startScreen_privacyCell" name="privacyCell" class="startScreen_privacyCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- privacyLabel -->
+                                    <div name="privacyLabel" id="startScreen_privacyLabel" dsid="privacyLabel" data-role="appery_label"
+                                    class="startScreen_privacyLabel">
+                                        privacy policy
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <!-- introPopup -->
+            <div data-role="popup" name="introPopup" dsid="introPopup" id="startScreen_introPopup"
+            class="roundedPopup  startScreen_introPopup" data-corners="true" data-dismissible="false"
+            data-overlay-theme="" data-theme="" data-shadow="true" data-tolerance="30,15,30,15">
+                <div class="ui-popup-content-wrapper">
+                    <!-- introPopupLabel1 -->
+                    <div name="introPopupLabel1" id="startScreen_introPopupLabel1" dsid="introPopupLabel1"
+                    data-role="appery_label" class="labelOnDark  startScreen_introPopupLabel1">
+                        knowye stands for 'know what you eat.' we believe what you eat is more important
+                        than where you eat.
+                    </div>
+                    <!-- introPopupLabel2 -->
+                    <div name="introPopupLabel2" id="startScreen_introPopupLabel2" dsid="introPopupLabel2"
+                    data-role="appery_label" class="labelOnDark  startScreen_introPopupLabel2">
+                        knowye helps you pick great dishes. create a free account to use more features.
+                    </div>
+                    <div data-role="fieldcontain" class="startScreen_showAgainChkBox" id="startScreen_showAgainChkBox"
+                    dsid="showAgainChkBox">
+                        <fieldset data-role="controlgroup" data-theme="b" data-mini="true" class="">
+                            <span dsid="showAgainCheck" class="startScreen_showAgainCheck" name="showAgainCheck">
+                                <input type="checkbox" name="showAgainChkBox" id="startScreen_showAgainCheck" tabindex="16"
+                                value="1" />
+                                <label id="startScreen_showAgainCheck_label" for="startScreen_showAgainCheck">
+                                    don't show again
+                                </label>
+                            </span>
+                        </fieldset>
+                    </div>
+                    <!-- introPopupContinueButton --><!--
+                    --><a data-role="button" name="introPopupContinueButton" dsid="introPopupContinueButton"
+                    class="scanMenuButton  startScreen_introPopupContinueButton" id="startScreen_introPopupContinueButton"
+                    data-corners="true" data-icon="check" data-iconpos="right" x-apple-data-detectors="false"
+                    data-inline="true" data-mini="true" data-theme="b" tabindex="17">
+                    continue
+                    </a>
+                </div>
+            </div>
+            <!-- createAccountPopup -->
+            <div data-role="popup" name="createAccountPopup" dsid="createAccountPopup" id="startScreen_createAccountPopup"
+            class="roundedPopup  startScreen_createAccountPopup" data-corners="true" data-dismissible="true"
+            data-overlay-theme="" data-theme="" data-shadow="true" data-tolerance="30,15,30,15">
+                <div class="ui-popup-content-wrapper">
+                    <!-- createAccountPopupLabel -->
+                    <div name="createAccountPopupLabel" id="startScreen_createAccountPopupLabel" dsid="createAccountPopupLabel"
+                    data-role="appery_label" class="labelOnDark  startScreen_createAccountPopupLabel">
+                        select the type of account to create
+                    </div>
+                    <!-- accountTypeList -->
+                    <ul data-role="listview" id="startScreen_accountTypeList" class="startScreen_accountTypeList"
+                    name="accountTypeList" dsid="accountTypeList" data-inset="true" data-theme="b" data-divider-theme="b"
+                    data-count-theme="b" style="" data-split-icon="carat-r">
+                        <!-- personSelectButton -->
+                        <li class="startScreen_personSelectButton" data-icon="carat-r">
+                            <a id="startScreen_personSelectButton" name="personSelectButton" dsid="personSelectButton"
+                            tabindex="19" class="startScreen_personSelectButton">
+                            <h3>customer</h3>
+                            </a>
+                        </li>
+                        <!-- proprietorSelectButton -->
+                        <li class="startScreen_proprietorSelectButton" data-icon="carat-r">
+                            <a id="startScreen_proprietorSelectButton" name="proprietorSelectButton" dsid="proprietorSelectButton"
+                            tabindex="19" class="startScreen_proprietorSelectButton">
+                            <h3>proprietor</h3>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- forgotPasswordPopup -->
+            <div data-role="popup" name="forgotPasswordPopup" dsid="forgotPasswordPopup" id="startScreen_forgotPasswordPopup"
+            class="roundedPopup  startScreen_forgotPasswordPopup" data-corners="true" data-dismissible="true"
+            data-overlay-theme="" data-theme="" data-shadow="true" data-tolerance="30,15,30,15">
+                <div class="ui-popup-content-wrapper">
+                    <!-- resetPwButton --><!--
+                    --><a data-role="button" name="resetPwButton" dsid="resetPwButton" class="startScreen_resetPwButton"
+                    style='min-height:20px; ' id="startScreen_resetPwButton" data-corners="true" data-icon="delete"
+                    data-iconpos="notext" x-apple-data-detectors="false" data-inline="true" data-mini="true"
+                    data-theme="b" tabindex="22">
+                    &nbsp;
+                    </a><!--
+                    --><!-- resetPasswordTempLabel -->
+                    <div name="resetPasswordTempLabel" id="startScreen_resetPasswordTempLabel" dsid="resetPasswordTempLabel"
+                    data-role="appery_label" class="labelOnDark  startScreen_resetPasswordTempLabel">
+                        Use your account email address to send a note to the address below to reset your
+                        password. We'll send a new password to your address shortly.
+                    </div>
+                    <!-- resetPwAddressLink -->
+                    <div class="startScreen_resetPwAddressLink_link_wrapper">
+                        <a id="startScreen_resetPwAddressLink" href="mailto:resetpassword@dyjit.com" name="resetPwAddressLink"
+                        dsid="resetPwAddressLink" data-role="appery_link" class="startScreen_resetPwAddressLink">
+                        resetpassword@dyjit.com
+                        </a>
+                    </div>
+                    <!-- forgotPasswordLabel -->
+                    <div name="forgotPasswordLabel" id="startScreen_forgotPasswordLabel" dsid="forgotPasswordLabel"
+                    data-role="appery_label" class="labelOnDark  startScreen_forgotPasswordLabel">
+                        enter your email below. we'll send you a new password. you can change it later on
+                        your profile page.
+                    </div>
+                    <!-- emailInput -->
+                    <div data-role="fieldcontain" class="startScreen_emailInput ">
+                        <input type="email" name="emailInput" dsid="emailInput" value="" placeholder="enter email"
+                        id="startScreen_emailInput" tabindex="20" multiple data-theme="b" data-mini="true"
+                        class="startScreen_emailInput" />
+                    </div>
+                    <!-- forgotPasswordButton --><!--
+                    --><a data-role="button" name="forgotPasswordButton" dsid="forgotPasswordButton" class="scanMenuButton  startScreen_forgotPasswordButton"
+                    id="startScreen_forgotPasswordButton" data-corners="true" data-icon="check" data-iconpos="right"
+                    x-apple-data-detectors="false" data-inline="true" data-mini="true" data-theme="b"
+                    tabindex="21">
+                    submit
+                    </a>
+                </div>
+            </div>
+            <!-- locationsPopup -->
+            <div data-role="popup" name="locationsPopup" dsid="locationsPopup" id="startScreen_locationsPopup"
+            class="roundedPopup  startScreen_locationsPopup" data-corners="true" data-dismissible="true"
+            data-overlay-theme="" data-theme="" data-shadow="true" data-tolerance="30,15,30,15">
+                <div class="ui-popup-content-wrapper">
+                    <!-- locationPopupGrid -->
+                    <div class="startScreen_locationPopupGrid_wrapper" data-wrapper-for="locationPopupGrid">
+                        <table id="startScreen_locationPopupGrid" class="startScreen_locationPopupGrid"
+                        dsid="locationPopupGrid" name="locationPopupGrid" cellpadding=0 cellspacing=0>
+                            <col style="width:50px;" />
+                            <col style="width:auto;" />
+                            <tr class="startScreen_locationPopupGrid_row_0">
+                                <!-- mobilegridcell_48 -->
+                                <td id="startScreen_mobilegridcell_48" name="mobilegridcell_48" class="startScreen_mobilegridcell_48"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- locationsCloseBtn --><!--
+                                        --><a data-role="button" name="locationsCloseBtn" dsid="locationsCloseBtn" class="startScreen_locationsCloseBtn"
+                                        style='min-height:20px; ' id="startScreen_locationsCloseBtn" data-corners="true"
+                                        data-icon="delete" data-iconpos="notext" x-apple-data-detectors="false" data-inline="true"
+                                        data-mini="true" data-theme="b" tabindex="23">
+                                        Button
+                                        </a>
+                                    </div>
+                                </td>
+                                <!-- mobilegridcell_49 -->
+                                <td id="startScreen_mobilegridcell_49" name="mobilegridcell_49" class="startScreen_mobilegridcell_49"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- locationsLabel -->
+                                        <div name="locationsLabel" id="startScreen_locationsLabel" dsid="locationsLabel"
+                                        data-role="appery_label" class="labelOnLight  startScreen_locationsLabel">
+                                            would you like to see the menu of one these nearby places?
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <!-- featureLocationList -->
+                    <ul data-role="listview" id="startScreen_featureLocationList" class="startScreen_featureLocationList"
+                    name="featureLocationList" dsid="featureLocationList" data-inset="true" data-theme="b"
+                    data-divider-theme="b" data-count-theme="b" style="" data-split-icon="carat-r">
+                        <!-- featureLocationsItem -->
+                        <li class="startScreen_featureLocationsItem" data-icon="carat-r">
+                            <a id="startScreen_featureLocationsItem" name="featureLocationsItem" dsid="featureLocationsItem"
+                            tabindex="36" class="startScreen_featureLocationsItem">
+                            <h3>Item 1</h3>
+                            <span class="ui-li-count">3</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- locationList -->
+                    <ul data-role="listview" id="startScreen_locationList" class="startScreen_locationList"
+                    name="locationList" dsid="locationList" data-inset="true" data-theme="b" data-divider-theme="b"
+                    data-count-theme="b" style="" data-split-icon="carat-r">
+                        <!-- locationsListItem -->
+                        <li class="startScreen_locationsListItem" data-icon="carat-r">
+                            <a id="startScreen_locationsListItem" name="locationsListItem" dsid="locationsListItem"
+                            tabindex="24" class="startScreen_locationsListItem">
+                            <h3>Item 1</h3>
+                            <span class="ui-li-count">3</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- recoverpassword_popup -->
+            <div data-role="popup" name="recoverpassword_popup" dsid="recoverpassword_popup"
+            id="startScreen_recoverpassword_popup" class="roundedPopup  startScreen_recoverpassword_popup"
+            data-corners="true" data-dismissible="false" data-overlay-theme="" data-theme=""
+            data-shadow="true" data-tolerance="30,15,30,15">
+                <div class="ui-popup-content-wrapper">
+                    <!-- rpw_close_btn --><!--
+                    --><a data-role="button" name="rpw_close_btn" dsid="rpw_close_btn" class="startScreen_rpw_close_btn"
+                    style='min-height:20px; ' id="startScreen_rpw_close_btn" data-corners="true" data-icon="delete"
+                    data-iconpos="notext" x-apple-data-detectors="false" data-inline="true" data-mini="true"
+                    data-theme="b" tabindex="25">
+                    &nbsp;
+                    </a><!--
+                    --><!-- rpw_title -->
+                    <div name="rpw_title" id="startScreen_rpw_title" dsid="rpw_title" data-role="appery_label"
+                    class="no-shadow  startScreen_rpw_title">
+                        recover password
+                    </div>
+                    <!-- rpw_instruction_label -->
+                    <div name="rpw_instruction_label" id="startScreen_rpw_instruction_label" dsid="rpw_instruction_label"
+                    data-role="appery_label" class="no-shadow  startScreen_rpw_instruction_label">
+                        please enter your email address. we will send you a secret code on your registered
+                        mobile number to reset your password.
+                    </div>
+                    <!-- rpw_email -->
+                    <div data-role="fieldcontain" class="startScreen_rpw_email ">
+                        <input type="email" name="rpw_email" dsid="rpw_email" value="" placeholder="email"
+                        id="startScreen_rpw_email" tabindex="26" multiple data-theme="b" data-mini="true"
+                        class="rounded-input  startScreen_rpw_email" />
+                    </div>
+                    <!-- rpw_error -->
+                    <div name="rpw_error" id="startScreen_rpw_error" dsid="rpw_error" data-role="appery_label"
+                    class="no-shadow  startScreen_rpw_error">
+                    </div>
+                    <!-- rpw_send_code --><!--
+                    --><a data-role="button" name="rpw_send_code" dsid="rpw_send_code" class="scanMenuButton  startScreen_rpw_send_code"
+                    id="startScreen_rpw_send_code" data-corners="true" data-icon="mail" data-iconpos="left"
+                    x-apple-data-detectors="false" data-inline="true" data-mini="true" data-theme="b"
+                    tabindex="27">
+                    send code
+                    </a>
+                </div>
+            </div>
+            <!-- resetpassword_popup -->
+            <div data-role="popup" name="resetpassword_popup" dsid="resetpassword_popup" id="startScreen_resetpassword_popup"
+            class="roundedPopup  startScreen_resetpassword_popup" data-corners="true" data-dismissible="false"
+            data-overlay-theme="" data-theme="" data-shadow="true" data-tolerance="30,15,30,15">
+                <div class="ui-popup-content-wrapper">
+                    <!-- resetpass_close_btn --><!--
+                    --><a data-role="button" name="resetpass_close_btn" dsid="resetpass_close_btn" class="startScreen_resetpass_close_btn"
+                    style='min-height:20px; ' id="startScreen_resetpass_close_btn" data-corners="true"
+                    data-icon="delete" data-iconpos="notext" x-apple-data-detectors="false" data-inline="true"
+                    data-mini="true" data-theme="b" tabindex="28">
+                    &nbsp;
+                    </a><!--
+                    --><!-- resetpass_title -->
+                    <div name="resetpass_title" id="startScreen_resetpass_title" dsid="resetpass_title"
+                    data-role="appery_label" class="no-shadow  startScreen_resetpass_title">
+                        reset password
+                    </div>
+                    <!-- resetpass_msg -->
+                    <div name="resetpass_msg" id="startScreen_resetpass_msg" dsid="resetpass_msg" data-role="appery_label"
+                    class="no-shadow  startScreen_resetpass_msg">
+                    </div>
+                    <!-- resetpass_response_error -->
+                    <div name="resetpass_response_error" id="startScreen_resetpass_response_error" dsid="resetpass_response_error"
+                    data-role="appery_label" class="no-shadow  startScreen_resetpass_response_error">
+                    </div>
+                    <!-- resetpass_email -->
+                    <div data-role="fieldcontain" class="startScreen_resetpass_email ">
+                        <input type="email" name="resetpass_email" dsid="resetpass_email" value="" placeholder="email"
+                        id="startScreen_resetpass_email" tabindex="29" multiple data-theme="b" data-mini="true"
+                        class="rounded-input  startScreen_resetpass_email" />
+                    </div>
+                    <!-- resetpass_email_error -->
+                    <div name="resetpass_email_error" id="startScreen_resetpass_email_error" dsid="resetpass_email_error"
+                    data-role="appery_label" class="no-shadow  startScreen_resetpass_email_error">
+                    </div>
+                    <!-- resetpass_secret -->
+                    <div data-role="fieldcontain" class="startScreen_resetpass_secret ">
+                        <input type="number" name="resetpass_secret" dsid="resetpass_secret" value="" placeholder="secret code"
+                        id="startScreen_resetpass_secret" tabindex="30" multiple data-theme="b" data-mini="true"
+                        class="rounded-input  startScreen_resetpass_secret" />
+                    </div>
+                    <!-- resetpass_secret_error -->
+                    <div name="resetpass_secret_error" id="startScreen_resetpass_secret_error" dsid="resetpass_secret_error"
+                    data-role="appery_label" class="no-shadow  startScreen_resetpass_secret_error">
+                    </div>
+                    <!-- resetpass_new_pass -->
+                    <div data-role="fieldcontain" class="startScreen_resetpass_new_pass ">
+                        <input type="password" name="resetpass_new_pass" dsid="resetpass_new_pass" value=""
+                        placeholder="new password" id="startScreen_resetpass_new_pass" tabindex="31" multiple
+                        data-theme="b" data-mini="true" class="rounded-input  startScreen_resetpass_new_pass"
+                        />
+                    </div>
+                    <!-- resetpass_confirm_pass -->
+                    <div data-role="fieldcontain" class="startScreen_resetpass_confirm_pass ">
+                        <input type="password" name="resetpass_confirm_pass" dsid="resetpass_confirm_pass"
+                        value="" placeholder="confirm password" id="startScreen_resetpass_confirm_pass" tabindex="33"
+                        multiple data-theme="b" data-mini="true" class="rounded-input  startScreen_resetpass_confirm_pass"
+                        />
+                    </div>
+                    <!-- resetpass_pass_error -->
+                    <div name="resetpass_pass_error" id="startScreen_resetpass_pass_error" dsid="resetpass_pass_error"
+                    data-role="appery_label" class="no-shadow  startScreen_resetpass_pass_error">
+                    </div>
+                    <!-- resetpass_submit --><!--
+                    --><a data-role="button" name="resetpass_submit" dsid="resetpass_submit" class="scanMenuButton  startScreen_resetpass_submit"
+                    id="startScreen_resetpass_submit" data-corners="true" data-icon="none" data-iconpos='nowhere'
+                    x-apple-data-detectors="false" data-inline="true" data-mini="true" data-theme="b"
+                    tabindex="34">
+                    change password
+                    </a>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>

@@ -1,0 +1,195 @@
+
+/* Define default spinner */
+.ui-icon-loading {
+	background: url("../libs/jquerymobile/1.4.5/images/ajax-loader.gif") repeat scroll 0 0 / 46px 46px transparent!important;
+}
+/* easterEggButton */
+#aboutPage_easterEggButton {
+
+}
+.ui-btn.aboutPage_easterEggButton {
+
+}
+/* aboutContainer */
+.ui-content.aboutPage_aboutContainer {
+	padding: 15px 15px 15px 15px;
+}
+/* aboutLabel1 */
+.aboutPage_aboutLabel1 {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #f8f8fa; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 2px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* aboutLabel2 */
+.aboutPage_aboutLabel2 {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #f8f8fa; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 10px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* dyjitLink */
+.aboutPage_dyjitLink {
+	margin: 4px 0px 4px 0px;
+	display: block;
+	vertical-align: middle;
+	padding: 2px;
+	cursor: pointer;
+}
+.aboutPage_dyjitLink_link_wrapper > .aboutPage_dyjitLink,
+.aboutPage_dyjitLink_link_wrapper > .aboutPage_dyjitLink:hover,
+.aboutPage_dyjitLink_link_wrapper > .aboutPage_dyjitLink:active,
+.aboutPage_dyjitLink_link_wrapper > .aboutPage_dyjitLink:visited {
+	text-decoration: underline; font-weight: normal; font-style: italic; color: #2489ce; text-align: center; font-family: Helvetica; font-size: 16px;
+}
+/* dyjitLogo */
+.aboutPage_dyjitLogo {
+	margin: 30px 0px 4px 40px;
+	width: 200px; height: auto;
+	display: block;
+}
+/* spacer_3 */
+.aboutPage_spacer_3 {
+	width: 260px; height: 34px;
+	margin: 4px 0px 4px 0px;
+}
+/* emailLabel */
+.aboutPage_emailLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #f8f8fa; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 0px 0px 0px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* emailLink */
+.aboutPage_emailLink {
+	margin: 0px 0px 0px 0px;
+	display: block;
+	vertical-align: middle;
+	padding: 2px;
+	cursor: pointer;
+}
+.aboutPage_emailLink_link_wrapper > .aboutPage_emailLink,
+.aboutPage_emailLink_link_wrapper > .aboutPage_emailLink:hover,
+.aboutPage_emailLink_link_wrapper > .aboutPage_emailLink:active,
+.aboutPage_emailLink_link_wrapper > .aboutPage_emailLink:visited {
+	text-decoration: underline; font-weight: normal; font-style: italic; color: #2489ce; text-align: center; font-family: Helvetica; font-size: 16px;
+}
+/* aboutFooter */
+.aboutPage_aboutFooter {
+	min-height:38px;
+}
+/* footerGrid */
+.aboutPage_footerGrid {
+	height: auto;
+	width:100%;
+	margin: 0px 2px 0px 2px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.aboutPage_footerGrid_wrapper {
+
+}
+.aboutPage_footerGrid > tr > td {
+	vertical-align: top;
+}
+.aboutPage_footerGrid_row_0, .aboutPage_footerGrid_row_0 > td {
+	height: auto
+}
+.aboutPage_footerGrid_row_1, .aboutPage_footerGrid_row_1 > td {
+	height: auto
+}
+/* registrationCell */
+.aboutPage_registrationCell {
+	height:auto !important;
+	width:auto;
+	padding: 0px 0px 0px 0px;
+}
+.aboutPage_registrationCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* registrationLabel */
+.aboutPage_registrationLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; text-align: left; font-family: Helvetica; font-size: 12px;
+	margin: 0px 0px 0px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* linkCell */
+.aboutPage_linkCell {
+	height:auto !important;
+	width:auto;
+	padding: 0px 0px 0px 0px;
+}
+.aboutPage_linkCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* linkGrid */
+.aboutPage_linkGrid {
+	height: auto;
+	width:100%;
+	margin: 0px 0px 0px 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.aboutPage_linkGrid_wrapper {
+
+}
+.aboutPage_linkGrid > tr > td {
+	vertical-align: top;
+}
+.aboutPage_linkGrid_row_0, .aboutPage_linkGrid_row_0 > td {
+	height: auto
+}
+/* touCell */
+.aboutPage_touCell {
+	height:auto !important;
+	width:auto;
+	padding: 0px 0px 0px 0px;
+}
+.aboutPage_touCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* touLabel */
+.aboutPage_touLabel {
+	text-decoration: underline; font-weight: normal; font-style: italic; color: #2489ce; text-align: left; font-family: Helvetica; font-size: 12px;
+	margin: 0px 4px 0px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* privacyCell */
+.aboutPage_privacyCell {
+	height:auto !important;
+	width:auto;
+	padding: 0px 0px 0px 0px;
+}
+.aboutPage_privacyCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* privacyPolicyLinkLabel */
+.aboutPage_privacyPolicyLinkLabel {
+	text-decoration: underline; font-weight: normal; font-style: italic; color: #2489ce; text-align: left; font-family: Helvetica; font-size: 12px;
+	margin: 0px 0px 0px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* versionCell */
+.aboutPage_versionCell {
+	height:auto !important;
+	width:50px;
+	padding: 0px 4px 0px 0px;
+}
+.aboutPage_versionCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* versionLabel */
+.aboutPage_versionLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; text-align: right; font-family: Helvetica; font-size: 11px;
+	margin: 0px 0px 0px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}

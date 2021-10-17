@@ -1,0 +1,69 @@
+
+/* Define default spinner */
+.ui-icon-loading {
+	background: url("../libs/jquerymobile/1.4.5/images/ajax-loader.gif") repeat scroll 0 0 / 46px 46px transparent!important;
+}
+/* menuButton */
+#filterPage_menuButton {
+
+}
+.ui-btn.filterPage_menuButton {
+
+}
+/* searchByContainer */
+.ui-content.filterPage_searchByContainer {
+	padding: 15px 15px 15px 15px;
+}
+/* mobilelabel_2 */
+.filterPage_mobilelabel_2 {
+	text-decoration: none; font-weight: normal; font-style: italic; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* mobilelabel_3 */
+.filterPage_mobilelabel_3 {
+	text-decoration: none; font-weight: normal; font-style: italic; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* mobilelabel_4 */
+.filterPage_mobilelabel_4 {
+	text-decoration: none; font-weight: normal; font-style: italic; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* mobilelabel_5 */
+.filterPage_mobilelabel_5 {
+	text-decoration: none; font-weight: normal; font-style: italic; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* mobilelabel_6 */
+.filterPage_mobilelabel_6 {
+	text-decoration: none; font-weight: normal; font-style: italic; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* mobilelabel_7 */
+.filterPage_mobilelabel_7 {
+	text-decoration: none; font-weight: normal; font-style: italic; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* findDishesButton */
+#filterPage_findDishesButton {
+
+}
+.ui-btn.filterPage_findDishesButton {
+	margin: 4px 5px 4px 5px;
+}
+/* filterFooter */
+.filterPage_filterFooter {
+	min-height:38px;
+}

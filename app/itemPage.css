@@ -1,0 +1,423 @@
+
+/* Define default spinner */
+.ui-icon-loading {
+	background: url("../libs/jquerymobile/1.4.5/images/ajax-loader.gif") repeat scroll 0 0 / 46px 46px transparent!important;
+}
+/* navigateButton */
+#itemPage_navigateButton {
+
+}
+.ui-btn.itemPage_navigateButton {
+
+}
+/* dishListContainer */
+.ui-content.itemPage_dishListContainer {
+	padding: 15px 15px 15px 15px;
+}
+/* proprietorNameLabel */
+.itemPage_proprietorNameLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #333333; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* menuTagLineLabel */
+.itemPage_menuTagLineLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #333333; text-align: center; font-family: Helvetica; font-size: 14px;
+	margin: 10px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* collapseExpandButton */
+#itemPage_collapseExpandButton {
+
+}
+.ui-btn.itemPage_collapseExpandButton {
+	margin: 4px 5px 4px 5px;
+}
+/* menuItemList */
+.ui-page .itemPage_menuItemList {
+	margin: 4px -15px 0px -15px;
+}
+/* menuItem */
+.ui-mobile-viewport ul[data-role="listview"] li.itemPage_menuItem {
+	padding: 0;
+	margin: 0;
+}
+.ui-mobile-viewport ul[data-role="listview"] li.itemPage_menuItem .ui-li-static-container {
+	padding: 0px 0px 4px 0px;
+	padding-right: 41px;
+	padding-left: 0px;
+	min-height: 1em;
+	border-width:0;
+}
+.ui-mobile-viewport ul[data-role="listview"] li.itemPage_menuItem.ui-icon-none .ui-li-static-container {
+	padding-right: 0px; /* consider nothing */
+}
+/* notAvailableLabel */
+.itemPage_notAvailableLabel {
+	text-decoration: none; font-weight: bold; color: #a31907; text-align: left; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	display: none;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* mobilelistitembutton_28 */
+.itemPage_mobilelistitembutton_28 {
+
+}
+/* nameLabel */
+.itemPage_nameLabel {
+	text-decoration: none; font-weight: normal; color: #d3e7f0; text-align: left; font-family: Helvetica; font-size: 18px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* descriptionLabel */
+.itemPage_descriptionLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #e7e8c1; text-align: left; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 4px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* priceRatingGrid */
+.itemPage_priceRatingGrid {
+	height: auto;
+	width:100%;
+	margin: 4px 0px 4px 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.itemPage_priceRatingGrid_wrapper {
+
+}
+.itemPage_priceRatingGrid > tr > td {
+	vertical-align: top;
+}
+.itemPage_priceRatingGrid_row_0, .itemPage_priceRatingGrid_row_0 > td {
+	height: 30px
+}
+/* mobilegridcell_38 */
+.itemPage_mobilegridcell_38 {
+	height:30px !important;
+	width:70px;
+	padding: 2px 2px 2px 2px;
+}
+.itemPage_mobilegridcell_38 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* mobilegrid_40 */
+.itemPage_mobilegrid_40 {
+	height: auto;
+	width:100%;
+	margin: 4px 0px 4px 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.itemPage_mobilegrid_40_wrapper {
+
+}
+.itemPage_mobilegrid_40 > tr > td {
+	vertical-align: top;
+}
+.itemPage_mobilegrid_40_row_0, .itemPage_mobilegrid_40_row_0 > td {
+	height: 30px
+}
+/* dollarSignCell */
+.itemPage_dollarSignCell {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.itemPage_dollarSignCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* dollarSignLabel */
+.itemPage_dollarSignLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; text-align: right; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* mobilegridcell_42 */
+.itemPage_mobilegridcell_42 {
+	height:30px !important;
+	width:45px;
+	padding: 2px 2px 2px 2px;
+}
+.itemPage_mobilegridcell_42 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* priceLabel */
+.itemPage_priceLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #e7e8c1; text-align: left; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* tasteStatCell */
+.itemPage_tasteStatCell {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.itemPage_tasteStatCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* tasteStatGrid */
+.itemPage_tasteStatGrid {
+	height: auto;
+	width:100%;
+	margin: 4px 0px 4px 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.itemPage_tasteStatGrid_wrapper {
+
+}
+.itemPage_tasteStatGrid > tr > td {
+	vertical-align: top;
+}
+.itemPage_tasteStatGrid_row_0, .itemPage_tasteStatGrid_row_0 > td {
+	height: 25px
+}
+.itemPage_tasteStatGrid_row_1, .itemPage_tasteStatGrid_row_1 > td {
+	height: 25px
+}
+/* plus2Cell */
+.itemPage_plus2Cell {
+	height:25px !important;
+	width:auto;
+	padding: 0px 0px 0px 0px;
+}
+.itemPage_plus2Cell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* plus2Label */
+.itemPage_plus2Label {
+	text-decoration: none; font-weight: normal; font-style: italic; text-align: left; font-family: Helvetica; font-size: 16px;
+	margin: 0px 0px 0px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* plus2CountCell */
+.itemPage_plus2CountCell {
+	height:25px !important;
+	width:auto;
+	padding: 0px 0px 0px 0px;
+}
+.itemPage_plus2CountCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* plus2CountLabel */
+.itemPage_plus2CountLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; text-align: center; font-family: Helvetica; font-size: 14px;
+	margin: 0px 0px 0px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* plus2PercentCell */
+.itemPage_plus2PercentCell {
+	height:25px !important;
+	width:auto;
+	padding: 0px 0px 0px 0px;
+}
+.itemPage_plus2PercentCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* plus2PercentLabel */
+.itemPage_plus2PercentLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; text-align: right; font-family: Helvetica; font-size: 14px;
+	margin: 0px 0px 0px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* percent2Cell */
+.itemPage_percent2Cell {
+	height:25px !important;
+	width:auto;
+	padding: 0px 0px 0px 0px;
+}
+.itemPage_percent2Cell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* percent2Label */
+.itemPage_percent2Label {
+	text-decoration: none; font-weight: normal; font-style: italic; text-align: left; font-family: Helvetica; font-size: 14px;
+	margin: 0px 0px 0px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* plus1Cell */
+.itemPage_plus1Cell {
+	height:25px !important;
+	width:auto;
+	padding: 0px 0px 0px 0px;
+}
+.itemPage_plus1Cell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* plus1Label */
+.itemPage_plus1Label {
+	text-decoration: none; font-weight: normal; font-style: italic; text-align: left; font-family: Helvetica; font-size: 16px;
+	margin: 0px 0px 0px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* plus1CountCell */
+.itemPage_plus1CountCell {
+	height:25px !important;
+	width:auto;
+	padding: 0px 0px 0px 0px;
+}
+.itemPage_plus1CountCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* plus1CountLabel */
+.itemPage_plus1CountLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; text-align: center; font-family: Helvetica; font-size: 14px;
+	margin: 0px 0px 0px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* plus1PercentCell */
+.itemPage_plus1PercentCell {
+	height:25px !important;
+	width:auto;
+	padding: 0px 0px 0px 0px;
+}
+.itemPage_plus1PercentCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* plus1PercentLabel */
+.itemPage_plus1PercentLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; text-align: right; font-family: Helvetica; font-size: 14px;
+	margin: 0px 0px 0px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* percent1Cell */
+.itemPage_percent1Cell {
+	height:25px !important;
+	width:auto;
+	padding: 0px 0px 0px 0px;
+}
+.itemPage_percent1Cell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* percent1Label */
+.itemPage_percent1Label {
+	text-decoration: none; font-weight: normal; font-style: italic; text-align: left; font-family: Helvetica; font-size: 14px;
+	margin: 0px 0px 0px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* rateStras */
+.itemPage_rateStras {
+	margin: 8px 5px 8px 5px;
+	font-weight: normal;
+	display: none;
+	width: 98px; height: 20px;
+}
+div.itemPage_rateStras {
+	overflow: auto;
+}
+/* itemSelectButton */
+#itemPage_itemSelectButton {
+
+}
+.ui-btn.itemPage_itemSelectButton {
+	margin: 4px 5px 4px 5px;
+}
+/* proprietorLabel */
+.itemPage_proprietorLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #e7e8c1; text-align: left; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	display: none;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* itemPageFooter */
+.itemPage_itemPageFooter {
+	min-height:38px;
+}
+/* serviceButtonGrid */
+.itemPage_serviceButtonGrid {
+	height: auto;
+	width:100%;
+	margin: 4px 0px 4px 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.itemPage_serviceButtonGrid_wrapper {
+
+}
+.itemPage_serviceButtonGrid > tr > td {
+	vertical-align: top;
+}
+.itemPage_serviceButtonGrid_row_0, .itemPage_serviceButtonGrid_row_0 > td {
+	height: auto
+}
+/* selectedCell */
+.itemPage_selectedCell {
+	height:auto !important;
+	width:151px;
+	padding: 0px 0px 0px 0px;
+}
+.itemPage_selectedCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* selectedButton */
+#itemPage_selectedButton {
+
+}
+.ui-btn.itemPage_selectedButton {
+	margin: 0px 0px 0px 0px;
+}
+/* callServerCell */
+.itemPage_callServerCell {
+	height:auto !important;
+	width:125px;
+	padding: 0px 0px 0px 0px;
+}
+.itemPage_callServerCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* callServerButton */
+#itemPage_callServerButton {
+	display: none;
+}
+.ui-btn.itemPage_callServerButton {
+	margin: 0px 0px 0px 0px;
+}
+/* proprietorInfoCell */
+.itemPage_proprietorInfoCell {
+	height:auto !important;
+	width:auto;
+	padding: 0px 0px 0px 0px;
+}
+.itemPage_proprietorInfoCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* proprietorInfoButton */
+#itemPage_proprietorInfoButton {
+
+}
+.ui-btn.itemPage_proprietorInfoButton {
+	margin: 0px 0px 0px 0px;
+}

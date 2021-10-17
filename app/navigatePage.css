@@ -1,0 +1,378 @@
+
+/* Define default spinner */
+.ui-icon-loading {
+	background: url("../libs/jquerymobile/1.4.5/images/ajax-loader.gif") repeat scroll 0 0 / 46px 46px transparent!important;
+}
+/* homeButton */
+#navigatePage_homeButton {
+	display: none;
+}
+.ui-btn.navigatePage_homeButton {
+
+}
+/* navigateContainer */
+.ui-content.navigatePage_navigateContainer {
+	padding: 15px 15px 15px 15px;
+}
+/* navigateList */
+.ui-page .navigatePage_navigateList {
+	margin: 10px 0px 0px 0px;
+}
+/* nearbyButton */
+/* mobilelistitembutton_43 */
+.navigatePage_mobilelistitembutton_43 {
+
+}
+/* scanCodeButton */
+.ui-listview li.navigatePage_scanCodeButton {
+	display: none;
+}
+/* mobilelistitembutton_18 */
+.navigatePage_mobilelistitembutton_18 {
+
+}
+/* currentSelectionsButton */
+/* mobilelistitembutton_45 */
+.navigatePage_mobilelistitembutton_45 {
+
+}
+/* menuHistoryButton */
+/* mobilelistitembutton_23 */
+.navigatePage_mobilelistitembutton_23 {
+
+}
+/* favoritesButton */
+/* mobilelistitembutton_12 */
+.navigatePage_mobilelistitembutton_12 {
+
+}
+/* wishListButton */
+/* mobilelistitembutton_14 */
+.navigatePage_mobilelistitembutton_14 {
+
+}
+/* orderHistoryButton */
+.ui-listview li.navigatePage_orderHistoryButton {
+	display: none;
+}
+/* mobilelistitembutton_21 */
+.navigatePage_mobilelistitembutton_21 {
+
+}
+/* searchPageReturnButton */
+.ui-listview li.navigatePage_searchPageReturnButton {
+	display: none;
+}
+/* mobilelistitembutton_10 */
+.navigatePage_mobilelistitembutton_10 {
+
+}
+/* updateProfileButton */
+/* mobilelistitembutton_4 */
+.navigatePage_mobilelistitembutton_4 {
+
+}
+/* settingsButton */
+.ui-listview li.navigatePage_settingsButton {
+	display: none;
+}
+/* mobilelistitembutton_16 */
+.navigatePage_mobilelistitembutton_16 {
+
+}
+/* helpButton */
+/* mobilelistitembutton_6 */
+.navigatePage_mobilelistitembutton_6 {
+
+}
+/* ratingInfoPageButton */
+.ui-listview li.navigatePage_ratingInfoPageButton {
+	display: none;
+}
+/* mobilelistitembutton_26 */
+.navigatePage_mobilelistitembutton_26 {
+
+}
+/* logoutButton */
+/* mobilelistitembutton_8 */
+.navigatePage_mobilelistitembutton_8 {
+
+}
+/* loggedInLabel */
+.navigatePage_loggedInLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #f8f8fa; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 10px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* loggedInIdLabel */
+.navigatePage_loggedInIdLabel {
+	text-decoration: none; font-weight: normal; color: #f8f8fa; text-align: center; font-family: Helvetica; font-size: 18px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* vendotOptionsButton */
+#navigatePage_vendotOptionsButton {
+	display: none;
+}
+.ui-btn.navigatePage_vendotOptionsButton {
+	margin: 4px 5px 4px 5px;
+}
+/* navigateFooter */
+.navigatePage_navigateFooter {
+	min-height:38px;
+}
+/* logoutConfirmPopup */
+.navigatePage_logoutConfirmPopup {
+
+}
+div.navigatePage_logoutConfirmPopup {
+	max-height: 100vh;
+	box-sizing: border-box;
+}
+div.navigatePage_logoutConfirmPopup .ui-popup-content-wrapper {
+	width:100%;
+	height:100%;
+	max-height: 99vh;
+	overflow:auto;
+	box-sizing: border-box;
+}
+/* logoutConfirmLabel */
+.navigatePage_logoutConfirmLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #4c516d; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 4px 4px 4px 4px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* logoutPopupButtonGrid */
+.navigatePage_logoutPopupButtonGrid {
+	height: auto;
+	width:100%;
+	margin: 10px 0px 4px 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.navigatePage_logoutPopupButtonGrid_wrapper {
+
+}
+.navigatePage_logoutPopupButtonGrid > tr > td {
+	vertical-align: top;
+}
+.navigatePage_logoutPopupButtonGrid_row_0, .navigatePage_logoutPopupButtonGrid_row_0 > td {
+	height: 30px
+}
+/* logoutPopupConfirmCell */
+.navigatePage_logoutPopupConfirmCell {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 4px;
+}
+.navigatePage_logoutPopupConfirmCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* logoutConfirmButton */
+#navigatePage_logoutConfirmButton {
+
+}
+.ui-btn.navigatePage_logoutConfirmButton {
+	margin: 10px 4px 5px 4px;
+}
+/* logoutPopupCancelCell */
+.navigatePage_logoutPopupCancelCell {
+	height:30px !important;
+	width:auto;
+	padding: 2px 4px 2px 2px;
+}
+.navigatePage_logoutPopupCancelCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* logoutCancelButton */
+#navigatePage_logoutCancelButton {
+
+}
+.ui-btn.navigatePage_logoutCancelButton {
+	margin: 10px 4px 5px 4px;
+}
+/* loginGotoPopup */
+.navigatePage_loginGotoPopup {
+
+}
+div.navigatePage_loginGotoPopup {
+	max-height: 100vh;
+	box-sizing: border-box;
+}
+div.navigatePage_loginGotoPopup .ui-popup-content-wrapper {
+	width:100%;
+	height:100%;
+	max-height: 99vh;
+	overflow:auto;
+	box-sizing: border-box;
+}
+/* loginGotoLabel */
+.navigatePage_loginGotoLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #4c516d; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 4px 4px 4px 4px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* loginGotoButtonGrid */
+.navigatePage_loginGotoButtonGrid {
+	height: auto;
+	width:100%;
+	margin: 10px 0px 4px 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.navigatePage_loginGotoButtonGrid_wrapper {
+
+}
+.navigatePage_loginGotoButtonGrid > tr > td {
+	vertical-align: top;
+}
+.navigatePage_loginGotoButtonGrid_row_0, .navigatePage_loginGotoButtonGrid_row_0 > td {
+	height: 30px
+}
+/* loginGotoCell */
+.navigatePage_loginGotoCell {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 4px;
+}
+.navigatePage_loginGotoCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* loginGotoButton */
+#navigatePage_loginGotoButton {
+
+}
+.ui-btn.navigatePage_loginGotoButton {
+	margin: 10px 4px 5px 4px;
+}
+/* loginGotoCancelCell */
+.navigatePage_loginGotoCancelCell {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.navigatePage_loginGotoCancelCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* loginGotoCancelButton */
+#navigatePage_loginGotoCancelButton {
+
+}
+.ui-btn.navigatePage_loginGotoCancelButton {
+	margin: 10px 4px 5px 4px;
+}
+/* quickMessagePopup */
+.navigatePage_quickMessagePopup {
+
+}
+div.navigatePage_quickMessagePopup {
+	max-height: 100vh;
+	box-sizing: border-box;
+}
+div.navigatePage_quickMessagePopup .ui-popup-content-wrapper {
+	width:100%;
+	height:100%;
+	max-height: 99vh;
+	overflow:auto;
+	box-sizing: border-box;
+}
+/* quickMessageLabel */
+.navigatePage_quickMessageLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #4c516d; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 4px 4px 4px 4px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* locationPopup */
+.navigatePage_locationPopup {
+
+}
+div.navigatePage_locationPopup {
+	max-height: 100vh;
+	box-sizing: border-box;
+}
+div.navigatePage_locationPopup .ui-popup-content-wrapper {
+	width:100%;
+	height:100%;
+	max-height: 99vh;
+	overflow:auto;
+	box-sizing: border-box;
+}
+/* locationPopupGrid */
+.navigatePage_locationPopupGrid {
+	height: auto;
+	width:100%;
+	margin: 0px 0px 0px 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.navigatePage_locationPopupGrid_wrapper {
+
+}
+.navigatePage_locationPopupGrid > tr > td {
+	vertical-align: top;
+}
+.navigatePage_locationPopupGrid_row_0, .navigatePage_locationPopupGrid_row_0 > td {
+	height: auto
+}
+/* cancelButtonCell */
+.navigatePage_cancelButtonCell {
+	height:auto !important;
+	width:45px;
+	padding: 2px 2px 2px 2px;
+}
+.navigatePage_cancelButtonCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* locationCancelButton */
+#navigatePage_locationCancelButton {
+
+}
+.ui-btn.navigatePage_locationCancelButton {
+	margin: 4px 5px 4px 5px;
+}
+/* labelCell */
+.navigatePage_labelCell {
+	height:auto !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.navigatePage_labelCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* locationPopupLabel */
+.navigatePage_locationPopupLabel {
+	text-decoration: none; font-weight: normal; color: #000000; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 4px 20px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* featureLocationList */
+.ui-page .navigatePage_featureLocationList {
+	margin: 4px 0px 0px 0px;
+	display: none;
+}
+/* featureLocationListItem */
+/* mobilelistitembutton_48 */
+.navigatePage_mobilelistitembutton_48 {
+
+}
+/* locationList */
+.ui-page .navigatePage_locationList {
+	margin: 4px 4px 4px 4px;
+}
+/* locationItem */
+/* mobilelistitembutton_31 */
+.navigatePage_mobilelistitembutton_31 {
+
+}

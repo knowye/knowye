@@ -1,0 +1,918 @@
+
+/* Define default spinner */
+.ui-icon-loading {
+	background: url("../libs/jquerymobile/1.4.5/images/ajax-loader.gif") repeat scroll 0 0 / 46px 46px transparent!important;
+}
+/* homeButton */
+#itemEditPage_homeButton {
+
+}
+.ui-btn.itemEditPage_homeButton {
+
+}
+/* editDishContainer */
+.ui-content.itemEditPage_editDishContainer {
+	padding: 15px 15px 15px 15px;
+}
+/* unavailableGrid */
+.itemEditPage_unavailableGrid {
+	height: auto;
+	width:100%;
+	margin: 4px 0px 4px 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.itemEditPage_unavailableGrid_wrapper {
+
+}
+.itemEditPage_unavailableGrid > tr > td {
+	vertical-align: top;
+}
+.itemEditPage_unavailableGrid_row_0, .itemEditPage_unavailableGrid_row_0 > td {
+	height: auto
+}
+/* unavailableLabelCell */
+.itemEditPage_unavailableLabelCell {
+	height:auto !important;
+	width:168px;
+	padding: 0px 0px 0px 0px;
+}
+.itemEditPage_unavailableLabelCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* unavailableItemLabel */
+.itemEditPage_unavailableItemLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #f8f8fa; text-align: left; font-family: Helvetica; font-size: 16px;
+	margin: 0px 0px 0px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* unavailableToggleCell */
+.itemEditPage_unavailableToggleCell {
+	height:auto !important;
+	width:auto;
+	padding: 0px 0px 0px 0px;
+}
+.itemEditPage_unavailableToggleCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* unavailableItemToggle */
+.itemEditPage_unavailableItemToggle {
+	margin: 2px 0px 0px 6px;
+}
+/* inactiveGrid */
+.itemEditPage_inactiveGrid {
+	height: auto;
+	width:100%;
+	margin: 10px 0px 4px 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.itemEditPage_inactiveGrid_wrapper {
+
+}
+.itemEditPage_inactiveGrid > tr > td {
+	vertical-align: top;
+}
+.itemEditPage_inactiveGrid_row_0, .itemEditPage_inactiveGrid_row_0 > td {
+	height: auto
+}
+/* inactiveLabelCell */
+.itemEditPage_inactiveLabelCell {
+	height:auto !important;
+	width:168px;
+	padding: 2px 2px 2px 2px;
+}
+.itemEditPage_inactiveLabelCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* inactiveLabel */
+.itemEditPage_inactiveLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; text-align: left; font-family: Helvetica; font-size: 16px;
+	margin: 0px 0px 0px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* inactiveToggleCell */
+.itemEditPage_inactiveToggleCell {
+	height:auto !important;
+	width:auto;
+	padding: 0px 0px 0px 0px;
+}
+.itemEditPage_inactiveToggleCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* inactiveToggle */
+.itemEditPage_inactiveToggle {
+	margin: 2px 0px 0px 6px;
+}
+/* itemPasteField */
+.itemEditPage_itemPasteField {
+	margin: 10px 0px 4px 0px;
+	display: none;
+}
+/* templateLink */
+.itemEditPage_templateLink {
+	margin: 4px 0px 4px 0px;
+	display: block;
+	vertical-align: middle;
+	padding: 2px;
+	cursor: pointer;
+	display: none;
+}
+.itemEditPage_templateLink_link_wrapper > .itemEditPage_templateLink,
+.itemEditPage_templateLink_link_wrapper > .itemEditPage_templateLink:hover,
+.itemEditPage_templateLink_link_wrapper > .itemEditPage_templateLink:active,
+.itemEditPage_templateLink_link_wrapper > .itemEditPage_templateLink:visited {
+	text-decoration: underline; font-weight: normal; font-style: italic; color: #2489ce; text-align: left; font-family: Helvetica; font-size: 14px;
+}
+/* orLabel */
+.itemEditPage_orLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #0ec40a; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	display: none;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* skuGrid */
+.itemEditPage_skuGrid {
+	height: auto;
+	width:100%;
+	margin: 4px 0px 4px 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.itemEditPage_skuGrid_wrapper {
+
+}
+.itemEditPage_skuGrid > tr > td {
+	vertical-align: top;
+}
+.itemEditPage_skuGrid_row_0, .itemEditPage_skuGrid_row_0 > td {
+	height: 30px
+}
+/* skuLabelCell */
+.itemEditPage_skuLabelCell {
+	height:30px !important;
+	width:90px;
+	padding: 2px 2px 2px 2px;
+}
+.itemEditPage_skuLabelCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* skuLabel */
+.itemEditPage_skuLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #f8f8fa; text-align: right; font-family: Helvetica; font-size: 16px;
+	margin: 6px 0px 0px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* skuCell */
+.itemEditPage_skuCell {
+	height:30px !important;
+	width:auto;
+	padding: 2px 0px 2px 0px;
+}
+.itemEditPage_skuCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* skuInput */
+.itemEditPage_skuInput {
+	margin: 0px 0px 0px 0px;
+}
+/* itemNameField */
+.itemEditPage_itemNameField {
+	margin: 10px 0px 4px 0px;
+}
+/* itemDescriptionField */
+.itemEditPage_itemDescriptionField {
+	margin: 4px 0px 4px 0px;
+}
+/* priceGrid */
+.itemEditPage_priceGrid {
+	height: auto;
+	width:100%;
+	margin: 4px 0px 4px 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.itemEditPage_priceGrid_wrapper {
+
+}
+.itemEditPage_priceGrid > tr > td {
+	vertical-align: top;
+}
+.itemEditPage_priceGrid_row_0, .itemEditPage_priceGrid_row_0 > td {
+	height: 30px
+}
+/* dollarSignCell */
+.itemEditPage_dollarSignCell {
+	height:30px !important;
+	width:19px;
+	padding: 0px 0px 0px 0px;
+}
+.itemEditPage_dollarSignCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* dollarSignLabel */
+.itemEditPage_dollarSignLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #f8f8fa; text-align: right; font-family: Helvetica; font-size: 16px;
+	margin: 6px 2px 0px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* priceCell */
+.itemEditPage_priceCell {
+	height:30px !important;
+	width:auto;
+	padding: 0px 0px 0px 0px;
+}
+.itemEditPage_priceCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* itemPriceField */
+.itemEditPage_itemPriceField {
+	margin: 0px 0px 0px 2px;
+}
+/* calorieLabelCell */
+.itemEditPage_calorieLabelCell {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.itemEditPage_calorieLabelCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* calorieLabel */
+.itemEditPage_calorieLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #f8f8fa; text-align: right; font-family: Helvetica; font-size: 16px;
+	margin: 6px 2px 0px 4px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* calorieCell */
+.itemEditPage_calorieCell {
+	height:30px !important;
+	width:auto;
+	padding: 2px 0px 2px 0px;
+}
+.itemEditPage_calorieCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* calories */
+.itemEditPage_calories {
+	margin: 0px 0px 0px 2px;
+}
+/* menuHeadingLabel */
+.itemEditPage_menuHeadingLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #f8f8fa; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 10px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* headingGrid */
+.itemEditPage_headingGrid {
+	height: auto;
+	width:100%;
+	margin: 4px 0px 4px 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.itemEditPage_headingGrid_wrapper {
+
+}
+.itemEditPage_headingGrid > tr > td {
+	vertical-align: top;
+}
+.itemEditPage_headingGrid_row_0, .itemEditPage_headingGrid_row_0 > td {
+	height: auto
+}
+/* headingCell */
+.itemEditPage_headingCell {
+	height:auto !important;
+	width:auto;
+	padding: 2px 6px 2px 0px;
+}
+.itemEditPage_headingCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* menuHeadingSelect */
+.itemEditPage_menuHeadingSelect {
+	margin: 0px 0px 0px 0px;
+}
+/* classificationLabel */
+.itemEditPage_classificationLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #f8f8fa; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 20px 0px 4px 0px;
+	display: none;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* classificationSelect */
+.itemEditPage_classificationSelect {
+	margin: 4px 5px 4px 5px;
+	display: none;
+}
+/* propertyLabel */
+.itemEditPage_propertyLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #f8f8fa; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 20px 0px 4px 0px;
+	display: none;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* propertySelectButton */
+.itemEditPage_propertySelectButton {
+	margin: 4px 5px 4px 5px;
+	display: none;
+}
+/* pairingGrid */
+.itemEditPage_pairingGrid {
+	height: auto;
+	width:100%;
+	margin: 10px 0px 0px 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.itemEditPage_pairingGrid_wrapper {
+	display: none;
+}
+.itemEditPage_pairingGrid > tr > td {
+	vertical-align: top;
+}
+.itemEditPage_pairingGrid_row_0, .itemEditPage_pairingGrid_row_0 > td {
+	height: auto
+}
+.itemEditPage_pairingGrid_row_1, .itemEditPage_pairingGrid_row_1 > td {
+	height: auto
+}
+/* pairingLabelCell */
+.itemEditPage_pairingLabelCell {
+	height:auto !important;
+	width:auto;
+	padding: 0px 0px 0px 0px;
+}
+.itemEditPage_pairingLabelCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* pairingLabel */
+.itemEditPage_pairingLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #f8f8fa; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 0px 0px 0px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* pairingSelectCell */
+.itemEditPage_pairingSelectCell {
+	height:auto !important;
+	width:auto;
+	padding: 2px 0px 0px 0px;
+}
+.itemEditPage_pairingSelectCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* pairingSelectButton */
+.itemEditPage_pairingSelectButton {
+	margin: 0px 0px 0px 0px;
+}
+/* ingredientAddButton */
+#itemEditPage_ingredientAddButton {
+	display: none;
+}
+.ui-btn.itemEditPage_ingredientAddButton {
+	margin: 4px 2px 2px 2px;
+}
+/* spacer_10 */
+.itemEditPage_spacer_10 {
+	width: 260px; height: 34px;
+	margin: 4px 0px 4px 0px;
+	display: none;
+}
+/* ingredientHiddenLabel */
+.itemEditPage_ingredientHiddenLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #f8f8fa; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	display: none;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* ingredientHiddenConfidentialLabel */
+.itemEditPage_ingredientHiddenConfidentialLabel {
+	text-decoration: none; font-weight: bold; font-style: italic; color: #f8f8fa; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	display: none;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* ingredientHidden */
+.itemEditPage_ingredientHidden {
+	margin: 4px 0px 4px 0px;
+	display: none;
+}
+/* itemTimeRangeLabel */
+.itemEditPage_itemTimeRangeLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #f8f8fa; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 10px 0px 4px 0px;
+	display: none;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* timeRangeSelect */
+.itemEditPage_timeRangeSelect {
+	margin: 4px 5px 4px 5px;
+	display: none;
+}
+/* itemImageGrid */
+.itemEditPage_itemImageGrid {
+	height: auto;
+	width:100%;
+	margin: 4px 10px 4px 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.itemEditPage_itemImageGrid_wrapper {
+	display: none;
+}
+.itemEditPage_itemImageGrid > tr > td {
+	vertical-align: top;
+}
+.itemEditPage_itemImageGrid_row_0, .itemEditPage_itemImageGrid_row_0 > td {
+	height: 25px
+}
+/* mobilegridcell_26 */
+.itemEditPage_mobilegridcell_26 {
+	height:25px !important;
+	width:14px;
+	padding: 2px 2px 2px 2px;
+}
+.itemEditPage_mobilegridcell_26 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* itemPhoto */
+.itemEditPage_itemPhoto {
+	margin: 0px 0px 0px 0px;
+	width: 100%; height: auto;
+	display: block;
+}
+/* fileSelect */
+.itemEditPage_fileSelect {
+	margin: 4px 0px 4px 0px;
+	display: none;
+}
+/* photoButtonGrid */
+.itemEditPage_photoButtonGrid {
+	height: auto;
+	width:100%;
+	margin: 10px 0px 4px 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.itemEditPage_photoButtonGrid_wrapper {
+
+}
+.itemEditPage_photoButtonGrid > tr > td {
+	vertical-align: top;
+}
+.itemEditPage_photoButtonGrid_row_0, .itemEditPage_photoButtonGrid_row_0 > td {
+	height: 30px
+}
+/* photoAddCell */
+.itemEditPage_photoAddCell {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.itemEditPage_photoAddCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* photoAddButton */
+#itemEditPage_photoAddButton {
+
+}
+.ui-btn.itemEditPage_photoAddButton {
+	margin: 0px 0px 0px 0px;
+}
+/* photoDeleteCell */
+.itemEditPage_photoDeleteCell {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.itemEditPage_photoDeleteCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* photoDeleteButton */
+#itemEditPage_photoDeleteButton {
+
+}
+.ui-btn.itemEditPage_photoDeleteButton {
+	margin: 0px 0px 0px 0px;
+}
+/* multiselectGrid */
+.itemEditPage_multiselectGrid {
+	height: auto;
+	width:100%;
+	margin: 10px 4px 0px 4px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.itemEditPage_multiselectGrid_wrapper {
+
+}
+.itemEditPage_multiselectGrid > tr > td {
+	vertical-align: top;
+}
+.itemEditPage_multiselectGrid_row_0, .itemEditPage_multiselectGrid_row_0 > td {
+	height: 30px
+}
+.itemEditPage_multiselectGrid_row_1, .itemEditPage_multiselectGrid_row_1 > td {
+	height: 30px
+}
+/* multiselectCell */
+.itemEditPage_multiselectCell {
+	height:30px !important;
+	width:auto;
+	padding: 0px 0px 0px 0px;
+}
+.itemEditPage_multiselectCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* multiselectLabel */
+.itemEditPage_multiselectLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 0px 0px 0px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* html_multiselect */
+.itemEditPage_html_multiselect {
+	margin: 4px 2px 0px 0px;
+	font-weight: normal;
+	width: auto; height: auto;
+}
+div.itemEditPage_html_multiselect {
+	overflow: auto;
+}
+/* mobilegridcell_30 */
+.itemEditPage_mobilegridcell_30 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 0px 0px 0px;
+}
+.itemEditPage_mobilegridcell_30 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* buttonGridSaveDeleteCancelGrid */
+.itemEditPage_buttonGridSaveDeleteCancelGrid {
+	height: auto;
+	width:100%;
+	margin: 20px 0px 4px 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.itemEditPage_buttonGridSaveDeleteCancelGrid_wrapper {
+
+}
+.itemEditPage_buttonGridSaveDeleteCancelGrid > tr > td {
+	vertical-align: top;
+}
+.itemEditPage_buttonGridSaveDeleteCancelGrid_row_0, .itemEditPage_buttonGridSaveDeleteCancelGrid_row_0 > td {
+	height: 30px
+}
+/* saveCell */
+.itemEditPage_saveCell {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.itemEditPage_saveCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* itemEditSaveButton */
+#itemEditPage_itemEditSaveButton {
+
+}
+.ui-btn.itemEditPage_itemEditSaveButton {
+	margin: 0px 0px 0px 0px;
+}
+/* deleteCell */
+.itemEditPage_deleteCell {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.itemEditPage_deleteCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* deleteButton */
+#itemEditPage_deleteButton {
+
+}
+.ui-btn.itemEditPage_deleteButton {
+	margin: 0px 0px 0px 0px;
+}
+/* cancelCell */
+.itemEditPage_cancelCell {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.itemEditPage_cancelCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* cancelButton */
+#itemEditPage_cancelButton {
+
+}
+.ui-btn.itemEditPage_cancelButton {
+	margin: 0px 0px 0px 0px;
+}
+/* itemEditPageFooter */
+.itemEditPage_itemEditPageFooter {
+	min-height:38px;
+}
+/* ingredientAddPopup */
+.itemEditPage_ingredientAddPopup {
+
+}
+div.itemEditPage_ingredientAddPopup {
+	max-height: 100vh;
+	box-sizing: border-box;
+}
+div.itemEditPage_ingredientAddPopup .ui-popup-content-wrapper {
+	width:100%;
+	height:100%;
+	max-height: 99vh;
+	overflow:auto;
+	box-sizing: border-box;
+}
+/* ingredientAddPopupLabel1 */
+.itemEditPage_ingredientAddPopupLabel1 {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #4c516d; text-align: center; font-family: Helvetica; font-size: 14px;
+	margin: 4px 4px 4px 4px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* ingredientVisibilityChoiceRadio */
+.itemEditPage_ingredientVisibilityChoiceRadio {
+	margin: 4px 4px 4px 4px;
+}
+/* ingredientMainRadio */
+.itemEditPage_ingredientMainRadio {
+	-webkit-border-radius: inherit;
+	border-radius: inherit;
+}
+/* ingredientFeaturedRadio */
+.itemEditPage_ingredientFeaturedRadio {
+	-webkit-border-radius: inherit;
+	border-radius: inherit;
+}
+/* ingredientHIDDENRadio */
+.itemEditPage_ingredientHIDDENRadio {
+	-webkit-border-radius: inherit;
+	border-radius: inherit;
+}
+/* ingredientField */
+.itemEditPage_ingredientField {
+	margin: 4px 4px 4px 4px;
+}
+/* ingredientCooktechLabel */
+.itemEditPage_ingredientCooktechLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #4c516d; text-align: center; font-family: Helvetica; font-size: 14px;
+	margin: 10px 4px 4px 4px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* cooktechSelect */
+.itemEditPage_cooktechSelect {
+	margin: 4px 5px 4px 5px;
+}
+/* ingredientAttributeLabel */
+.itemEditPage_ingredientAttributeLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #4c516d; text-align: center; font-family: Helvetica; font-size: 14px;
+	margin: 10px 4px 4px 4px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* mobileselectmenu_24 */
+.itemEditPage_mobileselectmenu_24 {
+	margin: 4px 5px 4px 5px;
+}
+/* ingredientButtonGrid */
+.itemEditPage_ingredientButtonGrid {
+	height: auto;
+	width:100%;
+	margin: 4px 0px 4px 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.itemEditPage_ingredientButtonGrid_wrapper {
+
+}
+.itemEditPage_ingredientButtonGrid > tr > td {
+	vertical-align: top;
+}
+.itemEditPage_ingredientButtonGrid_row_0, .itemEditPage_ingredientButtonGrid_row_0 > td {
+	height: 30px
+}
+/* ingredientSaveCell */
+.itemEditPage_ingredientSaveCell {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.itemEditPage_ingredientSaveCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* ingredientAddSaveButton */
+#itemEditPage_ingredientAddSaveButton {
+
+}
+.ui-btn.itemEditPage_ingredientAddSaveButton {
+	margin: 10px 5px 4px 5px;
+}
+/* ingredientCancelCell */
+.itemEditPage_ingredientCancelCell {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.itemEditPage_ingredientCancelCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* ingredientAddCancelButton */
+#itemEditPage_ingredientAddCancelButton {
+
+}
+.ui-btn.itemEditPage_ingredientAddCancelButton {
+	margin: 10px 5px 4px 5px;
+}
+/* deleteConfirmPopup */
+.itemEditPage_deleteConfirmPopup {
+
+}
+div.itemEditPage_deleteConfirmPopup {
+	max-height: 100vh;
+	box-sizing: border-box;
+}
+div.itemEditPage_deleteConfirmPopup .ui-popup-content-wrapper {
+	width:100%;
+	height:100%;
+	max-height: 99vh;
+	overflow:auto;
+	box-sizing: border-box;
+}
+/* deleteConfirmLabel */
+.itemEditPage_deleteConfirmLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #4c516d; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 4px 4px 4px 4px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* deleteConfirmGrid */
+.itemEditPage_deleteConfirmGrid {
+	height: auto;
+	width:100%;
+	margin: 10px 0px 4px 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.itemEditPage_deleteConfirmGrid_wrapper {
+
+}
+.itemEditPage_deleteConfirmGrid > tr > td {
+	vertical-align: top;
+}
+.itemEditPage_deleteConfirmGrid_row_0, .itemEditPage_deleteConfirmGrid_row_0 > td {
+	height: 30px
+}
+/* deleteConfirmCell */
+.itemEditPage_deleteConfirmCell {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.itemEditPage_deleteConfirmCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* deleteConfirmButton */
+#itemEditPage_deleteConfirmButton {
+
+}
+.ui-btn.itemEditPage_deleteConfirmButton {
+	margin: 10px 4px 5px 5px;
+}
+/* deleteCancelCell */
+.itemEditPage_deleteCancelCell {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.itemEditPage_deleteCancelCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* deleteCancelButton */
+#itemEditPage_deleteCancelButton {
+
+}
+.ui-btn.itemEditPage_deleteCancelButton {
+	margin: 10px 4px 5px 4px;
+}
+/* deletePhotoConfirmPopup */
+.itemEditPage_deletePhotoConfirmPopup {
+
+}
+div.itemEditPage_deletePhotoConfirmPopup {
+	max-height: 100vh;
+	box-sizing: border-box;
+}
+div.itemEditPage_deletePhotoConfirmPopup .ui-popup-content-wrapper {
+	width:100%;
+	height:100%;
+	max-height: 99vh;
+	overflow:auto;
+	box-sizing: border-box;
+}
+/* deletePhotoConfirmLabel */
+.itemEditPage_deletePhotoConfirmLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #4c516d; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 4px 4px 4px 4px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* deletePhotoConfirmGrid */
+.itemEditPage_deletePhotoConfirmGrid {
+	height: auto;
+	width:100%;
+	margin: 10px 0px 4px 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.itemEditPage_deletePhotoConfirmGrid_wrapper {
+
+}
+.itemEditPage_deletePhotoConfirmGrid > tr > td {
+	vertical-align: top;
+}
+.itemEditPage_deletePhotoConfirmGrid_row_0, .itemEditPage_deletePhotoConfirmGrid_row_0 > td {
+	height: 30px
+}
+/* confirmPhotoDeleteCell */
+.itemEditPage_confirmPhotoDeleteCell {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.itemEditPage_confirmPhotoDeleteCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* deletePhotoConfirmButton */
+#itemEditPage_deletePhotoConfirmButton {
+
+}
+.ui-btn.itemEditPage_deletePhotoConfirmButton {
+	margin: 10px 4px 5px 4px;
+}
+/* deletePhotoCancelCell */
+.itemEditPage_deletePhotoCancelCell {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.itemEditPage_deletePhotoCancelCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* deletePhotoCancelButton */
+#itemEditPage_deletePhotoCancelButton {
+
+}
+.ui-btn.itemEditPage_deletePhotoCancelButton {
+	margin: 10px 4px 5px 4px;
+}

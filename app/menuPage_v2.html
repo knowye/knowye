@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>
+            menuPage_v2
+        </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, viewport-fit=cover">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="msapplication-tap-highlight" content="no">
+        <!-- Enable all requests, inline styles, and eval() -->
+        <meta http-equiv="Content-Security-Policy" content="default-src * gap://ready data:; style-src 'self' 'unsafe-inline' *; script-src 'self' 'unsafe-inline' 'unsafe-eval' *">
+        <!-- Uncomment link and meta tags below to activate PWA icons and theme color -->
+        <!-- link rel="manifest" href="../manifest.json" crossOrigin="use-credentials" -->
+        <!-- meta name="theme-color" content="#ffffff" -->
+        <link href="../css/theme/jqm/jqm.css" rel="stylesheet" />
+        <link href="../css/theme/KnoWYE3/KnoWYE3.css" rel="stylesheet" />
+        <link href="../libs/jquerymobile/1.4.5/jquery.mobile.structure-1.4.5.css" rel="stylesheet"
+        />
+        <link type="text/css" rel="stylesheet" href="../css/logblock.css" />
+        <link type="text/css" rel="stylesheet" href="../css/menuPageBuilder.css" />
+        <link type="text/css" rel="stylesheet" href="../css/common.css" />
+        <link type="text/css" rel="stylesheet" href="../css/header_footer.css" />
+        <link type="text/css" rel="stylesheet" href="../css/button.css" />
+        <link type="text/css" rel="stylesheet" href="../css/label.css" />
+        <link type="text/css" rel="stylesheet" href="../css/FontRoboto.css.css" />
+        <!-- Uncomment this script to activate service worker -->
+        <!-- <script>
+        if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('../sw.js')
+        .then(() => console.log('service worker installed'))
+        .catch(err => console.error('Error', err));
+        }
+        </script>
+        -->
+        <script type="text/javascript" src="../libs/underscore/underscore.js">
+        </script>
+        <script type="text/javascript" src="../libs/store/json2.js">
+        </script>
+        <script type="text/javascript" src="../libs/jquery/jquery-2.1.1.js">
+        </script>
+        <script type="text/javascript" src="../libs/jquery/jquery-ajaxTransport.js">
+        </script>
+        <script type="text/javascript">
+            $(document).bind("mobileinit", function() {
+                if (navigator.userAgent.toLowerCase().indexOf("android") != -1) {
+                    $.mobile.defaultPageTransition = 'none';
+                    $.mobile.defaultDialogTransition = 'none';
+                } else if (navigator.userAgent.toLowerCase().indexOf("msie") != -1) {
+                    $.mobile.allowCrossDomainPages = true;
+                    $.support.cors = true;
+                } else if (navigator.userAgent.match(/(iPad|iPhone|iPod)/g)) {
+                    $.mobile.hashListeningEnabled = false;
+                }
+            });
+        </script>
+        <script type="text/javascript" src="../libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.js">
+        </script>
+        <script type="text/javascript" src="../libs/apperyio/mobilebase.js">
+        </script>
+        <script type="text/javascript" src="../libs/event/customEventHandler.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/sha1.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/oauth.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/contexts.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/jquery.xml2json.min.js">
+        </script>
+        <script type="text/javascript" src="../libs/ms_sdk_bundle/client-sdk.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/appery.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/component-manager.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/mapping-impl.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/entity-api.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/login.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/storage-api.js">
+        </script>
+        <script type="text/javascript" src="../get_target_platform.js">
+        </script>
+        <script type="text/javascript" src="../cordova.js">
+        </script>
+        <link href="../libs/apperyio/mobilebase.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="../js/services/model.js">
+        </script>
+        <script type="text/javascript" src="../js/menuHeadingManagePageBuilder.js">
+        </script>
+        <script type="text/javascript" src="../js/navigatePageManager.js">
+        </script>
+        <script type="text/javascript" src="../js/logblock.js">
+        </script>
+        <script type="text/javascript" src="../js/Facebook_Helper.js">
+        </script>
+        <script type="text/javascript" src="../js/menuHeadingManager.js">
+        </script>
+        <script type="text/javascript" src="../js/menuPageBuilder.js">
+        </script>
+        <script type="text/javascript" src="../js/jquery-ui.min.js">
+        </script>
+        <script type="text/javascript" src="../js/common.js">
+        </script>
+        <script type="text/javascript" src="../js/clipboard.js">
+        </script>
+        <script type="text/javascript" src="../js/FileUploadHelper.js">
+        </script>
+        <script type="text/javascript" src="../js/zzqrCodeScaner.js">
+        </script>
+        <script type="text/javascript" src="../js/menuHistoryManager.js">
+        </script>
+        <script type="text/javascript" src="../js/GoogleCharts.js">
+        </script>
+        <script type="text/javascript" src="../js/services/service.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/databaseUtils.js">
+        </script>
+        <script type="text/javascript" src="../js/secure.js">
+        </script>
+<script type="text/javascript" src="../js/EncodeDecodeJS.js">
+        </script>
+    </head>
+    
+    <body>
+        <script language="JavaScript" type="text/javascript">
+        </script>
+        <div data-role="page" style="min-height:480px;" dsid="menuPage_v2" id="menuPage_v2"
+        class="type-interior" data-theme="b">
+            <!-- headingManageHeader -->
+            <div data-role="header" data-position="fixed" data-add-back-btn="true" data-back-btn-text="&nbsp;"
+            data-theme="b" name="headingManageHeader" id="menuPage_v2_headingManageHeader" class="menuPage_v2_headingManageHeader">
+                <h1 dsid="headingManageHeader">
+                    menu
+                </h1>
+                <!-- navigateButton --><!--
+                --><a data-role="button" name="navigateButton" dsid="navigateButton" class="menuPage_v2_navigateButton ui-btn-right"
+                style='min-height:20px; ' id="menuPage_v2_navigateButton" data-corners="true" data-icon="home"
+                data-iconpos="notext" x-apple-data-detectors="false" data-inline='true' data-mini='true'
+                data-theme="b" tabindex="9">
+                &nbsp;
+                </a>
+            </div>
+            <!-- menuHeadingContainer -->
+            <div data-role="content" id="menuPage_v2_menuHeadingContainer" name="menuHeadingContainer"
+            class="ui-li-container  menuPage_v2_menuHeadingContainer ui-content" dsid="menuHeadingContainer"
+            data-theme="b">
+                <link href="menuPage_v2.css" rel="stylesheet" type="text/css" />
+                <script type="text/javascript" src="menuPage_v2.js">
+                </script>
+                <!-- name -->
+                <div data-role="appery_html" name="name" dsid="name" id="menuPage_v2_name" class="menuPage_v2_name">
+                    <div class="background-image">
+                    </div>
+                    <div style="padding-left: 15px;padding-right: 15px;" name="menu-heading-container"
+                    class="menu-heading-container">
+                        <div name="preferences-layout" class="preferences-layout">
+                            <div name="preferences-label" class="preferences-label">
+                                Preferences
+                            </div>
+                            <div style="display:inline-block; margin-top:-3px">
+                                <input type="checkbox" name="pref-value" class="pref-value">
+                            </div>
+                        </div>
+                        <div name="preferences" style="position:relative;    margin-top: -2px;" class="vendor-title">
+                        </div>
+                        <div name="vendor-title" style="position:relative;margin-top: 6px;" class="vendor-title">
+                            Test Vendor
+                        </div>
+                    </div>
+                </div>
+                <!-- profileSearchGrid -->
+                <div class="menuPage_v2_profileSearchGrid_wrapper" data-wrapper-for="profileSearchGrid">
+                    <table id="menuPage_v2_profileSearchGrid" class="menuPage_v2_profileSearchGrid"
+                    dsid="profileSearchGrid" name="profileSearchGrid" cellpadding=0 cellspacing=0>
+                        <col style="width:205px;" />
+                        <col style="width:auto;" />
+                        <tr class="menuPage_v2_profileSearchGrid_row_0">
+                            <!-- profileLabelCell -->
+                            <td id="menuPage_v2_profileLabelCell" name="profileLabelCell" class="menuPage_v2_profileLabelCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                </div>
+                            </td>
+                            <!-- profileToggleCell -->
+                            <td id="menuPage_v2_profileToggleCell" name="profileToggleCell" class="menuPage_v2_profileToggleCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="menuPage_v2_profileSearchGrid_row_1">
+                            <!-- searchLabelCell -->
+                            <td id="menuPage_v2_searchLabelCell" name="searchLabelCell" class="menuPage_v2_searchLabelCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                </div>
+                            </td>
+                            <!-- searchButtonCell -->
+                            <td id="menuPage_v2_searchButtonCell" name="searchButtonCell" class="menuPage_v2_searchButtonCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- expand_collapse_all_container -->
+                <div data-role="appery_html" name="expand_collapse_all_container" dsid="expand_collapse_all_container"
+                id="menuPage_v2_expand_collapse_all_container" class="relative  menuPage_v2_expand_collapse_all_container">
+                    <div class="expand-collapse-container">
+                        <img class="menuPage_v2_mobileimage_29" src="../img/up-and-down.png" id="menuPage_v2_mobileimage_29"
+                        dsid="mobileimage_29" name="mobileimage_29" style="margin: 2px;">
+                    </div>
+                </div>
+                <!-- menuHierarchy_div -->
+                <div data-role="appery_html" name="menuHierarchy_div" dsid="menuHierarchy_div" id="menuPage_v2_menuHierarchy_div"
+                class="menuPage_v2_menuHierarchy_div">
+                </div>
+            </div>
+            <!-- menuFooter -->
+            <div data-role="footer" data-position="fixed" class="menuPage_v2_menuFooter" name="menuFooter"
+            dsid="menuFooter" id="menuPage_v2_menuFooter" data-theme="b" data-id="persistentDataId">
+                <!-- footerGrid -->
+                <div class="menuPage_v2_footerGrid_wrapper" data-wrapper-for="footerGrid">
+                    <table id="menuPage_v2_footerGrid" class="menuPage_v2_footerGrid" dsid="footerGrid"
+                    name="footerGrid" cellpadding=0 cellspacing=0>
+                        <col style="width:auto;" />
+                        <col style="width:auto;" />
+                        <col style="width:42px;" />
+                        <tr class="menuPage_v2_footerGrid_row_0">
+                            <!-- selectedCell -->
+                            <td id="menuPage_v2_selectedCell" name="selectedCell" class="menuPage_v2_selectedCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- selectedButton --><!--
+                                    --><a data-role="button" name="selectedButton" dsid="selectedButton" class="menuPage_v2_selectedButton"
+                                    id="menuPage_v2_selectedButton" data-corners="false" data-icon="shop" data-iconpos="right"
+                                    x-apple-data-detectors="false" data-mini="false" data-theme="b" tabindex="20">
+                                    my selections
+                                    </a>
+                                </div>
+                            </td>
+                            <!-- callServerCell -->
+                            <td id="menuPage_v2_callServerCell" name="callServerCell" class="menuPage_v2_callServerCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                </div>
+                            </td>
+                            <!-- ownerInfoCell -->
+                            <td id="menuPage_v2_ownerInfoCell" name="ownerInfoCell" class="menuPage_v2_ownerInfoCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- ownerInfoButton --><!--
+                                    --><a data-role="button" name="ownerInfoButton" dsid="ownerInfoButton" class="menuPage_v2_ownerInfoButton"
+                                    style='min-height:20px; ' id="menuPage_v2_ownerInfoButton" data-corners="true" data-icon="location"
+                                    data-iconpos="notext" x-apple-data-detectors="false" data-mini="false" data-theme="b"
+                                    tabindex="27">
+                                    &nbsp;
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="menuPage_v2_footerGrid_row_1">
+                            <!-- touCell -->
+                            <td id="menuPage_v2_touCell" name="touCell" class="menuPage_v2_touCell" colspan=1
+                            rowspan=1>
+                                <div class="cell-wrapper">
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_24 -->
+                            <td id="menuPage_v2_mobilegridcell_24" name="mobilegridcell_24" class="menuPage_v2_mobilegridcell_24"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_25 -->
+                            <td id="menuPage_v2_mobilegridcell_25" name="mobilegridcell_25" class="menuPage_v2_mobilegridcell_25"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <!-- headingAddPopup -->
+            <div data-role="popup" name="headingAddPopup" dsid="headingAddPopup" id="menuPage_v2_headingAddPopup"
+            class="roundedPopup  menuPage_v2_headingAddPopup" data-corners="true" data-dismissible="true"
+            data-overlay-theme="" data-theme="" data-shadow="true" data-tolerance="30,15,30,15">
+                <div class="ui-popup-content-wrapper">
+                    <!-- categoryAddLabel -->
+                    <div name="categoryAddLabel" id="menuPage_v2_categoryAddLabel" dsid="categoryAddLabel"
+                    data-role="appery_label" class="labelOnDark  menuPage_v2_categoryAddLabel">
+                        enter a new menu heading in the field below.
+                    </div>
+                    <!-- headingAddField -->
+                    <div data-role="fieldcontain" class="menuPage_v2_headingAddField ">
+                        <input type="text" name="headingAddField" dsid="headingAddField" value="" placeholder="enter a new menu heading"
+                        id="menuPage_v2_headingAddField" tabindex="4" multiple data-theme="b" data-mini="true"
+                        class="menuPage_v2_headingAddField" />
+                    </div>
+                    <!-- headerDescriptionField -->
+                    <div data-role="fieldcontain" class="menuPage_v2_headerDescriptionField ">
+                        <textarea name="headerDescriptionField" id="menuPage_v2_headerDescriptionField"
+                        data-mini="true" tabindex="11" dsid="headerDescriptionField" data-theme="b" placeholder="use this field to include a description or detail below the heading."
+                        class="menuPage_v2_headerDescriptionField">
+</textarea>
+                    </div>
+                    <!-- categoryParentLabel -->
+                    <div name="categoryParentLabel" id="menuPage_v2_categoryParentLabel" dsid="categoryParentLabel"
+                    data-role="appery_label" class="labelOnDark  menuPage_v2_categoryParentLabel">
+                        you can make this heading a subheading under a heading you select below
+                    </div>
+                    <!-- headingExampleLabel1 -->
+                    <div name="headingExampleLabel1" id="menuPage_v2_headingExampleLabel1" dsid="headingExampleLabel1"
+                    data-role="appery_label" class="menuPage_v2_headingExampleLabel1">
+                        Entrée
+                    </div>
+                    <!-- headingExampleLabel2 -->
+                    <div name="headingExampleLabel2" id="menuPage_v2_headingExampleLabel2" dsid="headingExampleLabel2"
+                    data-role="appery_label" class="menuPage_v2_headingExampleLabel2">
+                        Beef
+                    </div>
+                    <!-- headingExampleLabel3 -->
+                    <div name="headingExampleLabel3" id="menuPage_v2_headingExampleLabel3" dsid="headingExampleLabel3"
+                    data-role="appery_label" class="menuPage_v2_headingExampleLabel3">
+                        Chicken
+                    </div>
+                    <!-- headingParentSelect -->
+                    <div data-role="fieldcontain" class="menuPage_v2_headingParentSelect ">
+                        <select name="headingParentSelect" id="menuPage_v2_headingParentSelect" dsid="headingParentSelect"
+                        data-theme="b" data-role="appery_selectmenu" data-inline="false" data-mini="true"
+                        data-icon="arrow-d" data-iconpos="right" data-native-menu="false" tabindex="5" appery-class="menuPage_v2_headingParentSelect">
+                            <option id="menuPage_v2_headingParentSelect-0" value="" reRender="headingParentSelect"
+                            dsid="headingParentSelect-0">
+                            </option>
+                        </select>
+                    </div>
+                    <!-- headingButtonGrid -->
+                    <div class="menuPage_v2_headingButtonGrid_wrapper" data-wrapper-for="headingButtonGrid">
+                        <table id="menuPage_v2_headingButtonGrid" class="menuPage_v2_headingButtonGrid"
+                        dsid="headingButtonGrid" name="headingButtonGrid" cellpadding=0 cellspacing=0>
+                            <col style="width:auto;" />
+                            <col style="width:auto;" />
+                            <tr class="menuPage_v2_headingButtonGrid_row_0">
+                                <!-- headingSaveCell -->
+                                <td id="menuPage_v2_headingSaveCell" name="headingSaveCell" class="menuPage_v2_headingSaveCell"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- headingAddSaveButton --><!--
+                                        --><a data-role="button" name="headingAddSaveButton" dsid="headingAddSaveButton" class="scanMenuButton  menuPage_v2_headingAddSaveButton"
+                                        id="menuPage_v2_headingAddSaveButton" data-corners="true" data-icon="check" data-iconpos="right"
+                                        x-apple-data-detectors="false" data-mini="true" data-theme="b" tabindex="10">
+                                        save
+                                        </a>
+                                    </div>
+                                </td>
+                                <!-- headingCancelCell -->
+                                <td id="menuPage_v2_headingCancelCell" name="headingCancelCell" class="menuPage_v2_headingCancelCell"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- headingCancelButton --><!--
+                                        --><a data-role="button" name="headingCancelButton" dsid="headingCancelButton" class="scanMenuButton  menuPage_v2_headingCancelButton"
+                                        id="menuPage_v2_headingCancelButton" data-corners="true" data-icon="delete" data-iconpos="right"
+                                        x-apple-data-detectors="false" data-mini="true" data-theme="b" tabindex="34">
+                                        cancel
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- categoryEditPopup -->
+            <div data-role="popup" name="categoryEditPopup" dsid="categoryEditPopup" id="menuPage_v2_categoryEditPopup"
+            class="roundedPopup  menuPage_v2_categoryEditPopup" data-corners="true" data-dismissible="true"
+            data-overlay-theme="" data-theme="" data-shadow="true" data-tolerance="30,15,30,15">
+                <div class="ui-popup-content-wrapper">
+                    <!-- categoryEditLabel -->
+                    <div name="categoryEditLabel" id="menuPage_v2_categoryEditLabel" dsid="categoryEditLabel"
+                    data-role="appery_label" class="labelOnDark  menuPage_v2_categoryEditLabel">
+                        edit the category below
+                    </div>
+                    <!-- mobiletextinput_22 -->
+                    <div data-role="fieldcontain" class="menuPage_v2_mobiletextinput_22 ">
+                        <input type="text" name="mobiletextinput_22" dsid="mobiletextinput_22" value=""
+                        placeholder="" id="menuPage_v2_mobiletextinput_22" tabindex="6" multiple data-theme="b"
+                        data-mini="true" class="menuPage_v2_mobiletextinput_22" />
+                    </div>
+                    <!-- categoryParentEditLabel -->
+                    <div name="categoryParentEditLabel" id="menuPage_v2_categoryParentEditLabel" dsid="categoryParentEditLabel"
+                    data-role="appery_label" class="labelOnDark  menuPage_v2_categoryParentEditLabel">
+                        change the parent category below
+                    </div>
+                    <!-- categoryParentEditButton -->
+                    <div data-role="fieldcontain" class="menuPage_v2_categoryParentEditButton ">
+                        <select name="categoryParentEditButton" id="menuPage_v2_categoryParentEditButton"
+                        dsid="categoryParentEditButton" data-theme="b" data-role="appery_selectmenu" data-inline="false"
+                        data-mini="true" data-icon="arrow-d" data-iconpos="right" data-native-menu="false"
+                        tabindex="7" appery-class="menuPage_v2_categoryParentEditButton">
+                            <option id="menuPage_v2_categoryParentEditButton-0" value="Appetizer" reRender="categoryParentEditButton"
+                            dsid="categoryParentEditButton-0" selected="selected">
+                                Appetizer
+                            </option>
+                            <option id="menuPage_v2_categoryParentEditButton-1" value="Beef" reRender="categoryParentEditButton"
+                            dsid="categoryParentEditButton-1">
+                                Beef
+                            </option>
+                            <option id="menuPage_v2_categoryParentEditButton-2" value="Beverage" reRender="categoryParentEditButton"
+                            dsid="categoryParentEditButton-2">
+                                Beverage
+                            </option>
+                        </select>
+                    </div>
+                    <!-- categoryButtonGrid -->
+                    <div class="menuPage_v2_categoryButtonGrid_wrapper" data-wrapper-for="categoryButtonGrid">
+                        <table id="menuPage_v2_categoryButtonGrid" class="menuPage_v2_categoryButtonGrid"
+                        dsid="categoryButtonGrid" name="categoryButtonGrid" cellpadding=0 cellspacing=0>
+                            <col style="width:auto;" />
+                            <col style="width:auto;" />
+                            <tr class="menuPage_v2_categoryButtonGrid_row_0">
+                                <!-- categorySaveCell -->
+                                <td id="menuPage_v2_categorySaveCell" name="categorySaveCell" class="menuPage_v2_categorySaveCell"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- categoryEditSaveButton --><!--
+                                        --><a data-role="button" name="categoryEditSaveButton" dsid="categoryEditSaveButton"
+                                        class="scanMenuButton  menuPage_v2_categoryEditSaveButton" id="menuPage_v2_categoryEditSaveButton"
+                                        data-corners="true" data-icon="check" data-iconpos="right" x-apple-data-detectors="false"
+                                        data-mini="true" data-theme="b" tabindex="8">
+                                        save
+                                        </a>
+                                    </div>
+                                </td>
+                                <!-- categoryCancelCell -->
+                                <td id="menuPage_v2_categoryCancelCell" name="categoryCancelCell" class="menuPage_v2_categoryCancelCell"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- categoryCancelButton --><!--
+                                        --><a data-role="button" name="categoryCancelButton" dsid="categoryCancelButton" class="scanMenuButton  menuPage_v2_categoryCancelButton"
+                                        id="menuPage_v2_categoryCancelButton" data-corners="true" data-icon="delete" data-iconpos="right"
+                                        x-apple-data-detectors="false" data-mini="true" data-theme="b" tabindex="33">
+                                        cancel
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- itemIsInOrderPopup -->
+            <div data-role="popup" name="itemIsInOrderPopup" dsid="itemIsInOrderPopup" id="menuPage_v2_itemIsInOrderPopup"
+            class="roundedPopup  menuPage_v2_itemIsInOrderPopup" data-corners="true" data-dismissible="true"
+            data-overlay-theme="" data-theme="" data-shadow="true" data-tolerance="30,15,30,15">
+                <div class="ui-popup-content-wrapper">
+                    <!-- itemIsInOrderLabel -->
+                    <div name="itemIsInOrderLabel" id="menuPage_v2_itemIsInOrderLabel" dsid="itemIsInOrderLabel"
+                    data-role="appery_label" class="labelOnDark  menuPage_v2_itemIsInOrderLabel">
+                        this item is already selected
+                    </div>
+                </div>
+            </div>
+            <!-- addToOrderPopup -->
+            <div data-role="popup" name="addToOrderPopup" dsid="addToOrderPopup" id="menuPage_v2_addToOrderPopup"
+            class="roundedPopup  menuPage_v2_addToOrderPopup" data-corners="true" data-dismissible="true"
+            data-overlay-theme="" data-theme="" data-shadow="true" data-tolerance="30,15,30,15">
+                <div class="ui-popup-content-wrapper">
+                    <!-- addtoOrderLabel -->
+                    <div name="addtoOrderLabel" id="menuPage_v2_addtoOrderLabel" dsid="addtoOrderLabel"
+                    data-role="appery_label" class="labelOnDark  menuPage_v2_addtoOrderLabel">
+                        you have selected this Item
+                    </div>
+                </div>
+            </div>
+            <!-- wishListPopup -->
+            <div data-role="popup" name="wishListPopup" dsid="wishListPopup" id="menuPage_v2_wishListPopup"
+            class="roundedPopup  menuPage_v2_wishListPopup" data-corners="true" data-dismissible="true"
+            data-overlay-theme="" data-theme="" data-shadow="true" data-tolerance="30,15,30,15">
+                <div class="ui-popup-content-wrapper">
+                    <!-- labelStandard -->
+                    <div name="labelStandard" id="menuPage_v2_labelStandard" dsid="labelStandard" data-role="appery_label"
+                    class="labelOnDark  menuPage_v2_labelStandard">
+                        this item was added to your wish list! do you want to include notes about why you
+                        added it or when you want to try it?
+                    </div>
+                    <!-- wishListNote -->
+                    <div data-role="fieldcontain" class="menuPage_v2_wishListNote ">
+                        <textarea name="wishListNote" id="menuPage_v2_wishListNote" data-mini="true" tabindex="25"
+                        dsid="wishListNote" data-theme="b" placeholder="type some notes" class="menuPage_v2_wishListNote">
+</textarea>
+                    </div>
+                    <!-- wishlistButtonGrid -->
+                    <div class="menuPage_v2_wishlistButtonGrid_wrapper" data-wrapper-for="wishlistButtonGrid">
+                        <table id="menuPage_v2_wishlistButtonGrid" class="menuPage_v2_wishlistButtonGrid"
+                        dsid="wishlistButtonGrid" name="wishlistButtonGrid" cellpadding=0 cellspacing=0>
+                            <col style="width:auto;" />
+                            <col style="width:auto;" />
+                            <tr class="menuPage_v2_wishlistButtonGrid_row_0">
+                                <!-- wishlistSaveCell -->
+                                <td id="menuPage_v2_wishlistSaveCell" name="wishlistSaveCell" class="menuPage_v2_wishlistSaveCell"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- closePopupButton --><!--
+                                        --><a data-role="button" name="closePopupButton" dsid="closePopupButton" class="scanMenuButton  menuPage_v2_closePopupButton"
+                                        id="menuPage_v2_closePopupButton" data-corners="true" data-icon="check" data-iconpos="right"
+                                        x-apple-data-detectors="false" data-mini="true" data-theme="b" tabindex="26">
+                                        save
+                                        </a>
+                                    </div>
+                                </td>
+                                <!-- mobilegridcell_28 -->
+                                <td id="menuPage_v2_mobilegridcell_28" name="mobilegridcell_28" class="menuPage_v2_mobilegridcell_28"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- wishlistCancelButton --><!--
+                                        --><a data-role="button" name="wishlistCancelButton" dsid="wishlistCancelButton" class="scanMenuButton  menuPage_v2_wishlistCancelButton"
+                                        id="menuPage_v2_wishlistCancelButton" data-corners="true" data-icon="delete" data-iconpos="right"
+                                        x-apple-data-detectors="false" data-mini="true" data-theme="b" tabindex="32">
+                                        cancel
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- wishlistConfirmPopup -->
+            <div data-role="popup" name="wishlistConfirmPopup" dsid="wishlistConfirmPopup" id="menuPage_v2_wishlistConfirmPopup"
+            class="roundedPopup  menuPage_v2_wishlistConfirmPopup" data-corners="true" data-dismissible="true"
+            data-overlay-theme="" data-theme="" data-shadow="true" data-tolerance="30,15,30,15">
+                <div class="ui-popup-content-wrapper">
+                    <!-- wishlistConfirmLabel -->
+                    <div name="wishlistConfirmLabel" id="menuPage_v2_wishlistConfirmLabel" dsid="wishlistConfirmLabel"
+                    data-role="appery_label" class="labelOnDark  menuPage_v2_wishlistConfirmLabel">
+                        this item was added to your wish list
+                    </div>
+                </div>
+            </div>
+            <!-- wishlistContainsItem -->
+            <div data-role="popup" name="wishlistContainsItem" dsid="wishlistContainsItem" id="menuPage_v2_wishlistContainsItem"
+            class="roundedPopup  menuPage_v2_wishlistContainsItem" data-corners="true" data-dismissible="true"
+            data-overlay-theme="" data-theme="" data-shadow="true" data-tolerance="30,15,30,15">
+                <div class="ui-popup-content-wrapper">
+                    <!-- wishListContainsItemLabel -->
+                    <div name="wishListContainsItemLabel" id="menuPage_v2_wishListContainsItemLabel"
+                    dsid="wishListContainsItemLabel" data-role="appery_label" class="labelOnDark  menuPage_v2_wishListContainsItemLabel">
+                        this item is already in your wish list
+                    </div>
+                </div>
+            </div>
+            <!-- loginGotoPopup -->
+            <div data-role="popup" name="loginGotoPopup" dsid="loginGotoPopup" id="menuPage_v2_loginGotoPopup"
+            class="roundedPopup  menuPage_v2_loginGotoPopup" data-corners="true" data-dismissible="true"
+            data-overlay-theme="" data-theme="" data-shadow="true" data-tolerance="30,15,30,15">
+                <div class="ui-popup-content-wrapper">
+                    <!-- loginGotoLabel -->
+                    <div name="loginGotoLabel" id="menuPage_v2_loginGotoLabel" dsid="loginGotoLabel"
+                    data-role="appery_label" class="labelOnDark  menuPage_v2_loginGotoLabel">
+                        please log in to use this feature
+                    </div>
+                    <!-- loginGotoButtonGrid -->
+                    <div class="menuPage_v2_loginGotoButtonGrid_wrapper" data-wrapper-for="loginGotoButtonGrid">
+                        <table id="menuPage_v2_loginGotoButtonGrid" class="menuPage_v2_loginGotoButtonGrid"
+                        dsid="loginGotoButtonGrid" name="loginGotoButtonGrid" cellpadding=0 cellspacing=0>
+                            <col style="width:auto;" />
+                            <col style="width:auto;" />
+                            <tr class="menuPage_v2_loginGotoButtonGrid_row_0">
+                                <!-- loginGotoCell -->
+                                <td id="menuPage_v2_loginGotoCell" name="loginGotoCell" class="menuPage_v2_loginGotoCell"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- loginGotoButton --><!--
+                                        --><a data-role="button" name="loginGotoButton" dsid="loginGotoButton" class="scan-btnwithborder rounded  menuPage_v2_loginGotoButton"
+                                        id="menuPage_v2_loginGotoButton" data-corners="true" data-icon="user" data-iconpos="right"
+                                        x-apple-data-detectors="false" data-mini="true" data-theme="b" tabindex="29">
+                                        log in
+                                        </a>
+                                    </div>
+                                </td>
+                                <!-- loginGotoCancelCell -->
+                                <td id="menuPage_v2_loginGotoCancelCell" name="loginGotoCancelCell" class="menuPage_v2_loginGotoCancelCell"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- loginGotoCancelButton --><!--
+                                        --><a data-role="button" name="loginGotoCancelButton" dsid="loginGotoCancelButton"
+                                        class="scanMenuButton  menuPage_v2_loginGotoCancelButton" id="menuPage_v2_loginGotoCancelButton"
+                                        data-corners="true" data-icon="delete" data-iconpos="right" x-apple-data-detectors="false"
+                                        data-mini="true" data-theme="b" tabindex="30">
+                                        cancel
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- zeroItemsPopup -->
+            <div data-role="popup" name="zeroItemsPopup" dsid="zeroItemsPopup" id="menuPage_v2_zeroItemsPopup"
+            class="roundedPopup  menuPage_v2_zeroItemsPopup" data-corners="true" data-dismissible="true"
+            data-overlay-theme="" data-theme="" data-shadow="true" data-tolerance="30,15,30,15">
+                <div class="ui-popup-content-wrapper">
+                    <!-- zeroItemsClosePopupButton --><!--
+                    --><a data-role="button" name="zeroItemsClosePopupButton" dsid="zeroItemsClosePopupButton"
+                    class="menuPage_v2_zeroItemsClosePopupButton" style='min-height:20px; ' id="menuPage_v2_zeroItemsClosePopupButton"
+                    data-corners="true" data-icon="delete" data-iconpos="notext" x-apple-data-detectors="false"
+                    data-inline="true" data-mini="true" data-theme="b" tabindex="31">
+                    Button
+                    </a><!--
+                    --><!-- zeroItemsPopupLabel -->
+                    <div name="zeroItemsPopupLabel" id="menuPage_v2_zeroItemsPopupLabel" dsid="zeroItemsPopupLabel"
+                    data-role="appery_label" class="labelOnDark  menuPage_v2_zeroItemsPopupLabel">
+                        oh no! nothing on the menu is marked to meet your preferences. turn off the preference
+                        toggle to see all menu items.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>

@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>
+            navigatePage
+        </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, viewport-fit=cover">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="msapplication-tap-highlight" content="no">
+        <!-- Enable all requests, inline styles, and eval() -->
+        <meta http-equiv="Content-Security-Policy" content="default-src * gap://ready data:; style-src 'self' 'unsafe-inline' *; script-src 'self' 'unsafe-inline' 'unsafe-eval' *">
+        <!-- Uncomment link and meta tags below to activate PWA icons and theme color -->
+        <!-- link rel="manifest" href="../manifest.json" crossOrigin="use-credentials" -->
+        <!-- meta name="theme-color" content="#ffffff" -->
+        <link href="../css/theme/jqm/jqm.css" rel="stylesheet" />
+        <link href="../css/theme/KnoWYE3/KnoWYE3.css" rel="stylesheet" />
+        <link href="../libs/jquerymobile/1.4.5/jquery.mobile.structure-1.4.5.css" rel="stylesheet"
+        />
+        <link type="text/css" rel="stylesheet" href="../css/logblock.css" />
+        <link type="text/css" rel="stylesheet" href="../css/menuPageBuilder.css" />
+        <link type="text/css" rel="stylesheet" href="../css/common.css" />
+        <link type="text/css" rel="stylesheet" href="../css/header_footer.css" />
+        <link type="text/css" rel="stylesheet" href="../css/button.css" />
+        <link type="text/css" rel="stylesheet" href="../css/label.css" />
+        <link type="text/css" rel="stylesheet" href="../css/FontRoboto.css.css" />
+        <!-- Uncomment this script to activate service worker -->
+        <!-- <script>
+        if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('../sw.js')
+        .then(() => console.log('service worker installed'))
+        .catch(err => console.error('Error', err));
+        }
+        </script>
+        -->
+        <script type="text/javascript" src="../libs/underscore/underscore.js">
+        </script>
+        <script type="text/javascript" src="../libs/store/json2.js">
+        </script>
+        <script type="text/javascript" src="../libs/jquery/jquery-2.1.1.js">
+        </script>
+        <script type="text/javascript" src="../libs/jquery/jquery-ajaxTransport.js">
+        </script>
+        <script type="text/javascript">
+            $(document).bind("mobileinit", function() {
+                if (navigator.userAgent.toLowerCase().indexOf("android") != -1) {
+                    $.mobile.defaultPageTransition = 'none';
+                    $.mobile.defaultDialogTransition = 'none';
+                } else if (navigator.userAgent.toLowerCase().indexOf("msie") != -1) {
+                    $.mobile.allowCrossDomainPages = true;
+                    $.support.cors = true;
+                } else if (navigator.userAgent.match(/(iPad|iPhone|iPod)/g)) {
+                    $.mobile.hashListeningEnabled = false;
+                }
+            });
+        </script>
+        <script type="text/javascript" src="../libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.js">
+        </script>
+        <script type="text/javascript" src="../libs/apperyio/mobilebase.js">
+        </script>
+        <script type="text/javascript" src="../libs/event/customEventHandler.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/sha1.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/oauth.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/contexts.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/jquery.xml2json.min.js">
+        </script>
+        <script type="text/javascript" src="../libs/ms_sdk_bundle/client-sdk.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/appery.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/component-manager.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/mapping-impl.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/entity-api.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/login.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/storage-api.js">
+        </script>
+        <script type="text/javascript" src="../get_target_platform.js">
+        </script>
+        <script type="text/javascript" src="../cordova.js">
+        </script>
+        <link href="../libs/apperyio/mobilebase.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="../js/services/model.js">
+        </script>
+        <script type="text/javascript" src="../js/menuHeadingManagePageBuilder.js">
+        </script>
+        <script type="text/javascript" src="../js/navigatePageManager.js">
+        </script>
+        <script type="text/javascript" src="../js/logblock.js">
+        </script>
+        <script type="text/javascript" src="../js/Facebook_Helper.js">
+        </script>
+        <script type="text/javascript" src="../js/menuHeadingManager.js">
+        </script>
+        <script type="text/javascript" src="../js/menuPageBuilder.js">
+        </script>
+        <script type="text/javascript" src="../js/jquery-ui.min.js">
+        </script>
+        <script type="text/javascript" src="../js/common.js">
+        </script>
+        <script type="text/javascript" src="../js/clipboard.js">
+        </script>
+        <script type="text/javascript" src="../js/FileUploadHelper.js">
+        </script>
+        <script type="text/javascript" src="../js/zzqrCodeScaner.js">
+        </script>
+        <script type="text/javascript" src="../js/menuHistoryManager.js">
+        </script>
+        <script type="text/javascript" src="../js/GoogleCharts.js">
+        </script>
+        <script type="text/javascript" src="../js/services/service.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/databaseUtils.js">
+        </script>
+        <script type="text/javascript" src="../js/secure.js">
+        </script>
+<script type="text/javascript" src="../js/EncodeDecodeJS.js">
+        </script>
+    </head>
+    
+    <body>
+        <script language="JavaScript" type="text/javascript">
+        </script>
+        <div data-role="page" style="min-height:480px;" dsid="navigatePage" id="navigatePage"
+        class="type-interior" data-theme="b">
+            <!-- navigateHeader -->
+            <div data-role="header" data-position="fixed" data-add-back-btn="false" data-back-btn-text="&nbsp;"
+            data-theme="b" name="navigateHeader" id="navigatePage_navigateHeader" class="navigatePage_navigateHeader">
+                <h1 dsid="navigateHeader">
+                    home
+                </h1>
+                <!-- homeButton --><!--
+                --><a data-role="button" name="homeButton" dsid="homeButton" class="navigatePage_homeButton ui-btn-right"
+                style='min-height:20px; ' id="navigatePage_homeButton" data-corners="true" data-icon="home"
+                data-iconpos="notext" x-apple-data-detectors="false" data-inline='true' data-mini='true'
+                data-theme="b" tabindex="3">
+                &nbsp;
+                </a>
+            </div>
+            <!-- navigateContainer -->
+            <div data-role="content" id="navigatePage_navigateContainer" name="navigateContainer"
+            class="ui-li-container  navigatePage_navigateContainer ui-content" dsid="navigateContainer"
+            data-theme="b">
+                <link href="navigatePage.css" rel="stylesheet" type="text/css" />
+                <script type="text/javascript" src="navigatePage.js">
+                </script>
+                <!-- navigateList -->
+                <ul data-role="listview" id="navigatePage_navigateList" class="navigate-list  navigatePage_navigateList"
+                name="navigateList" dsid="navigateList" data-inset="true" data-theme="b" data-divider-theme="b"
+                data-count-theme="b" style="" data-split-icon="carat-r">
+                    <!-- nearbyButton -->
+                    <li class="navigatePage_nearbyButton" data-icon="carat-r">
+                        <a id="navigatePage_nearbyButton" name="nearbyButton" dsid="nearbyButton" tabindex="1"
+                        class="navigatePage_nearbyButton">
+                        <h3>knowye near me</h3>
+                        </a>
+                    </li>
+                    <!-- scanCodeButton -->
+                    <li class="navigatePage_scanCodeButton" data-icon="camera">
+                        <a id="navigatePage_scanCodeButton" name="scanCodeButton" dsid="scanCodeButton"
+                        tabindex="1" class="navigatePage_scanCodeButton">
+                        <h3>scan qr code</h3>
+                        </a>
+                    </li>
+                    <!-- currentSelectionsButton -->
+                    <li class="navigatePage_currentSelectionsButton" data-icon="shop">
+                        <a id="navigatePage_currentSelectionsButton" name="currentSelectionsButton" dsid="currentSelectionsButton"
+                        tabindex="1" class="navigatePage_currentSelectionsButton">
+                        <h3>current selections</h3>
+                        </a>
+                    </li>
+                    <!-- menuHistoryButton -->
+                    <li class="navigatePage_menuHistoryButton" data-icon="clock">
+                        <a id="navigatePage_menuHistoryButton" name="menuHistoryButton" dsid="menuHistoryButton"
+                        tabindex="1" class="navigatePage_menuHistoryButton">
+                        <h3>menu history</h3>
+                        </a>
+                    </li>
+                    <!-- favoritesButton -->
+                    <li class="navigatePage_favoritesButton" data-icon="heart">
+                        <a id="navigatePage_favoritesButton" name="favoritesButton" dsid="favoritesButton"
+                        tabindex="1" class="navigatePage_favoritesButton">
+                        <h3>favorites</h3>
+                        </a>
+                    </li>
+                    <!-- wishListButton -->
+                    <li class="navigatePage_wishListButton" data-icon="bullets">
+                        <a id="navigatePage_wishListButton" name="wishListButton" dsid="wishListButton"
+                        tabindex="1" class="navigatePage_wishListButton">
+                        <h3>wishlist</h3>
+                        </a>
+                    </li>
+                    <!-- orderHistoryButton -->
+                    <li class="navigatePage_orderHistoryButton" data-icon="clock">
+                        <a id="navigatePage_orderHistoryButton" name="orderHistoryButton" dsid="orderHistoryButton"
+                        tabindex="1" class="navigatePage_orderHistoryButton">
+                        <h3>order history</h3>
+                        </a>
+                    </li>
+                    <!-- searchPageReturnButton -->
+                    <li class="navigatePage_searchPageReturnButton" data-icon="search">
+                        <a id="navigatePage_searchPageReturnButton" name="searchPageReturnButton" dsid="searchPageReturnButton"
+                        tabindex="1" class="navigatePage_searchPageReturnButton">
+                        <h3>search page</h3>
+                        </a>
+                    </li>
+                    <!-- updateProfileButton -->
+                    <li class="navigatePage_updateProfileButton" data-icon="user">
+                        <a id="navigatePage_updateProfileButton" name="updateProfileButton" dsid="updateProfileButton"
+                        tabindex="1" class="navigatePage_updateProfileButton">
+                        <h3>my profile</h3>
+                        </a>
+                    </li>
+                    <!-- settingsButton -->
+                    <li class="navigatePage_settingsButton" data-icon="gear">
+                        <a id="navigatePage_settingsButton" name="settingsButton" dsid="settingsButton"
+                        tabindex="1" class="navigatePage_settingsButton">
+                        <h3>settings</h3>
+                        </a>
+                    </li>
+                    <!-- helpButton -->
+                    <li class="navigatePage_helpButton" data-icon="info">
+                        <a id="navigatePage_helpButton" name="helpButton" dsid="helpButton" tabindex="1"
+                        class="navigatePage_helpButton">
+                        <h3>help</h3>
+                        </a>
+                    </li>
+                    <!-- ratingInfoPageButton -->
+                    <li class="navigatePage_ratingInfoPageButton" data-icon="star">
+                        <a id="navigatePage_ratingInfoPageButton" name="ratingInfoPageButton" dsid="ratingInfoPageButton"
+                        tabindex="1" class="navigatePage_ratingInfoPageButton">
+                        <h3>rating info</h3>
+                        </a>
+                    </li>
+                    <!-- logoutButton -->
+                    <li class="navigatePage_logoutButton" data-icon="power">
+                        <a id="navigatePage_logoutButton" name="logoutButton" dsid="logoutButton" tabindex="1"
+                        class="navigatePage_logoutButton">
+                        <h3>log out</h3>
+                        </a>
+                    </li>
+                </ul>
+                <!-- loggedInLabel -->
+                <div name="loggedInLabel" id="navigatePage_loggedInLabel" dsid="loggedInLabel" data-role="appery_label"
+                class="labelOnDark  navigatePage_loggedInLabel">
+                    you are logged in as
+                </div>
+                <!-- loggedInIdLabel -->
+                <div name="loggedInIdLabel" id="navigatePage_loggedInIdLabel" dsid="loggedInIdLabel"
+                data-role="appery_label" class="labelOnDark  navigatePage_loggedInIdLabel">
+                    (user ID)
+                </div>
+                <!-- vendotOptionsButton --><!--
+                --><a data-role="button" name="vendotOptionsButton" dsid="vendotOptionsButton" class="navigatePage_vendotOptionsButton"
+                id="navigatePage_vendotOptionsButton" data-corners="false" data-icon="carat-r" data-iconpos="right"
+                x-apple-data-detectors="false" data-mini="true" data-theme="b" tabindex="2">
+                vendor options
+                </a>
+            </div>
+            <!-- logoutConfirmPopup -->
+            <div data-role="popup" name="logoutConfirmPopup" dsid="logoutConfirmPopup" id="navigatePage_logoutConfirmPopup"
+            class="roundedPopup  navigatePage_logoutConfirmPopup" data-corners="true" data-dismissible="true"
+            data-overlay-theme="a" data-theme="" data-shadow="true" data-tolerance="30,15,30,15">
+                <div class="ui-popup-content-wrapper">
+                    <!-- logoutConfirmLabel -->
+                    <div name="logoutConfirmLabel" id="navigatePage_logoutConfirmLabel" dsid="logoutConfirmLabel"
+                    data-role="appery_label" class="labelOnDark  navigatePage_logoutConfirmLabel">
+                        are you sure you want to log out?
+                    </div>
+                    <!-- logoutPopupButtonGrid -->
+                    <div class="navigatePage_logoutPopupButtonGrid_wrapper" data-wrapper-for="logoutPopupButtonGrid">
+                        <table id="navigatePage_logoutPopupButtonGrid" class="navigatePage_logoutPopupButtonGrid"
+                        dsid="logoutPopupButtonGrid" name="logoutPopupButtonGrid" cellpadding=0 cellspacing=0>
+                            <col style="width:auto;" />
+                            <col style="width:auto;" />
+                            <tr class="navigatePage_logoutPopupButtonGrid_row_0">
+                                <!-- logoutPopupConfirmCell -->
+                                <td id="navigatePage_logoutPopupConfirmCell" name="logoutPopupConfirmCell" class="navigatePage_logoutPopupConfirmCell"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- logoutConfirmButton --><!--
+                                        --><a data-role="button" name="logoutConfirmButton" dsid="logoutConfirmButton" class="scan-btnwithborder  navigatePage_logoutConfirmButton"
+                                        id="navigatePage_logoutConfirmButton" data-corners="true" data-icon="power" data-iconpos="right"
+                                        x-apple-data-detectors="false" data-mini="true" data-theme="b" tabindex="5">
+                                        log out
+                                        </a>
+                                    </div>
+                                </td>
+                                <!-- logoutPopupCancelCell -->
+                                <td id="navigatePage_logoutPopupCancelCell" name="logoutPopupCancelCell" class="navigatePage_logoutPopupCancelCell"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- logoutCancelButton --><!--
+                                        --><a data-role="button" name="logoutCancelButton" dsid="logoutCancelButton" class="scanMenuButton  navigatePage_logoutCancelButton"
+                                        id="navigatePage_logoutCancelButton" data-corners="true" data-icon="delete" data-iconpos="right"
+                                        x-apple-data-detectors="false" data-mini="true" data-theme="b" tabindex="6">
+                                        cancel
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- loginGotoPopup -->
+            <div data-role="popup" name="loginGotoPopup" dsid="loginGotoPopup" id="navigatePage_loginGotoPopup"
+            class="roundedPopup  navigatePage_loginGotoPopup" data-corners="true" data-dismissible="true"
+            data-overlay-theme="a" data-theme="" data-shadow="true" data-tolerance="30,15,30,15">
+                <div class="ui-popup-content-wrapper">
+                    <!-- loginGotoLabel -->
+                    <div name="loginGotoLabel" id="navigatePage_loginGotoLabel" dsid="loginGotoLabel"
+                    data-role="appery_label" class="labelOnDark  navigatePage_loginGotoLabel">
+                        please log in to use this feature
+                    </div>
+                    <!-- loginGotoButtonGrid -->
+                    <div class="navigatePage_loginGotoButtonGrid_wrapper" data-wrapper-for="loginGotoButtonGrid">
+                        <table id="navigatePage_loginGotoButtonGrid" class="navigatePage_loginGotoButtonGrid"
+                        dsid="loginGotoButtonGrid" name="loginGotoButtonGrid" cellpadding=0 cellspacing=0>
+                            <col style="width:auto;" />
+                            <col style="width:auto;" />
+                            <tr class="navigatePage_loginGotoButtonGrid_row_0">
+                                <!-- loginGotoCell -->
+                                <td id="navigatePage_loginGotoCell" name="loginGotoCell" class="navigatePage_loginGotoCell"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- loginGotoButton --><!--
+                                        --><a data-role="button" name="loginGotoButton" dsid="loginGotoButton" class="scan-btnwithborder rounded navigatePage_loginGotoButton  navigatePage_loginGotoButton"
+                                        id="navigatePage_loginGotoButton" data-corners="true" data-icon="user" data-iconpos="right"
+                                        x-apple-data-detectors="false" data-mini="true" data-theme="b" tabindex="7">
+                                        log in
+                                        </a>
+                                    </div>
+                                </td>
+                                <!-- loginGotoCancelCell -->
+                                <td id="navigatePage_loginGotoCancelCell" name="loginGotoCancelCell" class="navigatePage_loginGotoCancelCell"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- loginGotoCancelButton --><!--
+                                        --><a data-role="button" name="loginGotoCancelButton" dsid="loginGotoCancelButton"
+                                        class="scanMenuButton  navigatePage_loginGotoCancelButton" id="navigatePage_loginGotoCancelButton"
+                                        data-corners="true" data-icon="delete" data-iconpos="right" x-apple-data-detectors="false"
+                                        data-mini="true" data-theme="b" tabindex="8">
+                                        cancel
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- quickMessagePopup -->
+            <div data-role="popup" name="quickMessagePopup" dsid="quickMessagePopup" id="navigatePage_quickMessagePopup"
+            class="roundedPopup  navigatePage_quickMessagePopup" data-corners="true" data-dismissible="true"
+            data-overlay-theme="" data-theme="" data-shadow="true" data-tolerance="30,15,30,15">
+                <div class="ui-popup-content-wrapper">
+                    <!-- quickMessageLabel -->
+                    <div name="quickMessageLabel" id="navigatePage_quickMessageLabel" dsid="quickMessageLabel"
+                    data-role="appery_label" class="labelOnDark  navigatePage_quickMessageLabel">
+                        message
+                    </div>
+                </div>
+            </div>
+            <!-- locationPopup -->
+            <div data-role="popup" name="locationPopup" dsid="locationPopup" id="navigatePage_locationPopup"
+            class="roundedPopup  navigatePage_locationPopup" data-corners="true" data-dismissible="true"
+            data-overlay-theme="" data-theme="" data-shadow="true" data-tolerance="30,15,30,15">
+                <div class="ui-popup-content-wrapper">
+                    <!-- locationPopupGrid -->
+                    <div class="navigatePage_locationPopupGrid_wrapper" data-wrapper-for="locationPopupGrid">
+                        <table id="navigatePage_locationPopupGrid" class="navigatePage_locationPopupGrid"
+                        dsid="locationPopupGrid" name="locationPopupGrid" cellpadding=0 cellspacing=0>
+                            <col style="width:49px;" />
+                            <col style="width:auto;" />
+                            <tr class="navigatePage_locationPopupGrid_row_0">
+                                <!-- cancelButtonCell -->
+                                <td id="navigatePage_cancelButtonCell" name="cancelButtonCell" class="navigatePage_cancelButtonCell"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- locationCancelButton --><!--
+                                        --><a data-role="button" name="locationCancelButton" dsid="locationCancelButton" class="navigatePage_locationCancelButton"
+                                        style='min-height:20px; ' id="navigatePage_locationCancelButton" data-corners="true"
+                                        data-icon="delete" data-iconpos="notext" x-apple-data-detectors="false" data-inline="true"
+                                        data-mini="true" data-theme="b" tabindex="10">
+                                        &nbsp;
+                                        </a>
+                                    </div>
+                                </td>
+                                <!-- labelCell -->
+                                <td id="navigatePage_labelCell" name="labelCell" class="navigatePage_labelCell"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- locationPopupLabel -->
+                                        <div name="locationPopupLabel" id="navigatePage_locationPopupLabel" dsid="locationPopupLabel"
+                                        data-role="appery_label" class="labelOnDark  navigatePage_locationPopupLabel">
+                                            these nearby places are in the know. tap to see a menu.
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <!-- featureLocationList -->
+                    <ul data-role="listview" id="navigatePage_featureLocationList" class="navigatePage_featureLocationList"
+                    name="featureLocationList" dsid="featureLocationList" data-inset="true" data-theme="b"
+                    data-divider-theme="b" data-count-theme="b" style="" data-split-icon="carat-r">
+                        <!-- featureLocationListItem -->
+                        <li class="navigatePage_featureLocationListItem" data-icon="carat-r">
+                            <a id="navigatePage_featureLocationListItem" name="featureLocationListItem" dsid="featureLocationListItem"
+                            tabindex="11" class="navigatePage_featureLocationListItem">
+                            <h3>Item 1</h3>
+                            <span class="ui-li-count">3</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- locationList -->
+                    <ul data-role="listview" id="navigatePage_locationList" class="navigatePage_locationList"
+                    name="locationList" dsid="locationList" data-inset="true" data-theme="b" data-divider-theme="b"
+                    data-count-theme="b" style="" data-split-icon="carat-r">
+                        <!-- locationItem -->
+                        <li class="navigatePage_locationItem" data-icon="carat-r">
+                            <a id="navigatePage_locationItem" name="locationItem" dsid="locationItem" tabindex="9"
+                            class="navigatePage_locationItem">
+                            <h3>Item 1</h3>
+                            <span class="ui-li-count">3</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>

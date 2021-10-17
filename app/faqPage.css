@@ -1,0 +1,36 @@
+
+/* Define default spinner */
+.ui-icon-loading {
+	background: url("../libs/jquerymobile/1.4.5/images/ajax-loader.gif") repeat scroll 0 0 / 46px 46px transparent!important;
+}
+/* menuButton */
+#faqPage_menuButton {
+
+}
+.ui-btn.faqPage_menuButton {
+
+}
+/* faqContainer */
+.ui-content.faqPage_faqContainer {
+	padding: 15px 15px 15px 15px;
+}
+/* feedbackLabel */
+.faqPage_feedbackLabel {
+	text-decoration: underline; font-weight: normal; font-style: italic; color: #2489ce; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 4px 4px 4px 4px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* html_3 */
+.faqPage_html_3 {
+	margin: 4px 0px 0px 0px;
+	font-weight: normal;
+	width: auto; height: auto;
+}
+div.faqPage_html_3 {
+	overflow: auto;
+}
+/* faqFooter */
+.faqPage_faqFooter {
+	min-height:38px;
+}

@@ -1,0 +1,36 @@
+
+/* Define default spinner */
+.ui-icon-loading {
+	background: url("../libs/jquerymobile/1.4.5/images/ajax-loader.gif") repeat scroll 0 0 / 46px 46px transparent!important;
+}
+/* navigateButton */
+#scannerPage_navigateButton {
+
+}
+.ui-btn.scannerPage_navigateButton {
+
+}
+/* scanContainer */
+.ui-content.scannerPage_scanContainer {
+	padding: 15px 15px 15px 15px;
+}
+/* mobileimage_4 */
+.scannerPage_mobileimage_4 {
+	margin: 0px 0px 0px 30px;
+	width: 231px; height: 13px;
+	display: block;
+	display: none;
+}
+/* scanner */
+.scannerPage_scanner {
+	margin: 8px 5px 8px 5px;
+	font-weight: normal;
+	width: 280px; height: 280px;
+}
+div.scannerPage_scanner {
+	overflow: auto;
+}
+/* mobilefooter */
+.scannerPage_mobilefooter {
+	min-height:38px;
+}

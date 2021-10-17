@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>
+            wishListPage
+        </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, viewport-fit=cover">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="msapplication-tap-highlight" content="no">
+        <!-- Enable all requests, inline styles, and eval() -->
+        <meta http-equiv="Content-Security-Policy" content="default-src * gap://ready data:; style-src 'self' 'unsafe-inline' *; script-src 'self' 'unsafe-inline' 'unsafe-eval' *">
+        <!-- Uncomment link and meta tags below to activate PWA icons and theme color -->
+        <!-- link rel="manifest" href="../manifest.json" crossOrigin="use-credentials" -->
+        <!-- meta name="theme-color" content="#ffffff" -->
+        <link href="../css/theme/jqm/jqm.css" rel="stylesheet" />
+        <link href="../css/theme/KnoWYE3/KnoWYE3.css" rel="stylesheet" />
+        <link href="../libs/jquerymobile/1.4.5/jquery.mobile.structure-1.4.5.css" rel="stylesheet"
+        />
+        <link type="text/css" rel="stylesheet" href="../css/logblock.css" />
+        <link type="text/css" rel="stylesheet" href="../css/menuPageBuilder.css" />
+        <link type="text/css" rel="stylesheet" href="../css/common.css" />
+        <link type="text/css" rel="stylesheet" href="../css/header_footer.css" />
+        <link type="text/css" rel="stylesheet" href="../css/button.css" />
+        <link type="text/css" rel="stylesheet" href="../css/label.css" />
+        <link type="text/css" rel="stylesheet" href="../css/FontRoboto.css.css" />
+        <!-- Uncomment this script to activate service worker -->
+        <!-- <script>
+        if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('../sw.js')
+        .then(() => console.log('service worker installed'))
+        .catch(err => console.error('Error', err));
+        }
+        </script>
+        -->
+        <script type="text/javascript" src="../libs/underscore/underscore.js">
+        </script>
+        <script type="text/javascript" src="../libs/store/json2.js">
+        </script>
+        <script type="text/javascript" src="../libs/jquery/jquery-2.1.1.js">
+        </script>
+        <script type="text/javascript" src="../libs/jquery/jquery-ajaxTransport.js">
+        </script>
+        <script type="text/javascript">
+            $(document).bind("mobileinit", function() {
+                if (navigator.userAgent.toLowerCase().indexOf("android") != -1) {
+                    $.mobile.defaultPageTransition = 'none';
+                    $.mobile.defaultDialogTransition = 'none';
+                } else if (navigator.userAgent.toLowerCase().indexOf("msie") != -1) {
+                    $.mobile.allowCrossDomainPages = true;
+                    $.support.cors = true;
+                } else if (navigator.userAgent.match(/(iPad|iPhone|iPod)/g)) {
+                    $.mobile.hashListeningEnabled = false;
+                }
+            });
+        </script>
+        <script type="text/javascript" src="../libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.js">
+        </script>
+        <script type="text/javascript" src="../libs/apperyio/mobilebase.js">
+        </script>
+        <script type="text/javascript" src="../libs/event/customEventHandler.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/sha1.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/oauth.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/contexts.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/jquery.xml2json.min.js">
+        </script>
+        <script type="text/javascript" src="../libs/ms_sdk_bundle/client-sdk.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/appery.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/component-manager.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/mapping-impl.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/entity-api.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/login.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/storage-api.js">
+        </script>
+        <script type="text/javascript" src="../get_target_platform.js">
+        </script>
+        <script type="text/javascript" src="../cordova.js">
+        </script>
+        <link href="../libs/apperyio/mobilebase.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="../js/services/model.js">
+        </script>
+        <script type="text/javascript" src="../js/menuHeadingManagePageBuilder.js">
+        </script>
+        <script type="text/javascript" src="../js/navigatePageManager.js">
+        </script>
+        <script type="text/javascript" src="../js/logblock.js">
+        </script>
+        <script type="text/javascript" src="../js/Facebook_Helper.js">
+        </script>
+        <script type="text/javascript" src="../js/menuHeadingManager.js">
+        </script>
+        <script type="text/javascript" src="../js/menuPageBuilder.js">
+        </script>
+        <script type="text/javascript" src="../js/jquery-ui.min.js">
+        </script>
+        <script type="text/javascript" src="../js/common.js">
+        </script>
+        <script type="text/javascript" src="../js/clipboard.js">
+        </script>
+        <script type="text/javascript" src="../js/FileUploadHelper.js">
+        </script>
+        <script type="text/javascript" src="../js/zzqrCodeScaner.js">
+        </script>
+        <script type="text/javascript" src="../js/menuHistoryManager.js">
+        </script>
+        <script type="text/javascript" src="../js/GoogleCharts.js">
+        </script>
+        <script type="text/javascript" src="../js/services/service.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/databaseUtils.js">
+        </script>
+        <script type="text/javascript" src="../js/secure.js">
+        </script>
+<script type="text/javascript" src="../js/EncodeDecodeJS.js">
+        </script>
+    </head>
+    
+    <body>
+        <script language="JavaScript" type="text/javascript">
+        </script>
+        <div data-role="page" style="min-height:480px;" dsid="wishListPage" id="wishListPage"
+        class="type-interior" data-theme="b">
+            <!-- wishlistHeader -->
+            <div data-role="header" data-position="fixed" data-add-back-btn="true" data-back-btn-text="&nbsp;"
+            data-theme="b" name="wishlistHeader" id="wishListPage_wishlistHeader" class="wishListPage_wishlistHeader">
+                <h1 dsid="wishlistHeader">
+                    wishlist
+                </h1>
+                <!-- menuButton --><!--
+                --><a data-role="button" name="menuButton" dsid="menuButton" class="wishListPage_menuButton ui-btn-right"
+                style='min-height:20px; ' id="wishListPage_menuButton" data-corners="true" data-icon="home"
+                data-iconpos="notext" x-apple-data-detectors="false" data-inline='true' data-mini='true'
+                data-theme="b" tabindex="2">
+                &nbsp;
+                </a>
+            </div>
+            <!-- wishlistContainer -->
+            <div data-role="content" id="wishListPage_wishlistContainer" name="wishlistContainer"
+            class="ui-li-container  wishListPage_wishlistContainer ui-content" dsid="wishlistContainer"
+            data-theme="b">
+                <link href="wishListPage.css" rel="stylesheet" type="text/css" />
+                <script type="text/javascript" src="wishListPage.js">
+                </script>
+                <!-- wishListLabel -->
+                <div name="wishListLabel" id="wishListPage_wishListLabel" dsid="wishListLabel" data-role="appery_label"
+                class="labelOnDark  wishListPage_wishListLabel">
+                    these are the items you want to try
+                </div>
+                <!-- wishList -->
+                <ul data-role="listview" id="wishListPage_wishList" class="wishListPage_wishList"
+                name="wishList" dsid="wishList" data-theme="b" data-divider-theme="b" data-count-theme="b"
+                style="" data-split-icon="carat-r">
+                    <!-- wish -->
+                    <li id="wishListPage_wish" name="wish" dsid="wish" tabindex="1" data-icon="carat-r"
+                    class="wishListPage_wish  ui-btn ui-btn-icon-right ui-icon-carat-r">
+                        <div class="ui-li-static-container ui-btn">
+                            <!-- itemLabel -->
+                            <div name="itemLabel" id="wishListPage_itemLabel" dsid="itemLabel" data-role="appery_label"
+                            class="labelItem  wishListPage_itemLabel">
+                                item
+                            </div>
+                            <!-- noteGrid -->
+                            <div class="wishListPage_noteGrid_wrapper" data-wrapper-for="noteGrid">
+                                <table id="wishListPage_noteGrid" class="wishListPage_noteGrid" dsid="noteGrid"
+                                name="noteGrid" cellpadding=0 cellspacing=0>
+                                    <col style="width:49px;" />
+                                    <col style="width:auto;" />
+                                    <tr class="wishListPage_noteGrid_row_0">
+                                        <!-- noteLabelCell -->
+                                        <td id="wishListPage_noteLabelCell" name="noteLabelCell" class="wishListPage_noteLabelCell"
+                                        colspan=1 rowspan=1>
+                                            <div class="cell-wrapper">
+                                                <!-- noteLabel -->
+                                                <div name="noteLabel" id="wishListPage_noteLabel" dsid="noteLabel" data-role="appery_label"
+                                                class="labelOnDark  wishListPage_noteLabel">
+                                                    note:
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <!-- noteLabelTextCell -->
+                                        <td id="wishListPage_noteLabelTextCell" name="noteLabelTextCell" class="wishListPage_noteLabelTextCell"
+                                        colspan=1 rowspan=1>
+                                            <div class="cell-wrapper">
+                                                <!-- noteLabelText -->
+                                                <div name="noteLabelText" id="wishListPage_noteLabelText" dsid="noteLabelText" data-role="appery_label"
+                                                class="labelOnDark  wishListPage_noteLabelText">
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <!-- proprietorLabel -->
+                            <div name="proprietorLabel" id="wishListPage_proprietorLabel" dsid="proprietorLabel"
+                            data-role="appery_label" class="labelDescription  wishListPage_proprietorLabel">
+                                host
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- deleteConfirmPopup -->
+            <div data-role="popup" name="deleteConfirmPopup" dsid="deleteConfirmPopup" id="wishListPage_deleteConfirmPopup"
+            class="wishListPage_deleteConfirmPopup" data-corners="true" data-dismissible="true"
+            data-overlay-theme="" data-theme="" data-shadow="true" data-tolerance="30,15,30,15">
+                <div class="ui-popup-content-wrapper">
+                    <!-- deleteConfirmLabel -->
+                    <div name="deleteConfirmLabel" id="wishListPage_deleteConfirmLabel" dsid="deleteConfirmLabel"
+                    data-role="appery_label" class="labelOnLight  wishListPage_deleteConfirmLabel">
+                        Delete this item from wishlist?
+                    </div>
+                    <!-- deleteButtonGrid -->
+                    <div class="wishListPage_deleteButtonGrid_wrapper" data-wrapper-for="deleteButtonGrid">
+                        <table id="wishListPage_deleteButtonGrid" class="wishListPage_deleteButtonGrid"
+                        dsid="deleteButtonGrid" name="deleteButtonGrid" cellpadding=0 cellspacing=0>
+                            <col style="width:auto;" />
+                            <col style="width:auto;" />
+                            <tr class="wishListPage_deleteButtonGrid_row_0">
+                                <!-- deleteConfirmCell -->
+                                <td id="wishListPage_deleteConfirmCell" name="deleteConfirmCell" class="wishListPage_deleteConfirmCell"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- deleteConfirmButton --><!--
+                                        --><a data-role="button" name="deleteConfirmButton" dsid="deleteConfirmButton" class="wishListPage_deleteConfirmButton"
+                                        id="wishListPage_deleteConfirmButton" data-corners="true" data-icon="alert" data-iconpos="right"
+                                        x-apple-data-detectors="false" data-mini="true" data-theme="b" tabindex="3">
+                                        Delete
+                                        </a>
+                                    </div>
+                                </td>
+                                <!-- deleteCancelCell -->
+                                <td id="wishListPage_deleteCancelCell" name="deleteCancelCell" class="wishListPage_deleteCancelCell"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- deleteCancelButton --><!--
+                                        --><a data-role="button" name="deleteCancelButton" dsid="deleteCancelButton" class="wishListPage_deleteCancelButton"
+                                        id="wishListPage_deleteCancelButton" data-corners="true" data-icon="delete" data-iconpos="right"
+                                        x-apple-data-detectors="false" data-mini="true" data-theme="b" tabindex="4">
+                                        Cancel
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>

@@ -1,0 +1,193 @@
+
+/* Define default spinner */
+.ui-icon-loading {
+	background: url("../libs/jquerymobile/1.4.5/images/ajax-loader.gif") repeat scroll 0 0 / 46px 46px transparent!important;
+}
+/* homeButton */
+#timeRangePage_homeButton {
+
+}
+.ui-btn.timeRangePage_homeButton {
+
+}
+/* timeRangeContainer */
+.ui-content.timeRangePage_timeRangeContainer {
+	padding: 15px 15px 15px 15px;
+}
+/* timeRangeLabel */
+.timeRangePage_timeRangeLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #0ec40a; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* rangeNameInput */
+.timeRangePage_rangeNameInput {
+	margin: 4px 0px 4px 0px;
+}
+/* daySelect */
+.timeRangePage_daySelect {
+	margin: 4px 0px 4px 0px;
+}
+/* monday */
+.timeRangePage_monday {
+	-webkit-border-radius: inherit;
+	border-radius: inherit;
+}
+/* tuesday */
+.timeRangePage_tuesday {
+	-webkit-border-radius: inherit;
+	border-radius: inherit;
+}
+/* wednesday */
+.timeRangePage_wednesday {
+	-webkit-border-radius: inherit;
+	border-radius: inherit;
+}
+/* thursday */
+.timeRangePage_thursday {
+	-webkit-border-radius: inherit;
+	border-radius: inherit;
+}
+/* friday */
+.timeRangePage_friday {
+	-webkit-border-radius: inherit;
+	border-radius: inherit;
+}
+/* saturday */
+.timeRangePage_saturday {
+	-webkit-border-radius: inherit;
+	border-radius: inherit;
+}
+/* sunday */
+.timeRangePage_sunday {
+	-webkit-border-radius: inherit;
+	border-radius: inherit;
+}
+/* rangeTimeGrid */
+.timeRangePage_rangeTimeGrid {
+	height: auto;
+	width:100%;
+	margin: 4px 0px 4px 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.timeRangePage_rangeTimeGrid_wrapper {
+
+}
+.timeRangePage_rangeTimeGrid > tr > td {
+	vertical-align: top;
+}
+.timeRangePage_rangeTimeGrid_row_0, .timeRangePage_rangeTimeGrid_row_0 > td {
+	height: 30px
+}
+.timeRangePage_rangeTimeGrid_row_1, .timeRangePage_rangeTimeGrid_row_1 > td {
+	height: 30px
+}
+/* timeStartLabelCell */
+.timeRangePage_timeStartLabelCell {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.timeRangePage_timeStartLabelCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* timeStartLabel */
+.timeRangePage_timeStartLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #0ec40a; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* timeEndLabelCell */
+.timeRangePage_timeEndLabelCell {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.timeRangePage_timeEndLabelCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* timeEndLabel */
+.timeRangePage_timeEndLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #0ec40a; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* timeStartCell */
+.timeRangePage_timeStartCell {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.timeRangePage_timeStartCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* timeStartInput */
+.timeRangePage_timeStartInput {
+	margin: 4px 0px 4px 0px;
+}
+/* timeEndCell */
+.timeRangePage_timeEndCell {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.timeRangePage_timeEndCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* timeEndInput */
+.timeRangePage_timeEndInput {
+	margin: 4px 0px 4px 0px;
+}
+/* timeRangeSaveButton */
+#timeRangePage_timeRangeSaveButton {
+
+}
+.ui-btn.timeRangePage_timeRangeSaveButton {
+	margin: 4px 5px 4px 5px;
+}
+/* DELETEsampleList */
+.ui-page .timeRangePage_DELETEsampleList {
+	margin: 4px -15px 0px -15px;
+}
+/* mobilelistitem_5 */
+/* mobilelistitembutton_5 */
+.timeRangePage_mobilelistitembutton_5 {
+
+}
+/* mobilelistitem_6 */
+/* mobilelistitembutton_7 */
+.timeRangePage_mobilelistitembutton_7 {
+
+}
+/* mobilelistitem_8 */
+/* mobilelistitembutton_9 */
+.timeRangePage_mobilelistitembutton_9 {
+
+}
+/* mobilelistitem_28 */
+/* mobilelistitembutton_29 */
+.timeRangePage_mobilelistitembutton_29 {
+
+}
+/* mobilelistitem_30 */
+/* mobilelistitembutton_31 */
+.timeRangePage_mobilelistitembutton_31 {
+
+}
+/* mobilelistitem_32 */
+/* mobilelistitembutton_33 */
+.timeRangePage_mobilelistitembutton_33 {
+
+}
+/* timeRangeFooter */
+.timeRangePage_timeRangeFooter {
+	min-height:38px;
+}

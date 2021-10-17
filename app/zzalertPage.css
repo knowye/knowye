@@ -1,0 +1,41 @@
+
+/* Define default spinner */
+.ui-icon-loading {
+	background: url("../libs/jquerymobile/1.4.5/images/ajax-loader.gif") repeat scroll 0 0 / 46px 46px transparent!important;
+}
+/* homeButton */
+#zzalertPage_homeButton {
+
+}
+.ui-btn.zzalertPage_homeButton {
+
+}
+/* alertContainer */
+.ui-content.zzalertPage_alertContainer {
+	padding: 15px 15px 15px 15px;
+}
+/* mobilelabel_3 */
+.zzalertPage_mobilelabel_3 {
+	text-decoration: none; font-weight: normal; color: #f21313; text-align: left; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* mobilelabel_5 */
+.zzalertPage_mobilelabel_5 {
+	text-decoration: none; font-weight: normal; color: #f21313; text-align: left; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* mobilelabel_4 */
+.zzalertPage_mobilelabel_4 {
+	text-decoration: none; font-weight: normal; color: #f21313; text-align: left; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* alertFooter */
+.zzalertPage_alertFooter {
+	min-height:38px;
+}

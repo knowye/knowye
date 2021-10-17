@@ -1,0 +1,188 @@
+
+/* Define default spinner */
+.ui-icon-loading {
+	background: url("../libs/jquerymobile/1.4.5/images/ajax-loader.gif") repeat scroll 0 0 / 46px 46px transparent!important;
+}
+/* menuButton */
+#wishListPage_menuButton {
+
+}
+.ui-btn.wishListPage_menuButton {
+
+}
+/* wishlistContainer */
+.ui-content.wishListPage_wishlistContainer {
+	padding: 15px 15px 15px 15px;
+}
+/* wishListLabel */
+.wishListPage_wishListLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #f8f8fa; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 4px 4px 4px 4px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* wishList */
+.ui-page .wishListPage_wishList {
+	margin: 10px -15px 0px -15px;
+}
+/* wish */
+.ui-mobile-viewport ul[data-role="listview"] li.wishListPage_wish {
+	padding: 0;
+	margin: 0;
+}
+.ui-mobile-viewport ul[data-role="listview"] li.wishListPage_wish .ui-li-static-container {
+	padding: 0px 0px 4px 0px;
+	padding-right: 41px;
+	padding-left: 0px;
+	min-height: 1em;
+	border-width:0;
+}
+.ui-mobile-viewport ul[data-role="listview"] li.wishListPage_wish.ui-icon-none .ui-li-static-container {
+	padding-right: 0px; /* consider nothing */
+}
+/* itemLabel */
+.wishListPage_itemLabel {
+	text-decoration: none; font-weight: normal; color: #d3e7f0; text-align: left; font-family: Helvetica; font-size: 18px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* mobilelistitembutton_4 */
+.wishListPage_mobilelistitembutton_4 {
+
+}
+/* noteGrid */
+.wishListPage_noteGrid {
+	height: auto;
+	width:100%;
+	margin: 2px 0px 0px 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.wishListPage_noteGrid_wrapper {
+
+}
+.wishListPage_noteGrid > tr > td {
+	vertical-align: top;
+}
+.wishListPage_noteGrid_row_0, .wishListPage_noteGrid_row_0 > td {
+	height: 30px
+}
+/* noteLabelCell */
+.wishListPage_noteLabelCell {
+	height:30px !important;
+	width:49px;
+	padding: 0px 0px 0px 0px;
+}
+.wishListPage_noteLabelCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* noteLabel */
+.wishListPage_noteLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; text-align: left; font-family: Helvetica; font-size: 16px;
+	margin: 0px 0px 0px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* noteLabelTextCell */
+.wishListPage_noteLabelTextCell {
+	height:30px !important;
+	width:auto;
+	padding: 0px 0px 0px 0px;
+}
+.wishListPage_noteLabelTextCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* noteLabelText */
+.wishListPage_noteLabelText {
+	text-decoration: none; font-weight: normal; text-align: left; font-family: Helvetica; font-size: 16px;
+	margin: 0px 0px 0px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* proprietorLabel */
+.wishListPage_proprietorLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #e7e8c1; text-align: left; font-family: Helvetica; font-size: 16px;
+	margin: 2px 0px 2px 4px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* wishListFooter */
+.wishListPage_wishListFooter {
+	min-height:38px;
+}
+/* deleteConfirmPopup */
+.wishListPage_deleteConfirmPopup {
+
+}
+div.wishListPage_deleteConfirmPopup {
+	max-height: 100vh;
+	box-sizing: border-box;
+}
+div.wishListPage_deleteConfirmPopup .ui-popup-content-wrapper {
+	width:100%;
+	height:100%;
+	max-height: 99vh;
+	overflow:auto;
+	box-sizing: border-box;
+}
+/* deleteConfirmLabel */
+.wishListPage_deleteConfirmLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 4px 4px 4px 4px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* deleteButtonGrid */
+.wishListPage_deleteButtonGrid {
+	height: auto;
+	width:100%;
+	margin: 10px 0px 4px 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.wishListPage_deleteButtonGrid_wrapper {
+
+}
+.wishListPage_deleteButtonGrid > tr > td {
+	vertical-align: top;
+}
+.wishListPage_deleteButtonGrid_row_0, .wishListPage_deleteButtonGrid_row_0 > td {
+	height: 30px
+}
+/* deleteConfirmCell */
+.wishListPage_deleteConfirmCell {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.wishListPage_deleteConfirmCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* deleteConfirmButton */
+#wishListPage_deleteConfirmButton {
+
+}
+.ui-btn.wishListPage_deleteConfirmButton {
+	margin: 0px 0px 0px 0px;
+}
+/* deleteCancelCell */
+.wishListPage_deleteCancelCell {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.wishListPage_deleteCancelCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* deleteCancelButton */
+#wishListPage_deleteCancelButton {
+
+}
+.ui-btn.wishListPage_deleteCancelButton {
+	margin: 0px 0px 0px 0px;
+}

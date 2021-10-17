@@ -1,0 +1,1217 @@
+
+/* Define default spinner */
+.ui-icon-loading {
+	background: url("../libs/jquerymobile/1.4.5/images/ajax-loader.gif") repeat scroll 0 0 / 46px 46px transparent!important;
+}
+/* homeButton */
+#operationsRestaurantPage_homeButton {
+
+}
+.ui-btn.operationsRestaurantPage_homeButton {
+
+}
+/* operationsContainer */
+.ui-content.operationsRestaurantPage_operationsContainer {
+	padding: 15px 15px 15px 15px;
+}
+/* changeLoginPasswordGrid */
+.operationsRestaurantPage_changeLoginPasswordGrid {
+	height: auto;
+	width:100%;
+	margin: 4px 0px 4px 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.operationsRestaurantPage_changeLoginPasswordGrid_wrapper {
+
+}
+.operationsRestaurantPage_changeLoginPasswordGrid > tr > td {
+	vertical-align: top;
+}
+.operationsRestaurantPage_changeLoginPasswordGrid_row_0, .operationsRestaurantPage_changeLoginPasswordGrid_row_0 > td {
+	height: 30px
+}
+/* loginChangeCell */
+.operationsRestaurantPage_loginChangeCell {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.operationsRestaurantPage_loginChangeCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* loginChangeButton */
+#operationsRestaurantPage_loginChangeButton {
+
+}
+.ui-btn.operationsRestaurantPage_loginChangeButton {
+	margin: 0px 2px 0px 0px;
+}
+/* passwordChangeCell */
+.operationsRestaurantPage_passwordChangeCell {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.operationsRestaurantPage_passwordChangeCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* passwordChangeButton */
+#operationsRestaurantPage_passwordChangeButton {
+
+}
+.ui-btn.operationsRestaurantPage_passwordChangeButton {
+	margin: 0px 0px 0px 2px;
+}
+/* typeLabel */
+.operationsRestaurantPage_typeLabel {
+	text-decoration: none; font-weight: bold; font-style: italic; color: #f8f8fa; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 10px 0px 4px 0px;
+	display: none;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* selectBusinessTypeButton */
+.operationsRestaurantPage_selectBusinessTypeButton {
+	margin: 4px 5px 4px 5px;
+	display: none;
+}
+/* copyMenuLinkButton */
+#operationsRestaurantPage_copyMenuLinkButton {
+
+}
+.ui-btn.operationsRestaurantPage_copyMenuLinkButton {
+	margin: 20px 0px 20px 0px;
+}
+/* locationLabel */
+.operationsRestaurantPage_locationLabel {
+	text-decoration: none; font-weight: bold; font-style: italic; color: #f8f8fa; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 10px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* businessName */
+.operationsRestaurantPage_businessName {
+	margin: 4px 0px 4px 0px;
+}
+/* streetAddress1 */
+.operationsRestaurantPage_streetAddress1 {
+	margin: 4px 0px 4px 0px;
+}
+/* streetAddress2 */
+.operationsRestaurantPage_streetAddress2 {
+	margin: 4px 0px 4px 0px;
+}
+/* city */
+.operationsRestaurantPage_city {
+	margin: 4px 0px 4px 0px;
+}
+/* stateGrid */
+.operationsRestaurantPage_stateGrid {
+	height: auto;
+	width:100%;
+	margin: 4px 0px 4px 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.operationsRestaurantPage_stateGrid_wrapper {
+
+}
+.operationsRestaurantPage_stateGrid > tr > td {
+	vertical-align: top;
+}
+.operationsRestaurantPage_stateGrid_row_0, .operationsRestaurantPage_stateGrid_row_0 > td {
+	height: 30px
+}
+/* statelabelCell */
+.operationsRestaurantPage_statelabelCell {
+	height:30px !important;
+	width:55px;
+	padding: 0px 0px 0px 0px;
+}
+.operationsRestaurantPage_statelabelCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* stateLabel */
+.operationsRestaurantPage_stateLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #f8f8fa; text-align: left; font-family: Helvetica; font-size: 16px;
+	margin: 6px 0px 0px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* stateDropdownCell */
+.operationsRestaurantPage_stateDropdownCell {
+	height:30px !important;
+	width:auto;
+	padding: 0px 0px 0px 0px;
+}
+.operationsRestaurantPage_stateDropdownCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* stateDropdown */
+.operationsRestaurantPage_stateDropdown {
+	margin: 0px 0px 0px 0px;
+}
+/* stateDropdown1 */
+.operationsRestaurantPage_stateDropdown1 {
+	margin: 4px 0px 4px 0px;
+	display: none;
+}
+/* zip */
+.operationsRestaurantPage_zip {
+	margin: 4px 0px 4px 0px;
+}
+/* phone */
+.operationsRestaurantPage_phone {
+	margin: 4px 0px 4px 0px;
+}
+/* website */
+.operationsRestaurantPage_website {
+	margin: 4px 0px 4px 0px;
+}
+/* contactLabel */
+.operationsRestaurantPage_contactLabel {
+	text-decoration: none; font-weight: bold; font-style: italic; color: #f8f8fa; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 10px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* contactName */
+.operationsRestaurantPage_contactName {
+	margin: 4px 0px 4px 0px;
+}
+/* contactPhone */
+.operationsRestaurantPage_contactPhone {
+	margin: 4px 0px 4px 0px;
+}
+/* contactEmail */
+.operationsRestaurantPage_contactEmail {
+	margin: 4px 0px 4px 0px;
+}
+/* chefHead */
+.operationsRestaurantPage_chefHead {
+	margin: 4px 0px 4px 0px;
+}
+/* vendorDetails */
+.operationsRestaurantPage_vendorDetails {
+	text-decoration: none; font-weight: bold; font-style: italic; color: #f8f8fa; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 10px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* vendorDescription */
+.operationsRestaurantPage_vendorDescription {
+	margin: 4px 0px 4px 0px;
+}
+/* hoursLabel */
+.operationsRestaurantPage_hoursLabel {
+	text-decoration: none; font-weight: bold; font-style: italic; color: #f8f8fa; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 10px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* hoursGrid */
+.operationsRestaurantPage_hoursGrid {
+	height: auto;
+	width:100%;
+	margin: 4px 0px 4px 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.operationsRestaurantPage_hoursGrid_wrapper {
+
+}
+.operationsRestaurantPage_hoursGrid > tr > td {
+	vertical-align: top;
+}
+.operationsRestaurantPage_hoursGrid_row_0, .operationsRestaurantPage_hoursGrid_row_0 > td {
+	height: 30px
+}
+.operationsRestaurantPage_hoursGrid_row_1, .operationsRestaurantPage_hoursGrid_row_1 > td {
+	height: 30px
+}
+.operationsRestaurantPage_hoursGrid_row_2, .operationsRestaurantPage_hoursGrid_row_2 > td {
+	height: 30px
+}
+.operationsRestaurantPage_hoursGrid_row_3, .operationsRestaurantPage_hoursGrid_row_3 > td {
+	height: 30px
+}
+.operationsRestaurantPage_hoursGrid_row_4, .operationsRestaurantPage_hoursGrid_row_4 > td {
+	height: 30px
+}
+.operationsRestaurantPage_hoursGrid_row_5, .operationsRestaurantPage_hoursGrid_row_5 > td {
+	height: 30px
+}
+.operationsRestaurantPage_hoursGrid_row_6, .operationsRestaurantPage_hoursGrid_row_6 > td {
+	height: 30px
+}
+/* mondayCell */
+.operationsRestaurantPage_mondayCell {
+	height:30px !important;
+	width:99px;
+	padding: 2px 2px 2px 2px;
+}
+.operationsRestaurantPage_mondayCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* mondayLabel */
+.operationsRestaurantPage_mondayLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; text-align: left; font-family: Helvetica; font-size: 16px;
+	margin: 9px 0px 0px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* mondayOpenCell */
+.operationsRestaurantPage_mondayOpenCell {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.operationsRestaurantPage_mondayOpenCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* mondayOpen */
+.operationsRestaurantPage_mondayOpen {
+	margin: 0px 0px 0px 0px;
+}
+/* mondayCloseCell */
+.operationsRestaurantPage_mondayCloseCell {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.operationsRestaurantPage_mondayCloseCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* mondayClose */
+.operationsRestaurantPage_mondayClose {
+	margin: 0px 0px 0px 0px;
+}
+/* tuesdayCell */
+.operationsRestaurantPage_tuesdayCell {
+	height:30px !important;
+	width:99px;
+	padding: 2px 2px 2px 2px;
+}
+.operationsRestaurantPage_tuesdayCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* tuesdayLabel */
+.operationsRestaurantPage_tuesdayLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; text-align: left; font-family: Helvetica; font-size: 16px;
+	margin: 9px 0px 0px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* tuesdayOpenCell */
+.operationsRestaurantPage_tuesdayOpenCell {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.operationsRestaurantPage_tuesdayOpenCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* tuesdayOpen */
+.operationsRestaurantPage_tuesdayOpen {
+	margin: 0px 0px 0px 0px;
+}
+/* tuesdayCloseCell */
+.operationsRestaurantPage_tuesdayCloseCell {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.operationsRestaurantPage_tuesdayCloseCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* tuesdayClose */
+.operationsRestaurantPage_tuesdayClose {
+	margin: 0px 0px 0px 0px;
+}
+/* wednesdayCell */
+.operationsRestaurantPage_wednesdayCell {
+	height:30px !important;
+	width:99px;
+	padding: 2px 2px 2px 2px;
+}
+.operationsRestaurantPage_wednesdayCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* wednesdayLabel */
+.operationsRestaurantPage_wednesdayLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; text-align: left; font-family: Helvetica; font-size: 16px;
+	margin: 9px 0px 0px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* wednesdayOpenCell */
+.operationsRestaurantPage_wednesdayOpenCell {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.operationsRestaurantPage_wednesdayOpenCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* wednesdayOpen */
+.operationsRestaurantPage_wednesdayOpen {
+	margin: 0px 0px 0px 0px;
+}
+/* wednesdayCloseCell */
+.operationsRestaurantPage_wednesdayCloseCell {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.operationsRestaurantPage_wednesdayCloseCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* wednesdayClose */
+.operationsRestaurantPage_wednesdayClose {
+	margin: 0px 0px 0px 0px;
+}
+/* thursdayCell */
+.operationsRestaurantPage_thursdayCell {
+	height:30px !important;
+	width:99px;
+	padding: 2px 2px 2px 2px;
+}
+.operationsRestaurantPage_thursdayCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* thursdayLabel */
+.operationsRestaurantPage_thursdayLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; text-align: left; font-family: Helvetica; font-size: 16px;
+	margin: 9px 0px 0px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* thursdayOpenCell */
+.operationsRestaurantPage_thursdayOpenCell {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.operationsRestaurantPage_thursdayOpenCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* thursdayOpen */
+.operationsRestaurantPage_thursdayOpen {
+	margin: 0px 0px 0px 0px;
+}
+/* thursdayCloseCell */
+.operationsRestaurantPage_thursdayCloseCell {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.operationsRestaurantPage_thursdayCloseCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* thursdayClose */
+.operationsRestaurantPage_thursdayClose {
+	margin: 0px 0px 0px 0px;
+}
+/* fridayCell */
+.operationsRestaurantPage_fridayCell {
+	height:30px !important;
+	width:99px;
+	padding: 2px 2px 2px 2px;
+}
+.operationsRestaurantPage_fridayCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* fridayLabel */
+.operationsRestaurantPage_fridayLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; text-align: left; font-family: Helvetica; font-size: 16px;
+	margin: 9px 0px 0px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* fridayOpenCell */
+.operationsRestaurantPage_fridayOpenCell {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.operationsRestaurantPage_fridayOpenCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* fridayOpen */
+.operationsRestaurantPage_fridayOpen {
+	margin: 0px 0px 0px 0px;
+}
+/* fridayCloseCell */
+.operationsRestaurantPage_fridayCloseCell {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.operationsRestaurantPage_fridayCloseCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* fridayClose */
+.operationsRestaurantPage_fridayClose {
+	margin: 0px 0px 0px 0px;
+}
+/* saturdayCell */
+.operationsRestaurantPage_saturdayCell {
+	height:30px !important;
+	width:99px;
+	padding: 2px 2px 2px 2px;
+}
+.operationsRestaurantPage_saturdayCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* saturdayLabel */
+.operationsRestaurantPage_saturdayLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; text-align: left; font-family: Helvetica; font-size: 16px;
+	margin: 9px 0px 0px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* saturdayOpenCell */
+.operationsRestaurantPage_saturdayOpenCell {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.operationsRestaurantPage_saturdayOpenCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* saturdayOpen */
+.operationsRestaurantPage_saturdayOpen {
+	margin: 0px 0px 0px 0px;
+}
+/* saturdayCloseCell */
+.operationsRestaurantPage_saturdayCloseCell {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.operationsRestaurantPage_saturdayCloseCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* saturdayClose */
+.operationsRestaurantPage_saturdayClose {
+	margin: 0px 0px 0px 0px;
+}
+/* sundayCell */
+.operationsRestaurantPage_sundayCell {
+	height:30px !important;
+	width:99px;
+	padding: 2px 2px 2px 2px;
+}
+.operationsRestaurantPage_sundayCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* sundayLabel */
+.operationsRestaurantPage_sundayLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; text-align: left; font-family: Helvetica; font-size: 16px;
+	margin: 9px 0px 0px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* sundayOpenCell */
+.operationsRestaurantPage_sundayOpenCell {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.operationsRestaurantPage_sundayOpenCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* sundayOpen */
+.operationsRestaurantPage_sundayOpen {
+	margin: 0px 0px 0px 0px;
+}
+/* sundayCloseCell */
+.operationsRestaurantPage_sundayCloseCell {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.operationsRestaurantPage_sundayCloseCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* sundayClose */
+.operationsRestaurantPage_sundayClose {
+	margin: 0px 0px 0px 0px;
+}
+/* taxGrid */
+.operationsRestaurantPage_taxGrid {
+	height: auto;
+	width:100%;
+	margin: 10px 0px 4px 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.operationsRestaurantPage_taxGrid_wrapper {
+
+}
+.operationsRestaurantPage_taxGrid > tr > td {
+	vertical-align: top;
+}
+.operationsRestaurantPage_taxGrid_row_0, .operationsRestaurantPage_taxGrid_row_0 > td {
+	height: 30px
+}
+/* taxLabelCell */
+.operationsRestaurantPage_taxLabelCell {
+	height:30px !important;
+	width:75px;
+	padding: 2px 2px 2px 2px;
+}
+.operationsRestaurantPage_taxLabelCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* taxLabel */
+.operationsRestaurantPage_taxLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #f8f8fa; text-align: left; font-family: Helvetica; font-size: 16px;
+	margin: 6px 0px 0px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* taxFieldCell */
+.operationsRestaurantPage_taxFieldCell {
+	height:30px !important;
+	width:75px;
+	padding: 2px 2px 2px 2px;
+}
+.operationsRestaurantPage_taxFieldCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* taxField */
+.operationsRestaurantPage_taxField {
+	margin: 0px 0px 0px 0px;
+}
+/* mobilegridcell_30 */
+.operationsRestaurantPage_mobilegridcell_30 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.operationsRestaurantPage_mobilegridcell_30 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* percentLabel */
+.operationsRestaurantPage_percentLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; text-align: left; font-family: Helvetica; font-size: 16px;
+	margin: 6px 0px 0px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* fileSelect */
+.operationsRestaurantPage_fileSelect {
+	margin: 4px 0px 4px 0px;
+	display: none;
+}
+/* photoButtonGrid */
+.operationsRestaurantPage_photoButtonGrid {
+	height: auto;
+	width:100%;
+	margin: 4px 0px 4px 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.operationsRestaurantPage_photoButtonGrid_wrapper {
+
+}
+.operationsRestaurantPage_photoButtonGrid > tr > td {
+	vertical-align: top;
+}
+.operationsRestaurantPage_photoButtonGrid_row_0, .operationsRestaurantPage_photoButtonGrid_row_0 > td {
+	height: 30px
+}
+/* addImageButtonCell */
+.operationsRestaurantPage_addImageButtonCell {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.operationsRestaurantPage_addImageButtonCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* addImageButton */
+#operationsRestaurantPage_addImageButton {
+
+}
+.ui-btn.operationsRestaurantPage_addImageButton {
+	margin: 4px 2px 4px 0px;
+}
+/* deleteImageButtonCell */
+.operationsRestaurantPage_deleteImageButtonCell {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.operationsRestaurantPage_deleteImageButtonCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* deleteImageButton */
+#operationsRestaurantPage_deleteImageButton {
+
+}
+.ui-btn.operationsRestaurantPage_deleteImageButton {
+	margin: 4px 0px 4px 2px;
+}
+/* placeholderForImageUpload */
+.operationsRestaurantPage_placeholderForImageUpload {
+	margin: 4px 0px 0px 0px;
+	width: 100%; height: auto;
+	display: block;
+	display: none;
+}
+/* buttonGridSaveCancel */
+.operationsRestaurantPage_buttonGridSaveCancel {
+	height: auto;
+	width:100%;
+	margin: 20px 0px 4px 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.operationsRestaurantPage_buttonGridSaveCancel_wrapper {
+
+}
+.operationsRestaurantPage_buttonGridSaveCancel > tr > td {
+	vertical-align: top;
+}
+.operationsRestaurantPage_buttonGridSaveCancel_row_0, .operationsRestaurantPage_buttonGridSaveCancel_row_0 > td {
+	height: 30px
+}
+/* operationsInfoSaveCell */
+.operationsRestaurantPage_operationsInfoSaveCell {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.operationsRestaurantPage_operationsInfoSaveCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* operationsInfoSave */
+#operationsRestaurantPage_operationsInfoSave {
+
+}
+.ui-btn.operationsRestaurantPage_operationsInfoSave {
+	margin: 0px 2px 0px 0px;
+}
+/* operationInfoCancelCell */
+.operationsRestaurantPage_operationInfoCancelCell {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.operationsRestaurantPage_operationInfoCancelCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* operationInfoCancelButton */
+#operationsRestaurantPage_operationInfoCancelButton {
+
+}
+.ui-btn.operationsRestaurantPage_operationInfoCancelButton {
+	margin: 0px 0px 0px 2px;
+}
+/* deactivateAccountLink */
+.operationsRestaurantPage_deactivateAccountLink {
+	margin: 20px 0px 4px 0px;
+	display: block;
+	vertical-align: middle;
+	padding: 2px;
+	cursor: pointer;
+	display: none;
+}
+.operationsRestaurantPage_deactivateAccountLink_link_wrapper > .operationsRestaurantPage_deactivateAccountLink,
+.operationsRestaurantPage_deactivateAccountLink_link_wrapper > .operationsRestaurantPage_deactivateAccountLink:hover,
+.operationsRestaurantPage_deactivateAccountLink_link_wrapper > .operationsRestaurantPage_deactivateAccountLink:active,
+.operationsRestaurantPage_deactivateAccountLink_link_wrapper > .operationsRestaurantPage_deactivateAccountLink:visited {
+	text-decoration: underline; font-weight: normal; font-style: italic; color: #2489ce; text-align: center; font-family: Helvetica; font-size: 14px;
+}
+/* operationsFooter */
+.operationsRestaurantPage_operationsFooter {
+	min-height:38px;
+}
+/* passwordChangePopup */
+.operationsRestaurantPage_passwordChangePopup {
+	width: auto;
+}
+div.operationsRestaurantPage_passwordChangePopup {
+	max-height: 100vh;
+	box-sizing: border-box;
+}
+div.operationsRestaurantPage_passwordChangePopup .ui-popup-content-wrapper {
+	width:100%;
+	height:100%;
+	max-height: 99vh;
+	overflow:auto;
+	box-sizing: border-box;
+}
+/* mobilegrid_24 */
+.operationsRestaurantPage_mobilegrid_24 {
+	height: auto;
+	width:100%;
+	margin: 4px 0px 4px 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.operationsRestaurantPage_mobilegrid_24_wrapper {
+
+}
+.operationsRestaurantPage_mobilegrid_24 > tr > td {
+	vertical-align: top;
+}
+.operationsRestaurantPage_mobilegrid_24_row_0, .operationsRestaurantPage_mobilegrid_24_row_0 > td {
+	height: 30px
+}
+.operationsRestaurantPage_mobilegrid_24_row_1, .operationsRestaurantPage_mobilegrid_24_row_1 > td {
+	height: 30px
+}
+.operationsRestaurantPage_mobilegrid_24_row_2, .operationsRestaurantPage_mobilegrid_24_row_2 > td {
+	height: 30px
+}
+/* mobilegridcell_25 */
+.operationsRestaurantPage_mobilegridcell_25 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.operationsRestaurantPage_mobilegridcell_25 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* passwordCurrentInput */
+.operationsRestaurantPage_passwordCurrentInput {
+	margin: 4px 4px 4px 4px;
+}
+/* mobilegridcell_27 */
+.operationsRestaurantPage_mobilegridcell_27 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.operationsRestaurantPage_mobilegridcell_27 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* passwordNewInput */
+.operationsRestaurantPage_passwordNewInput {
+	margin: 10px 4px 4px 4px;
+}
+/* passwordConfirmInput */
+.operationsRestaurantPage_passwordConfirmInput {
+	margin: 4px 4px 4px 4px;
+}
+/* errorMessageLabel */
+.operationsRestaurantPage_errorMessageLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #f50c0c; text-align: center; font-family: Helvetica; font-size: 14px;
+	margin: 8px 0px 8px 0px;
+	display: none;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* mobilegridcell_29 */
+.operationsRestaurantPage_mobilegridcell_29 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.operationsRestaurantPage_mobilegridcell_29 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* passwordButtonGrid */
+.operationsRestaurantPage_passwordButtonGrid {
+	height: auto;
+	width:100%;
+	margin: 4px 0px 4px 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.operationsRestaurantPage_passwordButtonGrid_wrapper {
+
+}
+.operationsRestaurantPage_passwordButtonGrid > tr > td {
+	vertical-align: top;
+}
+.operationsRestaurantPage_passwordButtonGrid_row_0, .operationsRestaurantPage_passwordButtonGrid_row_0 > td {
+	height: 30px
+}
+/* passwordSaveCell */
+.operationsRestaurantPage_passwordSaveCell {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.operationsRestaurantPage_passwordSaveCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* mobilebutton_23 */
+#operationsRestaurantPage_mobilebutton_23 {
+
+}
+.ui-btn.operationsRestaurantPage_mobilebutton_23 {
+	margin: 10px 4px 5px 4px;
+}
+/* passwordCancelCell */
+.operationsRestaurantPage_passwordCancelCell {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.operationsRestaurantPage_passwordCancelCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* passwordCancelButton */
+#operationsRestaurantPage_passwordCancelButton {
+
+}
+.ui-btn.operationsRestaurantPage_passwordCancelButton {
+	margin: 10px 4px 5px 4px;
+}
+/* messagePopup */
+.operationsRestaurantPage_messagePopup {
+
+}
+div.operationsRestaurantPage_messagePopup {
+	max-height: 100vh;
+	box-sizing: border-box;
+}
+div.operationsRestaurantPage_messagePopup .ui-popup-content-wrapper {
+	width:100%;
+	height:100%;
+	max-height: 99vh;
+	overflow:auto;
+	box-sizing: border-box;
+}
+/* messageLabel */
+.operationsRestaurantPage_messageLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #4c516d; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 4px 4px 4px 4px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* loginChangePopup */
+.operationsRestaurantPage_loginChangePopup {
+
+}
+div.operationsRestaurantPage_loginChangePopup {
+	max-height: 100vh;
+	box-sizing: border-box;
+}
+div.operationsRestaurantPage_loginChangePopup .ui-popup-content-wrapper {
+	width:100%;
+	height:100%;
+	max-height: 99vh;
+	overflow:auto;
+	box-sizing: border-box;
+}
+/* popupGrid */
+.operationsRestaurantPage_popupGrid {
+	height: auto;
+	width:100%;
+	margin: 4px 0px 4px 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.operationsRestaurantPage_popupGrid_wrapper {
+
+}
+.operationsRestaurantPage_popupGrid > tr > td {
+	vertical-align: top;
+}
+.operationsRestaurantPage_popupGrid_row_0, .operationsRestaurantPage_popupGrid_row_0 > td {
+	height: 30px
+}
+.operationsRestaurantPage_popupGrid_row_1, .operationsRestaurantPage_popupGrid_row_1 > td {
+	height: 30px
+}
+.operationsRestaurantPage_popupGrid_row_2, .operationsRestaurantPage_popupGrid_row_2 > td {
+	height: 30px
+}
+/* labelCell */
+.operationsRestaurantPage_labelCell {
+	height:30px !important;
+	width:auto;
+	padding: 0px 0px 0px 0px;
+}
+.operationsRestaurantPage_labelCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* emailChangeLable */
+.operationsRestaurantPage_emailChangeLable {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #4c516d; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 4px 4px 4px 4px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* loginCell */
+.operationsRestaurantPage_loginCell {
+	height:30px !important;
+	width:auto;
+	padding: 0px 0px 0px 0px;
+}
+.operationsRestaurantPage_loginCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* emailField */
+.operationsRestaurantPage_emailField {
+	margin: 4px 4px 4px 4px;
+}
+/* vaildEmailMessage */
+.operationsRestaurantPage_vaildEmailMessage {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #0ec40a; text-align: left; font-family: Helvetica; font-size: 14px;
+	margin: 4px 4px 4px 4px;
+	display: none;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* invalidEmailMessage */
+.operationsRestaurantPage_invalidEmailMessage {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #f50c0c; text-align: left; font-family: Helvetica; font-size: 14px;
+	margin: 4px 4px 4px 4px;
+	display: none;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* saveCell */
+.operationsRestaurantPage_saveCell {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.operationsRestaurantPage_saveCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* changeloginButtonGrid */
+.operationsRestaurantPage_changeloginButtonGrid {
+	height: auto;
+	width:100%;
+	margin: 4px 0px 4px 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.operationsRestaurantPage_changeloginButtonGrid_wrapper {
+
+}
+.operationsRestaurantPage_changeloginButtonGrid > tr > td {
+	vertical-align: top;
+}
+.operationsRestaurantPage_changeloginButtonGrid_row_0, .operationsRestaurantPage_changeloginButtonGrid_row_0 > td {
+	height: 30px
+}
+/* changeloginSaveCell */
+.operationsRestaurantPage_changeloginSaveCell {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.operationsRestaurantPage_changeloginSaveCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* loginSaveButton */
+#operationsRestaurantPage_loginSaveButton {
+
+}
+.ui-btn.operationsRestaurantPage_loginSaveButton {
+	margin: 10px 4px 5px 4px;
+}
+/* changeloginCancelCell */
+.operationsRestaurantPage_changeloginCancelCell {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.operationsRestaurantPage_changeloginCancelCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* changeloginCancelButton */
+#operationsRestaurantPage_changeloginCancelButton {
+
+}
+.ui-btn.operationsRestaurantPage_changeloginCancelButton {
+	margin: 10px 4px 5px 4px;
+}
+/* deactivateAccountPopup */
+.operationsRestaurantPage_deactivateAccountPopup {
+
+}
+div.operationsRestaurantPage_deactivateAccountPopup {
+	max-height: 100vh;
+	box-sizing: border-box;
+}
+div.operationsRestaurantPage_deactivateAccountPopup .ui-popup-content-wrapper {
+	width:100%;
+	height:100%;
+	max-height: 99vh;
+	overflow:auto;
+	box-sizing: border-box;
+}
+/* deactivateAccount */
+.operationsRestaurantPage_deactivateAccount {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #f52f14; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 4px 4px 4px 4px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* deactivateAccountGrid */
+.operationsRestaurantPage_deactivateAccountGrid {
+	height: auto;
+	width:100%;
+	margin: 10px 0px 4px 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.operationsRestaurantPage_deactivateAccountGrid_wrapper {
+
+}
+.operationsRestaurantPage_deactivateAccountGrid > tr > td {
+	vertical-align: top;
+}
+.operationsRestaurantPage_deactivateAccountGrid_row_0, .operationsRestaurantPage_deactivateAccountGrid_row_0 > td {
+	height: 30px
+}
+/* deactivateAccountConfirmCell */
+.operationsRestaurantPage_deactivateAccountConfirmCell {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 4px;
+}
+.operationsRestaurantPage_deactivateAccountConfirmCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* deactivateAccountConfirmButton */
+#operationsRestaurantPage_deactivateAccountConfirmButton {
+
+}
+.ui-btn.operationsRestaurantPage_deactivateAccountConfirmButton {
+	margin: 10px 4px 5px 4px;
+}
+/* deactivateAccountCancelCell */
+.operationsRestaurantPage_deactivateAccountCancelCell {
+	height:30px !important;
+	width:auto;
+	padding: 2px 4px 2px 2px;
+}
+.operationsRestaurantPage_deactivateAccountCancelCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* deactivateAccountCancelButton */
+#operationsRestaurantPage_deactivateAccountCancelButton {
+
+}
+.ui-btn.operationsRestaurantPage_deactivateAccountCancelButton {
+	margin: 10px 4px 5px 4px;
+}
+/* photoDeletePopup */
+.operationsRestaurantPage_photoDeletePopup {
+
+}
+div.operationsRestaurantPage_photoDeletePopup {
+	max-height: 100vh;
+	box-sizing: border-box;
+}
+div.operationsRestaurantPage_photoDeletePopup .ui-popup-content-wrapper {
+	width:100%;
+	height:100%;
+	max-height: 99vh;
+	overflow:auto;
+	box-sizing: border-box;
+}
+/* mobilelabel_36 */
+.operationsRestaurantPage_mobilelabel_36 {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #f52f14; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 4px 4px 4px 4px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* photoDeleteGrid */
+.operationsRestaurantPage_photoDeleteGrid {
+	height: auto;
+	width:100%;
+	margin: 10px 0px 4px 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.operationsRestaurantPage_photoDeleteGrid_wrapper {
+
+}
+.operationsRestaurantPage_photoDeleteGrid > tr > td {
+	vertical-align: top;
+}
+.operationsRestaurantPage_photoDeleteGrid_row_0, .operationsRestaurantPage_photoDeleteGrid_row_0 > td {
+	height: 30px
+}
+/* photoDeleteOkCell */
+.operationsRestaurantPage_photoDeleteOkCell {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 4px;
+}
+.operationsRestaurantPage_photoDeleteOkCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* photoDeleteOkButton */
+#operationsRestaurantPage_photoDeleteOkButton {
+
+}
+.ui-btn.operationsRestaurantPage_photoDeleteOkButton {
+	margin: 10px 4px 5px 4px;
+}
+/* photoDeleteCancelCell */
+.operationsRestaurantPage_photoDeleteCancelCell {
+	height:30px !important;
+	width:auto;
+	padding: 2px 4px 2px 2px;
+}
+.operationsRestaurantPage_photoDeleteCancelCell > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* photoDeleteCancelButton */
+#operationsRestaurantPage_photoDeleteCancelButton {
+
+}
+.ui-btn.operationsRestaurantPage_photoDeleteCancelButton {
+	margin: 10px 4px 5px 4px;
+}

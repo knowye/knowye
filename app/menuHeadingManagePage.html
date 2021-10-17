@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>
+            menuHeadingManagePage
+        </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, viewport-fit=cover">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="msapplication-tap-highlight" content="no">
+        <!-- Enable all requests, inline styles, and eval() -->
+        <meta http-equiv="Content-Security-Policy" content="default-src * gap://ready data:; style-src 'self' 'unsafe-inline' *; script-src 'self' 'unsafe-inline' 'unsafe-eval' *">
+        <!-- Uncomment link and meta tags below to activate PWA icons and theme color -->
+        <!-- link rel="manifest" href="../manifest.json" crossOrigin="use-credentials" -->
+        <!-- meta name="theme-color" content="#ffffff" -->
+        <link href="../css/theme/jqm/jqm.css" rel="stylesheet" />
+        <link href="../css/theme/KnoWYE3/KnoWYE3.css" rel="stylesheet" />
+        <link href="../libs/jquerymobile/1.4.5/jquery.mobile.structure-1.4.5.css" rel="stylesheet"
+        />
+        <link type="text/css" rel="stylesheet" href="../css/logblock.css" />
+        <link type="text/css" rel="stylesheet" href="../css/menuPageBuilder.css" />
+        <link type="text/css" rel="stylesheet" href="../css/common.css" />
+        <link type="text/css" rel="stylesheet" href="../css/header_footer.css" />
+        <link type="text/css" rel="stylesheet" href="../css/button.css" />
+        <link type="text/css" rel="stylesheet" href="../css/label.css" />
+        <link type="text/css" rel="stylesheet" href="../css/FontRoboto.css.css" />
+        <!-- Uncomment this script to activate service worker -->
+        <!-- <script>
+        if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('../sw.js')
+        .then(() => console.log('service worker installed'))
+        .catch(err => console.error('Error', err));
+        }
+        </script>
+        -->
+        <script type="text/javascript" src="../libs/underscore/underscore.js">
+        </script>
+        <script type="text/javascript" src="../libs/store/json2.js">
+        </script>
+        <script type="text/javascript" src="../libs/jquery/jquery-2.1.1.js">
+        </script>
+        <script type="text/javascript" src="../libs/jquery/jquery-ajaxTransport.js">
+        </script>
+        <script type="text/javascript">
+            $(document).bind("mobileinit", function() {
+                if (navigator.userAgent.toLowerCase().indexOf("android") != -1) {
+                    $.mobile.defaultPageTransition = 'none';
+                    $.mobile.defaultDialogTransition = 'none';
+                } else if (navigator.userAgent.toLowerCase().indexOf("msie") != -1) {
+                    $.mobile.allowCrossDomainPages = true;
+                    $.support.cors = true;
+                } else if (navigator.userAgent.match(/(iPad|iPhone|iPod)/g)) {
+                    $.mobile.hashListeningEnabled = false;
+                }
+            });
+        </script>
+        <script type="text/javascript" src="../libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.js">
+        </script>
+        <script type="text/javascript" src="../libs/apperyio/mobilebase.js">
+        </script>
+        <script type="text/javascript" src="../libs/event/customEventHandler.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/sha1.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/oauth.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/contexts.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/jquery.xml2json.min.js">
+        </script>
+        <script type="text/javascript" src="../libs/ms_sdk_bundle/client-sdk.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/appery.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/component-manager.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/mapping-impl.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/entity-api.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/login.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/storage-api.js">
+        </script>
+        <script type="text/javascript" src="../get_target_platform.js">
+        </script>
+        <script type="text/javascript" src="../cordova.js">
+        </script>
+        <link href="../libs/apperyio/mobilebase.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="../js/services/model.js">
+        </script>
+        <script type="text/javascript" src="../js/menuHeadingManagePageBuilder.js">
+        </script>
+        <script type="text/javascript" src="../js/navigatePageManager.js">
+        </script>
+        <script type="text/javascript" src="../js/logblock.js">
+        </script>
+        <script type="text/javascript" src="../js/Facebook_Helper.js">
+        </script>
+        <script type="text/javascript" src="../js/menuHeadingManager.js">
+        </script>
+        <script type="text/javascript" src="../js/menuPageBuilder.js">
+        </script>
+        <script type="text/javascript" src="../js/jquery-ui.min.js">
+        </script>
+        <script type="text/javascript" src="../js/common.js">
+        </script>
+        <script type="text/javascript" src="../js/clipboard.js">
+        </script>
+        <script type="text/javascript" src="../js/FileUploadHelper.js">
+        </script>
+        <script type="text/javascript" src="../js/zzqrCodeScaner.js">
+        </script>
+        <script type="text/javascript" src="../js/menuHistoryManager.js">
+        </script>
+        <script type="text/javascript" src="../js/GoogleCharts.js">
+        </script>
+        <script type="text/javascript" src="../js/services/service.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/databaseUtils.js">
+        </script>
+        <script type="text/javascript" src="../js/secure.js">
+        </script>
+<script type="text/javascript" src="../js/EncodeDecodeJS.js">
+        </script>
+    </head>
+    
+    <body>
+        <script language="JavaScript" type="text/javascript">
+        </script>
+        <div data-role="page" style="min-height:480px;" dsid="menuHeadingManagePage" id="menuHeadingManagePage"
+        class="type-interior" data-theme="b">
+            <!-- headingManageHeader -->
+            <div data-role="header" data-position="fixed" data-add-back-btn="true" data-back-btn-text="&nbsp;"
+            data-theme="b" name="headingManageHeader" id="menuHeadingManagePage_headingManageHeader"
+            class="menuHeadingManagePage_headingManageHeader">
+                <h1 dsid="headingManageHeader">
+                    menu headings
+                </h1>
+                <!-- homeButton --><!--
+                --><a data-role="button" name="homeButton" dsid="homeButton" class="menuHeadingManagePage_homeButton ui-btn-right"
+                style='min-height:20px; ' id="menuHeadingManagePage_homeButton" data-corners="true"
+                data-icon="home" data-iconpos="notext" x-apple-data-detectors="false" data-inline='true'
+                data-mini='true' data-theme="b" tabindex="17">
+                &nbsp;
+                </a>
+            </div>
+            <!-- menuHeadingContainer -->
+            <div data-role="content" id="menuHeadingManagePage_menuHeadingContainer" name="menuHeadingContainer"
+            class="ui-li-container  menuHeadingManagePage_menuHeadingContainer ui-content" dsid="menuHeadingContainer"
+            data-theme="b">
+                <link href="menuHeadingManagePage.css" rel="stylesheet" type="text/css" />
+                <script type="text/javascript" src="menuHeadingManagePage.js">
+                </script>
+                <!-- headingManageLabel -->
+                <div name="headingManageLabel" id="menuHeadingManagePage_headingManageLabel" dsid="headingManageLabel"
+                data-role="appery_label" class="labelOnDark  menuHeadingManagePage_headingManageLabel">
+                    click the add heading button to add a new menu heading, long-press to edit, swipe
+                    right to mark or change order, swipe left to make subheading
+                </div>
+                <!-- buttonCellAddPreview -->
+                <div class="menuHeadingManagePage_buttonCellAddPreview_wrapper" data-wrapper-for="buttonCellAddPreview">
+                    <table id="menuHeadingManagePage_buttonCellAddPreview" class="menuHeadingManagePage_buttonCellAddPreview"
+                    dsid="buttonCellAddPreview" name="buttonCellAddPreview" cellpadding=0 cellspacing=0>
+                        <col style="width:140px;" />
+                        <col style="width:auto;" />
+                        <tr class="menuHeadingManagePage_buttonCellAddPreview_row_0">
+                            <!-- addCell -->
+                            <td id="menuHeadingManagePage_addCell" name="addCell" class="menuHeadingManagePage_addCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- itemAddButton --><!--
+                                    --><a data-role="button" name="itemAddButton" dsid="itemAddButton" class="scanMenuButton  menuHeadingManagePage_itemAddButton"
+                                    id="menuHeadingManagePage_itemAddButton" data-corners="true" data-icon="plus" data-iconpos="right"
+                                    x-apple-data-detectors="false" data-mini="true" data-theme="b" tabindex="2">
+                                    add heading
+                                    </a>
+                                </div>
+                            </td>
+                            <!-- previewCell -->
+                            <td id="menuHeadingManagePage_previewCell" name="previewCell" class="menuHeadingManagePage_previewCell"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- expandCollapseAllButton --><!--
+                                    --><a data-role="button" name="expandCollapseAllButton" dsid="expandCollapseAllButton"
+                                    class="scanMenuButton  menuHeadingManagePage_expandCollapseAllButton" id="menuHeadingManagePage_expandCollapseAllButton"
+                                    data-corners="true" data-icon="none" data-iconpos='nowhere' x-apple-data-detectors="false"
+                                    data-mini="true" data-theme="b" tabindex="22">
+                                    expand / collapse
+                                    </a><!--
+                                    --><!-- menuPreviewButton --><!--
+                                    --><a data-role="button" name="menuPreviewButton" dsid="menuPreviewButton" class="menuHeadingManagePage_menuPreviewButton"
+                                    id="menuHeadingManagePage_menuPreviewButton" data-corners="true" data-icon="eye"
+                                    data-iconpos="right" x-apple-data-detectors="false" data-mini="true" data-theme="b"
+                                    tabindex="16">
+                                    customer preview
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- menuList -->
+                <ul data-role="listview" id="menuHeadingManagePage_menuList" class="menu-heading-list  menuHeadingManagePage_menuList"
+                name="menuList" dsid="menuList" data-theme="b" data-divider-theme="b" data-count-theme="b"
+                style="" data-split-icon="carat-r">
+                    <!-- headingItem -->
+                    <li id="menuHeadingManagePage_headingItem" name="headingItem" dsid="headingItem"
+                    tabindex="15" data-icon="carat-r" class="menuHeadingManagePage_headingItem  ui-btn ui-btn-icon-right ui-icon-carat-r">
+                        <div class="ui-li-static-container ui-btn">
+                            <!-- menuHeadingName -->
+                            <div name="menuHeadingName" id="menuHeadingManagePage_menuHeadingName" dsid="menuHeadingName"
+                            data-role="appery_label" class="labelMenuHeading  menuHeadingManagePage_menuHeadingName">
+                                item
+                            </div>
+                            <!-- menuHeadingDescription -->
+                            <div name="menuHeadingDescription" id="menuHeadingManagePage_menuHeadingDescription"
+                            dsid="menuHeadingDescription" data-role="appery_label" class="labelMenuDescription  menuHeadingManagePage_menuHeadingDescription">
+                                description
+                            </div>
+                            <!-- priceGrid -->
+                            <div class="menuHeadingManagePage_priceGrid_wrapper" data-wrapper-for="priceGrid">
+                                <table id="menuHeadingManagePage_priceGrid" class="menuHeadingManagePage_priceGrid"
+                                dsid="priceGrid" name="priceGrid" cellpadding=0 cellspacing=0>
+                                    <col style="width:22px;" />
+                                    <col style="width:30%;" />
+                                    <col style="width:auto;" />
+                                    <tr class="menuHeadingManagePage_priceGrid_row_0">
+                                        <!-- dollarLabelCell -->
+                                        <td id="menuHeadingManagePage_dollarLabelCell" name="dollarLabelCell" class="menuHeadingManagePage_dollarLabelCell"
+                                        colspan=1 rowspan=1>
+                                            <div class="cell-wrapper">
+                                                <!-- dollarSignLabel -->
+                                                <div name="dollarSignLabel" id="menuHeadingManagePage_dollarSignLabel" dsid="dollarSignLabel"
+                                                data-role="appery_label" class="labelMenuDollar  menuHeadingManagePage_dollarSignLabel">
+                                                    $
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <!-- priceCell -->
+                                        <td id="menuHeadingManagePage_priceCell" name="priceCell" class="menuHeadingManagePage_priceCell"
+                                        colspan=1 rowspan=1>
+                                            <div class="cell-wrapper">
+                                                <!-- price -->
+                                                <div name="price" id="menuHeadingManagePage_price" dsid="price" data-role="appery_label"
+                                                class="labelMenuPrice  menuHeadingManagePage_price">
+                                                    price
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <!-- hiddenCell -->
+                                        <td id="menuHeadingManagePage_hiddenCell" name="hiddenCell" class="menuHeadingManagePage_hiddenCell"
+                                        colspan=1 rowspan=1>
+                                            <div class="cell-wrapper">
+                                                <!-- hiddenStatus -->
+                                                <div name="hiddenStatus" id="menuHeadingManagePage_hiddenStatus" dsid="hiddenStatus"
+                                                data-role="appery_label" class="labelUnavailable  menuHeadingManagePage_hiddenStatus">
+                                                    UNAVAILABLE
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- headingAddPopup -->
+            <div data-role="popup" name="headingAddPopup" dsid="headingAddPopup" id="menuHeadingManagePage_headingAddPopup"
+            class="roundedPopup  menuHeadingManagePage_headingAddPopup" data-corners="true" data-dismissible="true"
+            data-overlay-theme="b" data-theme="" data-shadow="true" data-tolerance="30,15,30,15">
+                <div class="ui-popup-content-wrapper">
+                    <!-- headingAddLabel -->
+                    <div name="headingAddLabel" id="menuHeadingManagePage_headingAddLabel" dsid="headingAddLabel"
+                    data-role="appery_label" class="labelOnDark  menuHeadingManagePage_headingAddLabel">
+                        enter a new menu heading below
+                    </div>
+                    <!-- headingAddError -->
+                    <div name="headingAddError" id="menuHeadingManagePage_headingAddError" dsid="headingAddError"
+                    data-role="appery_label" class="menuHeadingManagePage_headingAddError">
+                        error
+                    </div>
+                    <!-- headingAddField -->
+                    <div data-role="fieldcontain" class="menuHeadingManagePage_headingAddField ">
+                        <input type="text" name="headingAddField" dsid="headingAddField" value="" placeholder="enter a new menu heading"
+                        id="menuHeadingManagePage_headingAddField" tabindex="4" multiple data-theme="b" data-mini="true"
+                        class="menuHeadingManagePage_headingAddField" />
+                    </div>
+                    <!-- headingDescriptionField -->
+                    <div data-role="fieldcontain" class="menuHeadingManagePage_headingDescriptionField ">
+                        <textarea name="headingDescriptionField" id="menuHeadingManagePage_headingDescriptionField"
+                        data-mini="true" tabindex="11" dsid="headingDescriptionField" data-theme="b" placeholder="use this field to include a description or detail below the heading"
+                        class="menuHeadingManagePage_headingDescriptionField">
+</textarea>
+                    </div>
+                    <!-- categoryParentLabel -->
+                    <div name="categoryParentLabel" id="menuHeadingManagePage_categoryParentLabel" dsid="categoryParentLabel"
+                    data-role="appery_label" class="labelOnDark  menuHeadingManagePage_categoryParentLabel">
+                        selecting a heading below will make this a subheading
+                    </div>
+                    <!-- headingExampleLabel1 -->
+                    <div name="headingExampleLabel1" id="menuHeadingManagePage_headingExampleLabel1"
+                    dsid="headingExampleLabel1" data-role="appery_label" class="menuHeadingManagePage_headingExampleLabel1">
+                        Entrée
+                    </div>
+                    <!-- headingExampleLabel2 -->
+                    <div name="headingExampleLabel2" id="menuHeadingManagePage_headingExampleLabel2"
+                    dsid="headingExampleLabel2" data-role="appery_label" class="menuHeadingManagePage_headingExampleLabel2">
+                        Beef
+                    </div>
+                    <!-- headingExampleLabel3 -->
+                    <div name="headingExampleLabel3" id="menuHeadingManagePage_headingExampleLabel3"
+                    dsid="headingExampleLabel3" data-role="appery_label" class="menuHeadingManagePage_headingExampleLabel3">
+                        Chicken
+                    </div>
+                    <!-- headingParentSelect -->
+                    <div data-role="fieldcontain" class="menuHeadingManagePage_headingParentSelect scanMenuButton">
+                        <select name="headingParentSelect" id="menuHeadingManagePage_headingParentSelect"
+                        dsid="headingParentSelect" data-theme="b" data-role="appery_selectmenu" data-inline="false"
+                        data-mini="true" data-icon="arrow-d" data-iconpos="right" data-native-menu="true"
+                        tabindex="5" appery-class="menuHeadingManagePage_headingParentSelect">
+                            <option id="menuHeadingManagePage_headingParentSelect-0" value="" reRender="headingParentSelect"
+                            dsid="headingParentSelect-0">
+                            </option>
+                        </select>
+                    </div>
+                    <!-- buttonGrid -->
+                    <div class="menuHeadingManagePage_buttonGrid_wrapper" data-wrapper-for="buttonGrid">
+                        <table id="menuHeadingManagePage_buttonGrid" class="menuHeadingManagePage_buttonGrid"
+                        dsid="buttonGrid" name="buttonGrid" cellpadding=0 cellspacing=0>
+                            <col style="width:auto;" />
+                            <col style="width:auto;" />
+                            <tr class="menuHeadingManagePage_buttonGrid_row_0">
+                                <!-- saveCell -->
+                                <td id="menuHeadingManagePage_saveCell" name="saveCell" class="menuHeadingManagePage_saveCell"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- headingAddSaveButton --><!--
+                                        --><a data-role="button" name="headingAddSaveButton" dsid="headingAddSaveButton" class="scanMenuButton  menuHeadingManagePage_headingAddSaveButton"
+                                        id="menuHeadingManagePage_headingAddSaveButton" data-corners="true" data-icon="check"
+                                        data-iconpos="right" x-apple-data-detectors="false" data-mini="true" data-theme="b"
+                                        tabindex="10">
+                                        save
+                                        </a>
+                                    </div>
+                                </td>
+                                <!-- deleteCell -->
+                                <td id="menuHeadingManagePage_deleteCell" name="deleteCell" class="menuHeadingManagePage_deleteCell"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- deleteButton --><!--
+                                        --><a data-role="button" name="deleteButton" dsid="deleteButton" class="scanMenuButton  menuHeadingManagePage_deleteButton"
+                                        id="menuHeadingManagePage_deleteButton" data-corners="true" data-icon="alert" data-iconpos="right"
+                                        x-apple-data-detectors="false" data-mini="true" data-theme="b" tabindex="18">
+                                        delete
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- categoryEditPopup -->
+            <div data-role="popup" name="categoryEditPopup" dsid="categoryEditPopup" id="menuHeadingManagePage_categoryEditPopup"
+            class="roundedPopup  menuHeadingManagePage_categoryEditPopup" data-corners="true"
+            data-dismissible="true" data-overlay-theme="" data-theme="" data-shadow="true" data-tolerance="30,15,30,15">
+                <div class="ui-popup-content-wrapper">
+                    <!-- headingEditLabel -->
+                    <div name="headingEditLabel" id="menuHeadingManagePage_headingEditLabel" dsid="headingEditLabel"
+                    data-role="appery_label" class="labelOnDark  menuHeadingManagePage_headingEditLabel">
+                        edit the heading below
+                    </div>
+                    <!-- headingField -->
+                    <div data-role="fieldcontain" class="menuHeadingManagePage_headingField ">
+                        <input type="text" name="headingField" dsid="headingField" value="" placeholder=""
+                        id="menuHeadingManagePage_headingField" tabindex="6" multiple data-theme="b" data-mini="true"
+                        class="menuHeadingManagePage_headingField" />
+                    </div>
+                    <!-- categoryParentEditLabel -->
+                    <div name="categoryParentEditLabel" id="menuHeadingManagePage_categoryParentEditLabel"
+                    dsid="categoryParentEditLabel" data-role="appery_label" class="labelOnDark  menuHeadingManagePage_categoryParentEditLabel">
+                        change the parent category below
+                    </div>
+                    <!-- categoryParentEditButton -->
+                    <div data-role="fieldcontain" class="menuHeadingManagePage_categoryParentEditButton scanMenuButton">
+                        <select name="categoryParentEditButton" id="menuHeadingManagePage_categoryParentEditButton"
+                        dsid="categoryParentEditButton" data-theme="b" data-role="appery_selectmenu" data-inline="false"
+                        data-mini="true" data-icon="arrow-d" data-iconpos="right" data-native-menu="false"
+                        tabindex="7" appery-class="menuHeadingManagePage_categoryParentEditButton">
+                            <option id="menuHeadingManagePage_categoryParentEditButton-0" value="Appetizer"
+                            reRender="categoryParentEditButton" dsid="categoryParentEditButton-0" selected="selected">
+                                Appetizer
+                            </option>
+                            <option id="menuHeadingManagePage_categoryParentEditButton-1" value="Beef" reRender="categoryParentEditButton"
+                            dsid="categoryParentEditButton-1">
+                                Beef
+                            </option>
+                            <option id="menuHeadingManagePage_categoryParentEditButton-2" value="Beverage" reRender="categoryParentEditButton"
+                            dsid="categoryParentEditButton-2">
+                                Beverage
+                            </option>
+                        </select>
+                    </div>
+                    <!-- headingButtonGrid -->
+                    <div class="menuHeadingManagePage_headingButtonGrid_wrapper" data-wrapper-for="headingButtonGrid">
+                        <table id="menuHeadingManagePage_headingButtonGrid" class="menuHeadingManagePage_headingButtonGrid"
+                        dsid="headingButtonGrid" name="headingButtonGrid" cellpadding=0 cellspacing=0>
+                            <col style="width:auto;" />
+                            <col style="width:auto;" />
+                            <tr class="menuHeadingManagePage_headingButtonGrid_row_0">
+                                <!-- headingSaveCell -->
+                                <td id="menuHeadingManagePage_headingSaveCell" name="headingSaveCell" class="menuHeadingManagePage_headingSaveCell"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- categoryEditSaveButton --><!--
+                                        --><a data-role="button" name="categoryEditSaveButton" dsid="categoryEditSaveButton"
+                                        class="scanMenuButton  menuHeadingManagePage_categoryEditSaveButton" id="menuHeadingManagePage_categoryEditSaveButton"
+                                        data-corners="true" data-icon="check" data-iconpos="right" x-apple-data-detectors="false"
+                                        data-mini="true" data-theme="b" tabindex="8">
+                                        save
+                                        </a>
+                                    </div>
+                                </td>
+                                <!-- headingCancelCell -->
+                                <td id="menuHeadingManagePage_headingCancelCell" name="headingCancelCell" class="menuHeadingManagePage_headingCancelCell"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- headingCancelButton --><!--
+                                        --><a data-role="button" name="headingCancelButton" dsid="headingCancelButton" class="scanMenuButton  menuHeadingManagePage_headingCancelButton"
+                                        id="menuHeadingManagePage_headingCancelButton" data-corners="true" data-icon="delete"
+                                        data-iconpos="right" x-apple-data-detectors="false" data-mini="true" data-theme="b"
+                                        tabindex="30">
+                                        cancel
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- deleteHeadingConfirmPopup -->
+            <div data-role="popup" name="deleteHeadingConfirmPopup" dsid="deleteHeadingConfirmPopup"
+            id="menuHeadingManagePage_deleteHeadingConfirmPopup" class="roundedPopup  menuHeadingManagePage_deleteHeadingConfirmPopup"
+            data-corners="true" data-dismissible="true" data-overlay-theme="" data-theme="" data-shadow="true"
+            data-tolerance="30,15,30,15">
+                <div class="ui-popup-content-wrapper">
+                    <!-- headingDeleteConfirmLabel -->
+                    <div name="headingDeleteConfirmLabel" id="menuHeadingManagePage_headingDeleteConfirmLabel"
+                    dsid="headingDeleteConfirmLabel" data-role="appery_label" class="labelOnDark  menuHeadingManagePage_headingDeleteConfirmLabel">
+                        delete this item?
+                    </div>
+                    <!-- deleteConfirmGrid -->
+                    <div class="menuHeadingManagePage_deleteConfirmGrid_wrapper" data-wrapper-for="deleteConfirmGrid">
+                        <table id="menuHeadingManagePage_deleteConfirmGrid" class="menuHeadingManagePage_deleteConfirmGrid"
+                        dsid="deleteConfirmGrid" name="deleteConfirmGrid" cellpadding=0 cellspacing=0>
+                            <col style="width:auto;" />
+                            <col style="width:auto;" />
+                            <tr class="menuHeadingManagePage_deleteConfirmGrid_row_0">
+                                <!-- deleteConfirmCell -->
+                                <td id="menuHeadingManagePage_deleteConfirmCell" name="deleteConfirmCell" class="menuHeadingManagePage_deleteConfirmCell"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- deleteConfirmButton --><!--
+                                        --><a data-role="button" name="deleteConfirmButton" dsid="deleteConfirmButton" class="scanMenuButton  menuHeadingManagePage_deleteConfirmButton"
+                                        id="menuHeadingManagePage_deleteConfirmButton" data-corners="true" data-icon="alert"
+                                        data-iconpos="right" x-apple-data-detectors="false" data-mini="true" data-theme="b"
+                                        tabindex="20">
+                                        Delete
+                                        </a>
+                                    </div>
+                                </td>
+                                <!-- deleteCancelCell -->
+                                <td id="menuHeadingManagePage_deleteCancelCell" name="deleteCancelCell" class="menuHeadingManagePage_deleteCancelCell"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- deleteCancelButton --><!--
+                                        --><a data-role="button" name="deleteCancelButton" dsid="deleteCancelButton" class="scanMenuButton  menuHeadingManagePage_deleteCancelButton"
+                                        id="menuHeadingManagePage_deleteCancelButton" data-corners="true" data-icon="delete"
+                                        data-iconpos="right" x-apple-data-detectors="false" data-mini="true" data-theme="b"
+                                        tabindex="21">
+                                        Cancel
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- moveFrom_popup -->
+            <div data-role="popup" name="moveFrom_popup" dsid="moveFrom_popup" id="menuHeadingManagePage_moveFrom_popup"
+            class="roundedPopup  menuHeadingManagePage_moveFrom_popup" data-corners="true" data-dismissible="true"
+            data-overlay-theme="" data-theme="" data-shadow="true" data-tolerance="30,15,30,15">
+                <div class="ui-popup-content-wrapper">
+                    <!-- moveFrom_label -->
+                    <div name="moveFrom_label" id="menuHeadingManagePage_moveFrom_label" dsid="moveFrom_label"
+                    data-role="appery_label" class="labelOnDark  menuHeadingManagePage_moveFrom_label">
+                        mark this heading to be moved?
+                    </div>
+                    <!-- moveHeadingFrom_grid -->
+                    <div class="menuHeadingManagePage_moveHeadingFrom_grid_wrapper" data-wrapper-for="moveHeadingFrom_grid">
+                        <table id="menuHeadingManagePage_moveHeadingFrom_grid" class="menuHeadingManagePage_moveHeadingFrom_grid"
+                        dsid="moveHeadingFrom_grid" name="moveHeadingFrom_grid" cellpadding=0 cellspacing=0>
+                            <col style="width:auto;" />
+                            <col style="width:auto;" />
+                            <tr class="menuHeadingManagePage_moveHeadingFrom_grid_row_0">
+                                <!-- mobilegridcell_42 -->
+                                <td id="menuHeadingManagePage_mobilegridcell_42" name="mobilegridcell_42" class="menuHeadingManagePage_mobilegridcell_42"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- moveFrom_button --><!--
+                                        --><a data-role="button" name="moveFrom_button" dsid="moveFrom_button" class="scanMenuButton  menuHeadingManagePage_moveFrom_button"
+                                        id="menuHeadingManagePage_moveFrom_button" data-corners="true" data-icon="check"
+                                        data-iconpos="right" x-apple-data-detectors="false" data-mini="true" data-theme="b"
+                                        tabindex="23">
+                                        mark
+                                        </a>
+                                    </div>
+                                </td>
+                                <!-- mobilegridcell_43 -->
+                                <td id="menuHeadingManagePage_mobilegridcell_43" name="mobilegridcell_43" class="menuHeadingManagePage_mobilegridcell_43"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- moveFrom_cancel --><!--
+                                        --><a data-role="button" name="moveFrom_cancel" dsid="moveFrom_cancel" class="scanMenuButton  menuHeadingManagePage_moveFrom_cancel"
+                                        id="menuHeadingManagePage_moveFrom_cancel" data-corners="true" data-icon="delete"
+                                        data-iconpos="right" x-apple-data-detectors="false" data-mini="true" data-theme="b"
+                                        tabindex="24">
+                                        cancel
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- moveToOrder_popup -->
+            <div data-role="popup" name="moveToOrder_popup" dsid="moveToOrder_popup" id="menuHeadingManagePage_moveToOrder_popup"
+            class="roundedPopup  menuHeadingManagePage_moveToOrder_popup" data-corners="true"
+            data-dismissible="true" data-overlay-theme="" data-theme="" data-shadow="true" data-tolerance="30,15,30,15">
+                <div class="ui-popup-content-wrapper">
+                    <!-- moveToOrder_label -->
+                    <div name="moveToOrder_label" id="menuHeadingManagePage_moveToOrder_label" dsid="moveToOrder_label"
+                    data-role="appery_label" class="labelOnDark  menuHeadingManagePage_moveToOrder_label">
+                        move heading here?
+                    </div>
+                    <!-- moveToOrder_grid -->
+                    <div class="menuHeadingManagePage_moveToOrder_grid_wrapper" data-wrapper-for="moveToOrder_grid">
+                        <table id="menuHeadingManagePage_moveToOrder_grid" class="menuHeadingManagePage_moveToOrder_grid"
+                        dsid="moveToOrder_grid" name="moveToOrder_grid" cellpadding=0 cellspacing=0>
+                            <col style="width:auto;" />
+                            <col style="width:auto;" />
+                            <col style="width:auto;" />
+                            <tr class="menuHeadingManagePage_moveToOrder_grid_row_0">
+                                <!-- mobilegridcell_52 -->
+                                <td id="menuHeadingManagePage_mobilegridcell_52" name="mobilegridcell_52" class="menuHeadingManagePage_mobilegridcell_52"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- moveToBefore_button --><!--
+                                        --><a data-role="button" name="moveToBefore_button" dsid="moveToBefore_button" class="scanMenuButton  menuHeadingManagePage_moveToBefore_button"
+                                        id="menuHeadingManagePage_moveToBefore_button" data-corners="true" data-icon="arrow-u"
+                                        data-iconpos="right" x-apple-data-detectors="false" data-mini="true" data-theme="b"
+                                        tabindex="25">
+                                        before
+                                        </a>
+                                    </div>
+                                </td>
+                                <!-- mobilegridcell_53 -->
+                                <td id="menuHeadingManagePage_mobilegridcell_53" name="mobilegridcell_53" class="menuHeadingManagePage_mobilegridcell_53"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- moveToAfter_button --><!--
+                                        --><a data-role="button" name="moveToAfter_button" dsid="moveToAfter_button" class="scanMenuButton  menuHeadingManagePage_moveToAfter_button"
+                                        id="menuHeadingManagePage_moveToAfter_button" data-corners="true" data-icon="arrow-d"
+                                        data-iconpos="right" x-apple-data-detectors="false" data-mini="true" data-theme="b"
+                                        tabindex="26">
+                                        after
+                                        </a>
+                                    </div>
+                                </td>
+                                <!-- mobilegridcell_56 -->
+                                <td id="menuHeadingManagePage_mobilegridcell_56" name="mobilegridcell_56" class="menuHeadingManagePage_mobilegridcell_56"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- moveTo_cancel --><!--
+                                        --><a data-role="button" name="moveTo_cancel" dsid="moveTo_cancel" class="scanMenuButton  menuHeadingManagePage_moveTo_cancel"
+                                        id="menuHeadingManagePage_moveTo_cancel" data-corners="true" data-icon="delete" data-iconpos="right"
+                                        x-apple-data-detectors="false" data-mini="true" data-theme="b" tabindex="27">
+                                        cancel
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- moveToChild_popup -->
+            <div data-role="popup" name="moveToChild_popup" dsid="moveToChild_popup" id="menuHeadingManagePage_moveToChild_popup"
+            class="roundedPopup  menuHeadingManagePage_moveToChild_popup" data-corners="true"
+            data-dismissible="true" data-overlay-theme="" data-theme="" data-shadow="true" data-tolerance="30,15,30,15">
+                <div class="ui-popup-content-wrapper">
+                    <!-- mobilelabel_60 -->
+                    <div name="mobilelabel_60" id="menuHeadingManagePage_mobilelabel_60" dsid="mobilelabel_60"
+                    data-role="appery_label" class="labelOnDark  menuHeadingManagePage_mobilelabel_60">
+                        move heading here?
+                    </div>
+                    <!-- moveToChild_grid -->
+                    <div class="menuHeadingManagePage_moveToChild_grid_wrapper" data-wrapper-for="moveToChild_grid">
+                        <table id="menuHeadingManagePage_moveToChild_grid" class="menuHeadingManagePage_moveToChild_grid"
+                        dsid="moveToChild_grid" name="moveToChild_grid" cellpadding=0 cellspacing=0>
+                            <col style="width:auto;" />
+                            <col style="width:auto;" />
+                            <tr class="menuHeadingManagePage_moveToChild_grid_row_0">
+                                <!-- mobilegridcell_62 -->
+                                <td id="menuHeadingManagePage_mobilegridcell_62" name="mobilegridcell_62" class="menuHeadingManagePage_mobilegridcell_62"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- moveToChild_button --><!--
+                                        --><a data-role="button" name="moveToChild_button" dsid="moveToChild_button" class="scanMenuButton  menuHeadingManagePage_moveToChild_button"
+                                        id="menuHeadingManagePage_moveToChild_button" data-corners="true" data-icon="arrow-d"
+                                        data-iconpos="right" x-apple-data-detectors="false" data-mini="true" data-theme="b"
+                                        tabindex="28">
+                                        subheading
+                                        </a>
+                                    </div>
+                                </td>
+                                <!-- mobilegridcell_63 -->
+                                <td id="menuHeadingManagePage_mobilegridcell_63" name="mobilegridcell_63" class="menuHeadingManagePage_mobilegridcell_63"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- moveToChild_cancel --><!--
+                                        --><a data-role="button" name="moveToChild_cancel" dsid="moveToChild_cancel" class="scanMenuButton  menuHeadingManagePage_moveToChild_cancel"
+                                        id="menuHeadingManagePage_moveToChild_cancel" data-corners="true" data-icon="delete"
+                                        data-iconpos="right" x-apple-data-detectors="false" data-mini="true" data-theme="b"
+                                        tabindex="29">
+                                        cancel
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>

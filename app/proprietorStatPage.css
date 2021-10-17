@@ -1,0 +1,292 @@
+
+/* Define default spinner */
+.ui-icon-loading {
+	background: url("../libs/jquerymobile/1.4.5/images/ajax-loader.gif") repeat scroll 0 0 / 46px 46px transparent!important;
+}
+/* homeButton */
+#proprietorStatPage_homeButton {
+
+}
+.ui-btn.proprietorStatPage_homeButton {
+
+}
+/* vendorStatContainer */
+.ui-content.proprietorStatPage_vendorStatContainer {
+	padding: 15px 15px 15px 15px;
+}
+/* statsLabel */
+.proprietorStatPage_statsLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #3ce661; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* serverCallList */
+.proprietorStatPage_serverCallList {
+	height: auto;
+	width:100%;
+	margin: 4px 0px 4px 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.proprietorStatPage_serverCallList_wrapper {
+
+}
+.proprietorStatPage_serverCallList > tr > td {
+	vertical-align: top;
+}
+.proprietorStatPage_serverCallList_row_0, .proprietorStatPage_serverCallList_row_0 > td {
+	height: 30px
+}
+.proprietorStatPage_serverCallList_row_1, .proprietorStatPage_serverCallList_row_1 > td {
+	height: 30px
+}
+.proprietorStatPage_serverCallList_row_2, .proprietorStatPage_serverCallList_row_2 > td {
+	height: 30px
+}
+/* mobilegridcell_18 */
+.proprietorStatPage_mobilegridcell_18 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.proprietorStatPage_mobilegridcell_18 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* mobilelabel_28 */
+.proprietorStatPage_mobilelabel_28 {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #3ce661; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* mobilegridcell_19 */
+.proprietorStatPage_mobilegridcell_19 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.proprietorStatPage_mobilegridcell_19 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* mobilelabel_29 */
+.proprietorStatPage_mobilelabel_29 {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #3ce661; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* mobilegridcell_25 */
+.proprietorStatPage_mobilegridcell_25 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.proprietorStatPage_mobilegridcell_25 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* mobilelabel_30 */
+.proprietorStatPage_mobilelabel_30 {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #3ce661; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* mobilegridcell_20 */
+.proprietorStatPage_mobilegridcell_20 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.proprietorStatPage_mobilegridcell_20 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* mobilelabel_31 */
+.proprietorStatPage_mobilelabel_31 {
+	text-decoration: none; font-weight: normal; font-style: italic; text-align: right; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* mobilegridcell_21 */
+.proprietorStatPage_mobilegridcell_21 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.proprietorStatPage_mobilegridcell_21 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* mobilelabel_32 */
+.proprietorStatPage_mobilelabel_32 {
+	text-decoration: none; font-weight: normal; font-style: italic; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* mobilegridcell_26 */
+.proprietorStatPage_mobilegridcell_26 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.proprietorStatPage_mobilegridcell_26 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* mobilebutton_35 */
+#proprietorStatPage_mobilebutton_35 {
+
+}
+.ui-btn.proprietorStatPage_mobilebutton_35 {
+	margin: 0px 0px 0px 24px;
+}
+/* mobilegridcell_23 */
+.proprietorStatPage_mobilegridcell_23 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.proprietorStatPage_mobilegridcell_23 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* mobilelabel_33 */
+.proprietorStatPage_mobilelabel_33 {
+	text-decoration: none; font-weight: normal; font-style: italic; text-align: right; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* mobilegridcell_24 */
+.proprietorStatPage_mobilegridcell_24 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.proprietorStatPage_mobilegridcell_24 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* mobilelabel_34 */
+.proprietorStatPage_mobilelabel_34 {
+	text-decoration: none; font-weight: normal; font-style: italic; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* mobilegridcell_27 */
+.proprietorStatPage_mobilegridcell_27 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.proprietorStatPage_mobilegridcell_27 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* mobilebutton_36 */
+#proprietorStatPage_mobilebutton_36 {
+
+}
+.ui-btn.proprietorStatPage_mobilebutton_36 {
+	margin: 0px 0px 0px 24px;
+}
+/* statList */
+.ui-page .proprietorStatPage_statList {
+	margin: 4px 0px 0px 0px;
+}
+/* mobilelistitem_4 */
+.ui-mobile-viewport ul[data-role="listview"] li.proprietorStatPage_mobilelistitem_4 {
+	padding: 0;
+	margin: 0;
+}
+.ui-mobile-viewport ul[data-role="listview"] li.proprietorStatPage_mobilelistitem_4 .ui-li-static-container {
+	padding: 0px 0px 4px 0px;
+	padding-right: 41px;
+	padding-left: 0px;
+	min-height: 1em;
+	border-width:0;
+}
+.ui-mobile-viewport ul[data-role="listview"] li.proprietorStatPage_mobilelistitem_4.ui-icon-none .ui-li-static-container {
+	padding-right: 0px; /* consider nothing */
+}
+/* dishRatingDrop */
+.proprietorStatPage_dishRatingDrop {
+	text-decoration: none; font-weight: normal; font-style: italic; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* mobilelistitembutton_5 */
+.proprietorStatPage_mobilelistitembutton_5 {
+
+}
+/* mobilelabel_13 */
+.proprietorStatPage_mobilelabel_13 {
+	text-decoration: none; font-weight: bold; color: #e61717; text-align: left; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* mobilebutton_11 */
+#proprietorStatPage_mobilebutton_11 {
+
+}
+.ui-btn.proprietorStatPage_mobilebutton_11 {
+	margin: 4px 5px 4px 5px;
+}
+/* mobilelistitem_6 */
+.ui-mobile-viewport ul[data-role="listview"] li.proprietorStatPage_mobilelistitem_6 {
+	padding: 0;
+	margin: 0;
+}
+.ui-mobile-viewport ul[data-role="listview"] li.proprietorStatPage_mobilelistitem_6 .ui-li-static-container {
+	padding: 0px 0px 4px 0px;
+	padding-right: 41px;
+	padding-left: 0px;
+	min-height: 1em;
+	border-width:0;
+}
+.ui-mobile-viewport ul[data-role="listview"] li.proprietorStatPage_mobilelistitem_6.ui-icon-none .ui-li-static-container {
+	padding-right: 0px; /* consider nothing */
+}
+/* dishRatingRise */
+.proprietorStatPage_dishRatingRise {
+	text-decoration: none; font-weight: normal; font-style: italic; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* mobilelistitembutton_7 */
+.proprietorStatPage_mobilelistitembutton_7 {
+
+}
+/* dishRiseLabel */
+.proprietorStatPage_dishRiseLabel {
+	text-decoration: none; font-weight: bold; color: #3ce661; text-align: left; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* mobilebutton_16 */
+#proprietorStatPage_mobilebutton_16 {
+
+}
+.ui-btn.proprietorStatPage_mobilebutton_16 {
+	margin: 4px 5px 4px 5px;
+}
+/* mobilelistitem_8 */
+/* mobilelistitembutton_9 */
+.proprietorStatPage_mobilelistitembutton_9 {
+
+}
+/* statsFooter */
+.proprietorStatPage_statsFooter {
+	min-height:38px;
+}

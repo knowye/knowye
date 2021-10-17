@@ -1,0 +1,91 @@
+
+/* Define default spinner */
+.ui-icon-loading {
+	background: url("../libs/jquerymobile/1.4.5/images/ajax-loader.gif") repeat scroll 0 0 / 46px 46px transparent!important;
+}
+/* homeButton */
+#zzqrCodePage_homeButton {
+
+}
+.ui-btn.zzqrCodePage_homeButton {
+
+}
+/* qrCodePageContainer */
+.ui-content.zzqrCodePage_qrCodePageContainer {
+	padding: 15px 15px 15px 15px;
+}
+/* ownerNameLabel */
+.zzqrCodePage_ownerNameLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* qrImage */
+.zzqrCodePage_qrImage {
+	margin: 20px 5px 8px 5px;
+	font-weight: normal;
+	width: 100%; height: 200px;
+}
+div.zzqrCodePage_qrImage {
+	overflow: auto;
+}
+/* qrcodeDownload */
+.zzqrCodePage_qrcodeDownload {
+	margin: 8px 5px 8px 5px;
+	font-weight: normal;
+	width: 100%; height: 50px;
+}
+div.zzqrCodePage_qrcodeDownload {
+	overflow: auto;
+}
+/* html_3 */
+.zzqrCodePage_html_3 {
+	margin: 8px 5px 8px 5px;
+	font-weight: normal;
+	display: none;
+	width: 100%; height: 50px;
+}
+div.zzqrCodePage_html_3 {
+	overflow: auto;
+}
+/* menuUrl */
+.zzqrCodePage_menuUrl {
+	margin: 20px 0px 4px 0px;
+	display: block;
+	vertical-align: middle;
+	padding: 2px;
+	cursor: pointer;
+}
+.zzqrCodePage_menuUrl_link_wrapper > .zzqrCodePage_menuUrl,
+.zzqrCodePage_menuUrl_link_wrapper > .zzqrCodePage_menuUrl:hover,
+.zzqrCodePage_menuUrl_link_wrapper > .zzqrCodePage_menuUrl:active,
+.zzqrCodePage_menuUrl_link_wrapper > .zzqrCodePage_menuUrl:visited {
+	text-decoration: underline; font-weight: normal; font-style: italic; color: #2489ce; text-align: center; font-family: Helvetica; font-size: 16px;
+}
+/* qrCodePageFooter */
+.zzqrCodePage_qrCodePageFooter {
+	min-height:38px;
+}
+/* confirmCopyPopup */
+.zzqrCodePage_confirmCopyPopup {
+
+}
+div.zzqrCodePage_confirmCopyPopup {
+	max-height: 100vh;
+	box-sizing: border-box;
+}
+div.zzqrCodePage_confirmCopyPopup .ui-popup-content-wrapper {
+	width:100%;
+	height:100%;
+	max-height: 99vh;
+	overflow:auto;
+	box-sizing: border-box;
+}
+/* urlCopiedLabel */
+.zzqrCodePage_urlCopiedLabel {
+	text-decoration: none; font-weight: normal; font-style: italic; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 4px 4px 4px 4px;
+	word-wrap: break-word;
+	white-space: normal;
+}

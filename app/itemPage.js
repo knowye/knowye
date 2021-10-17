@@ -21,24 +21,6 @@ function setDetailContent(pageUrl) {
     Apperyio.setDetailContent(pageUrl);
 }
 Apperyio.AppPages = [{
-    "name": "itemPage",
-    "location": "itemPage.html"
-},{
-    "name": "menu_shared",
-    "location": "menu_shared.html"
-}, {
-    "name": "zzqrCodePage",
-    "location": "zzqrCodePage.html"
-}, {
-    "name": "zzfacebookLogin",
-    "location": "zzfacebookLogin.html"
-}, {
-    "name": "startScreen",
-    "location": "startScreen.html"
-}, {
-    "name": "zzpromoManage",
-    "location": "zzpromoManage.html"
-}, {
     "name": "aboutPage",
     "location": "aboutPage.html"
 }, {
@@ -48,86 +30,38 @@ Apperyio.AppPages = [{
     "name": "menuHeadingManagePage",
     "location": "menuHeadingManagePage.html"
 }, {
-    "name": "createAccount",
-    "location": "createAccount.html"
-}, {
-    "name": "zzsettingsPage",
-    "location": "zzsettingsPage.html"
-}, {
-    "name": "wishListPage",
-    "location": "wishListPage.html"
-}, {
-    "name": "menuManagementPage",
-    "location": "menuManagementPage.html"
-}, {
-    "name": "favoritesPage",
-    "location": "favoritesPage.html"
-}, {
-    "name": "touPage",
-    "location": "touPage.html"
-}, {
-    "name": "navigatePage",
-    "location": "navigatePage.html"
-}, {
-    "name": "logoutPage",
-    "location": "logoutPage.html"
-}, {
-    "name": "proprietorPage",
-    "location": "proprietorPage.html"
-}, {
-    "name": "helpPage",
-    "location": "helpPage.html"
-}, {
     "name": "proprietorAnalyticsPage",
     "location": "proprietorAnalyticsPage.html"
-}, {
-    "name": "menuPreviewPage",
-    "location": "menuPreviewPage.html"
 }, {
     "name": "zzpromoEdit",
     "location": "zzpromoEdit.html"
 }, {
-    "name": "menuPage_v2",
-    "location": "menuPage_v2.html"
+    "name": "startScreen",
+    "location": "startScreen.html"
 }, {
-    "name": "filterPage",
-    "location": "filterPage.html"
+    "name": "itemPage",
+    "location": "itemPage.html"
 }, {
-    "name": "easterEggPage",
-    "location": "easterEggPage.html"
+    "name": "zzpromoManage",
+    "location": "zzpromoManage.html"
 }, {
-    "name": "profilePage",
-    "location": "profilePage.html"
+    "name": "zzscannerPage",
+    "location": "zzscannerPage.html"
 }, {
-    "name": "zzsearchPage",
-    "location": "zzsearchPage.html"
-}, {
-    "name": "itemEditPage",
-    "location": "itemEditPage.html"
-}, {
-    "name": "zzproprietorStatPage",
-    "location": "zzproprietorStatPage.html"
-}, {
-    "name": "zzdetailedReviewPage",
-    "location": "zzdetailedReviewPage.html"
-}, {
-    "name": "selectionHistoryPage",
-    "location": "selectionHistoryPage.html"
-}, {
-    "name": "operationsRestaurantPage",
-    "location": "operationsRestaurantPage.html"
-}, {
-    "name": "itemManagePage",
-    "location": "itemManagePage.html"
-}, {
-    "name": "proprietorStartPage",
-    "location": "proprietorStartPage.html"
-}, {
-    "name": "orderHistoryPage",
-    "location": "orderHistoryPage.html"
+    "name": "zztimeRangePage",
+    "location": "zztimeRangePage.html"
 }, {
     "name": "selectedPage",
     "location": "selectedPage.html"
+}, {
+    "name": "zzCSStestPage",
+    "location": "zzCSStestPage.html"
+}, {
+    "name": "zzmenuPage",
+    "location": "zzmenuPage.html"
+}, {
+    "name": "menuHistoryPage",
+    "location": "menuHistoryPage.html"
 }, {
     "name": "faqPage",
     "location": "faqPage.html"
@@ -135,26 +69,92 @@ Apperyio.AppPages = [{
     "name": "zzratingInfoPage",
     "location": "zzratingInfoPage.html"
 }, {
-    "name": "zztimeRangePage",
-    "location": "zztimeRangePage.html"
+    "name": "orderHistoryPage",
+    "location": "orderHistoryPage.html"
 }, {
-    "name": "zzscannerPage",
-    "location": "zzscannerPage.html"
+    "name": "createAccount",
+    "location": "createAccount.html"
 }, {
-    "name": "zzCSStestPage",
-    "location": "zzCSStestPage.html"
+    "name": "itemManagePage",
+    "location": "itemManagePage.html"
 }, {
-    "name": "menuHistoryPage",
-    "location": "menuHistoryPage.html"
+    "name": "proprietorStartPage",
+    "location": "proprietorStartPage.html"
 }, {
-    "name": "zzmenuPage",
-    "location": "zzmenuPage.html"
+    "name": "operationsRestaurantPage",
+    "location": "operationsRestaurantPage.html"
+}, {
+    "name": "zzdetailedReviewPage",
+    "location": "zzdetailedReviewPage.html"
+}, {
+    "name": "itemEditPage",
+    "location": "itemEditPage.html"
+}, {
+    "name": "selectionHistoryPage",
+    "location": "selectionHistoryPage.html"
+}, {
+    "name": "zzproprietorStatPage",
+    "location": "zzproprietorStatPage.html"
 }, {
     "name": "zzitemInventoryPage",
     "location": "zzitemInventoryPage.html"
 }, {
     "name": "zzalertPage",
     "location": "zzalertPage.html"
+}, {
+    "name": "zzsearchPage",
+    "location": "zzsearchPage.html"
+}, {
+    "name": "menuPage_v2",
+    "location": "menuPage_v2.html"
+}, {
+    "name": "zzqrCodePage",
+    "location": "zzqrCodePage.html"
+}, {
+    "name": "profilePage",
+    "location": "profilePage.html"
+}, {
+    "name": "filterPage",
+    "location": "filterPage.html"
+}, {
+    "name": "easterEggPage",
+    "location": "easterEggPage.html"
+}, {
+    "name": "helpPage",
+    "location": "helpPage.html"
+}, {
+    "name": "navigatePage",
+    "location": "navigatePage.html"
+}, {
+    "name": "menuPreviewPage",
+    "location": "menuPreviewPage.html"
+}, {
+    "name": "zzfacebookLogin",
+    "location": "zzfacebookLogin.html"
+}, {
+    "name": "menu_shared",
+    "location": "menu_shared.html"
+}, {
+    "name": "logoutPage",
+    "location": "logoutPage.html"
+}, {
+    "name": "favoritesPage",
+    "location": "favoritesPage.html"
+}, {
+    "name": "proprietorPage",
+    "location": "proprietorPage.html"
+}, {
+    "name": "wishListPage",
+    "location": "wishListPage.html"
+}, {
+    "name": "menuManagementPage",
+    "location": "menuManagementPage.html"
+}, {
+    "name": "touPage",
+    "location": "touPage.html"
+}, {
+    "name": "zzsettingsPage",
+    "location": "zzsettingsPage.html"
 }];
 
 function itemPage_js() {
@@ -232,50 +232,7 @@ function itemPage_js() {
             }
         ]
     };
-    Apperyio.mappings["itemPage_itemPage_item_query_service_onbeforesend_mapping_0"] = {
-        "homeScreen": "itemPage",
-        "directions": [
-            {
-                "from_name": "selectedParentItem",
-                "from_type": "SESSION_STORAGE",
-                "to_name": "itemPage_item_query_service",
-                "to_type": "SERVICE_REQUEST",
-                "to_default": {
-                    "headers": {
-                        "X-Appery-Database-Id": "{database_id}",
-                        "X-Appery-Session-Token": "{session_token}"
-                    },
-                    "parameters": {
-                        "where": " {\"vendor_lk\": {\"$inQuery\" : { \"_id\": \"{vendor_id}\"}}}",
-                        "include": "cuisine_lk,ingredientMain_lk,ingredientMain_lk.category_lk,ingredientHidden_lk,ingredientHidden_lk.category_lk,ingredientFeatured_lk,ingredientFeatured_lk.category_lk,rating_lk,rating_lk.item,rating_lk.item.cuisine_lk,rating_lk.item.ingredientMain_lk,rating_lk.item.ingredientMain_lk.category_lk,rating_lk.item.ingredientHidden_lk,rating_lk.item.ingredientFeatured_lk,rating_lk.item.rating_lk,rating_lk.item.vendor_lk,rating_lk.item.heading,rating_lk.user,rating_lk.user.status,vendor_lk,vendor_lk.state,vendor_lk.country,heading,heading.vendor,heading.vendor.state,heading.vendor.country,heading.headingParent",
-                        "sort": "order",
-                        "limit": "1500"
-                    },
-                    "body": null
-                },
-                "mappings": [
-                    {
-                        "source": "$",
-                        "target_transformation": function(value) {
-                            return {
-                                "vendor_lk": {
-                                    "$inQuery": {
-                                        "_id": projectMdb1_settings.vendor_id
-                                    }
-                                },
-                                "heading": {
-                                    "$inQuery": {
-                                        "_id": value
-                                    }
-                                }
-                            };
-                        },
-                        "target": "$['parameters']['where']"
-                    }
-                ]
-            }
-        ]
-    };
+
     Apperyio.mappings["itemPage_itemPage_item_query_service_onsuccess_mapping_0"] = {
         "homeScreen": "itemPage",
         "directions": [
@@ -332,44 +289,45 @@ function itemPage_js() {
             }
         ]
     };
-    Apperyio.mappings["itemPage_itemPage_getItemsRate_service_onbeforesend_mapping_0"] = {
+        Apperyio.mappings["itemPage_itemPage_item_query_service_onbeforesend_mapping_0"] = {
         "homeScreen": "itemPage",
         "directions": [
             {
-                "from_name": "vendorId",
-                "from_type": "SESSION_STORAGE",
-                "to_name": "itemPage_getItemsRate_service",
-                "to_type": "SERVICE_REQUEST",
-                "to_default": {
-                    "headers": {},
-                    "parameters": {
-                        "vendorId": "567bc758e4b0efe9f5f7c579"
-                    },
-                    "body": null
-                },
-                "mappings": [
-                    {
-                        "source": "$",
-                        "target": "$['parameters']['vendorId']"
-                    }
-                ]
-            },
-            {
                 "from_name": "selectedParentItem",
                 "from_type": "SESSION_STORAGE",
-                "to_name": "itemPage_getItemsRate_service",
+                "to_name": "itemPage_item_query_service",
                 "to_type": "SERVICE_REQUEST",
                 "to_default": {
-                    "headers": {},
+                    "headers": {
+                        "X-Appery-Database-Id": "{database_id}",
+                        "X-Appery-Session-Token": "{session_token}"
+                    },
                     "parameters": {
-                        "vendorId": "567bc758e4b0efe9f5f7c579"
+                        "where": " {\"vendor_lk\": {\"$inQuery\" : { \"_id\": \"{vendor_id}\"}}}",
+                        "include": "cuisine_lk,ingredientMain_lk,ingredientMain_lk.category_lk,ingredientHidden_lk,ingredientHidden_lk.category_lk,ingredientFeatured_lk,ingredientFeatured_lk.category_lk,rating_lk,rating_lk.item,rating_lk.item.cuisine_lk,rating_lk.item.ingredientMain_lk,rating_lk.item.ingredientMain_lk.category_lk,rating_lk.item.ingredientHidden_lk,rating_lk.item.ingredientFeatured_lk,rating_lk.item.rating_lk,rating_lk.item.vendor_lk,rating_lk.item.heading,rating_lk.user,rating_lk.user.status,vendor_lk,vendor_lk.state,vendor_lk.country,heading,heading.vendor,heading.vendor.state,heading.vendor.country,heading.headingParent",
+                        "sort": "order",
+                        "limit": "1500"
                     },
                     "body": null
                 },
                 "mappings": [
                     {
                         "source": "$",
-                        "target": "$['parameters']['headingId']"
+                        "target_transformation": function(value) {
+                            return {
+                                "vendor_lk": {
+                                    "$inQuery": {
+                                        "_id": projectMdb1_settings.vendor_id
+                                    }
+                                },
+                                "heading": {
+                                    "$inQuery": {
+                                        "_id": value
+                                    }
+                                }
+                            };
+                        },
+                        "target": "$['parameters']['where']"
                     }
                 ]
             }
@@ -422,6 +380,49 @@ function itemPage_js() {
                     {
                         "source": "$['body'][i]['hidden']",
                         "target": "$['menuItem']['notAvailableLabel:visible']"
+                    }
+                ]
+            }
+        ]
+    };
+    Apperyio.mappings["itemPage_itemPage_getItemsRate_service_onbeforesend_mapping_0"] = {
+        "homeScreen": "itemPage",
+        "directions": [
+            {
+                "from_name": "vendorId",
+                "from_type": "SESSION_STORAGE",
+                "to_name": "itemPage_getItemsRate_service",
+                "to_type": "SERVICE_REQUEST",
+                "to_default": {
+                    "headers": {},
+                    "parameters": {
+                        "vendorId": "567bc758e4b0efe9f5f7c579"
+                    },
+                    "body": null
+                },
+                "mappings": [
+                    {
+                        "source": "$",
+                        "target": "$['parameters']['vendorId']"
+                    }
+                ]
+            },
+            {
+                "from_name": "selectedParentItem",
+                "from_type": "SESSION_STORAGE",
+                "to_name": "itemPage_getItemsRate_service",
+                "to_type": "SERVICE_REQUEST",
+                "to_default": {
+                    "headers": {},
+                    "parameters": {
+                        "vendorId": "567bc758e4b0efe9f5f7c579"
+                    },
+                    "body": null
+                },
+                "mappings": [
+                    {
+                        "source": "$",
+                        "target": "$['parameters']['headingId']"
                     }
                 ]
             }

@@ -41,7 +41,7 @@ function goBack() {
 }
 
 
-function proceedAsGuest(loginService, element, list, isGuestParam) {
+function proceedAsGuest(loginService, element, list, isGuestParam ) {
         if (isGuestParam == undefined) {isGuestParam = true;}
         /* Navigate to vendor's page */
         var idx_attr = $(element).attr('_idx');

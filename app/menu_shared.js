@@ -405,7 +405,6 @@ function menu_shared_js() {
             Apperyio.processMappingAction(Apperyio.mappings["menu_shared_manushared_vendor_details_get_onbeforesend_mapping_0"]);
         },
         "onComplete": function(jqXHR, textStatus) {
-        
         },
         "onSuccess": function(data) {
             Apperyio.processMappingAction(Apperyio.mappings["menu_shared_manushared_vendor_details_get_onsuccess_mapping_0"]);
@@ -415,7 +414,6 @@ function menu_shared_js() {
                 // currentVendor.id = vendor_id ;
                 // storageSet('currentVendor', currentVendor);
                 // storageSet('vendorId', vendor_id);
-                
                 projectMdb1_settings.vendor_id = vendor_id;
                 if (xorKey.available()) {
                     var uname = xorKey.getLogin();
@@ -459,13 +457,17 @@ function menu_shared_js() {
             userName = storageGet('userName');
             Settings.session_token = storageGet('sessionToken');
             customerMode = true;
-            // if ((!isPhone || !customerMode) && !isGuest) {
-            //     projectMdb1_settings.vendor_id = storageGet('vendorId');
-            // }
-            // if (customerMode) {
-            //     if (!isPhone) {
+            // if ((!isPhone || !customerMode) && !isGuest) 
+            // {
+            // 	projectMdb1_settings.vendor_id = storageGet('vendorId');
+            // }    
+            // if(customerMode)
+            // {
+            //     if(!isPhone)
+            //     {
             //         var id = urlParam('vendor');
-            //         if (id) {
+            //         if(id)
+            //         {
             //             storageSet('vendorId', id);
             //             projectMdb1_settings.user_id = id;
             //             projectMdb1_settings.vendor_id = id;

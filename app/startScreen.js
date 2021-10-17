@@ -28,21 +28,6 @@ var _pushRegistrationApperyService = new Apperyio.RestService({
     'contentType': 'application/json',
 });
 Apperyio.AppPages = [{
-    "name": "itemPage",
-    "location": "itemPage.html"
-}, {
-    "name": "zzqrCodePage",
-    "location": "zzqrCodePage.html"
-}, {
-    "name": "zzfacebookLogin",
-    "location": "zzfacebookLogin.html"
-}, {
-    "name": "startScreen",
-    "location": "startScreen.html"
-}, {
-    "name": "zzpromoManage",
-    "location": "zzpromoManage.html"
-}, {
     "name": "aboutPage",
     "location": "aboutPage.html"
 }, {
@@ -52,86 +37,38 @@ Apperyio.AppPages = [{
     "name": "menuHeadingManagePage",
     "location": "menuHeadingManagePage.html"
 }, {
-    "name": "createAccount",
-    "location": "createAccount.html"
-}, {
-    "name": "zzsettingsPage",
-    "location": "zzsettingsPage.html"
-}, {
-    "name": "wishListPage",
-    "location": "wishListPage.html"
-}, {
-    "name": "menuManagementPage",
-    "location": "menuManagementPage.html"
-}, {
-    "name": "favoritesPage",
-    "location": "favoritesPage.html"
-}, {
-    "name": "touPage",
-    "location": "touPage.html"
-}, {
-    "name": "navigatePage",
-    "location": "navigatePage.html"
-}, {
-    "name": "logoutPage",
-    "location": "logoutPage.html"
-}, {
-    "name": "proprietorPage",
-    "location": "proprietorPage.html"
-}, {
-    "name": "helpPage",
-    "location": "helpPage.html"
-}, {
     "name": "proprietorAnalyticsPage",
     "location": "proprietorAnalyticsPage.html"
-}, {
-    "name": "menuPreviewPage",
-    "location": "menuPreviewPage.html"
 }, {
     "name": "zzpromoEdit",
     "location": "zzpromoEdit.html"
 }, {
-    "name": "menuPage_v2",
-    "location": "menuPage_v2.html"
+    "name": "startScreen",
+    "location": "startScreen.html"
 }, {
-    "name": "filterPage",
-    "location": "filterPage.html"
+    "name": "itemPage",
+    "location": "itemPage.html"
 }, {
-    "name": "easterEggPage",
-    "location": "easterEggPage.html"
+    "name": "zzpromoManage",
+    "location": "zzpromoManage.html"
 }, {
-    "name": "profilePage",
-    "location": "profilePage.html"
+    "name": "zzscannerPage",
+    "location": "zzscannerPage.html"
 }, {
-    "name": "zzsearchPage",
-    "location": "zzsearchPage.html"
-}, {
-    "name": "itemEditPage",
-    "location": "itemEditPage.html"
-}, {
-    "name": "zzproprietorStatPage",
-    "location": "zzproprietorStatPage.html"
-}, {
-    "name": "zzdetailedReviewPage",
-    "location": "zzdetailedReviewPage.html"
-}, {
-    "name": "selectionHistoryPage",
-    "location": "selectionHistoryPage.html"
-}, {
-    "name": "operationsRestaurantPage",
-    "location": "operationsRestaurantPage.html"
-}, {
-    "name": "itemManagePage",
-    "location": "itemManagePage.html"
-}, {
-    "name": "proprietorStartPage",
-    "location": "proprietorStartPage.html"
-}, {
-    "name": "orderHistoryPage",
-    "location": "orderHistoryPage.html"
+    "name": "zztimeRangePage",
+    "location": "zztimeRangePage.html"
 }, {
     "name": "selectedPage",
     "location": "selectedPage.html"
+}, {
+    "name": "zzCSStestPage",
+    "location": "zzCSStestPage.html"
+}, {
+    "name": "zzmenuPage",
+    "location": "zzmenuPage.html"
+}, {
+    "name": "menuHistoryPage",
+    "location": "menuHistoryPage.html"
 }, {
     "name": "faqPage",
     "location": "faqPage.html"
@@ -139,26 +76,92 @@ Apperyio.AppPages = [{
     "name": "zzratingInfoPage",
     "location": "zzratingInfoPage.html"
 }, {
-    "name": "zztimeRangePage",
-    "location": "zztimeRangePage.html"
+    "name": "orderHistoryPage",
+    "location": "orderHistoryPage.html"
 }, {
-    "name": "zzscannerPage",
-    "location": "zzscannerPage.html"
+    "name": "createAccount",
+    "location": "createAccount.html"
 }, {
-    "name": "zzCSStestPage",
-    "location": "zzCSStestPage.html"
+    "name": "itemManagePage",
+    "location": "itemManagePage.html"
 }, {
-    "name": "menuHistoryPage",
-    "location": "menuHistoryPage.html"
+    "name": "proprietorStartPage",
+    "location": "proprietorStartPage.html"
 }, {
-    "name": "zzmenuPage",
-    "location": "zzmenuPage.html"
+    "name": "operationsRestaurantPage",
+    "location": "operationsRestaurantPage.html"
+}, {
+    "name": "zzdetailedReviewPage",
+    "location": "zzdetailedReviewPage.html"
+}, {
+    "name": "itemEditPage",
+    "location": "itemEditPage.html"
+}, {
+    "name": "selectionHistoryPage",
+    "location": "selectionHistoryPage.html"
+}, {
+    "name": "zzproprietorStatPage",
+    "location": "zzproprietorStatPage.html"
 }, {
     "name": "zzitemInventoryPage",
     "location": "zzitemInventoryPage.html"
 }, {
     "name": "zzalertPage",
     "location": "zzalertPage.html"
+}, {
+    "name": "zzsearchPage",
+    "location": "zzsearchPage.html"
+}, {
+    "name": "menuPage_v2",
+    "location": "menuPage_v2.html"
+}, {
+    "name": "zzqrCodePage",
+    "location": "zzqrCodePage.html"
+}, {
+    "name": "profilePage",
+    "location": "profilePage.html"
+}, {
+    "name": "filterPage",
+    "location": "filterPage.html"
+}, {
+    "name": "easterEggPage",
+    "location": "easterEggPage.html"
+}, {
+    "name": "helpPage",
+    "location": "helpPage.html"
+}, {
+    "name": "navigatePage",
+    "location": "navigatePage.html"
+}, {
+    "name": "menuPreviewPage",
+    "location": "menuPreviewPage.html"
+}, {
+    "name": "zzfacebookLogin",
+    "location": "zzfacebookLogin.html"
+}, {
+    "name": "menu_shared",
+    "location": "menu_shared.html"
+}, {
+    "name": "logoutPage",
+    "location": "logoutPage.html"
+}, {
+    "name": "favoritesPage",
+    "location": "favoritesPage.html"
+}, {
+    "name": "proprietorPage",
+    "location": "proprietorPage.html"
+}, {
+    "name": "wishListPage",
+    "location": "wishListPage.html"
+}, {
+    "name": "menuManagementPage",
+    "location": "menuManagementPage.html"
+}, {
+    "name": "touPage",
+    "location": "touPage.html"
+}, {
+    "name": "zzsettingsPage",
+    "location": "zzsettingsPage.html"
 }];
 
 function startScreen_js() {
@@ -240,34 +243,6 @@ function startScreen_js() {
      * Nonvisual components
      */
     Apperyio.mappings = Apperyio.mappings || {};
-    Apperyio.mappings["startScreen_loginService_onbeforesend_mapping_0"] = {
-        "homeScreen": "startScreen",
-        "directions": [
-            {
-                "from_name": "startScreen",
-                "from_type": "UI",
-                "to_name": "loginService",
-                "to_type": "SERVICE_REQUEST",
-                "to_default": {
-                    "headers": {
-                        "X-Appery-Database-Id": "{database_id}"
-                    },
-                    "parameters": {},
-                    "body": null
-                },
-                "mappings": [
-                    {
-                        "source": "$['loginField:text']",
-                        "target": "$['parameters']['username']"
-                    },
-                    {
-                        "source": "$['passwordField:text']",
-                        "target": "$['parameters']['password']"
-                    }
-                ]
-            }
-        ]
-    };
     Apperyio.mappings["startScreen_loginService_onsuccess_mapping_0"] = {
         "homeScreen": "startScreen",
         "directions": [
@@ -309,31 +284,35 @@ function startScreen_js() {
             }
         ]
     };
-    Apperyio.mappings["startScreen_usetTypeService_onbeforesend_mapping_0"] = {
+    Apperyio.mappings["startScreen_loginService_onbeforesend_mapping_0"] = {
         "homeScreen": "startScreen",
         "directions": [
             {
-                "from_name": "userId",
-                "from_type": "LOCAL_STORAGE",
-                "to_name": "usetTypeService",
+                "from_name": "startScreen",
+                "from_type": "UI",
+                "to_name": "loginService",
                 "to_type": "SERVICE_REQUEST",
                 "to_default": {
                     "headers": {
-                        "X-Appery-Database-Id": "{database_id}",
-                        "X-Appery-Session-Token": "{session_token}"
+                        "X-Appery-Database-Id": "{database_id}"
                     },
                     "parameters": {},
                     "body": null
                 },
                 "mappings": [
                     {
-                        "source": "$",
-                        "target": "$['parameters']['userId']"
+                        "source": "$['loginField:text']",
+                        "target": "$['parameters']['username']"
+                    },
+                    {
+                        "source": "$['passwordField:text']",
+                        "target": "$['parameters']['password']"
                     }
                 ]
             }
         ]
     };
+
     Apperyio.mappings["startScreen_usetTypeService_onsuccess_mapping_0"] = {
         "homeScreen": "startScreen",
         "directions": [
@@ -411,6 +390,61 @@ function startScreen_js() {
             }
         ]
     };
+    Apperyio.mappings["startScreen_usetTypeService_onbeforesend_mapping_0"] = {
+        "homeScreen": "startScreen",
+        "directions": [
+            {
+                "from_name": "userId",
+                "from_type": "LOCAL_STORAGE",
+                "to_name": "usetTypeService",
+                "to_type": "SERVICE_REQUEST",
+                "to_default": {
+                    "headers": {
+                        "X-Appery-Database-Id": "{database_id}",
+                        "X-Appery-Session-Token": "{session_token}"
+                    },
+                    "parameters": {},
+                    "body": null
+                },
+                "mappings": [
+                    {
+                        "source": "$",
+                        "target": "$['parameters']['userId']"
+                    }
+                ]
+            }
+        ]
+    };
+
+    Apperyio.mappings["startScreen_start_menuHeading_list_service_onsuccess_mapping_0"] = {
+        "homeScreen": "startScreen",
+        "directions": [
+            {
+                "from_name": "start_menuHeading_list_service",
+                "from_type": "SERVICE_RESPONSE",
+                "to_name": "menuHeading",
+                "to_type": "SESSION_STORAGE",
+                "mappings": [
+                    {
+                        "source": "$['body'][i]['heading']",
+                        "target": "$[i]['heading']"
+                    },
+                    {
+                        "source": "$['body'][i]['_id']",
+                        "target": "$[i]['id']"
+                    },
+                    {
+                        "source": "$['body'][i]['headingDescription']",
+                        "target": "$[i]['description']"
+                    },
+                    {
+                        "source": "$['body'][i]['headingParent']['_id']",
+                        "target": "$[i]['parent_id']"
+                    }
+                ]
+            }
+        ]
+    };
     Apperyio.mappings["startScreen_start_menuHeading_list_service_onbeforesend_mapping_0"] = {
         "homeScreen": "startScreen",
         "directions": [
@@ -436,35 +470,6 @@ function startScreen_js() {
                     {
                         "source": "$",
                         "target": "$['headers']['X-Appery-Session-Token']"
-                    }
-                ]
-            }
-        ]
-    };
-    Apperyio.mappings["startScreen_start_menuHeading_list_service_onsuccess_mapping_0"] = {
-        "homeScreen": "startScreen",
-        "directions": [
-            {
-                "from_name": "start_menuHeading_list_service",
-                "from_type": "SERVICE_RESPONSE",
-                "to_name": "menuHeading",
-                "to_type": "SESSION_STORAGE",
-                "mappings": [
-                    {
-                        "source": "$['body'][i]['heading']",
-                        "target": "$[i]['heading']"
-                    },
-                    {
-                        "source": "$['body'][i]['_id']",
-                        "target": "$[i]['id']"
-                    },
-                    {
-                        "source": "$['body'][i]['headingDescription']",
-                        "target": "$[i]['description']"
-                    },
-                    {
-                        "source": "$['body'][i]['headingParent']['_id']",
-                        "target": "$[i]['parent_id']"
                     }
                 ]
             }
